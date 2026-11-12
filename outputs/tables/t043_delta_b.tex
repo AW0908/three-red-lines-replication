@@ -1,0 +1,29 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Cutoff / fit & N pre/post & Firms pre/post & Pre b & Post b & Change (SE) & 95\% CI & Share $>0$ \\
+\midrule
+0.7000 main & 797/630 & 136/132 & -0.8772 & 3.1429 & 4.0200 (1.2657) & [1.6711, 6.7968] & 1.0000 \\
+0.7000 degree4 & 797/630 & 136/132 & -1.0206 & 2.9544 & 3.9750 (1.2228) & [1.6891, 6.6623] & 1.0000 \\
+0.7000 degree7 & 797/630 & 136/132 & -0.9050 & 2.4069 & 3.3119 (1.2019) & [1.2190, 5.8783] & 0.9980 \\
+0.7000 narrow & 797/630 & 136/132 & -0.5865 & 2.9727 & 3.5592 (1.0705) & [1.6567, 5.8675] & 1.0000 \\
+0.7000 wide & 797/630 & 136/132 & -0.8313 & 3.9735 & 4.8049 (1.4606) & [2.1965, 8.0551] & 1.0000 \\
+0.6000 main & 797/630 & 136/132 & 0.8956 & -0.3387 & -1.2343 (1.5304) & [-4.2554, 1.7049] & 0.1882 \\
+0.6000 degree4 & 797/630 & 136/132 & -0.0857 & -0.7557 & -0.6700 (1.0511) & [-2.6649, 1.3917] & 0.2412 \\
+0.6000 degree7 & 797/630 & 136/132 & 1.5679 & 0.6593 & -0.9087 (2.1670) & [-5.0261, 3.7896] & 0.3086 \\
+0.6000 narrow & 797/630 & 136/132 & 0.0562 & 0.2403 & 0.1841 (1.0409) & [-1.6810, 2.3172] & 0.5596 \\
+0.6000 wide & 797/630 & 136/132 & 1.3812 & -0.5403 & -1.9215 (1.8151) & [-5.7553, 1.4366] & 0.1151 \\
+0.8000 main & 797/630 & 136/132 & -0.3598 & -0.0449 & 0.3149 (0.7882) & [-1.1642, 1.9175] & 0.6507 \\
+0.8000 degree4 & 797/630 & 136/132 & 0.1765 & 0.2975 & 0.1210 (0.8724) & [-1.5573, 1.8627] & 0.5566 \\
+0.8000 degree7 & 797/630 & 136/132 & -0.6634 & -0.3465 & 0.3169 (0.7534) & [-1.0858, 1.8746] & 0.6727 \\
+0.8000 narrow & 797/630 & 136/132 & -0.6412 & -0.3390 & 0.3022 (0.5757) & [-0.8091, 1.4141] & 0.7017 \\
+0.8000 wide & 797/630 & 136/132 & -0.4011 & -0.2105 & 0.1906 (0.8269) & [-1.3453, 1.8788] & 0.5856 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample. Pre: 2017H1--2019H2; post: 2020H2--2022H2. Seed 20261016; 999 whole-firm draws, complete re-estimation, pointwise percentile intervals. Invalid draws are counted without replacement; fewer than 90 percent valid draws is unreliable. Smooth density and stable reporting selection are assumptions. Descriptive, no causal or evasion inference. T023 grid [0.40,1.00], width 0.01. Placebos additionally exclude [0.66,0.72). Share positive conditions on valid paired draws (denominators and failures in CSV); it is not a p-value. N includes finite RL1 outside the histogram range.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

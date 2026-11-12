@@ -1,0 +1,3 @@
+"period","anchor","n","firms","kappa_point","point_status","kappa_CI","CI_status","interpolation"
+"post","2019-12-31",602,129,0.27647696599032,"interpolated_first_crossing",0.0874528791525238,"interpolated_first_crossing","linear_between_0.1_grid_points_no_monotonicity_imposed"
+"placebo","2016-12-31",616,125,0,"already_nonpositive_at_zero",0,"CI_includes_zero_at_zero","linear_between_0.1_grid_points_no_monotonicity_imposed"

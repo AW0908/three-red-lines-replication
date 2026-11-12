@@ -1,0 +1,23 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{llrrrrr}
+\toprule
+Source & Outcome / spec. & F & df & p & N & Firms \\
+\midrule
+T009 & rl1 baseline & 1.6854 & 7,123 & 0.1186 & -- & -- \\
+T009 & rl2 baseline & 1.8290 & 7,123 & 0.0875 & -- & -- \\
+T009 & rl2\_gap baseline & 0.8834 & 7,123 & 0.5218 & -- & -- \\
+T009 & mi\_share baseline & 0.8389 & 7,121 & 0.5572 & -- & -- \\
+T009 & jv\_ta baseline & 0.7459 & 7,100 & 0.6337 & -- & -- \\
+T028 & rl1 C0 & 1.6854 & 7,123 & 0.1186 & 1544 & 124 \\
+T028 & rl1 C3-date & 4.3894 & 7,123 & 0.0002 & 1544 & 124 \\
+T028 & mi\_share C0 & 0.8389 & 7,121 & 0.5572 & 1484 & 122 \\
+T028 & mi\_share C3-date & 0.9002 & 7,121 & 0.5088 & 1484 & 122 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Values copied verbatim from T009/T028 CSVs (no re-estimation); decimals rounded for display. Joint Wald F tests of seven pre-policy interactions, 2016H2--2019H2. T009 does not record N/firms; -- means unrecorded. C0 is also shown in T028 to preserve both input tables. Controlled RL1 C3-date p=0.000222545565783325 rejects the tested pre-trend restriction; a non-rejection for another outcome does not establish parallel trends. No multiple-testing adjustment.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

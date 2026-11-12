@@ -1,0 +1,9 @@
+"market","source","variable","convention","eligible_rows","eligible_firms"
+"A","eastmoney","roa","YTD; December annual reports only; no annual/half-year pooling",189,63
+"A","eastmoney","sales","YTD; December annual reports only; no annual/half-year pooling",189,63
+"HK","eastmoney","roa","YTD; December annual reports only; no annual/half-year pooling",99,33
+"HK","eastmoney","sales","YTD; December annual reports only; no annual/half-year pooling",99,33
+"A","wind","roa","YTD; December annual reports only; no annual/half-year pooling",42,14
+"A","wind","sales","YTD; December annual reports only; no annual/half-year pooling",42,14
+"HK","wind","roa","YTD; December annual reports only; no annual/half-year pooling",36,12
+"HK","wind","sales","YTD; December annual reports only; no annual/half-year pooling",36,12

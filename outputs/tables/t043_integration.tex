@@ -1,0 +1,25 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Period / method & N & Firms & b & 95\% CI & $B_{net}$ & Below 0.70 & [0.70,0.74) & Mass resid. & Iter. & Valid draws \\
+\midrule
+pre T023 baseline & 797 & 136 & -0.8772 & [-1.8501, 0.4278] & -- & -18.8201 & -- & 18.8201 & 0 & 999/999 \\
+pre Chetty net (main) & 797 & 136 & 0.2004 & [-1.5955, 2.3611] & 4.0715 & -14.2579 & 18.3294 & 0.0000 & 17 & 999/999 \\
+pre Chetty, $B$ below 0.70 only (secondary) & 797 & 136 & -0.5996 & [-1.6534, 0.7419] & 10.2281 & -11.8133 & 22.0414 & -22.0414 & 9 & 999/999 \\
+pre Boundary: literal $s$ & 797 & 136 & -- & [--, --] & -0.0000 & -15.8746 & 15.8746 & 14.5765 & 22 & 27/999 \\
+pre Boundary: normalized & 797 & 136 & -- & [--, --] & 0.0000 & -13.9197 & 13.9197 & -0.0000 & 20 & 47/999 \\
+post T023 baseline & 630 & 132 & 3.1429 & [1.0122, 5.8411] & -- & 51.9200 & -- & -51.9200 & 0 & 999/999 \\
+post Chetty net (main) & 630 & 132 & 3.7630 & [1.5964, 6.1461] & 63.8353 & 50.1446 & 13.6907 & 0.0000 & 19 & 999/999 \\
+post Chetty, $B$ below 0.70 only (secondary) & 630 & 132 & 3.1445 & [1.1914, 5.2867] & 68.2360 & 51.9355 & 16.3005 & -16.3005 & 10 & 999/999 \\
+post Boundary: literal $s$ & 630 & 132 & 1.0302 & [0.2045, 1.9072]$^{\dagger}$ & 0.0000 & 24.1672 & -24.1672 & 236.4523 & 25 & 982/999 \\
+post Boundary: normalized & 630 & 132 & -- & [--, --] & 58.6260 & 56.8062 & 1.8199 & 0.0000 & 0 & 2/999 \\
+post minus pre: Chetty net, $\Delta b_{net}$ & 797/630 & 136 & 3.5626 & [0.7492, 6.4921] & -- & -- & -- & -- & -- & 999/999 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample. Pre: 2017H1--2019H2; post: 2020H2--2022H2. Seed 20261016; 999 whole-firm draws, complete re-estimation, pointwise percentile intervals. Invalid draws are counted without replacement; fewer than 90 percent valid draws is unreliable. Smooth density and stable reporting selection are assumptions. Descriptive, no causal or evasion inference. Degree five; integration rows exclude [0.66,0.74), the T023 baseline only [0.66,0.70). T023 baseline rows show -- for $B_{net}$ and [0.70,0.74): their fit does not exclude [0.70,0.74), so these columns are not comparable with the integration rows (values in CSV). $B_{net}$ = observed minus fitted counts over [0.66,0.74) = Below 0.70 (over [0.66,0.70)) + [0.70,0.74) (observed minus fitted there; negative = missing mass above 0.70). Mass resid. = full-grid fitted minus observed total over [0.40,1.00], shown for every row. Decomposition and residual are the final values of each search, also where the point estimate is unavailable. Chetty net (main; textbook Chetty et al. 2011): counts in bins at or above 0.74 are multiplied by 1 + $B_{net}$ / (their sum), the polynomial is refitted and $B_{net}$ recomputed until it changes by less than 1e-6 (at most 200 iterations); no free scale, no renormalization. Its mass residual is zero by an OLS identity (asserted). $b_{net}$ = $B_{net}$ divided by the mean fitted count per bin in [0.66,0.70), the T023 normalization of b. $\Delta b_{net}$ = post minus pre $b_{net}$, joint firm bootstrap as in the change table (same firm draw in both periods); N pre/post, firms = union. Share of valid draws with $\Delta b_{net} > 0$ in CSV; not a p-value. Secondary (rework 2): same fixed point with $B$ measured on [0.66,0.70) only, b = that $B$ over the same denominator; its mass residual equals minus the [0.70,0.74) column (observed minus fitted there) by the same identity. Boundary cases (appendix): literal $s$ multiplies all counts at or above 0.70 by 1+s with free s chosen so that local excess equals local missing; normalized additionally rescales each fitted full grid to the observed total. Neither case conserves mass in the sense of the fixed point: literal $s$ leaves the full-grid residual shown; normalized forces it to zero only by rescaling the left side. Boundary tolerance 1e-8 times max(1, local observed count); upward bracket at most 2 to the power 20, at most 200 bisections. No clipping or forced result. $\dagger$: interval conditional on valid bootstrap draws only (see Valid draws); conditioning can narrow it. Unavailable estimates and nonconvergence are shown as --; CSVs retain reasons, starting fits, scales, traces and all draws. pre: T023\_baseline: unconstrained; pre: chetty\_net: converged; pre: chetty\_below\_only: converged; pre: boundary\_literal\_s: negative\_excess\_or\_missing\_mass; pre: boundary\_normalized: negative\_excess\_or\_missing\_mass; post: T023\_baseline: unconstrained; post: chetty\_net: converged; post: chetty\_below\_only: converged; post: boundary\_literal\_s: balanced; post: boundary\_normalized: no\_upward\_bracket; post\_minus\_pre: chetty\_net: joint\_difference
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

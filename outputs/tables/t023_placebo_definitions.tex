@@ -1,0 +1,22 @@
+\begin{threeparttable}
+\begin{tabular}{llrrrr}
+\toprule
+Definition & Period & N & Below & Above & 95\% CI for change \\
+\midrule
+rl1 & pre & 711 & 0.0464 & 0.0661 & -- \\
+rl1 & post & 599 & 0.1302 & 0.0885 & -- \\
+rl1\_alt & pre & 711 & 0.0478 & 0.0506 & -- \\
+rl1\_alt & post & 599 & 0.0668 & 0.0584 & -- \\
+rl1 minus rl1\_alt & Change & -- & 0.0648 & -- & [0.0174, 0.1153] \\
+rl2 & pre & 132 & 0.0455 & 0.0152 & -- \\
+rl2 & post & 99 & 0.0505 & 0.0404 & -- \\
+rl2\_adj & pre & 132 & 0.0303 & 0.0227 & -- \\
+rl2\_adj & post & 99 & 0.0404 & 0.0202 & -- \\
+rl2 minus rl2\_adj & Change & -- & -0.0051 & -- & [--, --] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Main sample. Pre: 2017H1--2019H2; post: 2020H2--2022H2. Bins include the lower edge and exclude the upper edge. RL1 comparison requires observed positive advances and both definitions; RL1 cutoff 0.70, alternative cutoff 0.533500, width 0.02. The alternative cutoff is the type-7 pre-period quantile at the RL1 percentile of 0.70 (rank 0.483826; N = 711). This is a descriptive distribution-position comparison, not an economic-leverage test. Its intervals condition on the fixed estimated cutoff. RL2 comparison requires an observed perpetual item and both ratios; cutoff 1.00, width 0.05. Zero-imputed perpetuals are excluded. RL2 has 33 pre-period and 26 post-period firms. No RL2 inference is shown unless each period has at least 30 firms; the CSV gives coverage exclusions. Change is the regulated post minus pre share change minus the alternative change. Firms are resampled jointly (999 draws). Reference counts on the unrestricted main sample are provided separately in the CSV. All intervals are pointwise; no multiple-testing adjustment.
+\end{tablenotes}
+\end{threeparttable}

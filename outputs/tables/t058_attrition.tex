@@ -1,0 +1,81 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{5.7cm}rrrrrl}
+\toprule
+Cell / statistic / period & N & Firms & Window N (firms) & Estimate & 95\% CI & S \\
+\midrule
+all / all / b / pre & 797 & 136 & 67 (35) & -0.877 & [-1.850, 0.428] &  \\
+all / all / b / post & 630 & 132 & 118 (43) & 3.143 & [1.012, 5.841] &  \\
+all / all / delta b / post minus pre & 630/797 & 132/136 & 118/67 (43/35) & 4.020 & [1.671, 6.797] &  \\
+balanced 13 dates / all / b / pre & 690 & 115 & 66 (34) & -0.662 & [-1.726, 0.786] &  \\
+balanced 13 dates / all / b / post & 575 & 115 & 109 (40) & 3.244 & [0.960, 6.189] &  \\
+balanced 13 dates / all / delta b / post minus pre & 575/690 & 115/115 & 109/66 (40/34) & 3.906 & [1.628, 6.985] &  \\
+balanced main 11 dates / all / b / pre & 690 & 115 & 66 (34) & -0.662 & [-1.726, 0.786] &  \\
+balanced main 11 dates / all / b / post & 575 & 115 & 109 (40) & 3.244 & [0.960, 6.189] &  \\
+balanced main 11 dates / all / delta b / post minus pre & 575/690 & 115/115 & 109/66 (40/34) & 3.906 & [1.628, 6.985] &  \\
+last observation distribution / exiting after 2021h1 / bin share / 0.4 0.45 & 10 & 10 & 0 (0) & 0.000 & [0.000, 0.000] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.45 0.5 & 10 & 10 & 0 (0) & 0.000 & [0.000, 0.000] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.5 0.55 & 10 & 10 & 0 (0) & 0.000 & [0.000, 0.000] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.55 0.6 & 10 & 10 & 1 (1) & 0.100 & [0.000, 0.333] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.6 0.65 & 10 & 10 & 0 (0) & 0.000 & [0.000, 0.000] & S \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; pre 2017H1--2019H2, post 2020H2--2022H2 unless labeled. 999 joint whole-firm draws of the 136-firm universe, seed 20261016; density and statistics re-estimated each draw. Pointwise percentile CIs condition on valid draws; below 90 percent valid is unreliable. b is excess / mean fitted mass-bin count, degree 5, 0.01 bins over [0.40,1.00], excluding [0.66,0.70). All cells are descriptive; S flags fewer than 15 firms in the window. Smooth density and reporting comparability are assumptions. Contrasts list first/benchmark populations; delta rows list post/pre. Window counts are the respective histogram bin for bin-share rows, otherwise [0.66,0.70). Balanced means finite RL1 at each of 13 dates, or each of 11 pre/post dates excluding 2016H2 and 2020H1. Exiting: last financial row on or after 2021H1 and before 2022H2; continuing: financial row at 2022H2; last finite RL1 used. Earlier exits excluded from distribution comparison. Histogram shares include out-of-range ratios in denominator. Fisher exact two-sided test for equal near-threshold shares in CSV. LOCF fills only terminal exit dates through 2022H2, never internal gaps; a sensitivity scenario, not an identified numerical bound.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{5.7cm}rrrrrl}
+\toprule
+Cell / statistic / period & N & Firms & Window N (firms) & Estimate & 95\% CI & S \\
+\midrule
+last observation distribution / exiting after 2021h1 / bin share / 0.65 0.7 & 10 & 10 & 2 (2) & 0.200 & [0.000, 0.500] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.7 0.75 & 10 & 10 & 3 (3) & 0.300 & [0.000, 0.600] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.75 0.8 & 10 & 10 & 1 (1) & 0.100 & [0.000, 0.333] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.8 0.85 & 10 & 10 & 0 (0) & 0.000 & [0.000, 0.000] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.85 0.9 & 10 & 10 & 1 (1) & 0.100 & [0.000, 0.333] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.9 0.95 & 10 & 10 & 1 (1) & 0.100 & [0.000, 0.333] & S \\
+last observation distribution / exiting after 2021h1 / bin share / 0.95 1 & 10 & 10 & 0 (0) & 0.000 & [0.000, 0.000] & S \\
+last observation distribution / continuing / bin share / 0.4 0.45 & 120 & 120 & 2 (2) & 0.017 & [0.000, 0.042] & S \\
+last observation distribution / continuing / bin share / 0.45 0.5 & 120 & 120 & 4 (4) & 0.033 & [0.008, 0.067] & S \\
+last observation distribution / continuing / bin share / 0.5 0.55 & 120 & 120 & 2 (2) & 0.017 & [0.000, 0.048] & S \\
+last observation distribution / continuing / bin share / 0.55 0.6 & 120 & 120 & 3 (3) & 0.025 & [0.000, 0.053] & S \\
+last observation distribution / continuing / bin share / 0.6 0.65 & 120 & 120 & 10 (10) & 0.083 & [0.041, 0.136] & S \\
+last observation distribution / continuing / bin share / 0.65 0.7 & 120 & 120 & 25 (25) & 0.208 & [0.138, 0.282] &  \\
+last observation distribution / continuing / bin share / 0.7 0.75 & 120 & 120 & 18 (18) & 0.150 & [0.090, 0.217] &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; pre 2017H1--2019H2, post 2020H2--2022H2 unless labeled. 999 joint whole-firm draws of the 136-firm universe, seed 20261016; density and statistics re-estimated each draw. Pointwise percentile CIs condition on valid draws; below 90 percent valid is unreliable. b is excess / mean fitted mass-bin count, degree 5, 0.01 bins over [0.40,1.00], excluding [0.66,0.70). All cells are descriptive; S flags fewer than 15 firms in the window. Smooth density and reporting comparability are assumptions. Contrasts list first/benchmark populations; delta rows list post/pre. Window counts are the respective histogram bin for bin-share rows, otherwise [0.66,0.70). Balanced means finite RL1 at each of 13 dates, or each of 11 pre/post dates excluding 2016H2 and 2020H1. Exiting: last financial row on or after 2021H1 and before 2022H2; continuing: financial row at 2022H2; last finite RL1 used. Earlier exits excluded from distribution comparison. Histogram shares include out-of-range ratios in denominator. Fisher exact two-sided test for equal near-threshold shares in CSV. LOCF fills only terminal exit dates through 2022H2, never internal gaps; a sensitivity scenario, not an identified numerical bound.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{5.7cm}rrrrrl}
+\toprule
+Cell / statistic / period & N & Firms & Window N (firms) & Estimate & 95\% CI & S \\
+\midrule
+last observation distribution / continuing / bin share / 0.75 0.8 & 120 & 120 & 10 (10) & 0.083 & [0.034, 0.138] & S \\
+last observation distribution / continuing / bin share / 0.8 0.85 & 120 & 120 & 14 (14) & 0.117 & [0.061, 0.183] & S \\
+last observation distribution / continuing / bin share / 0.85 0.9 & 120 & 120 & 6 (6) & 0.050 & [0.016, 0.091] & S \\
+last observation distribution / continuing / bin share / 0.9 0.95 & 120 & 120 & 3 (3) & 0.025 & [0.000, 0.057] & S \\
+last observation distribution / continuing / bin share / 0.95 1 & 120 & 120 & 5 (5) & 0.042 & [0.009, 0.080] & S \\
+equal near threshold share / exiting / share below / last observed RL1 & 10 & 10 & 1 (1) & 0.100 & [0.000, 0.364] & S \\
+equal near threshold share / continuing / share below / last observed RL1 & 120 & 120 & 21 (21) & 0.175 & [0.110, 0.242] &  \\
+equal near threshold share / exiting minus continuing / share below / last observed RL1 & 10/120 & 10/120 & 1/21 (1/21) & -0.075 & [-0.227, 0.188] & S \\
+terminal exit LOCF / all / b / pre & 797 & 136 & 67 (35) & -0.877 & [-1.850, 0.428] &  \\
+terminal exit LOCF / all / b / post & 652 & 132 & 121 (43) & 3.115 & [0.911, 5.841] &  \\
+terminal exit LOCF / all / delta b / post minus pre & 652/797 & 132/136 & 121/67 (43/35) & 3.992 & [1.738, 6.811] &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; pre 2017H1--2019H2, post 2020H2--2022H2 unless labeled. 999 joint whole-firm draws of the 136-firm universe, seed 20261016; density and statistics re-estimated each draw. Pointwise percentile CIs condition on valid draws; below 90 percent valid is unreliable. b is excess / mean fitted mass-bin count, degree 5, 0.01 bins over [0.40,1.00], excluding [0.66,0.70). All cells are descriptive; S flags fewer than 15 firms in the window. Smooth density and reporting comparability are assumptions. Contrasts list first/benchmark populations; delta rows list post/pre. Window counts are the respective histogram bin for bin-share rows, otherwise [0.66,0.70). Balanced means finite RL1 at each of 13 dates, or each of 11 pre/post dates excluding 2016H2 and 2020H1. Exiting: last financial row on or after 2021H1 and before 2022H2; continuing: financial row at 2022H2; last finite RL1 used. Earlier exits excluded from distribution comparison. Histogram shares include out-of-range ratios in denominator. Fisher exact two-sided test for equal near-threshold shares in CSV. LOCF fills only terminal exit dates through 2022H2, never internal gaps; a sensitivity scenario, not an identified numerical bound.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

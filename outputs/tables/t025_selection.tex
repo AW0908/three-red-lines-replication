@@ -1,0 +1,53 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Attrition checks for the dose by post estimates}
+\label{tab:selection}
+\begin{tabular}{lrrrr}
+\toprule
+Outcome & Baseline & Heckman & IPW & S6 \\
+\midrule
+rl1 & -0.014909 & -0.021908 & -0.015182 & -0.009773 \\
+SE & (0.010068) & (0.011558) & (0.010368) & (0.011025) \\
+95 percent CI low & -0.034838 & -0.042059 & -0.033733 & -0.031638 \\
+95 percent CI high & 0.005019 & 0.003919 & 0.007292 & 0.012093 \\
+N / Firms & 1544/124 & 1544/124 & 1544/124 & 1352/104 \\
+Draws valid / failed & -- & 499/0 & 499/0 & -- \\
+rl2 & -0.283814 & -0.627567 & -0.335486 & -0.106813 \\
+SE & (0.144772) & (0.495222) & (0.163385) & (0.139802) \\
+95 percent CI low & -0.570381 & -1.852188 & -0.681991 & -0.384077 \\
+95 percent CI high & 0.002754 & 0.061408 & -0.053441 & 0.170451 \\
+N / Firms & 1523/124 & 1523/124 & 1523/124 & 1338/104 \\
+Draws valid / failed & -- & 499/0 & 499/0 & -- \\
+mi\_share & 0.021017 & 0.003618 & 0.019764 & 0.017620 \\
+SE & (0.014713) & -- & (0.016367) & (0.015807) \\
+95 percent CI low & -0.008112 & -- & -0.014552 & -0.013729 \\
+95 percent CI high & 0.050146 & -- & 0.050227 & 0.048970 \\
+N / Firms & 1484/122 & 1484/122 & 1484/122 & 1331/104 \\
+Draws valid / failed & -- & 390/109 & 499/0 & -- \\
+rl2\_gap & 0.010768 & 0.011649 & 0.010130 & 0.013697 \\
+SE & (0.035232) & (0.036548) & (0.032382) & (0.042417) \\
+95 percent CI low & -0.058971 & -0.042454 & -0.036710 & -0.070427 \\
+95 percent CI high & 0.080507 & 0.085104 & 0.080784 & 0.097821 \\
+N / Firms & 1523/124 & 1523/124 & 1523/124 & 1338/104 \\
+Draws valid / failed & -- & 499/0 & 499/0 & -- \\
+jv\_ta & 0.002506 & 0.002308 & 0.002735 & 0.001389 \\
+SE & (0.003132) & -- & (0.003104) & (0.003242) \\
+95 percent CI low & -0.003708 & -- & -0.003431 & -0.005052 \\
+95 percent CI high & 0.008720 & -- & 0.008229 & 0.007830 \\
+N / Firms & 1225/101 & 1225/101 & 1225/101 & 1156/92 \\
+Draws valid / failed & -- & 427/72 & 499/0 & -- \\
+\midrule
+\multicolumn{5}{l}{Pooled probit exclusion diagnostic} \\
+Outcome & Z coefficient & Cluster SE & z & p \\
+rl1 & -1.683009 & 1.227606 & -1.370969 & 0.170385 \\
+rl2 & -1.541050 & 1.281339 & -1.202687 & 0.229097 \\
+mi\_share & -1.300683 & 1.265272 & -1.027986 & 0.303956 \\
+rl2\_gap & -1.393303 & 1.011989 & -1.376796 & 0.168575 \\
+jv\_ta & -1.180445 & 1.404358 & -0.840559 & 0.400595 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\par\smallskip
+\noindent\begin{minipage}{\linewidth}\footnotesize
+Primary attrition checks are IPW and Lee bounds; Heckman is an instructor-suggested complement. Dose is mean breaches over 2017H1--2019H2. All DiD models use firm and date fixed effects and require parallel trends absent the policy. Baseline reproduces T009 within 1e-12. Heckman and IPW retain exactly the baseline outcome observations, including FE singleton removal. S6 restricts to firms with a financial source row on all 13 dates; outcome-specific missing items remain excluded. Selection risk set: 124 main-sample firms with defined dose, each at all 13 dates; selection means the outcome is observed. Only the five post dates (2020H2--2022H2) enter the pooled probit and logit. Pre characteristics use 2016H2--2019H2 only. Missing pre-outcome means are set to zero with an outcome-specific missing indicator in both selection models. Outcomes are never imputed. Two firms for minority share and 22 for JV/TA lack pre means, affecting respectively two and two observed post rows. Other outcomes have none. Probit controls: dose, pre-outcome mean, pre-log-assets mean, market, date dummies, reporting frequency Z and the missing indicator when relevant. Z is the share of the seven pre dates with nonmissing total assets; only seven firms have Z below one. Nonmissing assets proxy balance-sheet filing. The exclusion requires pre reporting frequency to affect post observation but not conditional outcome innovations. Reporting frequency may proxy governance, distress or reporting quality, so this restriction is weak. Heckman is identified mainly by functional form (weak exclusion restriction). Z is negative and not significant; no substantive interpretation is attached to its sign. A single inverse Mills ratio enters the outcome model; it equals zero on every non-post row, including 2020H1. Numerical fitted probabilities of zero or one do not stop estimation. Heckman and IPW SEs and percentile intervals use 499 whole-firm bootstrap draws of both stages, seed 20261016. Baseline and S6 use firm-clustered SEs and cluster-t intervals. IPW firm-clustered SEs conditional on fitted weights are separately recorded in the CSV. A Heckman draw fails if its pooled probit does not converge or a present missing-indicator group has no observed post row. Failed draws are counted per outcome, excluded only from that outcome and never replaced. Above 10 percent failures, Heckman SE and CI are suppressed as bootstrap unstable (separation). IPW and Lee run on all 499 draws independently of Heckman failures. Lambda is a nonlinear function of firm-constant regressors including dose, and is close to collinear with dose by post after fixed effects. Heckman shifts indicate fragility, not evidence of attrition bias. IPW logit uses dose, pre-outcome mean, pre-log-assets mean, market and the missing indicator, plus reporting at 2020H1 in place of unavailable dated listing status. This last pre-announcement indicator is defined by nonmissing assets; present listing status is not used. IPW uses inverse fitted post observation probabilities, clipped at type-7 1st and 99th percentiles among observed post rows. IPW reweights rows within firms: pre rows have weight one and observed post rows have truncated inverse-probability weights. IPW requires observation to be independent of outcome innovations conditional on these pre characteristics and positive observation probabilities. Neither IPW nor Heckman removes unobserved selection without its assumptions. Outcome missingness mixes firm attrition, missing items and invalid equity denominators. JV/TA in particular includes firms that never report the item. Cross-market log assets retain unresolved reporting-currency differences.
+\end{minipage}

@@ -1,0 +1,21 @@
+{
+  "privacy_and_secrets_findings": 0,
+  "source_inputs_checked": 985,
+  "source_inputs_changed": [],
+  "source_Wind_files_matched": 0,
+  "Wind_extract_name_matches_in_data": 0,
+  "public_panel_rows": 1880,
+  "public_panel_firms": 150,
+  "public_panel_columns": 77,
+  "removed_firms": 34,
+  "removed_columns": 12,
+  "output_inventory_files": 411,
+  "outputs_withheld": 89,
+  "outputs_included": 322,
+  "raw_inputs_withheld": 1,
+  "outputs_rechecked": 322,
+  "removed_ID_matches_in_included_outputs": 0,
+  "Wind_extract_name_references_in_column_provenance": "Allowed source filenames in REMOVED_COLUMNS.csv only; no Wind values",
+  "oversize_original_output": "t066_rework1_old_new.csv is withheld: mixed firm-specific old/new values; no split/compressed copy required",
+  "manifest_convention": "All payload files except MANIFEST itself; excludes .git transport metadata; withheld files are explicit status=withheld rows with source hashes, not payload."
+}

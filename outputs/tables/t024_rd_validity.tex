@@ -1,0 +1,53 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{RL1 RD validity checks}
+\label{tab:t024_rd_validity}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Test & Cutoff & BC & Robust 95\% CI & p & N left & N right \\
+\midrule
+Density (jackknife) & 0.0000 & -2.8325 & [-7.3405, 1.6755] & 0.2181 & 31 & 45 \\
+Pre-policy RL1 change & 0.0000 & 0.0029 & [-0.1404, 0.1463] & 0.9683 & 28 & 45 \\
+HK listing & 0.0000 & 0.3157 & [-0.4522, 1.0836] & 0.4204 & 28 & 45 \\
+Later-delisted register flag & 0.0000 & 0.4680 & [-0.0779, 1.0138] & 0.0929 & 28 & 45 \\
+Log assets (A-shares) & 0.0000 & -0.3583 & [-2.1648, 1.4482] & 0.6975 & 22 & 23 \\
+Minority share 2019 & 0.0000 & 0.0554 & [-0.2549, 0.3657] & 0.7264 & 28 & 45 \\
+Placebo cutoff: RL1 change & -0.1000 & 0.0356 & [-0.0774, 0.1485] & 0.5372 & 15 & 28 \\
+Placebo cutoff: RL1 change & -0.0500 & 0.0085 & [-0.1955, 0.2126] & 0.9346 & 26 & 14 \\
+Placebo cutoff: RL1 change & 0.0500 & -0.0608 & [-0.1211, -0.0005] & 0.0481 & 24 & 36 \\
+Placebo cutoff: RL1 change & 0.1000 & 0.0246 & [-0.0981, 0.1474] & 0.6939 & 44 & 22 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+RD rows use local linear triangular fits with h = b = 0.10 and robust bias-corrected 95\% CIs; counts are effective N. Density uses all 135 end-2019 RL1 observations, local quadratic density with cubic bias correction, jackknife SE and package-selected bandwidths. Pre-policy RL1 change is end-2019 minus end-2017; its baseline construction can induce mean reversion. Later-delisted is the panel register indicator; the panel supplies no delisting date. It is a post-treatment diagnostic, not a predetermined covariate. Log assets uses A-shares only; minority share is end-2019. Negative placebo cutoffs use only x \textless{} 0, positive cutoffs only x \textgreater{} 0; nominal h = b = 0.10 windows are truncated at zero, including bias estimation. All requested checks are reported whether their CIs contain zero or not. Unadjusted multiple tests and low power limit interpretation; non-rejection does not establish validity.
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Supplementary exact binomial density checks}
+\label{tab:t024_rd_binomial}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Window & Width left & Width right & N left & N right & p \\
+\midrule
+1 & 0.0754 & 0.0754 & 20 & 35 & 0.0581 \\
+2 & 0.0793 & 0.0781 & 20 & 36 & 0.0440 \\
+3 & 0.0832 & 0.0808 & 21 & 38 & 0.0363 \\
+4 & 0.0872 & 0.0835 & 22 & 39 & 0.0396 \\
+5 & 0.0911 & 0.0862 & 23 & 40 & 0.0430 \\
+6 & 0.0950 & 0.0889 & 25 & 40 & 0.0817 \\
+7 & 0.0989 & 0.0916 & 27 & 41 & 0.1143 \\
+8 & 0.1028 & 0.0943 & 28 & 42 & 0.1196 \\
+9 & 0.1067 & 0.0970 & 30 & 44 & 0.1302 \\
+10 & 0.1107 & 0.0998 & 31 & 45 & 0.1354 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+All ten default rddensity windows are shown; null probability on each side is 0.5. Exact binomial tests supplement the primary robust density test; p-values are unadjusted across overlapping windows.
+\end{minipage}
+\end{table}

@@ -1,0 +1,263 @@
+T025 COMPLETE: approved third-ESCALATE bootstrap rule implemented.
+Prescribed command: cd replication && Rscript run_all.R
+Executed twice on the final code in isolated full-package copies:
+/tmp/t025_final_check/run1 and /tmp/t025_final_check/run2; both exit 0.
+Only T025 analysis outputs were copied back; original non-T025 outputs and inputs were never regenerated in place.
+11/11 generated T025 CSV/TEX artifacts byte-identical across both full builds and delivered workspace.
+83/83 pre-existing non-T025 outputs byte-identical before/after in workspace and both full builds.
+The step-09 log counts 82 non-hidden protected outputs; the external manifest additionally covers outputs/.DS_Store.
+6/6 card/estimation inputs unchanged in workspace and both full builds, including state/STATE.md.
+T009 baseline: every numeric column asserted within 1e-12; maximum deviation 2.2204460492503099e-15.
+S6: all five coefficients, clustered SEs, N and firm counts independently compared with T011 within 1e-12.
+Second-stage observation keys: Heckman and IPW asserted identical to baseline; no outcome imputation.
+All original-sample pooled-post probits and IPW logits converge. Selection risk set 124 x 13; post 620 rows.
+Z<1 for 7 firms; Z negative and not significant (p 0.1686--0.4006); identified mainly by functional form (weak exclusion restriction).
+Pre means missing for mi_share: 2 firms / 2 observed post rows; jv_ta: 22 firms / 2 observed post rows.
+IPW substitutes reported_2020h1 for unavailable dated listing status, as approved.
+All 499 firm resamples shared across outcomes and methods, seed 20261016; duplicated firms have distinct FE IDs.
+Heckman valid/failed: rl1 499/0; rl2 499/0; mi_share 390/109; rl2_gap 499/0; jv_ta 427/72.
+109/499 (21.84%) and 72/499 (14.43%) exceed 10%: mi_share and jv_ta Heckman SE/CI are NA in CSV and -- in TEX, bootstrap unstable (separation).
+All 181 failed Heckman draws were independently reconstructed from the seeded firm draws and missing-indicator data. Numerical nonconvergence adds 0 draws.
+Failures are excluded only from the affected Heckman outcome; no draws replaced; point estimates retained.
+IPW and Lee each run on all 499 draws for all 5 outcomes, regardless of Heckman failures.
+IPW SE/CI resample both selection and weighted outcome stages. Conditional firm-clustered IPW SEs also recorded.
+Non-post lambda=0 and IPW weight=1 checked independently over all 8060 risk-audit rows.
+2495 bootstrap outcome-draw rows, 20 selection rows, 5 Lee rows; all shifts independently recomputed.
+Heckman shifts: RL2 -2.374 baseline SE; mi_share -1.182; RL1 -0.695. Near collinearity of lambda with dose x post makes these fragility, not evidence of attrition bias.
+IPW shifts at most 0.357 baseline SE (RL2); S6 largest shift +1.223 baseline SE (RL2).
+IPW reweights within firms (pre weight 1, observed post inverse-probability weight clipped at the observed-post 1st/99th percentiles).
+IPW requires conditional independence of observation and outcome innovations, positivity and parallel dose trends.
+Lee: high dose >=2, low dose <1; available post minus available 2016H2--2019H2 means; selected means >=1 post observation given >=1 pre observation.
+Lee limits: unequal reporting horizons miss late attrition; monotone individual selection and exogenous comparison/parallel change trends are unverified.
+Lee contrasts are binary high-minus-low changes, not per-unit continuous-dose effects. Endpoint percentile intervals and outer envelope are not an exact joint confidence set.
+pdflatex: both generated tables compile with booktabs and 1-inch margins; selection 2 pages, Lee 1 page; no overfull/underfull boxes or unescaped text characters.
+Both entry points register 09 immediately after 08. Bash syntax checked separately.
+Superseded incomplete/partial/stop diagnostics removed. No network requests or package installation performed.
+AI-use log suggestion for Co-PI after delivery: Codex implemented T025 selection corrections and bootstrap failure rules; checked two full builds, hashes, independent draw/sample audits and LaTeX compilation.
+
+Independent checks:
+T011 fields: ['spec', 'outcome', 'outcome_variable', 'treatment', 'coefficient', 'std_error', 'ci_lower', 'ci_upper', 'p_value', 'N', 'n_firms', 'pretrend_p', 'pretrend_p_before_2019', 'pretrend_df', 'pretrend_df_before_2019', 'n_winsorised', 'status']
+Identical T025 artifacts: 11
+Protected outputs byte-identical in workspace and both full builds: 83
+Inputs unchanged in workspace and both full builds: 6
+Rows: selection=20, bootstrap=2495, Lee=5, risk audit=8060
+rl1 Heckman beta=-0.0219076031162696 SE=0.011558068904462 shift=-0.695111996124369 valid=499 failed=0
+rl1 IPW beta=-0.01518179660902 SE=0.0103679054522883 shift=-0.027062392283769 valid=499 failed=0
+rl1 S6 beta=-0.0097726526587748 SE=0.0110250412549116 shift=0.510207966175561 valid=0 failed=0
+rl2 Heckman beta=-0.627567076205862 SE=0.495221704522204 shift=-2.37444432387435 valid=499 failed=0
+rl2 IPW beta=-0.335485716408349 SE=0.16338532239456 shift=-0.356919495041695 valid=499 failed=0
+rl2 S6 beta=-0.106812928256648 SE=0.13980203066779 shift=1.222616522232 valid=0 failed=0
+mi_share Heckman beta=0.00361837303947151 SE=NA shift=-1.18248434071504 valid=390 failed=109
+mi_share IPW beta=0.0197636184375993 SE=0.0163670837311159 shift=-0.0851685342101326 valid=499 failed=0
+mi_share S6 beta=0.0176203180439459 SE=0.015807033782253 shift=-0.230838503420812 valid=0 failed=0
+rl2_gap Heckman beta=0.0116494199274253 SE=0.0365482002558264 shift=0.0250184243334389 valid=499 failed=0
+rl2_gap IPW beta=0.010129884323279 SE=0.0323817827162282 shift=-0.0181113695043718 valid=499 failed=0
+rl2_gap S6 beta=0.0136966577975162 SE=0.0424168641201692 shift=0.083126274543102 valid=0 failed=0
+jv_ta Heckman beta=0.00230807241606741 SE=NA shift=-0.0631642245862215 valid=427 failed=72
+jv_ta IPW beta=0.00273488024942288 SE=0.00310390317272678 shift=0.0731052641093891 valid=499 failed=0
+jv_ta S6 beta=0.00138927039469225 SE=0.00324248873158436 shift=-0.356515639158339 valid=0 failed=0
+Lee intervals:
+rl1 -0.0569562595143377 -0.0413492432786729 -0.109342619014673 0.0120190517110939
+rl2 -0.813827029600002 -0.765260403926887 -1.44893937759308 -0.188337518454273
+mi_share 0.06393370484194 0.0808969474623722 0.0114780446086089 0.136830086200205
+rl2_gap 0.0132883179411581 0.034491437337054 -0.0886387161030885 0.16543992966799
+jv_ta -0.000818615957441846 -0.000100654437678562 -0.0236161048162949 0.0224037578890458
+
+rl1 : independently reconstructed separated draws = 0 ; numerical nonconvergence = 0 
+rl2 : independently reconstructed separated draws = 0 ; numerical nonconvergence = 0 
+mi_share : independently reconstructed separated draws = 109 ; numerical nonconvergence = 0 
+rl2_gap : independently reconstructed separated draws = 0 ; numerical nonconvergence = 0 
+jv_ta : independently reconstructed separated draws = 72 ; numerical nonconvergence = 0 
+All 2495 outcome-draw separation decisions independently reproduced.
+
+Final full pipeline run1 log tail:
+      rl2       S6 -0.1068129282566478849 0.1398020306677904556  1.222616522231997349
+ mi_share baseline  0.0210167370720617148 0.0147133990984350139  0.000000000000000000
+ mi_share  Heckman  0.0036183730394715066                    NA -1.182484340715041160
+ mi_share      IPW  0.0197636184375993181 0.0163670837311159049 -0.085168534210132610
+ mi_share       S6  0.0176203180439458568 0.0158070337822530001 -0.230838503420811664
+  rl2_gap baseline  0.0107679785118400435 0.0352316918059112083  0.000000000000000000
+  rl2_gap  Heckman  0.0116494199274252714 0.0365482002558264393  0.025018424333438871
+  rl2_gap      IPW  0.0101298843232790377 0.0323817827162282412 -0.018111369504371793
+  rl2_gap       S6  0.0136966577975161756 0.0424168641201691649  0.083126274543101994
+    jv_ta baseline  0.0025059082346301641 0.0031320865546714096  0.000000000000000000
+    jv_ta  Heckman  0.0023080724160674145                    NA -0.063164224586221507
+    jv_ta      IPW  0.0027348802494228841 0.0031039031727267794  0.073105264109389126
+    jv_ta       S6  0.0013892703946922467 0.0032424887315843647 -0.356515639158338948
+T025 Lee bounds (binary high-minus-low changes):
+  outcome                   lower                   upper        outer_ci_lower        outer_ci_upper valid_draws
+      rl1 -0.05695625951433769957 -0.04134924327867289806 -0.109342619014672821  0.012019051711093909         499
+      rl2 -0.81382702960000186110 -0.76526040392688687852 -1.448939377593082334 -0.188337518454273489         499
+ mi_share  0.06393370484194001169  0.08089694746237224843  0.011478044608608858  0.136830086200205481         499
+  rl2_gap  0.01328831794115811413  0.03449143733705396786 -0.088638716103088516  0.165439929667989566         499
+    jv_ta -0.00081861595744184626 -0.00010065443767856216 -0.023616104816294944  0.022403757889045806         499
+T025 bootstrap counts (failed Heckman draws never replaced):
+  outcome  method bootstrap_valid bootstrap_failed                                                                 inference_status
+      rl1 Heckman             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+      rl1     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+      rl2 Heckman             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+      rl2     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+ mi_share Heckman             390              109                                                  bootstrap unstable (separation)
+ mi_share     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+  rl2_gap Heckman             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+  rl2_gap     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+    jv_ta Heckman             427               72                                                  bootstrap unstable (separation)
+    jv_ta     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+T025 completed: 5 outcomes; 499 seeded whole-firm draws; failed Heckman draws counted; 82 existing outputs unchanged.
+09_selection.R: exit 0, 40.19 seconds
+Done: outputs/ rebuilt. Total elapsed: 53.65 seconds.
+
+Final full pipeline run2 log tail:
+      rl2       S6 -0.1068129282566478849 0.1398020306677904556  1.222616522231997349
+ mi_share baseline  0.0210167370720617148 0.0147133990984350139  0.000000000000000000
+ mi_share  Heckman  0.0036183730394715066                    NA -1.182484340715041160
+ mi_share      IPW  0.0197636184375993181 0.0163670837311159049 -0.085168534210132610
+ mi_share       S6  0.0176203180439458568 0.0158070337822530001 -0.230838503420811664
+  rl2_gap baseline  0.0107679785118400435 0.0352316918059112083  0.000000000000000000
+  rl2_gap  Heckman  0.0116494199274252714 0.0365482002558264393  0.025018424333438871
+  rl2_gap      IPW  0.0101298843232790377 0.0323817827162282412 -0.018111369504371793
+  rl2_gap       S6  0.0136966577975161756 0.0424168641201691649  0.083126274543101994
+    jv_ta baseline  0.0025059082346301641 0.0031320865546714096  0.000000000000000000
+    jv_ta  Heckman  0.0023080724160674145                    NA -0.063164224586221507
+    jv_ta      IPW  0.0027348802494228841 0.0031039031727267794  0.073105264109389126
+    jv_ta       S6  0.0013892703946922467 0.0032424887315843647 -0.356515639158338948
+T025 Lee bounds (binary high-minus-low changes):
+  outcome                   lower                   upper        outer_ci_lower        outer_ci_upper valid_draws
+      rl1 -0.05695625951433769957 -0.04134924327867289806 -0.109342619014672821  0.012019051711093909         499
+      rl2 -0.81382702960000186110 -0.76526040392688687852 -1.448939377593082334 -0.188337518454273489         499
+ mi_share  0.06393370484194001169  0.08089694746237224843  0.011478044608608858  0.136830086200205481         499
+  rl2_gap  0.01328831794115811413  0.03449143733705396786 -0.088638716103088516  0.165439929667989566         499
+    jv_ta -0.00081861595744184626 -0.00010065443767856216 -0.023616104816294944  0.022403757889045806         499
+T025 bootstrap counts (failed Heckman draws never replaced):
+  outcome  method bootstrap_valid bootstrap_failed                                                                 inference_status
+      rl1 Heckman             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+      rl1     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+      rl2 Heckman             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+      rl2     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+ mi_share Heckman             390              109                                                  bootstrap unstable (separation)
+ mi_share     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+  rl2_gap Heckman             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+  rl2_gap     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+    jv_ta Heckman             427               72                                                  bootstrap unstable (separation)
+    jv_ta     IPW             499                0 bootstrap SE and percentile intervals; failed draws excluded without replacement
+T025 completed: 5 outcomes; 499 seeded whole-firm draws; failed Heckman draws counted; 82 existing outputs unchanged.
+09_selection.R: exit 0, 40.11 seconds
+Done: outputs/ rebuilt. Total elapsed: 53.58 seconds.
+
+SHA-256 protected outputs: start = workspace after = run1 after = run2 after
+ce3253c43850a369e4dfe2b31c8568c33a57ae9e9d9c026fe0aa6c7363ec77bb  replication/outputs/.DS_Store
+f7d6eecc5080bbdae61ca05b699e3cbe5f4572292ef10552f52eac008c318114  replication/outputs/figures/t005_breach_shares.pdf
+3cd175a438753447e2f0bc297aa0b2412f764058dc1cd49b182e1ec8d113563b  replication/outputs/figures/t005_bunching_rl1.pdf
+e87754215c5178ef5e5c306e8c24773c60fd77ffdf3d85f904c8c19897f48eec  replication/outputs/figures/t005_bunching_rl2.pdf
+5cee6251754e98a862d20584697698d10cabfe352fe30021249978e8551eac41  replication/outputs/figures/t005_bunching_rl3.pdf
+e5f2bdfd6b99e5b958936e495cf7cb3a3b49238938a2e8f2a3a7c66082643fe9  replication/outputs/figures/t009_es_jv_ta.pdf
+0a36be0a5901421588702a234e6db9432e655a42dba3634a43bc541c3966ad64  replication/outputs/figures/t009_es_mi_share.pdf
+a213b4782f533fd59f8147ee1dfc8dfc0d697482b90c47fbe63ed36ecffe554e  replication/outputs/figures/t009_es_rl1.pdf
+9a97532de9273f3a3aed62bd877bbdcbb8458474780ac483f098a852c44a8672  replication/outputs/figures/t009_es_rl2.pdf
+ae8dc291ee26a43d295efd9161d756bb769ae0682500126ca6bbb92c49293d9c  replication/outputs/figures/t009_es_rl2_gap.pdf
+bf44a125b4c24fdc70ae1db10451ea2a6b769d4f5f9eea3d1bbddfa9b3d3fb2f  replication/outputs/figures/t011_es_mi_share_distance.pdf
+be8cac54dd39a1c5efb14d6de80c130bb46f6c8fb815b05e68097cbdb4fbf68e  replication/outputs/figures/t011_es_mi_share_dose2018.pdf
+482338f768677f8ed55dd74b480b5a4211dec388020ded63471fd2099df8dc9e  replication/outputs/figures/t011_es_rl1_distance.pdf
+4af9ba1a564baaf8d37292584fce0c413943f9c13a4802064acc8504f020314d  replication/outputs/figures/t011_es_rl1_dose2018.pdf
+399291df94ed01288f72b02a6e0cc567dceffb8b4eec3e2e9f4b9dd23c139bed  replication/outputs/figures/t019_soe_coefficients.pdf
+d3e0a02f157891b1ba5483773aa247914f313448a20ee552c4f6209ea3346625  replication/outputs/figures/t023_bunching_rl1_vs_alt.pdf
+49f1c21514dc8d71c5175a7bed4c78d7b5ad422e08a5106614128d84a3705831  replication/outputs/figures/t023_excess_mass_rl1.pdf
+9c39fa36948626541e6fc0bd1ec04d5ddc800cb1fbb82199ff1dddc3fe7b739b  replication/outputs/figures/t024_density_rl1.pdf
+25886bb39759e8686a27d46b7d9f1051f2ffdb4e3895292181f16e3fab1a0e09  replication/outputs/figures/t024_rdplot_rl1.pdf
+d1189dd3dd2c2ef926b45b7507854d97571e1fa433f80d2fda6dad63f95ed7e6  replication/outputs/figures/t024_rdplot_rl2.pdf
+e556811135d7f3a1b75c21ad450e6b08e3c58d169c3408ee0e648d0cc27a3244  replication/outputs/figures/t024_rdplot_rl3.pdf
+b8a445af30734d8d83348903a8101215299d4b3f9445d2bcf181df2bf4291fe6  replication/outputs/figures/t027_decomposition_rl1.pdf
+1998bbe073a60883f2ed121f416df2a951b5669006790c639de0ba4ccdc088e2  replication/outputs/tables/t004_item_coverage.csv
+db473180f041c9a5a255fc1d6cf9b090835cdc0ea7334cb6640343822d2743c9  replication/outputs/tables/t004_ownership_unresolved.csv
+a4c4cc8c7e9bd056db3977ece29f2ce9c7a88660cbe040224b7235c64759be2b  replication/outputs/tables/t004_panel_counts.csv
+33163fafd952421f016fede2373dce2636dabb00cfb709a9f780ea86c404cb58  replication/outputs/tables/t004_variable_dictionary.csv
+9a576142a4f96330404e3ae1fe6dedf3c8bd5544b8deae81b342760c2722ec94  replication/outputs/tables/t005_bunching_counts.csv
+ed615ae7207d1faf075fafc295705ea7c37a8ba80ab3b957d96368dbc24463f3  replication/outputs/tables/t005_by_dose.csv
+c96980fe9e91d296a1563684feef9137ff2476689b74ba2485eeba345842e036  replication/outputs/tables/t005_by_dose.tex
+7049089e40a9406a4d81f28fa6014402dfc6bb1e92217fec11bf45a9242733c9  replication/outputs/tables/t005_summary_stats.csv
+e3e7e4690c3ed5700beb2d9ca1ae210c115d27fd6796f9de46778c0cf378986f  replication/outputs/tables/t005_summary_stats.tex
+c90f55ed37b1b577579939230ec342337f8a1bd61ca200da753e64dd4aca2b93  replication/outputs/tables/t008_mde.csv
+99a6346e67c305642c3db0d4283b44c4c3739a7b83d330d09eb5cede089e31bd  replication/outputs/tables/t008_mde.tex
+25a55c179fe83b9d1320a783fd665779862d9726e63cfcda4b25935351eeec9f  replication/outputs/tables/t009_did_main.csv
+ee6f5e35db714652cd45662216b4b326adc238b4c0590cc18a9000005e5f0f2e  replication/outputs/tables/t009_did_main.tex
+b7701453ec85903c0f1260d9db5e6344706b1305c045634bfeba861434ff8dec  replication/outputs/tables/t009_event_study.csv
+9e30d27001799354b92911588691cdcced8c740da261e63a0a61184c8a983d45  replication/outputs/tables/t009_pretrend_tests.csv
+f34b54fe5b837fd733c597542ea7805713c4c403a16b4da080e566cd2c21e42c  replication/outputs/tables/t011_robustness.csv
+c5f9fff00335932e1f4e12a8a07284bdb7cc2d38b883eab87af68ef79c770e69  replication/outputs/tables/t011_robustness.tex
+0f8f7947a652f3ec41a98974f56ef086d5a4a34a810c9f41bf8f34074141dcc5  replication/outputs/tables/t011_treatment_definitions.csv
+ead486358e557f8bf0d95d98f5e58c471426b85434f1f6bcd1495c203dd42c8c  replication/outputs/tables/t015_ownership_counts.csv
+40b81ee0ce6c7f58c94332dcba69567e81b9bacc27155402dc5d4d2b5c309c6c  replication/outputs/tables/t015_rework_verification.txt
+6ab8ba57675e5ec55c445e74df07003848786c2458f3cce949507e8b770bf3b2  replication/outputs/tables/t015_soe_heterogeneity.csv
+00e4fd705ebf423584f1f763f5409320bb51f88c6a5976fe46827675a003843c  replication/outputs/tables/t015_soe_heterogeneity.tex
+8592d45b62d4cb9d5aebc64bfd9b0f12cbbea2211de31195e3137a54db8cf58e  replication/outputs/tables/t015_specification_checks.csv
+224158ca1fdbc14c2c0cf8bee93ef0c5becc6a09621815b75ef0a18deb198f87  replication/outputs/tables/t023_composition.csv
+289df85b7c0d67b0a5a3defbc704a12501283b85ab3b5be3d3557c2154fc726a  replication/outputs/tables/t023_coverage.csv
+e02f6cbc857290128a054568acb55e73ada48fa15e73f061e22deb31a959f71e  replication/outputs/tables/t023_excess_mass.csv
+0096b4625757c525654d503e806ae7de7a5ce2e73eda60e1b60f886fbda47eef  replication/outputs/tables/t023_excess_mass.tex
+8431e5afea1a2c029c393f531e29fb239d29d7ad5966c4bb1cf2f07c2bb2ab88  replication/outputs/tables/t023_excess_mass_bins.csv
+debe895b2f7975d42641c0621eb536f5204b3234cb1bfb16a1a4126b43d8ce10  replication/outputs/tables/t023_histogram_bins.csv
+10dbd880d1644c8777a70a91f15574345ac77d592a92dec87debcb0221601bd0  replication/outputs/tables/t023_placebo_definitions.csv
+0a21bab2b342ffc533e757d2164a4aef495f6069f413d681d0417c16d58dfb86  replication/outputs/tables/t023_placebo_definitions.tex
+d20ca65e4576552ad7b5ab55866914b55da58ad8fad8a1cd91f704d28fe0b7f7  replication/outputs/tables/t023_reporting_dates.csv
+163b8f565af3a2389018711585276fec2a20729b6e5f16f848087484d0bcc0bd  replication/outputs/tables/t023_reversal.csv
+f36bec00099976f0eea846b6d3792c312825f0ee45373e1b086bd77464e229e2  replication/outputs/tables/t023_reversal.tex
+fa9ec02aa2b373a7d3525024394d9130d79aaaea07f860e48b8c89286ed8e3ad  replication/outputs/tables/t023_verification.txt
+5cc143e8b2105a975901115eb713559ea2278b71e3eed17d9fac87495ea17522  replication/outputs/tables/t024_density_grid.csv
+71e86fcfa73fb25468b650dc8cf5b340b1e69793222f7c46e832740ee0822cc8  replication/outputs/tables/t024_dependency_check.txt
+a37775c41a713ef494bef07098ccb62b30a7f01c781dba5c5c924d8950c2e73b  replication/outputs/tables/t024_firm_audit.csv
+9bef206e9701eeb54f3ca17570f90193faeb86c653fa13a3c6145a14abeb53ed  replication/outputs/tables/t024_plot_bins.csv
+fc44753d82c29afc6bce7ae1c738d7c13ffe00ffea9f070f2341161ce4d87f5b  replication/outputs/tables/t024_plot_fits.csv
+6298f015dbcf2ed982a6349fd826055e64317047529288abfe33203056f1525d  replication/outputs/tables/t024_rd_fuzzy.tex
+54cb57958694341a2c9a5354aa3277882558fc6534a0e9b070ef4aa612b14372  replication/outputs/tables/t024_rd_main.csv
+5ab2c693a3618bce4abe58ed80364ac09c32250b3b69ad50026547b9a727db0d  replication/outputs/tables/t024_rd_main.tex
+d39a4c26196bacbbfc12ba0c7fb197dc422a7775262a4f3697dcbfc89374c02a  replication/outputs/tables/t024_rd_robustness.csv
+297b81a987a88e18601a05c9ce02e056168607fd2813f06e96fb06a8a35aa756  replication/outputs/tables/t024_rd_robustness_note.tex
+4163d5bc1a89e3aa1e0d79160a58f3459023752d1f1154f3a5bf4967f9ce898e  replication/outputs/tables/t024_rd_validity.csv
+510fe87a5d83db987310ce84a2cdcebab141fe16a5cca268b3663c7b71fc820e  replication/outputs/tables/t024_rd_validity.tex
+f7358213a151bc4e04bfdc88261dc111a7166093e78ac4d2e5e6fad51fdd9d86  replication/outputs/tables/t024_sample_counts.csv
+f7171e09f4de5711328a1fe53a68be67ab6ecd9b3533350fad84cbba2b9fab5e  replication/outputs/tables/t024_verification.txt
+249c44811c86442548e699bd96bdfca334f4bf10c698f31d3734eb8394eff124  replication/outputs/tables/t027_debt_growth.csv
+5e2aceb5e0a3b791d2de8c7df881c47416db927bace09c691700489d698ba97e  replication/outputs/tables/t027_decomposition_rl1.csv
+27b3787827e603638b2d55e6818cae1db0239d569175317c18f1bd16473f5892  replication/outputs/tables/t027_decomposition_rl1.tex
+7f8b89ec97652a369a049db1a8439d9d76c5bcf125835e54259a115a1b9ec7b8  replication/outputs/tables/t027_decomposition_rl2.csv
+cbbb48beacd3de198f9a74f8c56125c39ad99394c59eb1cfa98ace0fe6d2cc12  replication/outputs/tables/t027_decomposition_rl2.tex
+4f5571fee8999411696a137b5020b001e996d4184b5d324a49e31b7101d6e3a2  replication/outputs/tables/t027_event_audit.csv
+4f707014e81a0725c1b5df096edd761e06feec648d3adbe932cf49434e3cdcb0  replication/outputs/tables/t027_events.csv
+8c82487d600122977d1582932ae83ff45b55f7bc5e92d010dc8be06c270468fc  replication/outputs/tables/t027_identity_checks.txt
+7c38d9133064f8f69668b042c5484a1f72d275d3e4f351b2ec39d21c7837ed08  replication/outputs/tables/t027_robustness.csv
+4e8479282a26c0dda64fbbf2566e7e2de2f71081c2f6c077b51c7a5a76a0af1f  replication/outputs/tables/t027_tests.csv
+d03794d2838b47fa6fb85da919de41d184e9cc2f886826a8eca6dc4326ba245f  replication/outputs/tables/t027_tests.tex
+39e7ce29ebe5b2f8fcc8a13c57191c5822d2001ba6f02759f1b84545fc199a9b  replication/outputs/tables/t027_verification.txt
+
+SHA-256 inputs: start = workspace after = run1 after = run2 after
+9b868659fbc52d2a5d67efb6a1889ca1bbd695731ca30bf17a0a5c3c54c1cb26  replication/data/processed/panel_firm_halfyear.csv
+5ab2b8462525b18575c107564011db247a1e3297130430fc83177beaaf111cc2  replication/code/02_estimate.R
+25a55c179fe83b9d1320a783fd665779862d9726e63cfcda4b25935351eeec9f  replication/outputs/tables/t009_did_main.csv
+70bfd861c57104d5f2a445a2a01181bb3f8090e5d740ad02d77750fc0e8a7bac  state/STATE.md
+248ca8b27526b8723b7abebd2c8b1c685c56e7193ac18bf74cc44f80da6df6c0  state/LIMITATIONS.md
+ea4793785ed13010628723fcc48f90c0cfe7eb4f5ed675d875b0c4fbc2b08192  tasks/T025.md
+
+SHA-256 final implementation: workspace = run1 = run2
+1c543c3b7f6ee764cabbd8dd43ce23a0b42cb4fd4b7f24da9aeaa8e9300698c0  replication/code/09_selection.R
+d2ed8b7f5a73b933697446e8e34e04764ca1bbae6cb666986b479892ba1822db  replication/run_all.R
+c9f5ae4402a3724de4de173ddb1e030f62517c3fd9302a0c748be352723d6694  replication/run_all.sh
+fbfa955aea5cbe4f0a07fb14158f548acd84d11936c7cd9b1e95e6aa6d498a18  replication/README.md
+
+SHA-256 generated T025 outputs: workspace = run1 = run2 (verification record excluded)
+8b4686620744d8fae6599250b39b269fc017a7f90fa0fe49b19a93e41cfc9bf6  replication/outputs/tables/t025_attrition.csv
+d43b01aa010850c66960448923428f5d6286c3c3585be15668805263127fbaf3  replication/outputs/tables/t025_baseline_validation.csv
+2d318133a44a173d529c90f8d982e4ff7fc271010b7f1934e686a85188bcb901  replication/outputs/tables/t025_bootstrap_draws.csv
+75de58f739ed50cd3810125cbb947c472c05dc80366270f484c5eefdab265dc5  replication/outputs/tables/t025_first_stage_diagnostics.csv
+63044a93a2d1a31112ff47377d1f800735cd11a61dea3f62c0800342fc01cd86  replication/outputs/tables/t025_lee_audit.csv
+1ffd34c28baf0b647fe95b38efbb8c4103e7ef22a7d99834c377384df8a69c25  replication/outputs/tables/t025_lee_bounds.csv
+6a6cc3278266f9ab3b9ea651aa9941b471da8787adf7c7bf0a1355fed0a95d87  replication/outputs/tables/t025_lee_bounds.tex
+0664946ba778099a896ab368c0e6bf24eb0a69a10dbbaa42be250195bbb49316  replication/outputs/tables/t025_missing_predictors.csv
+1463aa9dd931c727ef2fa6435f70023bcd0891685ef4c9b0a7ceccdb70b87bbe  replication/outputs/tables/t025_selection.csv
+2c8ef7aa0954c4053f4c05fef428d9c0385e10d4a646416c8c17d4a9a5ad3a3f  replication/outputs/tables/t025_selection.tex
+b76c7bed43d9b9cb0c408a2b842c3479d2b19504f64c3c77d5142a74ffc753bb  replication/outputs/tables/t025_selection_audit.csv
+
+Workspace scope audit:
+All substantive inputs and non-T025 analysis outputs are unchanged.
+The workspace scan additionally observes changes to .DS_Store and the ongoing tasks/T025_worker.log; no task command edited or reset these files. These are outside the scientific outputs protected by criterion 3.
+.DS_Store: start 6d77954db6c7bb87d0eba08efb44b5c1081b312cf56b53974080ad29678ad56d, current 07bfce649fe15199be2ff8711bd3d11f98cbc5a23186444f698302b211b9cfb4
+tasks/T025_worker.log: start fcb1dd2abfc29ada1bd460b57b5c0991b72d621ba517a0038f2773385110c8be, current 047f953f1be2fcf9484c042a04f40156a225d847cd692b9265cc08592af08b2c

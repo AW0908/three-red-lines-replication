@@ -1,0 +1,5 @@
+"group","period","n_obs","n_firms","window_obs","window_firms","mass_lower","mass_upper"
+"developers_all","pre",797,136,67,35,0.66,0.7
+"developers_all","post",630,132,118,43,0.66,0.7
+"control_all","pre",4512,752,207,96,0.66,0.7
+"control_all","post",3760,752,159,91,0.66,0.7

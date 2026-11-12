@@ -1,0 +1,23 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{6.0cm}rrrrr}
+\toprule
+Period / scope / metric & N & Firms & Estimate & 95\% CI & Valid \\
+\midrule
+pre joint available b RL1 & 797 & 136 & -0.8772 & [-1.8501, 0.4278] & 999/999 \\
+pre joint available b raw tl ta & 797 & 136 & -1.3105 & [-2.1706, -0.2704] & 999/999 \\
+pre joint available b RL1 minus raw & 797 & 136 & 0.4333 & [-1.0113, 2.0755] & 999/999 \\
+post joint available b RL1 & 630 & 132 & 3.1429 & [1.0122, 5.8411] & 999/999 \\
+post joint available b raw tl ta & 630 & 132 & -0.2013 & [-1.8458, 2.0089] & 999/999 \\
+post joint available b RL1 minus raw & 630 & 132 & 3.3441 & [0.3171, 6.5782] & 999/999 \\
+post minus pre joint available delta b rl1 & 630/797 & 132/136 & 4.0200 & [1.6711, 6.7968] & 999/999 \\
+post minus pre joint available delta b raw & 630/797 & 132/136 & 1.1092 & [-0.7514, 3.5069] & 999/999 \\
+post minus pre joint available delta b RL1 minus raw & 630/797 & 132/136 & 2.9108 & [-0.5880, 6.2459] & 999/999 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 common whole-firm resamples of the full 136-firm universe, seed 20261016. All CIs are pointwise percentile intervals; invalid draws omitted and counted in CSV; fewer than 90 percent valid is unreliable. Post: 2020H2--2022H2, anchor end-2019; placebo: 2017H2--2019H2, anchor end-2016. b: excess count / mean fitted mass-bin count; degree 5 over [0.40,1.00], 0.01 bins, excluded/mass window [0.66,0.70). Zero bins and final right edge retained; no clipping or integration constraint. Descriptive; no causal policy interpretation. For contrasts N/Firms show first/benchmark populations. Raw ratio is total liabilities / total assets (tl/ta), with no deduction of advance receipts. Both definitions use identical available firm-dates; rl1-alt is never used. RL1 minus raw is computed in each joint draw; delta b is post minus pre. Smooth densities near 0.70 are assumed separately; a shared focal point can generate excess mass without policy targeting.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

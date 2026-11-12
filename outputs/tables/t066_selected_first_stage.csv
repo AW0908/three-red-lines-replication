@@ -1,0 +1,6 @@
+"outcome","specification","usable_strength","status"
+"rl1","Z3",FALSE,"strongest admissible specification remains weak (Wald < 10); requested sensitivity only; exclusion assumed"
+"rl2","Z2",FALSE,"strongest admissible specification remains weak (Wald < 10); requested sensitivity only; exclusion assumed"
+"mi_share","Z3",FALSE,"strongest admissible specification remains weak (Wald < 10); requested sensitivity only; exclusion assumed"
+"rl2_gap","Z2",FALSE,"strongest admissible specification remains weak (Wald < 10); requested sensitivity only; exclusion assumed"
+"jv_ta","joint",FALSE,"strongest admissible specification remains weak (Wald < 10); requested sensitivity only; exclusion assumed"

@@ -1,0 +1,28 @@
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrll}
+\hline
+Group & Year(s) & Firms & Obs. & $\Delta$MI (bn) & Capital [95\% CI] & Residual [95\% CI] \\
+\hline
+All & 2019 & 28 & 28 & 188.27 & 0.526 [0.285, 1.144] & 0.296 [-0.517, 0.630] \\
+All & 2020 & 43 & 43 & 339.79 & 0.857 [0.725, 1.020] & -0.076 [-0.224, 0.036] \\
+All & 2021 & 38 & 38 & 262.60 & 0.909 [0.758, 1.063] & -0.111 [-0.266, 0.014] \\
+All & 2019-2021 & 58 & 109 & 790.67 & 0.795 [0.607, 0.995] & 0.001 [-0.209, 0.226] \\
+Crossers & 2020 & 18 & 18 & 156.01 & 0.919 [0.765, 1.148] & -0.098 [-0.308, 0.038] \\
+Crossers & 2021 & 15 & 15 & 116.81 & 1.028 [0.828, 1.220] & -0.175 [-0.366, -0.009] \\
+Crossers & 2020-2021 & 20 & 33 & 272.82 & 0.966 [0.843, 1.111] & -0.131 [-0.294, -0.007] \\
+Others & 2020 & 25 & 25 & 183.78 & 0.804 [0.601, 1.074] & -0.056 [-0.280, 0.115] \\
+Others & 2021 & 23 & 23 & 145.79 & 0.814 [0.628, 1.037] & -0.060 [-0.360, 0.104] \\
+Others & 2020-2021 & 34 & 48 & 329.57 & 0.808 [0.660, 0.998] & -0.058 [-0.254, 0.088] \\
+All & Pre: 2019 & 28 & 28 & 188.27 & 0.526 [0.285, 1.144] & 0.296 [-0.517, 0.630] \\
+All & Post: 2020-2021 & 54 & 81 & 602.39 & 0.880 [0.771, 1.000] & -0.091 [-0.209, 0.017] \\
+\hline
+\end{tabular}
+\endgroup
+% T046. Descriptive only. Ratios of sums over complete firm-years with positive delta MI.
+% Residual = delta MI - annual NCI profit + absolute NCI dividends - NCI capital.
+% RMB stocks and flows and December fiscal endpoints required; no FX conversion or imputation.
+% FY2020 supplies 2019/2020; FY2021 supplies 2021, or 2020 only if FY2020 report is absent.
+% Empty/absent cells remain missing; printed dashes are zero. 999 whole-firm draws, seed 20261029; percentile CIs.
+% CSVs retain all exclusion counts (overlapping reasons), finite draw counts and the >=50 percent count/share.

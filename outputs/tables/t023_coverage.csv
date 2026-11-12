@@ -1,0 +1,5 @@
+"ratio","placebo","period","n_regulated","missing_placebo","missing_share","perp_missing","adv_missing"
+"rl1","rl1_alt","pre",797,0,0,665,86
+"rl1","rl1_alt","post",630,0,0,531,31
+"rl2","rl2_adj","pre",740,0,0,608,73
+"rl2","rl2_adj","post",575,0,0,476,22

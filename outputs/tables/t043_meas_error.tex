@@ -1,0 +1,26 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{lrrrrr}
+\toprule
+Sample / variant / statistic & Error N (firms) & Applied mean (SD) & Sim. mean & 2.5/97.5 pct. & Share $>0$ \\
+\midrule
+All pairs raw post b & 64 (30) & 0.0099 (0.0264) & 2.0114 & [1.2727, 2.8186] & 1.0000 \\
+All pairs raw pre b & 64 (30) & 0.0099 (0.0264) & -0.8303 & [-1.3363, -0.3260] & 0.0000 \\
+All pairs raw change b & 64 (30) & 0.0099 (0.0264) & 2.8416 & [1.8936, 3.7745] & 1.0000 \\
+All pairs centered post b & 64 (30) & -0.0000 (0.0264) & 2.9899 & [2.1260, 3.8971] & 1.0000 \\
+All pairs centered pre b & 64 (30) & -0.0000 (0.0264) & -0.4774 & [-1.0039, 0.0529] & 0.0410 \\
+All pairs centered change b & 64 (30) & -0.0000 (0.0264) & 3.4673 & [2.4228, 4.5239] & 1.0000 \\
+Near cutoff raw post b & 52 (26) & 0.0044 (0.0077) & 2.0229 & [1.3530, 2.7192] & 1.0000 \\
+Near cutoff raw pre b & 52 (26) & 0.0044 (0.0077) & -0.8921 & [-1.3123, -0.4506] & 0.0000 \\
+Near cutoff raw change b & 52 (26) & 0.0044 (0.0077) & 2.9149 & [2.0823, 3.8355] & 1.0000 \\
+Near cutoff centered post b & 52 (26) & 0.0000 (0.0077) & 2.4710 & [1.7377, 3.1797] & 1.0000 \\
+Near cutoff centered pre b & 52 (26) & 0.0000 (0.0077) & -0.7926 & [-1.2355, -0.3645] & 0.0000 \\
+Near cutoff centered change b & 52 (26) & 0.0000 (0.0077) & 3.2636 & [2.3829, 4.1361] & 1.0000 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] 999 measurement-error perturbations per sample and variant; seed 20261016. Raw errors are constructed minus published RL1; centered errors subtract their empirical mean before addition to original RL1. Raw and centered variants use identical sampled error indices. Centering is an approved additional sensitivity check, not a correction of the original ratios. CSV error-mean and error-SD describe raw empirical errors; applied-error columns describe the distribution actually added. Mean-shift attenuation = centered minus raw simulation mean; baseline minus raw = centered attenuation plus mean-shift attenuation. The CSV reports this contrast and its share of raw attenuation; this is a descriptive decomposition, not a causal attribution. Empirical errors are transported iid across pre/post firm-dates; the selected validation sample need not represent population errors. No nested bootstrap: intervals are simulation percentiles, not sampling confidence intervals. Fixed analysis observations/firms: pre 797/136; post 630/132. Error sample counts, means, SDs and validity denominators are in CSV.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

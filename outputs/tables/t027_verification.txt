@@ -1,0 +1,139 @@
+T027 REWORK verification (2026-10-21); static evidence, not an analysis output.
+Execution command, twice on final code: cd replication && Rscript run_all.R
+Both final-code runs: exit 0. Packages preflight passed; no installation and no network.
+All 12 generated analysis artifacts byte-identical between final-code runs.
+All 73 baseline non-T027 output/data files byte-identical after EACH final-code run (including hidden files).
+The 73 files include the 54 output/panel artifacts listed by the original verification plus 19 other data files.
+In-script protected-output count: 52; this supplements, rather than replaces, the pre-build comparison.
+RL1 numeric fields and original five test rows unchanged; events.csv and debt_growth.csv unchanged byte for byte.
+decomposition_rl1: 0 allowed numeric-field changes; all other existing values unchanged.
+decomposition_rl2: 8 allowed numeric-field changes; all other existing values unchanged.
+robustness: 24 allowed numeric-field changes; all other existing values unchanged.
+event_audit: 64 allowed numeric-field changes; all other existing values unchanged.
+tests: 0 allowed numeric-field changes; all other existing values unchanged.
+New all-events equity_mi_share contrasts: 32 post events/30 firms versus 21 pre events/19 firms; 999/999 valid draws each.
+Independent R reconstruction by explicit sampled-firm concatenation reproduces BOTH new estimates and percentile CIs within 1e-12.
+PASS: independent net-debt diagnostics, both new bootstrap estimates/CIs (999 draws), 32/21 coverage, and nonpositive/zero-change guards.
+PASS: HK-Wind observed-perpetual guard stops independently for date0 and date1 in temporary copies; production panel unchanged.
+RL2 nonpositive and zero net debt diagnostic cases tested in memory, without editing the production panel.
+Identity failures >1 percent: 0/2277 panel, 0/1691 main; maximum available component-sum error 4.4408920985006262e-16.
+Coverage unchanged: RL1 post 33/31 firms, pre 21/19, stayers 281/74; RL2 post 28/27, pre 36/30.
+Full item sums available for 319 RL1 and 63 RL2 events; observed-perpetual sums for 54 and 12.
+Literal every-event item decomposition remains unavailable: 15 nonpositive-equity RL1 stayers and one missing minority observation in each crossing type.
+Pre observed-perpetual contrast: 2 events/1 firm, 634 valid/365 failed draws; retained as conditional_unreliable and not interpretable for comparison.
+Figure: all-events split with component-specific available-case medians; total N/firms per bar, component coverage in note; no perpetual restriction.
+Post median logit change -0.1620; code computes local approximation 100*0.70*(1-0.70)*median = -3.40 percentage points.
+LaTeX: all three fragments compile together to 6 pages; no overfull, underfull, oversized-float or other warnings.
+All six rendered table pages visually inspected; latest tests page re-rendered and inspected. Final figure rendered/inspected: no overlap or clipping.
+All RL1 TeX captions/notes include log-odds identity; binary-share medians are --; negative rounded zero suppressed; notes have no unescaped special characters.
+bash -n replication/run_all.sh: exit 0. Entry points already correct and unchanged.
+Task status unchanged; write scope respected. AI_USAGE_LOG.md not edited; suggested entry in worker report.
+
+Final-code run 1, last lines:
+T027: exact available component sums asserted <= 1e-10; 399 event audit rows.
+T027: all 7 contrasts use 999 firm-cluster draws; valid draws 634--999.
+T027: wrote identity, counts, audit, summaries, tests, debt growth, robustness and figure; input and 52 protected outputs unchanged.
+08_decomposition.R: exit 0, 0.74 seconds
+Done: outputs/ rebuilt. Total elapsed: 10.82 seconds.
+
+Final-code run 2, last lines:
+T027: exact available component sums asserted <= 1e-10; 399 event audit rows.
+T027: all 7 contrasts use 999 firm-cluster draws; valid draws 634--999.
+T027: wrote identity, counts, audit, summaries, tests, debt growth, robustness and figure; input and 52 protected outputs unchanged.
+08_decomposition.R: exit 0, 0.72 seconds
+Done: outputs/ rebuilt. Total elapsed: 10.82 seconds.
+
+SHA-256 final generated analysis artifacts:
+b8a445af30734d8d83348903a8101215299d4b3f9445d2bcf181df2bf4291fe6  replication/outputs/figures/t027_decomposition_rl1.pdf
+249c44811c86442548e699bd96bdfca334f4bf10c698f31d3734eb8394eff124  replication/outputs/tables/t027_debt_growth.csv
+5e2aceb5e0a3b791d2de8c7df881c47416db927bace09c691700489d698ba97e  replication/outputs/tables/t027_decomposition_rl1.csv
+27b3787827e603638b2d55e6818cae1db0239d569175317c18f1bd16473f5892  replication/outputs/tables/t027_decomposition_rl1.tex
+7f8b89ec97652a369a049db1a8439d9d76c5bcf125835e54259a115a1b9ec7b8  replication/outputs/tables/t027_decomposition_rl2.csv
+cbbb48beacd3de198f9a74f8c56125c39ad99394c59eb1cfa98ace0fe6d2cc12  replication/outputs/tables/t027_decomposition_rl2.tex
+4f5571fee8999411696a137b5020b001e996d4184b5d324a49e31b7101d6e3a2  replication/outputs/tables/t027_event_audit.csv
+4f707014e81a0725c1b5df096edd761e06feec648d3adbe932cf49434e3cdcb0  replication/outputs/tables/t027_events.csv
+8c82487d600122977d1582932ae83ff45b55f7bc5e92d010dc8be06c270468fc  replication/outputs/tables/t027_identity_checks.txt
+7c38d9133064f8f69668b042c5484a1f72d275d3e4f351b2ec39d21c7837ed08  replication/outputs/tables/t027_robustness.csv
+4e8479282a26c0dda64fbbf2566e7e2de2f71081c2f6c077b51c7a5a76a0af1f  replication/outputs/tables/t027_tests.csv
+d03794d2838b47fa6fb85da919de41d184e9cc2f886826a8eca6dc4326ba245f  replication/outputs/tables/t027_tests.tex
+
+SHA-256 code, entry points and README:
+3a83571ecc07f88294e5efb2f3c7ac5f782e2c2ba7729d0b406f4e8cb75e1df7  replication/code/08_decomposition.R
+efcee999c48a50c42baca19ce32f81210bb55e4b4d61f294f9dd1e68d0d4c2b5  replication/run_all.R
+0c5879438a331ae6e17df88febafcf5bacb69bb5e93c105dec41d6a1b99296c0  replication/run_all.sh
+64ea99499d47770ae743c7d5076c98714c41393701501663a832873c185852a6  replication/README.md
+
+SHA-256 unchanged baseline output/data files:
+ae532cfea766fa2e71206b7aab1db70b3d400b6d298e56486973485a6680301b  replication/data/.DS_Store
+9b868659fbc52d2a5d67efb6a1889ca1bbd695731ca30bf17a0a5c3c54c1cb26  replication/data/processed/panel_firm_halfyear.csv
+6a6fac0ace952061753736a767b3c1271ff74cc5c33090ca4fdeb7cb17ea1d08  replication/data/raw/.DS_Store
+a05c227805db40b69c82b2b4a3491d5ca088ab8baf4c7d56e8d68b9e76007dc5  replication/data/raw/MANIFEST.csv
+3e589d9ba5c9f572409affac1395445b434eeeeaaa7e9fb52f409158ca648fc0  replication/data/raw/eastmoney/delisted_hk_balance.csv
+8ab43841a4336225e935b645d382c6b3a0c72812963609f5aba334917ecfe524  replication/data/raw/eastmoney/delisted_hk_income.csv
+26a0beb3aac57a30c3bb18619de46f854110aae6a54281886e4ea9e51f99c00c  replication/data/raw/eastmoney/firm_list.csv
+b14ecb525391389ed6e60bb99ec984c9feef99b7acba111dfa7b1a3b5b424feb  replication/data/raw/eastmoney/raw_a_balance.csv
+82dab1bc9386f0d2da2c07a2d55d70630ed928c03b2eb74bd92a437633db12b1  replication/data/raw/eastmoney/raw_a_income.csv
+864eded01132fbd5b29103c428d14ca96a8fb359399304b002aa479a370fa1da  replication/data/raw/eastmoney/raw_hk_balance.csv
+ccb7941e284ba277d81b5888de8c1578ab9585d4e557afd3b96f26564146aae0  replication/data/raw/eastmoney/raw_hk_income.csv
+c0ed1a3052a46757c163ae402db0e14e60d19d475f652883252e38db418170fe  replication/data/raw/manual/ownership_manual_coding.csv
+61bac5ff4bbc8a3576d6a6356deecd6e2ac3d126da5200f10008de9634161489  replication/data/raw/wind/Sicherung_A_1.xlsx
+769de6bd6bbcf7cecee79f6d409847b9d6c170ed28d4cbe60b58a1e4f068dbfd  replication/data/raw/wind/delistete_immobilienfirmen.csv
+3de46b363d4edfe4a533ff1e963cb27a8273e8b21ea7f509eea8fe2649cab3a8  replication/data/raw/wind/sicherung_HK_1.xlsx
+c76e3bbf1ef6de8b26d2db1a9dd83354a9f6e287fc7abfc61b8a36da0149c2a9  replication/data/raw/wind/sicherung_HK_2.xlsx
+da07cd9119ba0ab0a0f45a09938ecf96f604917d2819a5ac5237294c672d22df  replication/data/raw/wind/sicherung_HK_3.xlsx
+a488a4bc9991ea5044322a17825c4e1ca712bfd0f82b002b380f62770788a5a0  replication/data/raw/wind/wind_A_delistet_v2.xlsx
+eb308d7cfd4ffe4726e8a510bd6fb3ffad58ab26de0587b2f473a39501887fec  replication/data/raw/wind/wind_A_gelistet_eigentum.xlsx
+6383c9e158b82ca550048a818123416580f993af47bc79b630e6ceef8d0874dc  replication/data/raw/wind/wind_HK_delistet_v2.xlsx
+ce3253c43850a369e4dfe2b31c8568c33a57ae9e9d9c026fe0aa6c7363ec77bb  replication/outputs/.DS_Store
+f7d6eecc5080bbdae61ca05b699e3cbe5f4572292ef10552f52eac008c318114  replication/outputs/figures/t005_breach_shares.pdf
+3cd175a438753447e2f0bc297aa0b2412f764058dc1cd49b182e1ec8d113563b  replication/outputs/figures/t005_bunching_rl1.pdf
+e87754215c5178ef5e5c306e8c24773c60fd77ffdf3d85f904c8c19897f48eec  replication/outputs/figures/t005_bunching_rl2.pdf
+5cee6251754e98a862d20584697698d10cabfe352fe30021249978e8551eac41  replication/outputs/figures/t005_bunching_rl3.pdf
+e5f2bdfd6b99e5b958936e495cf7cb3a3b49238938a2e8f2a3a7c66082643fe9  replication/outputs/figures/t009_es_jv_ta.pdf
+0a36be0a5901421588702a234e6db9432e655a42dba3634a43bc541c3966ad64  replication/outputs/figures/t009_es_mi_share.pdf
+a213b4782f533fd59f8147ee1dfc8dfc0d697482b90c47fbe63ed36ecffe554e  replication/outputs/figures/t009_es_rl1.pdf
+9a97532de9273f3a3aed62bd877bbdcbb8458474780ac483f098a852c44a8672  replication/outputs/figures/t009_es_rl2.pdf
+ae8dc291ee26a43d295efd9161d756bb769ae0682500126ca6bbb92c49293d9c  replication/outputs/figures/t009_es_rl2_gap.pdf
+bf44a125b4c24fdc70ae1db10451ea2a6b769d4f5f9eea3d1bbddfa9b3d3fb2f  replication/outputs/figures/t011_es_mi_share_distance.pdf
+be8cac54dd39a1c5efb14d6de80c130bb46f6c8fb815b05e68097cbdb4fbf68e  replication/outputs/figures/t011_es_mi_share_dose2018.pdf
+482338f768677f8ed55dd74b480b5a4211dec388020ded63471fd2099df8dc9e  replication/outputs/figures/t011_es_rl1_distance.pdf
+4af9ba1a564baaf8d37292584fce0c413943f9c13a4802064acc8504f020314d  replication/outputs/figures/t011_es_rl1_dose2018.pdf
+399291df94ed01288f72b02a6e0cc567dceffb8b4eec3e2e9f4b9dd23c139bed  replication/outputs/figures/t019_soe_coefficients.pdf
+d3e0a02f157891b1ba5483773aa247914f313448a20ee552c4f6209ea3346625  replication/outputs/figures/t023_bunching_rl1_vs_alt.pdf
+49f1c21514dc8d71c5175a7bed4c78d7b5ad422e08a5106614128d84a3705831  replication/outputs/figures/t023_excess_mass_rl1.pdf
+1998bbe073a60883f2ed121f416df2a951b5669006790c639de0ba4ccdc088e2  replication/outputs/tables/t004_item_coverage.csv
+db473180f041c9a5a255fc1d6cf9b090835cdc0ea7334cb6640343822d2743c9  replication/outputs/tables/t004_ownership_unresolved.csv
+a4c4cc8c7e9bd056db3977ece29f2ce9c7a88660cbe040224b7235c64759be2b  replication/outputs/tables/t004_panel_counts.csv
+33163fafd952421f016fede2373dce2636dabb00cfb709a9f780ea86c404cb58  replication/outputs/tables/t004_variable_dictionary.csv
+9a576142a4f96330404e3ae1fe6dedf3c8bd5544b8deae81b342760c2722ec94  replication/outputs/tables/t005_bunching_counts.csv
+ed615ae7207d1faf075fafc295705ea7c37a8ba80ab3b957d96368dbc24463f3  replication/outputs/tables/t005_by_dose.csv
+c96980fe9e91d296a1563684feef9137ff2476689b74ba2485eeba345842e036  replication/outputs/tables/t005_by_dose.tex
+7049089e40a9406a4d81f28fa6014402dfc6bb1e92217fec11bf45a9242733c9  replication/outputs/tables/t005_summary_stats.csv
+e3e7e4690c3ed5700beb2d9ca1ae210c115d27fd6796f9de46778c0cf378986f  replication/outputs/tables/t005_summary_stats.tex
+c90f55ed37b1b577579939230ec342337f8a1bd61ca200da753e64dd4aca2b93  replication/outputs/tables/t008_mde.csv
+99a6346e67c305642c3db0d4283b44c4c3739a7b83d330d09eb5cede089e31bd  replication/outputs/tables/t008_mde.tex
+25a55c179fe83b9d1320a783fd665779862d9726e63cfcda4b25935351eeec9f  replication/outputs/tables/t009_did_main.csv
+ee6f5e35db714652cd45662216b4b326adc238b4c0590cc18a9000005e5f0f2e  replication/outputs/tables/t009_did_main.tex
+b7701453ec85903c0f1260d9db5e6344706b1305c045634bfeba861434ff8dec  replication/outputs/tables/t009_event_study.csv
+9e30d27001799354b92911588691cdcced8c740da261e63a0a61184c8a983d45  replication/outputs/tables/t009_pretrend_tests.csv
+f34b54fe5b837fd733c597542ea7805713c4c403a16b4da080e566cd2c21e42c  replication/outputs/tables/t011_robustness.csv
+c5f9fff00335932e1f4e12a8a07284bdb7cc2d38b883eab87af68ef79c770e69  replication/outputs/tables/t011_robustness.tex
+0f8f7947a652f3ec41a98974f56ef086d5a4a34a810c9f41bf8f34074141dcc5  replication/outputs/tables/t011_treatment_definitions.csv
+ead486358e557f8bf0d95d98f5e58c471426b85434f1f6bcd1495c203dd42c8c  replication/outputs/tables/t015_ownership_counts.csv
+40b81ee0ce6c7f58c94332dcba69567e81b9bacc27155402dc5d4d2b5c309c6c  replication/outputs/tables/t015_rework_verification.txt
+6ab8ba57675e5ec55c445e74df07003848786c2458f3cce949507e8b770bf3b2  replication/outputs/tables/t015_soe_heterogeneity.csv
+00e4fd705ebf423584f1f763f5409320bb51f88c6a5976fe46827675a003843c  replication/outputs/tables/t015_soe_heterogeneity.tex
+8592d45b62d4cb9d5aebc64bfd9b0f12cbbea2211de31195e3137a54db8cf58e  replication/outputs/tables/t015_specification_checks.csv
+224158ca1fdbc14c2c0cf8bee93ef0c5becc6a09621815b75ef0a18deb198f87  replication/outputs/tables/t023_composition.csv
+289df85b7c0d67b0a5a3defbc704a12501283b85ab3b5be3d3557c2154fc726a  replication/outputs/tables/t023_coverage.csv
+e02f6cbc857290128a054568acb55e73ada48fa15e73f061e22deb31a959f71e  replication/outputs/tables/t023_excess_mass.csv
+0096b4625757c525654d503e806ae7de7a5ce2e73eda60e1b60f886fbda47eef  replication/outputs/tables/t023_excess_mass.tex
+8431e5afea1a2c029c393f531e29fb239d29d7ad5966c4bb1cf2f07c2bb2ab88  replication/outputs/tables/t023_excess_mass_bins.csv
+debe895b2f7975d42641c0621eb536f5204b3234cb1bfb16a1a4126b43d8ce10  replication/outputs/tables/t023_histogram_bins.csv
+10dbd880d1644c8777a70a91f15574345ac77d592a92dec87debcb0221601bd0  replication/outputs/tables/t023_placebo_definitions.csv
+0a21bab2b342ffc533e757d2164a4aef495f6069f413d681d0417c16d58dfb86  replication/outputs/tables/t023_placebo_definitions.tex
+d20ca65e4576552ad7b5ab55866914b55da58ad8fad8a1cd91f704d28fe0b7f7  replication/outputs/tables/t023_reporting_dates.csv
+163b8f565af3a2389018711585276fec2a20729b6e5f16f848087484d0bcc0bd  replication/outputs/tables/t023_reversal.csv
+f36bec00099976f0eea846b6d3792c312825f0ee45373e1b086bd77464e229e2  replication/outputs/tables/t023_reversal.tex
+fa9ec02aa2b373a7d3525024394d9130d79aaaea07f860e48b8c89286ed8e3ad  replication/outputs/tables/t023_verification.txt
+71e86fcfa73fb25468b650dc8cf5b340b1e69793222f7c46e832740ee0822cc8  replication/outputs/tables/t024_dependency_check.txt

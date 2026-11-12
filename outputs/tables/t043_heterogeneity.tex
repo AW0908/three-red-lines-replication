@@ -1,0 +1,26 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{0.32\linewidth}rrrrr}
+\toprule
+Dimension / group / statistic & N & Firms & Estimate & 95\% CI & Cell $<30$ \\
+\midrule
+Ownership: private post b & 368 & 79 & 3.9447 & [0.6825, 8.0207] & No \\
+Ownership: private D & 344 & 76 & 0.1308 & [0.0630, 0.1989] & No \\
+Ownership: SOE post b & 227 & 46 & 2.0311 & [-0.9791, 6.8718] & No \\
+Ownership: SOE D & 223 & 46 & 0.0762 & [0.0180, 0.1500] & No \\
+Market: A post b & 400 & 80 & 2.2467 & [-0.1480, 5.5551] & No \\
+Market: A D & 386 & 80 & 0.0751 & [0.0290, 0.1293] & No \\
+Market: HK post b & 230 & 52 & 4.5473 & [0.8154, 10.4704] & No \\
+Market: HK D & 216 & 49 & 0.1852 & [0.0986, 0.2811] & No \\
+Other lines: at least one breached post b & 326 & 69 & 1.7971 & [-0.8347, 5.5739] & No \\
+Other lines: at least one breached D & 305 & 66 & 0.0787 & [0.0163, 0.1476] & No \\
+Other lines: both met post b & 249 & 52 & 4.7788 & [1.0245, 10.3098] & No \\
+Other lines: both met D & 245 & 52 & 0.1510 & [0.0816, 0.2292] & No \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample. Pre: 2017H1--2019H2; post: 2020H2--2022H2. Seed 20261016; 999 whole-firm draws, complete re-estimation, pointwise percentile intervals. Invalid draws are counted without replacement; fewer than 90 percent valid draws is unreliable. Smooth density and stable reporting selection are assumptions. Descriptive, no causal or evasion inference. All heterogeneity is descriptive, with cells below 30 observed unique firms flagged. Each fixed subgroup resamples its own firms uniformly with replacement, preserving whole histories. SOE uses soe-final; missing final classifications are excluded. Other-line class requires both finite RL2 and RL3 at 2020-06-30; missing stays unclassified. Both met: RL2 at most 1 and RL3 at least 1. No RL1 selection. CSV counts all classification and outcome exclusions. D is official minus end-2019-frozen compliance on eligible $N>0$, $E>0$ pairs with positive frozen denominator; MI may be genuine equity.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

@@ -1,0 +1,25 @@
+\begin{table}[!htbp]\centering\scriptsize
+\begin{tabular}{llrrrrr}
+\toprule
+Sample & Statistic & N & Firms & Estimate & 95\% CI & Valid \\
+\midrule
+baseline & T023\_b & 630 & 132 & 3.1429 & [1.0122, 5.8411] & 999 \\
+baseline & T029\_paired\_official\_b & 602 & 129 & 3.1818 & [1.0105, 6.0136] & 999 \\
+baseline & T029\_paired\_frozen\_b & 602 & 129 & -0.5250 & [-1.8293, 1.0763] & 999 \\
+baseline & T029\_b\_drop & 602 & 129 & 3.7068 & [1.6048, 6.1403] & 999 \\
+baseline & T029\_D & 602 & 129 & 0.1146 & [0.0688, 0.1619] & 999 \\
+perpetual & T023\_b & 630 & 132 & 2.5821 & [0.5152, 5.1304] & 999 \\
+perpetual & T029\_paired\_official\_b & 602 & 129 & 2.6087 & [0.4584, 5.2164] & 999 \\
+perpetual & T029\_paired\_frozen\_b & 602 & 129 & -0.1375 & [-1.6606, 1.6762] & 999 \\
+perpetual & T029\_b\_drop & 602 & 129 & 2.7462 & [0.6262, 5.0976] & 999 \\
+perpetual & T029\_D & 602 & 129 & 0.0930 & [0.0523, 0.1336] & 999 \\
+matched\_firms & T023\_b & 100 & 20 & 8.8093 & [1.7571, 23.0662] & 999 \\
+matched\_firms & T029\_paired\_official\_b & 100 & 20 & 8.8093 & [1.7571, 23.0662] & 999 \\
+matched\_firms & T029\_paired\_frozen\_b & 100 & 20 & -0.8640 & [-2.8721, 1.8452] & 999 \\
+matched\_firms & T029\_b\_drop & 100 & 20 & 9.6734 & [2.3464, 23.4566] & 999 \\
+matched\_firms & T029\_D & 100 & 20 & 0.2700 & [0.1400, 0.4100] & 999 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{0.95\linewidth}{\footnotesize Post: 2020H2--2022H2. Pointwise percentile intervals, 999 whole-firm draws, seed 20261016. Degree five, 0.01 bins on [0.40,1.00], exclude [0.66,0.70). Perpetual RL1 adds observed perpetuals to non-advance liabilities, holding assets fixed; missing perpetuals use the original definition. Frozen MI also replaces current MI with end-2019 MI, holding perpetuals at their current values. T029 requires positive original N and equity and positive total denominators; bunching uses paired observations. Matched firms pass within one percentage point at every coded current-date RL1 observation; this is a selected-sample robustness check. Mechanical accounting comparisons, not causal effects or economic leverage. MI may be genuine equity. The all-perpetual adjustment is not an exact reconstruction of every firm convention. Fewer than 90 percent valid draws is unreliable.}
+\end{table}
+

@@ -1,0 +1,6 @@
+"variable","included","n_firms","n_observed","n_missing","mean","sd","correlation_with_dose","n_correlation","max_date","max_report_date","convention"
+"size",TRUE,124,124,0,24.4359441293083,1.6845854811153,0.307753736624058,124,"2019-12-31","2019-12-31","Half-year-end stocks; at least 3 dates"
+"roa",TRUE,124,122,2,0.020120218260152,0.0319508956196054,-0.275387687611095,122,"2019-12-31","2019-12-31","December annual reports only; at least 3 dates"
+"liquidity",TRUE,124,124,0,0.120211906226712,0.0600457819778614,-0.450200276321618,124,"2019-12-31","2019-12-31","Half-year-end stocks; at least 3 dates"
+"inventory",TRUE,124,124,0,0.480204326852867,0.18243975415542,0.237054825556288,124,"2019-12-31","2019-12-31","Half-year-end stocks; at least 3 dates"
+"sales",TRUE,124,122,2,0.18607712305922,0.079294881563147,-0.0558897819481502,122,"2019-12-31","2019-12-31","December annual reports only; at least 3 dates"

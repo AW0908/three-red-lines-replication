@@ -1,0 +1,34 @@
+T041 verification (2026-10-27)
+Execution, twice from replication/:
+Rscript --vanilla code/14_core_robustness.R > outputs/tables/t041_build_run1.log 2>&1
+Rscript --vanilla code/14_core_robustness.R > outputs/tables/t041_build_run2.log 2>&1
+Both processes exited 0. Identical stdout logs:
+T041 reproduction PASS: b_post=3.142854757615; D=0.114617940199.
+T041: 149 protected outputs unchanged; input hashes unchanged.
+T041: date=12, one-per-firm=1004, density=4, horizon=25 rows; 8 tables and 2 figures written.
+T041 random-date selection: 998/999 positive; 999 valid; b range [-0.2621, 7.0410].
+
+SHA-256 PASS: 183 existing data/output files unchanged, 10 analysis artifacts byte-identical across final runs.
+Full per-file evidence: t041_hashes.csv (protected baseline/final and generated run1/run2).
+Script additionally asserts its input hashes and all 149 pre-existing outputs before publishing.
+No historical analysis script was sourced or rerun; no full run_all rebuild was performed.
+Both build entry points register 14 last. R parse checks and bash -n passed.
+Independent numerical QA PASS:
+- T023 stored baseline b and both percentile CI endpoints reproduced to 1e-10.
+- Four density estimates checked against direct raw-power lm fits and direct weighted local lm intercepts (tolerance 1e-6).
+- All 12 date ratios checked using independently fitted pre-period polynomial shares (tolerance 1e-6).
+- All 14 available frozen-MI cells and their observation counts checked by direct accounting formulas (tolerance 1e-12).
+- 999 random selections retained, each with n=firms=132, no bootstrap CI attached; 998 positive.
+- 12 date, 1004 one-per-firm, 4 density, 25 horizon rows asserted.
+- All five cross sections exceed the 60-firm gate (135, 132, 130, 124, 124).
+- June-2017 three-year placebo and contrast explicitly unavailable; no extrapolation.
+All four TeX fragments compiled together with booktabs/threeparttable: exit 0, 5 pages, no overfull boxes.
+Both final scientific PDF figures rendered for inspection; labels, pointwise intervals and timing/horizon markers checked.
+
+Interpretation:
+- Timing: ratios are 0.9631 at 2019H2, 0.4962 at 2020H1, 1.4775 at 2020H2 and 1.5716 at 2021H1. An increase is visible at policy arrival, but the last two pointwise CIs include 1. The evidence does not establish a statistically abrupt causal break. The ratio CI excludes 1 from 2021H2 onward.
+- One observation per firm: positive cross-section b after policy; intervals exclude zero only at 2021H2 and 2022H1 among the requested post dates. Random-date b positive in 998/999 selections; the date-selection distribution is not a sampling CI.
+- Low flexibility: all three alternatives have positive b and 95% CIs above zero, so the pooled finding survives these shapes.
+- Matched horizons: post exceeds both placebos with positive pointwise difference CIs at 1.5, 2 and 2.5 years. At 1 year the June-2017 comparison includes zero; at 3 years the end-2016 comparison includes zero and has negative point estimate. Thus the unusual-MI-dependence claim survives only partly and does not persist at every horizon.
+Implementation choices documented before results: local-linear tricube kernel with fixed h=0.10 on [0.55,0.85]; date ratios normalized by all finite RL1; shared T029 whole-firm bootstrap with cell-specific available samples, not a new balanced-sample filter.
+Limitations: pointwise inference, no multiplicity adjustment; smooth-density assumptions and reporting selection; stable within-firm currency; MI can be genuine equity. No causal policy or economic-leverage conclusion.

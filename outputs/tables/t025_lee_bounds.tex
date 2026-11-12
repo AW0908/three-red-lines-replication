@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\caption{Lee sensitivity bounds: high versus low pre-policy dose}
+\label{tab:lee_bounds}
+\begin{tabular}{lrrrr}
+\toprule
+Outcome & Lower & Upper & Envelope low & Envelope high \\
+\midrule
+rl1 & -0.056956 & -0.041349 & -0.109343 & 0.012019 \\
+rl2 & -0.813827 & -0.765260 & -1.448939 & -0.188338 \\
+mi\_share & 0.063934 & 0.080897 & 0.011478 & 0.136830 \\
+rl2\_gap & 0.013288 & 0.034491 & -0.088639 & 0.165440 \\
+jv\_ta & -0.000819 & -0.000101 & -0.023616 & 0.022404 \\
+\midrule
+Outcome & High risk & Low risk & High rate & Low rate \\
+rl1 & 43 & 51 & 0.953488 & 0.980392 \\
+rl2 & 43 & 51 & 0.953488 & 0.980392 \\
+mi\_share & 42 & 51 & 0.952381 & 0.980392 \\
+rl2\_gap & 43 & 51 & 0.953488 & 0.980392 \\
+jv\_ta & 34 & 45 & 0.941176 & 0.933333 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\par\smallskip
+\noindent\begin{minipage}{\linewidth}\footnotesize
+Lee bounds are a primary sensitivity check, separate from the continuous-dose DiD estimates. High dose means at least two; low dose means less than one. Intermediate-dose firms are excluded only from this binary comparison. Change is the available post mean (2020H2--2022H2) minus the available pre mean (2016H2--2019H2); 2020H1 is excluded. Unequal reporting horizons remain. The risk population comprises firms in these dose bins with at least one pre outcome. A firm is selected if it has at least one post outcome. Firms lacking pre means are disclosed in the CSV, with no imputation. The group with the higher observation rate is trimmed at each tail to match the lower rate; fractional boundary mass is retained exactly. The trimmed group for each outcome is reported in the CSV. Causal Lee bounds require monotone individual selection in the stated direction and an exogenous binary contrast (or a defensible parallel-trends assumption for these changes). Nonrandom dose, missing items and invalid equity denominators make these assumptions substantive and unverified; the reported intervals are sensitivity bounds, not established causal effects. Bounds describe high-minus-low changes among always-observed firms under those assumptions; they are not per-unit-dose effects and cannot be compared numerically to the main coefficient. There are 499 shared whole-firm resamples, seed 20261016. CSV reports 95 percent percentile intervals for each endpoint, valid draws and trimming-direction changes. The displayed outer envelope uses the lower endpoint's 2.5th and upper endpoint's 97.5th percentile; it is not an exact joint confidence set.
+\end{minipage}

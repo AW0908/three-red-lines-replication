@@ -1,0 +1,18 @@
+\begin{threeparttable}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Distance & Post minus pre & Cluster SE & 95\% CI \\
+\midrule
+bins001 & 0.005 & -0.337 & 0.159 & [-0.654, -0.019] \\
+bins001 & 0.015 & -0.315 & 0.147 & [-0.607, -0.023] \\
+bins001 & 0.025 & -0.012 & 0.153 & [-0.318, 0.294] \\
+linear & 0.005 & -0.233 & 0.092 & [-0.415, -0.050] \\
+linear & 0.015 & -0.199 & 0.079 & [-0.357, -0.042] \\
+linear & 0.025 & -0.166 & 0.067 & [-0.299, -0.033] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Main-sample origins with RL1 in [0.60,0.70); outcome equals one if RL1 is strictly above 0.70 at the next scheduled half-year. Missing follow-up is excluded without bridging. Periods refer to origins; 2019H2 may lead to 2020H1, and 2022H2 is right-censored. The LPM includes a full interaction of post with distance: ten 0.01 RL1 bins, or an intercept and linear distance to 0.70. The nearest bin is [0.69,0.70), corresponding to distance (0,0.01]; requested distances are bin centers. SEs use the firm-clustered CR1 sandwich, G/(G-1) times (N-1)/(N-K), and t critical values with G-1 degrees of freedom. These LPM intervals are not bootstrap intervals. All intervals are pointwise without multiple-testing adjustment. Unobserved period-bin contrasts are not estimable. LPM predictions are not clipped to [0,1]. Comparison at the same distance addresses distance composition only; reporting attrition, mean reversion and calendar effects remain.
+\end{tablenotes}
+\end{threeparttable}

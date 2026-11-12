@@ -1,0 +1,5 @@
+"panel","parameter_id","selection"
+1,48,"minimum mean-statistic distance: empirical"
+2,127,"minimum mean-statistic distance: normal"
+3,168,"minimum mean-statistic distance: frictionless"
+4,180,"frictionless at empirical-best pi/beta/Delta"

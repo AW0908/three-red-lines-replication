@@ -1,0 +1,6 @@
+"outcome","risk_rows","risk_firms","missing_pre_mean_firms","missing_predictor_rows","observed_post_rows_missing_pre_mean","n_Z_below_one","converged","Z_coefficient","Z_cluster_se","Z_z","Z_p","min_fitted","max_fitted","weak_exclusion","label","warnings"
+"rl1",620,124,0,0,0,7,TRUE,-1.68300947899002,1.22760608217606,-1.37096867099803,0.170384722494455,0.0777634256361588,1,TRUE,"identified mainly by functional form (weak exclusion restriction)","glm.fit: fitted probabilities numerically 0 or 1 occurred"
+"rl2",620,124,0,0,0,7,TRUE,-1.5410503755278,1.28133902837803,-1.20268745538682,0.229097290161082,0.0858398809642934,0.999977421178296,TRUE,"identified mainly by functional form (weak exclusion restriction)",""
+"mi_share",620,124,2,10,2,7,TRUE,-1.30068279179828,1.26527228975793,-1.02798646767734,0.303956193266314,0.0173180060573785,0.999945695171218,TRUE,"identified mainly by functional form (weak exclusion restriction)",""
+"rl2_gap",620,124,0,0,0,7,TRUE,-1.39330274865673,1.01198893535382,-1.37679642531821,0.168575196358547,0.109673396242435,0.999988876432228,TRUE,"identified mainly by functional form (weak exclusion restriction)",""
+"jv_ta",620,124,22,110,2,7,TRUE,-1.18044531170631,1.40435782766351,-0.840558786694886,0.400595155272342,5.51816877579974e-07,0.999999817561214,TRUE,"identified mainly by functional form (weak exclusion restriction)",""

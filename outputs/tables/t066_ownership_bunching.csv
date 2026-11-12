@@ -1,0 +1,4 @@
+"group","estimate","se","ci_low","ci_high","valid","failed","pre_firms","post_firms","pre_n","post_n","pre_window_obs","post_window_obs","pre_comparison_firms","post_comparison_firms","pre_comparison_n","post_comparison_n","b_pre","b_post","pre_comparison_window_obs","post_comparison_window_obs","low_support","bootstrap_draws","seed"
+"private",5.1790821792402,2.04858064685681,1.57790142251358,9.96763779205722,999,0,52,51,312,250,20,42,NA,NA,NA,NA,-1.52174615107967,3.65733602816053,NA,NA,TRUE,999,20261102
+"SOE",1.90558566083875,2.02400483844978,-1.42578406329313,6.31180998550284,999,0,43,43,258,215,31,40,NA,NA,NA,NA,0.334018147278885,2.23960380811764,NA,NA,FALSE,999,20261102
+"private_minus_SOE",3.27349651840145,2.85597717548472,-1.85321565082848,9.05318681030619,999,0,52,51,312,250,20,42,43,43,258,215,NA,NA,31,40,TRUE,999,20261102

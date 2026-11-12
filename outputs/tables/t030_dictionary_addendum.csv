@@ -1,0 +1,9 @@
+column,definition
+"date","17 target dates 2016H2-2024H2; original observed-row support through 2022H2, full frozen firm register for four extension dates"
+"has_row","TRUE only for actual financial source rows; FALSE for missing extension rows, including Wind-only firms without post-2022 exports"
+"source","Actual source eastmoney/wind; NA on absent extension rows. Coverage-table source falls back to historical source class for absent rows"
+"post","Unchanged mechanical date indicator >=2020-12-31; NOT evidence original policy rules remained in force in 2023-2024"
+"post2","1 for date >=2023-06-30; separate 2023-2024 window, not labelled post-policy pending PI verification of relaxation"
+"dose / dose_pre / soe_final","Copied from main panel by permanent firm_id; no reclassification or post-2022 treatment information"
+"missing-row financial fields","NA when has_row=FALSE, including advances/perpetuals and imputation flags; component-present counts 0. Existing imputation rules apply only to actual rows"
+"sample_main / sample_broad","Frozen main-panel membership: 136 main / 172 broad among 184 firms; no new firms"

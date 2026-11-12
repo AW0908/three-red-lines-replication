@@ -1,0 +1,33 @@
+"check","max_absolute_error","tolerance","pass"
+"frozen reconstruction official b,N,G,in-range",2.22044604925031e-15,1e-09,TRUE
+"frozen reconstruction official 95% CI",3.5527136788005e-15,1e-09,TRUE
+"frozen reconstruction frozen b,N,G,in-range",4.44089209850063e-16,1e-09,TRUE
+"frozen reconstruction frozen 95% CI",2.88657986402541e-15,1e-09,TRUE
+"frozen reconstruction D,N,G",4.44089209850063e-16,1e-09,TRUE
+"measurement simulation all uncentered N,mean,percentiles",3.5527136788005e-15,1e-09,TRUE
+"measurement simulation all centered N,mean,percentiles",4.44089209850063e-15,1e-09,TRUE
+"measurement simulation published_rl1_060_080 uncentered N,mean,percentiles",2.88657986402541e-15,1e-09,TRUE
+"measurement simulation published_rl1_060_080 centered N,mean,percentiles",3.10862446895044e-15,1e-09,TRUE
+"specification curve common units",1.95399252334028e-14,1e-09,TRUE
+"overlap histogram counts A_control main Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts A_control main Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts A_control average Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts A_control average Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts all_control main Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts all_control main Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts all_control average Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts all_control average Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts A_control_no_suppliers main Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts A_control_no_suppliers main Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts A_control_no_suppliers average Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts A_control_no_suppliers average Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts all_control_no_suppliers main Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts all_control_no_suppliers main Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts all_control_no_suppliers average Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts all_control_no_suppliers average Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts private_SOE main Y1,Y2,Y3,Y4 1",0,1e-09,TRUE
+"overlap histogram counts private_SOE main Y1,Y2,Y3,Y4 0",0,1e-09,TRUE
+"overlap histogram counts private_SOE main Y5 1",0,1e-09,TRUE
+"overlap histogram counts private_SOE main Y5 0",0,1e-09,TRUE
+"overlap histogram counts private_SOE average Y1,Y2,Y3,Y4,Y5 1",0,1e-09,TRUE
+"overlap histogram counts private_SOE average Y1,Y2,Y3,Y4,Y5 0",0,1e-09,TRUE

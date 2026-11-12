@@ -1,0 +1,27 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{llrrrrrr}
+\toprule
+Dimension & Value & Fits & Positive & CI above 0 & Min & Median & Max \\
+\midrule
+all & all & 72 & 1.000 & 0.958 & 2.316 & 3.921 & 6.300 \\
+bin width & 0.005 & 24 & 1.000 & 0.958 & 2.316 & 3.870 & 6.277 \\
+bin width & 0.01 & 24 & 1.000 & 0.958 & 2.380 & 3.918 & 6.288 \\
+bin width & 0.02 & 24 & 1.000 & 0.958 & 2.523 & 4.050 & 6.300 \\
+exclusion window & 0.67:0.7 & 18 & 1.000 & 1.000 & 2.488 & 3.418 & 5.392 \\
+exclusion window & 0.66:0.7 & 18 & 1.000 & 1.000 & 2.575 & 3.656 & 5.392 \\
+exclusion window & 0.65:0.7 & 18 & 1.000 & 0.833 & 2.316 & 3.705 & 6.084 \\
+exclusion window & 0.66:0.72 & 18 & 1.000 & 1.000 & 3.733 & 4.478 & 6.300 \\
+degree & 3 & 24 & 1.000 & 1.000 & 3.573 & 4.804 & 6.300 \\
+degree & 5 & 24 & 1.000 & 1.000 & 2.875 & 3.900 & 4.842 \\
+degree & 7 & 24 & 1.000 & 0.875 & 2.316 & 3.102 & 4.074 \\
+fit range & 0.4:1 & 36 & 1.000 & 1.000 & 2.958 & 4.072 & 6.300 \\
+fit range & 0.5:0.9 & 36 & 1.000 & 0.917 & 2.316 & 3.511 & 4.836 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; pre 2017H1--2019H2, post 2020H2--2022H2. 999 joint whole-firm draws; seed 20261016. All 72 T031 specifications vary bin width (0.005, 0.01, 0.02), exclusion window, polynomial degree and fit range as shown. Window counts in the CSV refer to each realized exclusion window. Shares use all fits as denominator, including invalid fits as unsupported. Min/Median/Max are rescaled to 0.01-bin units (native b times bin width / 0.01); native units appear only in CSV. No multiple-testing adjustment.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

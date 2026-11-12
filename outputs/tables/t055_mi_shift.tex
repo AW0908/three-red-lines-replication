@@ -1,0 +1,30 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{6.0cm}rrrrr}
+\toprule
+Period / scope / metric & N & Firms & Estimate & 95\% CI & Valid \\
+\midrule
+post all pairs mean shift pp & 602 & 129 & 1.4600 & [0.9553, 1.9703] & 999/999 \\
+placebo all pairs mean shift pp & 616 & 125 & 1.8305 & [1.3873, 2.2624] & 999/999 \\
+post minus placebo all pairs mean shift pp & 602/616 & 129/125 & -0.3704 & [-1.0358, 0.2790] & 999/999 \\
+post all pairs median shift pp & 602 & 129 & 0.5064 & [0.1727, 1.1556] & 999/999 \\
+placebo all pairs median shift pp & 616 & 125 & 0.7322 & [0.5409, 1.0968] & 999/999 \\
+post minus placebo all pairs median shift pp & 602/616 & 129/125 & -0.2258 & [-0.6101, 0.3415] & 999/999 \\
+post reported 060 080 mean shift pp & 369 & 93 & 2.3970 & [1.8062, 3.0272] & 999/999 \\
+placebo reported 060 080 mean shift pp & 329 & 89 & 2.3751 & [1.8199, 2.9411] & 999/999 \\
+post minus placebo reported 060 080 mean shift pp & 369/329 & 93/89 & 0.0219 & [-0.6649, 0.7066] & 999/999 \\
+post reported 060 080 median shift pp & 369 & 93 & 1.8280 & [1.0473, 2.4675] & 999/999 \\
+placebo reported 060 080 median shift pp & 329 & 89 & 1.2247 & [0.7789, 2.1136] & 999/999 \\
+post minus placebo reported 060 080 median shift pp & 369/329 & 93/89 & 0.6032 & [-0.3205, 1.2857] & 999/999 \\
+post reported 060 080 D & 369 & 93 & 0.1870 & [0.1169, 0.2568] & 999/999 \\
+placebo reported 060 080 D & 329 & 89 & 0.0699 & [0.0187, 0.1320] & 999/999 \\
+placebo reported 060 080 D reweighted & 329/369 & 89/93 & 0.1444 & [0.0650, 0.2290] & 999/999 \\
+post minus placebo reported 060 080 D post minus reweighted placebo & 369/329 & 93/89 & 0.0426 & [-0.0410, 0.1243] & 999/999 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 common whole-firm resamples of the full 136-firm universe, seed 20261016. All CIs are pointwise percentile intervals; invalid draws omitted and counted in CSV; fewer than 90 percent valid is unreliable. Post: 2020H2--2022H2, anchor end-2019; placebo: 2017H2--2019H2, anchor end-2016. b: excess count / mean fitted mass-bin count; degree 5 over [0.40,1.00], 0.01 bins, excluded/mass window [0.66,0.70). Zero bins and final right edge retained; no clipping or integration constraint. Descriptive; no causal policy interpretation. For contrasts N/Firms show first/benchmark populations. Shift = 100(frozen minus reported RL1), in percentage points; negative shifts retained. Reported-range restriction uses accounting R in [0.60,0.80] in each period. D is a share, not percentage points. IPW placebo uses post bin shares / placebo bin shares in 0.02 bins; both source and target distributions re-estimated in each draw; unsupported target bins invalidate the draw. The D contrast compares restricted post D to reweighted restricted placebo D.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

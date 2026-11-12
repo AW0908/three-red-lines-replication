@@ -1,0 +1,7 @@
+"metric","value","note"
+"native_width_inches",6.25,"Same figure block in 19_referee3.R and T061"
+"paper_linewidth_inches_A4_1in_margins",6.26771653543307,"Read from existing preamble: A4, 1 inch margins"
+"minimum_text_native_pt",9.6,"pointsize 12; cex reset to 1; legend and notes cex .8"
+"minimum_text_at_linewidth_pt",9.6272125984252,"At full linewidth (no smaller placement assumed)"
+"T055_points",44,"All existing points and confidence intervals unchanged"
+"T055_bootstrap_draws",43956,"Existing draws; not re-estimated in step 6"

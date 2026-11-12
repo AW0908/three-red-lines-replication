@@ -1,0 +1,48 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{lrrrrr}
+\toprule
+Anchor / variant / statistic & N & Firms & Estimate & 95\% CI & Fallback \\
+\midrule
+2019-12-31 own D & 602 & 129 & -0.0980 & [-0.1513, -0.0474] & 13 \\
+2019-12-31 own b & 602 & 129 & 1.5224 & [0.1365, 3.3356] & 13 \\
+2019-12-31 bin D & 602 & 129 & -0.0565 & [-0.1190, 0.0095] & 13 \\
+2019-12-31 bin b & 602 & 129 & 1.7448 & [-0.1815, 3.3457] & 13 \\
+2016-12-31 own D & 0 & 0 & -- & [--, --] & 136 \\
+2016-12-31 own b & 0 & 0 & -- & [--, --] & 136 \\
+2016-12-31 bin D & 0 & 0 & -- & [--, --] & 136 \\
+2016-12-31 bin b & 0 & 0 & -- & [--, --] & 136 \\
+2017-06-30 own D & 0 & 0 & -- & [--, --] & 136 \\
+2017-06-30 own b & 0 & 0 & -- & [--, --] & 136 \\
+2017-06-30 bin D & 0 & 0 & -- & [--, --] & 136 \\
+2017-06-30 bin b & 0 & 0 & -- & [--, --] & 136 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 whole-firm draws, seed 20261016; pointwise percentile CIs. Descriptive, no causal interpretation. MI counterfactual = anchor MI times exp(g times elapsed half-years). D is official minus trend-adjusted compliance; b is adjusted-RL1 excess mass. Firm g = total log MI change / elapsed half-years over the inclusive preceding three years; at least four finite MI observations and no observed nonpositive MI required. Failed firm trends use the median eligible firm trend in the anchor RL1 bin. The bin variant uses that median for all firms. Bins: [0.60,0.66), [0.66,0.74), [0.74,0.80], other (including missing RL1). No bin donor means missing; no global fallback. Each draw re-estimates bin medians with firm multiplicities, eligible pairs and polynomial fits. Own-history sufficient statistics are invariant to firm duplication. Outcome horizons: anchor+2 through +6 half-years. Panel begins end-2016: placebo anchors have at most one/two pre observations; estimates and contrasts are unavailable, not zero. Fallback counts are full-universe firms failing the own-trend rule. CSVs retain paired official b, coverage, exclusions and all draws. Extrapolation, smooth density, reporting selection and stable within-firm currency are assumptions. The unavailable placebo prevents a post-minus-pre inference.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{lrrrrr}
+\toprule
+Anchor / variant / statistic & N & Firms & Estimate & 95\% CI & Fallback \\
+\midrule
+Post minus 2016-12-31 own D & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2016-12-31 own b & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2016-12-31 bin D & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2016-12-31 bin b & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2017-06-30 own D & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2017-06-30 own b & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2017-06-30 bin D & 602 & 129 & -- & [--, --] & 13 \\
+Post minus 2017-06-30 bin b & 602 & 129 & -- & [--, --] & 13 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 whole-firm draws, seed 20261016; pointwise percentile CIs. Descriptive, no causal interpretation. MI counterfactual = anchor MI times exp(g times elapsed half-years). D is official minus trend-adjusted compliance; b is adjusted-RL1 excess mass. Firm g = total log MI change / elapsed half-years over the inclusive preceding three years; at least four finite MI observations and no observed nonpositive MI required. Failed firm trends use the median eligible firm trend in the anchor RL1 bin. The bin variant uses that median for all firms. Bins: [0.60,0.66), [0.66,0.74), [0.74,0.80], other (including missing RL1). No bin donor means missing; no global fallback. Each draw re-estimates bin medians with firm multiplicities, eligible pairs and polynomial fits. Own-history sufficient statistics are invariant to firm duplication. Outcome horizons: anchor+2 through +6 half-years. Panel begins end-2016: placebo anchors have at most one/two pre observations; estimates and contrasts are unavailable, not zero. Fallback counts are full-universe firms failing the own-trend rule. CSVs retain paired official b, coverage, exclusions and all draws. Extrapolation, smooth density, reporting selection and stable within-firm currency are assumptions. The unavailable placebo prevents a post-minus-pre inference.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

@@ -1,0 +1,284 @@
+T023 ESTIMATION REWORK VERIFICATION - 2026-10-19
+Review addressed: review/T023.md, estimation findings 1-4; matching Co-PI REWORK feedback.
+This is a verification record, generated from CSVs, build logs and hash comparisons by local QA commands. It is not rebuilt by run_all.R.
+Analysis results remain reproducible from code/06_bunching_tests.R and the approved panel. No network used.
+
+CORRECTIONS
+1. All 0.60/0.80 placebo polynomial fits exclude BOTH their own test window and the true-threshold region [0.66,0.72) for RL1. Alternative RL1 excludes the analogous [0.49,0.55). Additional exclusions affect fitting only; mass is confined to the placebo window.
+2. Invalid point estimates have b, SE and confidence intervals missing, printed as -- in excess-mass CSV/TEX. bootstrap_valid_share, bootstrap_meets_90pct and inference_status flag validity. A TEX dagger flags conditional SEs from fewer than 90% valid draws; no significance stars are used.
+3. RL1 retains full-main-sample fits (pre/post N=797/630) and adds fits on the exact paired sample used for alternative RL1 (N=711/599). Sample columns are explicit in CSV, bin audit and TEX.
+4. For excess mass only, the pre-period quantile-matched cutoff 0.53350029 is rounded to the nearest 0.01 (R round, ties to even): 0.53. Main window [0.49,0.53); narrow [0.50,0.53); wide exclusion [0.49,0.55) counts mass only below 0.53. The definition-share check, reporting-date comparisons and histogram retain the original unrounded cutoff.
+
+OLD VS NEW PLACEBO FITS
+Only the additional regulated-region exclusion changes these existing placebo fits. The alternative main cutoff rounding does not change the original placebo test windows.
+ratio | sample | period | cutoff | specification | old b | old SE | old valid draws | new b | new SE | new valid draws | new status
+rl1 | Full | pre | 0.6 | main | 1.20738230998854 | 1.26289087170799 | 999 | 0.895610504703358 | 1.12756536855887 | 999 | all_draws_valid
+rl1 | Full | pre | 0.6 | degree4 | 0.127781033713481 | 0.836740023650465 | 999 | -0.0857327562477337 | 0.793558421298985 | 999 | all_draws_valid
+rl1 | Full | pre | 0.6 | degree7 | 1.8385552384071 | 1.50713978646776 | 999 | 1.56794495476291 | 1.390795945439 | 999 | all_draws_valid
+rl1 | Full | pre | 0.6 | narrow | 0.251904884112766 | 0.783381717608713 | 999 | 0.0562220231987662 | 0.693839455331837 | 999 | all_draws_valid
+rl1 | Full | pre | 0.6 | wide | 1.72773738707434 | 1.69292322590746 | 999 | 1.38116657875783 | 1.4767988498544 | 999 | all_draws_valid
+rl1 | Full | pre | 0.8 | main | -0.278784126325591 | 0.5802558388637 | 999 | -0.359826764714871 | 0.551490399319922 | 999 | all_draws_valid
+rl1 | Full | pre | 0.8 | degree4 | 0.304335917878378 | 0.68677594242149 | 999 | 0.176483025563723 | 0.649038067652562 | 999 | all_draws_valid
+rl1 | Full | pre | 0.8 | degree7 | -0.584024654992899 | 0.536817241125323 | 999 | -0.663359160597328 | 0.51690929902866 | 999 | all_draws_valid
+rl1 | Full | pre | 0.8 | narrow | -0.588555073357733 | 0.460165678398208 | 999 | -0.641219810153321 | 0.444041851677113 | 999 | all_draws_valid
+rl1 | Full | pre | 0.8 | wide | -0.305280034473937 | 0.620770509193639 | 999 | -0.401124753733523 | 0.588838933266055 | 999 | all_draws_valid
+rl1 | Full | post | 0.6 | main | -1.32541962186745 | 0.714588371830475 | 999 | -0.3386854740632 | 1.00480890681994 | 999 | all_draws_valid
+rl1 | Full | post | 0.6 | degree4 | -1.450798427765 | 0.661693314717515 | 999 | -0.755709906708762 | 0.825075747633122 | 999 | all_draws_valid
+rl1 | Full | post | 0.6 | degree7 | 0.143629875511001 | 1.32909063149102 | 998 | 0.659277143169722 | 1.59868844997555 | 998 | conditional_bootstrap
+rl1 | Full | post | 0.6 | narrow | -0.647833572006637 | 0.620295071105443 | 999 | 0.240347340924355 | 0.855659114414099 | 999 | all_draws_valid
+rl1 | Full | post | 0.6 | wide | -1.60558631079725 | 0.687525695260099 | 999 | -0.540291393411364 | 1.05833922527046 | 999 | all_draws_valid
+rl1 | Full | post | 0.8 | main | -0.907891595982832 | 0.572347723873385 | 999 | -0.0449493120012078 | 0.730827440904437 | 999 | all_draws_valid
+rl1 | Full | post | 0.8 | degree4 | -0.670598258807397 | 0.617199664889657 | 999 | 0.297497966654598 | 0.788713465372894 | 999 | all_draws_valid
+rl1 | Full | post | 0.8 | degree7 | -0.950341524694007 | 0.577366368878821 | 999 | -0.34648535703653 | 0.708491355712055 | 999 | all_draws_valid
+rl1 | Full | post | 0.8 | narrow | -0.842871116821659 | 0.459035243526281 | 999 | -0.338997973758039 | 0.560906048950978 | 999 | all_draws_valid
+rl1 | Full | post | 0.8 | wide | -1.0936876960631 | 0.556917240445397 | 999 | -0.21047743686333 | 0.73782965156897 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.6 | main | 0.562087248157697 | 0.66728335300505 | 999 | 0.232965663662715 | 0.658947217230974 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.6 | degree4 | 0.90636177256559 | 0.715616643750232 | 999 | 0.455578581527867 | 0.688786475971809 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.6 | degree7 | 0.508458588341173 | 0.67662037389942 | 999 | 0.21125913311777 | 0.700333027762121 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.6 | narrow | 0.411371174592541 | 0.574751434858798 | 999 | 0.193657856431655 | 0.557490632382545 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.6 | wide | 0.783961309836535 | 0.747679414662502 | 999 | 0.439229865833085 | 0.746238132860835 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.8 | main | 0.605812938614027 | 2.11699673596573 | 888 | 1.15115111225341 | 2.25493050815243 | 847 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | pre | 0.8 | degree4 | -1.50318205980595 | 1.05274566608107 | 999 | -1.11109936562933 | 1.3453388751518 | 997 | conditional_bootstrap
+rl1_alt | Paired | pre | 0.8 | degree7 | 13.4063132803898 | 5.18929785386205 | 473 | 6.40237391805451 | 5.57049194894072 | 621 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | pre | 0.8 | narrow | 0.406529482531014 | 1.87741948231989 | 907 | 0.79945317133547 | 2.14186845868087 | 874 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | pre | 0.8 | wide | 0.539658405105085 | 2.2341176215056 | 848 | 1.14923436676238 | 2.42765988675389 | 792 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | post | 0.6 | main | 1.04468791773983 | 0.73047758012775 | 999 | 1.27239398192477 | 0.798437069173348 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.6 | degree4 | 1.35491563256797 | 0.811224153838529 | 999 | 1.58496694378047 | 0.876451514949002 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.6 | degree7 | 0.711356869681913 | 0.702197259975511 | 999 | 0.930785163200649 | 0.829926856788866 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.6 | narrow | 0.917112732420499 | 0.635311506226741 | 999 | 1.03753305699703 | 0.66241392551029 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.6 | wide | 1.31252020085373 | 0.859945403013153 | 999 | 1.77175806474908 | 1.01532767555447 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.8 | main | 4.31524735800369 | 3.45321468502988 | 578 | 4.75940601646932 | 3.37899407221374 | 549 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | post | 0.8 | degree4 | -1.29192673386389 | 1.93923897088302 | 990 | -1.25859076883592 | 1.62580027165585 | 992 | conditional_bootstrap
+rl1_alt | Paired | post | 0.8 | degree7 | 5.99562829127787 | 11.0076602418881 | 691 | 7.89524109894439 | 11.092406788275 | 668 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | post | 0.8 | narrow | 0.716335755219455 | 2.5125479863938 | 656 | 0.93436518824765 | 2.57369581713381 | 630 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | post | 0.8 | wide | NA | 3.81040125345111 | 389 | -- | -- | 350 | invalid_counterfactual
+
+CURRENT MAIN EXCESS-MASS ESTIMATES
+ratio | sample | period | cutoff | N | b | SE | CI low | CI high | valid draws | status
+rl1 | Full | pre | 0.7 | 797 | -0.877187033767494 | 0.598087460618515 | -1.85006683138097 | 0.427802068235097 | 999 | all_draws_valid
+rl1 | Full | pre | 0.6 | 797 | 0.895610504703358 | 1.12756536855887 | -0.758281828587912 | 3.56192815834226 | 999 | all_draws_valid
+rl1 | Full | pre | 0.8 | 797 | -0.359826764714871 | 0.551490399319922 | -1.3515975407895 | 0.737270905203152 | 999 | all_draws_valid
+rl1 | Full | post | 0.7 | 630 | 3.1428547576148 | 1.26667653714963 | 1.01220136164402 | 5.84113827427256 | 999 | all_draws_valid
+rl1 | Full | post | 0.6 | 630 | -0.3386854740632 | 1.00480890681994 | -1.9195506241611 | 1.91227368647285 | 999 | all_draws_valid
+rl1 | Full | post | 0.8 | 630 | -0.0449493120012078 | 0.730827440904437 | -1.3760088408453 | 1.50290986907948 | 999 | all_draws_valid
+rl1 | Paired | pre | 0.7 | 711 | -0.730499936819541 | 0.666864160517198 | -1.84669837558401 | 0.674819498036407 | 999 | all_draws_valid
+rl1 | Paired | pre | 0.6 | 711 | 0.659770012228299 | 1.20754640635391 | -1.10730659580761 | 3.37184169147649 | 999 | all_draws_valid
+rl1 | Paired | pre | 0.8 | 711 | -0.523089349330289 | 0.567800258891159 | -1.58005792547146 | 0.59931031218769 | 999 | all_draws_valid
+rl1 | Paired | post | 0.7 | 599 | 3.6607140484657 | 1.36652036792122 | 1.35325475126237 | 6.56802247484708 | 999 | all_draws_valid
+rl1 | Paired | post | 0.6 | 599 | -0.936447736694612 | 0.940074964336991 | -2.38814764729892 | 1.36366671788287 | 999 | all_draws_valid
+rl1 | Paired | post | 0.8 | 599 | 0.0802160788858233 | 0.761724138037274 | -1.29961645200789 | 1.70406884800022 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.53 | 711 | -0.403047449783616 | 0.574220369079277 | -1.49193394184439 | 0.732048400018366 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.6 | 711 | 0.232965663662715 | 0.658947217230974 | -0.90876250405008 | 1.70918931041014 | 999 | all_draws_valid
+rl1_alt | Paired | pre | 0.8 | 711 | 1.15115111225341 | 2.25493050815243 | -2.09574120194648 | 6.61024988612283 | 847 | unreliable_bootstrap_below_90pct
+rl1_alt | Paired | post | 0.53 | 599 | 0.00393021374065504 | 0.651297066074232 | -1.1467441833061 | 1.38957834311047 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.6 | 599 | 1.27239398192477 | 0.798437069173348 | -0.131758810564257 | 2.97946237128572 | 999 | all_draws_valid
+rl1_alt | Paired | post | 0.8 | 599 | 4.75940601646932 | 3.37899407221374 | -2.04983688780907 | 10.0195876616372 | 549 | unreliable_bootstrap_below_90pct
+
+VALIDITY AND ACCEPTANCE
+90 polynomial specifications, each with 999 firm-cluster bootstrap draws, seed 20261016.
+Valid draws range 350--999. Fits below 90% valid draws: 8. Invalid point estimates: 1.
+Alternative RL1, post, 0.80, wide: b and SE both --; 350 valid draws; invalid counterfactual. Alternative 0.80 tail fits are unstable and cannot support mechanism inference.
+All 13 generated CSV/TEX/PDF deliverables exist and are byte-identical across two final project builds and a fresh-copy build.
+All 86 protected data/output files are byte-identical before and after project builds, including 38 non-T023 output files.
+The fresh copy removed all 49 generated CSV/TEX/PDF outputs (36 non-T023 plus 13 T023) and the processed panel before rebuilding. All 49 outputs and the raw-data-rebuilt panel match their original/project hashes. The pre-existing t015 verification text was copied, not regenerated; .DS_Store files were omitted from the fresh copy.
+T005 check: RL1 [0.68,0.70) exactly 36/797 pre and 78/630 post, asserted against t005_bunching_counts.csv by the analysis script.
+Stop coverage gate: missing alternative ratios 0/797, 0/630, 0/740 and 0/575. No protected-output or coverage stop condition occurred.
+
+SEPARATE COMPUTATIONAL CHECK (worker self-check, not independent review)
+Independent raw-power fits: all 90 estimates and 5400 bin rows verified; max b error 2.04e-13.
+Independent 999-draw whole-firm refits for 12 RL1 main fits: max SE error 6.44e-15.
+Paired N=711/599; full N=797/630; placebo exclusion unions and exact mass windows verified.
+Invalid point: b/SE/CI suppressed; below-90-percent flags verified; no TEX significance stars.
+All 90 point fits were independently recomputed from the panel using hist() and scaled raw polynomial powers with lm.fit, rather than the analysis script's orthogonal poly()/qr basis. All 5,400 observed/fitted bin rows, paired sample sizes, exclusion unions and mass windows were checked.
+
+INTERPRETATION OF EACH DIAGNOSTIC
+1. Definitions (descriptive): concentration specific to the regulated definition is consistent with targeting. Genuine deleveraging requires separate debt/economic-leverage evidence; alternative RL1 is only a denominator change, not economic leverage. Paired RL1 difference-in-bunching=0.06484553, CI [0.01736021,0.11528972], conditioned on the fixed unrounded cutoff. RL2 uses observed perpetual items only: pre/post N=132/99, firms=33/26, difference=-0.00505051 without inference because post has fewer than 30 firms.
+2. Reporting dates (descriptive): unusual reporting-snapshot concentration, especially December, could support temporary reporting adjustment; durable real adjustment need not create a December peak. RL1 post below shares: June 34/254=13.39%, December 44/376=11.70%; excluding fiscal-year-flag firms, 34/250=13.60% and 44/370=11.89%. No special December peak. There are no off-report-date observations, and no formal June/December contrast test.
+3. Reversal (selected, descriptive transitions): increased post-period near-bin returns above 0.70 relative to controls and pre would support temporary targeting. RL1 post 14/61=22.95%, control 9/50=18.00%; difference CI [-0.1071168,0.1977178]. Pre near 20/36=55.56%; post minus pre difference=-0.3260474, CI [-0.5365585,-0.1271132]. Thus reversal declined, without evidence of increased temporary reversal. Persistent compliance can reflect real or persistent cosmetic adjustment. RL2 post 6/17 versus 17/45 also has an imprecise contrast. Next-date gaps, mean reversion and right censoring prevent causal claims.
+4. Composition (selected, descriptive transitions): debt declines support real adjustment; increasing cosmetic proxies without debt declines could indicate cosmetic channels. Entrant and stayer mean log-debt changes are -0.0325219 and -0.0348377 (difference=0.0023158, cluster p=0.9143832). Log-assets difference=0.0408122 (cluster p=0.004257), consistent with denominator expansion, not proof of cosmetic activity. Cash/assets, minority/equity and JV/assets do not have precise differences. Perpetual/equity uses items observed at both dates: 8 entries/42 stayers, 19 firms; no inference. Logs assume within-firm currency comparability.
+5. Excess mass (descriptive): local mass at the regulated threshold relative to unaffected placebo thresholds can support threshold targeting. Genuine deleveraging can also target the regulatory threshold. Full RL1 main b: pre -0.8772 (SE 0.5981), post 3.1429 (SE 1.2667). Paired RL1: pre -0.7305 (SE 0.6669), post 3.6607 (SE 1.3665); paired alternative RL1 at rounded 0.53: pre -0.4030 (SE 0.5742), post 0.0039 (SE 0.6513). The paired ratios share N but use distinct definition-specific cutoffs; their difference is not formally tested.
+After excluding the true regulated region, full-sample RL1 post main placebo b at 0.60 changes from -1.3254 to -0.3387 (SE 1.0048, CI [-1.9196,1.9123]); at 0.80 from -0.9079 to -0.0449 (SE 0.7308, CI [-1.3760,1.5029]). Both CIs include zero; some robustness placebo point estimates are positive. Their previous negative signs are not independent evidence of absent mass. They are sensitive to counterfactual fitting and provide only a limited descriptive comparison.
+Assumptions: a smooth counterfactual outside excluded regions, suitable polynomial shape/windows, and comparable selection. No integration correction, elasticity or causal mechanism interpretation. Pointwise inference, no multiplicity correction and no formal pre/post b-difference test.
+Principal diagnostics remain regulated-ratio placebo thresholds, reversal, reporting snapshots and composition. Taken together, the results are consistent with RL1 threshold targeting but do not identify cosmetic rather than real balance-sheet adjustment.
+
+LAYOUT
+All three final TEX fragments compiled together at 12pt Times-compatible newtx, one-inch margins: 4 pages, no overfull or underfull boxes. Excess mass uses three panels so sample labels remain readable. All four rendered pages and both figure PDFs were inspected. Figures remain byte-identical to the pre-REWORK versions.
+The alternative histogram retains its fixed 0.02 grid, so its cutoff line can cross a bar. Definition-share checks use bins anchored at the exact quantile; excess-mass windows instead use the stated 0.01-grid-rounded cutoff. These are distinct descriptive summaries, not interchangeable bar counts.
+
+SCOPE AND OPEN ISSUES
+Only code/06_bunching_tests.R, README.md and t023 outputs were edited by this worker. Both run_all entry points already call 06 after 05 and were unchanged. tasks/T023.md and AI_USAGE_LOG.md were unchanged.
+state/STATE.md changed externally during this run: a separate approved Conclusion-section entry appeared. The worker did not edit it; this entry does not change T023 samples, estimands or computations. All panel/raw inputs and state/LIMITATIONS.md remain byte-identical.
+The panel has 10 fiscal-year-flag firms, 4 in sample_main; the card/limitations mention 11. All flagged firms were excluded in the requested variant; input flags were not changed.
+The quantile-matched cutoff is held fixed under bootstrap, so its estimation uncertainty is not included. The original matched ECDF uses <=0.70; threshold bins use <0.70. This existing minor boundary convention was not changed in estimation REWORK.
+
+AI-USAGE LOG SUGGESTION (Co-PI to add; outside worker write scope)
+2026-10-19 | Codex | T023 estimation REWORK: placebo fits exclude true-threshold regions; invalid and low-validity bootstrap results flagged; paired RL1 excess mass and grid-rounded alternative cutoff added | Verified by two full project builds, fresh raw-data rebuild, SHA-256 comparisons, separate raw-power/firm-bootstrap recalculation and rendered TEX/PDF checks; independent review pending. No network or raw-data edits.
+
+BUILD run_final1.log - exit 0
+cd replication && Rscript run_all.R
+Running 06_bunching_tests.R 
+T023: rl1 pre placebo missing 0/797.
+T023: rl1 post placebo missing 0/630.
+T023: rl2 pre placebo missing 0/740.
+T023: rl2 post placebo missing 0/575.
+T023: RL1 below-threshold counts verified: pre 36/797; post 78/630.
+T023: alternative RL1 cutoff 0.53350029; pre rank 0.48382560, N=711; descriptive only.
+T023: excess-mass alternative cutoff rounded to 0.53; main window [0.49,0.53).
+T023: RL2 observed-perpetual firms pre/post 33/26; inference reported: FALSE.
+T023: fiscal-year-flag firms: 4 main-sample (10 panel-wide); reporting-date exclusion variant written.
+T023: rl1 difference-in-bunching 0.06484553, 95% CI [0.01736021, 0.11528972].
+T023: rl2 difference-in-bunching -0.00505051, 95% CI [NA, NA].
+T023: 90 polynomial specifications; bootstrap valid draws 350--999 of 999.
+T023: 1 invalid point estimates; 8 fits below 90% valid draws; no significance stars.
+T023: wrote 13 staged CSV/TEX/PDF outputs; input and 38 existing-output hashes unchanged.
+06_bunching_tests.R: exit 0, 1.15 seconds
+Done: outputs/ rebuilt. Total elapsed: 10.12 seconds.
+
+BUILD run_final2.log - exit 0
+cd replication && Rscript run_all.R
+Running 06_bunching_tests.R 
+T023: rl1 pre placebo missing 0/797.
+T023: rl1 post placebo missing 0/630.
+T023: rl2 pre placebo missing 0/740.
+T023: rl2 post placebo missing 0/575.
+T023: RL1 below-threshold counts verified: pre 36/797; post 78/630.
+T023: alternative RL1 cutoff 0.53350029; pre rank 0.48382560, N=711; descriptive only.
+T023: excess-mass alternative cutoff rounded to 0.53; main window [0.49,0.53).
+T023: RL2 observed-perpetual firms pre/post 33/26; inference reported: FALSE.
+T023: fiscal-year-flag firms: 4 main-sample (10 panel-wide); reporting-date exclusion variant written.
+T023: rl1 difference-in-bunching 0.06484553, 95% CI [0.01736021, 0.11528972].
+T023: rl2 difference-in-bunching -0.00505051, 95% CI [NA, NA].
+T023: 90 polynomial specifications; bootstrap valid draws 350--999 of 999.
+T023: 1 invalid point estimates; 8 fits below 90% valid draws; no significance stars.
+T023: wrote 13 staged CSV/TEX/PDF outputs; input and 38 existing-output hashes unchanged.
+06_bunching_tests.R: exit 0, 1.27 seconds
+Done: outputs/ rebuilt. Total elapsed: 10.54 seconds.
+
+BUILD run_fresh.log - exit 0
+cd replication && Rscript run_all.R
+Running 06_bunching_tests.R 
+T023: rl1 pre placebo missing 0/797.
+T023: rl1 post placebo missing 0/630.
+T023: rl2 pre placebo missing 0/740.
+T023: rl2 post placebo missing 0/575.
+T023: RL1 below-threshold counts verified: pre 36/797; post 78/630.
+T023: alternative RL1 cutoff 0.53350029; pre rank 0.48382560, N=711; descriptive only.
+T023: excess-mass alternative cutoff rounded to 0.53; main window [0.49,0.53).
+T023: RL2 observed-perpetual firms pre/post 33/26; inference reported: FALSE.
+T023: fiscal-year-flag firms: 4 main-sample (10 panel-wide); reporting-date exclusion variant written.
+T023: rl1 difference-in-bunching 0.06484553, 95% CI [0.01736021, 0.11528972].
+T023: rl2 difference-in-bunching -0.00505051, 95% CI [NA, NA].
+T023: 90 polynomial specifications; bootstrap valid draws 350--999 of 999.
+T023: 1 invalid point estimates; 8 fits below 90% valid draws; no significance stars.
+T023: wrote 13 staged CSV/TEX/PDF outputs; input and 37 existing-output hashes unchanged.
+06_bunching_tests.R: exit 0, 1.17 seconds
+Done: outputs/ rebuilt. Total elapsed: 10.16 seconds.
+
+SHA-256 - GENERATED DELIVERABLES (identical across both final project builds and fresh build)
+d3e0a02f157891b1ba5483773aa247914f313448a20ee552c4f6209ea3346625  replication/outputs/figures/t023_bunching_rl1_vs_alt.pdf
+49f1c21514dc8d71c5175a7bed4c78d7b5ad422e08a5106614128d84a3705831  replication/outputs/figures/t023_excess_mass_rl1.pdf
+224158ca1fdbc14c2c0cf8bee93ef0c5becc6a09621815b75ef0a18deb198f87  replication/outputs/tables/t023_composition.csv
+289df85b7c0d67b0a5a3defbc704a12501283b85ab3b5be3d3557c2154fc726a  replication/outputs/tables/t023_coverage.csv
+e02f6cbc857290128a054568acb55e73ada48fa15e73f061e22deb31a959f71e  replication/outputs/tables/t023_excess_mass.csv
+0096b4625757c525654d503e806ae7de7a5ce2e73eda60e1b60f886fbda47eef  replication/outputs/tables/t023_excess_mass.tex
+8431e5afea1a2c029c393f531e29fb239d29d7ad5966c4bb1cf2f07c2bb2ab88  replication/outputs/tables/t023_excess_mass_bins.csv
+debe895b2f7975d42641c0621eb536f5204b3234cb1bfb16a1a4126b43d8ce10  replication/outputs/tables/t023_histogram_bins.csv
+10dbd880d1644c8777a70a91f15574345ac77d592a92dec87debcb0221601bd0  replication/outputs/tables/t023_placebo_definitions.csv
+0a21bab2b342ffc533e757d2164a4aef495f6069f413d681d0417c16d58dfb86  replication/outputs/tables/t023_placebo_definitions.tex
+d20ca65e4576552ad7b5ab55866914b55da58ad8fad8a1cd91f704d28fe0b7f7  replication/outputs/tables/t023_reporting_dates.csv
+163b8f565af3a2389018711585276fec2a20729b6e5f16f848087484d0bcc0bd  replication/outputs/tables/t023_reversal.csv
+f36bec00099976f0eea846b6d3792c312825f0ee45373e1b086bd77464e229e2  replication/outputs/tables/t023_reversal.tex
+
+SHA-256 - ALL 86 PROTECTED DATA/OUTPUT FILES (baseline = final)
+72de054dd95588d6074408362b77bc56d1804b1942896e78b486e672922ff969  Daten/.DS_Store
+c11c6d8f402402e661443897a0cfc6b59c5b6f8d3efeb97b7f63914ba15aa667  Daten/A_delistet.xlsx
+155965ee3c777ed2187eb6fa96d1556a55affa21c37c428f77b6b4a476956aa2  Daten/HK_delistet.xlsx
+f946102ab63c6d0bbb278ea9ca1b3fbb14cfcd14deea719eb14a436d986f86ee  Daten/Wind_Export_Checkliste.xlsx
+a0277386ed77ee77c6103f723cab180069317802dc27fdaf47a4ca821d7c2003  Daten/akshare_coverage_test.py
+ed2c1977ea599b0492997890dba32afe25c5fc715938709d578e7d4ab3c96f45  Daten/akshare_output/coverage_report.xlsx
+b42f2099187886def637d6aa840022266e05cb6c987a9394e708e23cd505eb46  Daten/akshare_output/delisted_a_balance.csv
+b42f2099187886def637d6aa840022266e05cb6c987a9394e708e23cd505eb46  Daten/akshare_output/delisted_a_income.csv
+3e589d9ba5c9f572409affac1395445b434eeeeaaa7e9fb52f409158ca648fc0  Daten/akshare_output/delisted_hk_balance.csv
+8ab43841a4336225e935b645d382c6b3a0c72812963609f5aba334917ecfe524  Daten/akshare_output/delisted_hk_income.csv
+26a0beb3aac57a30c3bb18619de46f854110aae6a54281886e4ea9e51f99c00c  Daten/akshare_output/firm_list.csv
+b14ecb525391389ed6e60bb99ec984c9feef99b7acba111dfa7b1a3b5b424feb  Daten/akshare_output/raw_a_balance.csv
+82dab1bc9386f0d2da2c07a2d55d70630ed928c03b2eb74bd92a437633db12b1  Daten/akshare_output/raw_a_income.csv
+864eded01132fbd5b29103c428d14ca96a8fb359399304b002aa479a370fa1da  Daten/akshare_output/raw_hk_balance.csv
+ccb7941e284ba277d81b5888de8c1578ab9585d4e557afd3b96f26564146aae0  Daten/akshare_output/raw_hk_income.csv
+769de6bd6bbcf7cecee79f6d409847b9d6c170ed28d4cbe60b58a1e4f068dbfd  Daten/delistete_immobilienfirmen.csv
+05dd3e69e55a8745c7de415679961e2b10b56b09603ec3e46a19e1089c7fa6af  Daten/fetch_delisted.py
+363b51edcc8036d7599dfe789b94825a8055134143ac1302829890bb696d38a6  Daten/wind_2026-10-16/README.md
+61bac5ff4bbc8a3576d6a6356deecd6e2ac3d126da5200f10008de9634161489  Daten/wind_2026-10-16/Sicherung_A_1.xlsx
+3de46b363d4edfe4a533ff1e963cb27a8273e8b21ea7f509eea8fe2649cab3a8  Daten/wind_2026-10-16/sicherung_HK_1.xlsx
+c76e3bbf1ef6de8b26d2db1a9dd83354a9f6e287fc7abfc61b8a36da0149c2a9  Daten/wind_2026-10-16/sicherung_HK_2.xlsx
+da07cd9119ba0ab0a0f45a09938ecf96f604917d2819a5ac5237294c672d22df  Daten/wind_2026-10-16/sicherung_HK_3.xlsx
+090bb4888aef2571e2ab056242e5c16a0bf9fb6452931e383656ae6d3f42052c  Daten/wind_2026-10-16/wind_A_delistet.xlsx
+a488a4bc9991ea5044322a17825c4e1ca712bfd0f82b002b380f62770788a5a0  Daten/wind_2026-10-16/wind_A_delistet_v2.xlsx
+eb308d7cfd4ffe4726e8a510bd6fb3ffad58ab26de0587b2f473a39501887fec  Daten/wind_2026-10-16/wind_A_gelistet_eigentum.xlsx
+b69004874aef892eb6cf45a67c036b1bdb685262a79cec832b212945fcea46ea  Daten/wind_2026-10-16/wind_HK_delistet.xlsx
+6383c9e158b82ca550048a818123416580f993af47bc79b630e6ceef8d0874dc  Daten/wind_2026-10-16/wind_HK_delistet_v2.xlsx
+55775bb2a156daac2c9bd5395e4dc5695a56203eacef9d5beecdc708061e5e74  Daten/wind_codes.txt
+ae532cfea766fa2e71206b7aab1db70b3d400b6d298e56486973485a6680301b  replication/data/.DS_Store
+9b868659fbc52d2a5d67efb6a1889ca1bbd695731ca30bf17a0a5c3c54c1cb26  replication/data/processed/panel_firm_halfyear.csv
+6a6fac0ace952061753736a767b3c1271ff74cc5c33090ca4fdeb7cb17ea1d08  replication/data/raw/.DS_Store
+a05c227805db40b69c82b2b4a3491d5ca088ab8baf4c7d56e8d68b9e76007dc5  replication/data/raw/MANIFEST.csv
+3e589d9ba5c9f572409affac1395445b434eeeeaaa7e9fb52f409158ca648fc0  replication/data/raw/eastmoney/delisted_hk_balance.csv
+8ab43841a4336225e935b645d382c6b3a0c72812963609f5aba334917ecfe524  replication/data/raw/eastmoney/delisted_hk_income.csv
+26a0beb3aac57a30c3bb18619de46f854110aae6a54281886e4ea9e51f99c00c  replication/data/raw/eastmoney/firm_list.csv
+b14ecb525391389ed6e60bb99ec984c9feef99b7acba111dfa7b1a3b5b424feb  replication/data/raw/eastmoney/raw_a_balance.csv
+82dab1bc9386f0d2da2c07a2d55d70630ed928c03b2eb74bd92a437633db12b1  replication/data/raw/eastmoney/raw_a_income.csv
+864eded01132fbd5b29103c428d14ca96a8fb359399304b002aa479a370fa1da  replication/data/raw/eastmoney/raw_hk_balance.csv
+ccb7941e284ba277d81b5888de8c1578ab9585d4e557afd3b96f26564146aae0  replication/data/raw/eastmoney/raw_hk_income.csv
+c0ed1a3052a46757c163ae402db0e14e60d19d475f652883252e38db418170fe  replication/data/raw/manual/ownership_manual_coding.csv
+61bac5ff4bbc8a3576d6a6356deecd6e2ac3d126da5200f10008de9634161489  replication/data/raw/wind/Sicherung_A_1.xlsx
+769de6bd6bbcf7cecee79f6d409847b9d6c170ed28d4cbe60b58a1e4f068dbfd  replication/data/raw/wind/delistete_immobilienfirmen.csv
+3de46b363d4edfe4a533ff1e963cb27a8273e8b21ea7f509eea8fe2649cab3a8  replication/data/raw/wind/sicherung_HK_1.xlsx
+c76e3bbf1ef6de8b26d2db1a9dd83354a9f6e287fc7abfc61b8a36da0149c2a9  replication/data/raw/wind/sicherung_HK_2.xlsx
+da07cd9119ba0ab0a0f45a09938ecf96f604917d2819a5ac5237294c672d22df  replication/data/raw/wind/sicherung_HK_3.xlsx
+a488a4bc9991ea5044322a17825c4e1ca712bfd0f82b002b380f62770788a5a0  replication/data/raw/wind/wind_A_delistet_v2.xlsx
+eb308d7cfd4ffe4726e8a510bd6fb3ffad58ab26de0587b2f473a39501887fec  replication/data/raw/wind/wind_A_gelistet_eigentum.xlsx
+6383c9e158b82ca550048a818123416580f993af47bc79b630e6ceef8d0874dc  replication/data/raw/wind/wind_HK_delistet_v2.xlsx
+ce3253c43850a369e4dfe2b31c8568c33a57ae9e9d9c026fe0aa6c7363ec77bb  replication/outputs/.DS_Store
+f7d6eecc5080bbdae61ca05b699e3cbe5f4572292ef10552f52eac008c318114  replication/outputs/figures/t005_breach_shares.pdf
+3cd175a438753447e2f0bc297aa0b2412f764058dc1cd49b182e1ec8d113563b  replication/outputs/figures/t005_bunching_rl1.pdf
+e87754215c5178ef5e5c306e8c24773c60fd77ffdf3d85f904c8c19897f48eec  replication/outputs/figures/t005_bunching_rl2.pdf
+5cee6251754e98a862d20584697698d10cabfe352fe30021249978e8551eac41  replication/outputs/figures/t005_bunching_rl3.pdf
+e5f2bdfd6b99e5b958936e495cf7cb3a3b49238938a2e8f2a3a7c66082643fe9  replication/outputs/figures/t009_es_jv_ta.pdf
+0a36be0a5901421588702a234e6db9432e655a42dba3634a43bc541c3966ad64  replication/outputs/figures/t009_es_mi_share.pdf
+a213b4782f533fd59f8147ee1dfc8dfc0d697482b90c47fbe63ed36ecffe554e  replication/outputs/figures/t009_es_rl1.pdf
+9a97532de9273f3a3aed62bd877bbdcbb8458474780ac483f098a852c44a8672  replication/outputs/figures/t009_es_rl2.pdf
+ae8dc291ee26a43d295efd9161d756bb769ae0682500126ca6bbb92c49293d9c  replication/outputs/figures/t009_es_rl2_gap.pdf
+bf44a125b4c24fdc70ae1db10451ea2a6b769d4f5f9eea3d1bbddfa9b3d3fb2f  replication/outputs/figures/t011_es_mi_share_distance.pdf
+be8cac54dd39a1c5efb14d6de80c130bb46f6c8fb815b05e68097cbdb4fbf68e  replication/outputs/figures/t011_es_mi_share_dose2018.pdf
+482338f768677f8ed55dd74b480b5a4211dec388020ded63471fd2099df8dc9e  replication/outputs/figures/t011_es_rl1_distance.pdf
+4af9ba1a564baaf8d37292584fce0c413943f9c13a4802064acc8504f020314d  replication/outputs/figures/t011_es_rl1_dose2018.pdf
+399291df94ed01288f72b02a6e0cc567dceffb8b4eec3e2e9f4b9dd23c139bed  replication/outputs/figures/t019_soe_coefficients.pdf
+1998bbe073a60883f2ed121f416df2a951b5669006790c639de0ba4ccdc088e2  replication/outputs/tables/t004_item_coverage.csv
+db473180f041c9a5a255fc1d6cf9b090835cdc0ea7334cb6640343822d2743c9  replication/outputs/tables/t004_ownership_unresolved.csv
+a4c4cc8c7e9bd056db3977ece29f2ce9c7a88660cbe040224b7235c64759be2b  replication/outputs/tables/t004_panel_counts.csv
+33163fafd952421f016fede2373dce2636dabb00cfb709a9f780ea86c404cb58  replication/outputs/tables/t004_variable_dictionary.csv
+9a576142a4f96330404e3ae1fe6dedf3c8bd5544b8deae81b342760c2722ec94  replication/outputs/tables/t005_bunching_counts.csv
+ed615ae7207d1faf075fafc295705ea7c37a8ba80ab3b957d96368dbc24463f3  replication/outputs/tables/t005_by_dose.csv
+c96980fe9e91d296a1563684feef9137ff2476689b74ba2485eeba345842e036  replication/outputs/tables/t005_by_dose.tex
+7049089e40a9406a4d81f28fa6014402dfc6bb1e92217fec11bf45a9242733c9  replication/outputs/tables/t005_summary_stats.csv
+e3e7e4690c3ed5700beb2d9ca1ae210c115d27fd6796f9de46778c0cf378986f  replication/outputs/tables/t005_summary_stats.tex
+c90f55ed37b1b577579939230ec342337f8a1bd61ca200da753e64dd4aca2b93  replication/outputs/tables/t008_mde.csv
+99a6346e67c305642c3db0d4283b44c4c3739a7b83d330d09eb5cede089e31bd  replication/outputs/tables/t008_mde.tex
+25a55c179fe83b9d1320a783fd665779862d9726e63cfcda4b25935351eeec9f  replication/outputs/tables/t009_did_main.csv
+ee6f5e35db714652cd45662216b4b326adc238b4c0590cc18a9000005e5f0f2e  replication/outputs/tables/t009_did_main.tex
+b7701453ec85903c0f1260d9db5e6344706b1305c045634bfeba861434ff8dec  replication/outputs/tables/t009_event_study.csv
+9e30d27001799354b92911588691cdcced8c740da261e63a0a61184c8a983d45  replication/outputs/tables/t009_pretrend_tests.csv
+f34b54fe5b837fd733c597542ea7805713c4c403a16b4da080e566cd2c21e42c  replication/outputs/tables/t011_robustness.csv
+c5f9fff00335932e1f4e12a8a07284bdb7cc2d38b883eab87af68ef79c770e69  replication/outputs/tables/t011_robustness.tex
+0f8f7947a652f3ec41a98974f56ef086d5a4a34a810c9f41bf8f34074141dcc5  replication/outputs/tables/t011_treatment_definitions.csv
+ead486358e557f8bf0d95d98f5e58c471426b85434f1f6bcd1495c203dd42c8c  replication/outputs/tables/t015_ownership_counts.csv
+40b81ee0ce6c7f58c94332dcba69567e81b9bacc27155402dc5d4d2b5c309c6c  replication/outputs/tables/t015_rework_verification.txt
+6ab8ba57675e5ec55c445e74df07003848786c2458f3cce949507e8b770bf3b2  replication/outputs/tables/t015_soe_heterogeneity.csv
+00e4fd705ebf423584f1f763f5409320bb51f88c6a5976fe46827675a003843c  replication/outputs/tables/t015_soe_heterogeneity.tex
+8592d45b62d4cb9d5aebc64bfd9b0f12cbbea2211de31195e3137a54db8cf58e  replication/outputs/tables/t015_specification_checks.csv
+
+SHA-256 - ANALYSIS AND PIPELINE FILES
+ecf5ef620899efec5fd862ec423da13d61ad4e5f6450bae68527b0f2f2352975  replication/code/06_bunching_tests.R
+01bc84d9d03dae88e7037d0b3947d6499c0df6ed45478d9981c81850d30d08c8  replication/README.md
+3e8b2324da47b21ccd3a75410648c7d37a65c89d4e043b55810e9b6d65e8ef5a  replication/run_all.R
+4a5dd6e95251c081089bdac9bc606ce7499ef4feaf1b52f44f3775ba199e0b1a  replication/run_all.sh

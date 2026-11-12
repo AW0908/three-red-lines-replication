@@ -1,0 +1,16 @@
+T027 identity checks; no bootstrap tests at this gate.
+sample=panel; source=all; rows=2279; evaluated=2277; missing_identity=2; violations=0; violation_share=0; max_relative_residual=4.0183015957157830e-08; informative_mi_rows=1681; rival_excluding_mi_violations=1681; max_rl1_identity_difference=5.0786536864855236e-08
+sample=panel; source=eastmoney; rows=1880; evaluated=1880; missing_identity=0; violations=0; violation_share=0; max_relative_residual=4.0183015957157830e-08; informative_mi_rows=1461; rival_excluding_mi_violations=1461; max_rl1_identity_difference=5.0786536864855236e-08
+sample=panel; source=wind; rows= 399; evaluated= 397; missing_identity=2; violations=0; violation_share=0; max_relative_residual=7.4501223311710699e-14; informative_mi_rows= 220; rival_excluding_mi_violations= 220; max_rl1_identity_difference=9.8920871494101448e-14
+sample=main; source=all; rows=1692; evaluated=1691; missing_identity=1; violations=0; violation_share=0; max_relative_residual=4.0183015957157830e-08; informative_mi_rows=1351; rival_excluding_mi_violations=1351; max_rl1_identity_difference=5.0786536864855236e-08
+sample=main; source=eastmoney; rows=1362; evaluated=1362; missing_identity=0; violations=0; violation_share=0; max_relative_residual=4.0183015957157830e-08; informative_mi_rows=1148; rival_excluding_mi_violations=1148; max_rl1_identity_difference=5.0786536864855236e-08
+sample=main; source=wind; rows= 330; evaluated= 329; missing_identity=1; violations=0; violation_share=0; max_relative_residual=7.4501223311710699e-14; informative_mi_rows= 203; rival_excluding_mi_violations= 203; max_rl1_identity_difference=9.8920871494101448e-14
+te provenance: 01_clean.R maps total equity including minorities, not parent equity.
+Rival identity subtracts mi again; informative rows have abs(mi)/ta > 0.01.
+Evidence is accounting consistency plus item mappings; contracts are not observed.
+RL1 events use stored rl1. Decomposition uses Rstar=N/(N+te), N=tl-adv.
+Stored RL1=(tl-adv)/(ta-adv); tiny balance-rounding differences are audited.
+rl1: events=335; valid totals=320; invalid totals=15; numerator=tl-adv; zero numerator changes=0; unavailable numerator-zero flags=0; zero equity changes=0; full item sums=319; observed-perp item sums=54; max full sum error=2.2204460492503131e-16; max perp sum error=5.5511151231257827e-17; max stored-vs-identity change difference=1.7319479184152442e-14
+rl2: events=64; valid totals=64; invalid totals=0; numerator=ibd-cash (zero flags require positive net debt at both dates); zero numerator changes=0; unavailable numerator-zero flags=0; zero equity changes=0; full item sums=63; observed-perp item sums=12; max full sum error=4.4408920985006262e-16; max perp sum error=2.2204460492503131e-16; max stored-vs-identity change difference=2.1316282072803006e-14
+All available event-level component sums asserted within 1e-10.
+Missing log domains or zero-change denominators remain NA; see event audit and summary coverage.

@@ -1,0 +1,6 @@
+"ratio","cell","events","firms","perp_observed_events","perp_observed_firms"
+"rl1","post_crossings",33,31,10,10
+"rl1","pre_crossings",21,19,2,1
+"rl1","post_stayers",281,74,42,16
+"rl2","post_crossings",28,27,7,7
+"rl2","pre_crossings",36,30,5,4

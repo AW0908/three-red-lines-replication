@@ -1,0 +1,9 @@
+PASS: all six control levels independently reproduced with hist()/lm()/predict(); maximum error < 1e-10.
+PASS: placebo fit exclusions contain ten bins (own four plus six in [0.66,0.72)); mass uses only its own four bins.
+PASS: all 2997 developer-minus-control bootstrap differences match saved component draws (< 1e-12).
+PASS: all 57 frozen control files match MANIFEST SHA-256 and size.
+PASS: 368/368 historical non-kappa output hashes unchanged.
+PASS: all 73 read-only inputs and 368 existing protected outputs unchanged during execution.
+PASS: kappa calculated text lower bound 9.600000 pt natively (12 * 0.8); 9.627213 pt at full A4/1-inch-margin linewidth (native * (210/25.4 - 2) / 6.25). Conservative rendering bound, not measured PDF font size.
+PASS: all 44 existing T055 point/interval rows checked against stored bootstrap draws; no T055 table re-estimated.
+Repeat-run byte identity is asserted for every staged output when input/protected-output hashes match; see console log.

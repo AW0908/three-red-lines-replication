@@ -1,0 +1,9 @@
+PASS: reproduction asserts 136-firm main-sample developer delta 4.02 and developer-control delta 4.59.
+DIAGNOSTIC: A-share-only private/SOE main valid draws 766,766,766,766,702 / 999; MI/JV Heckman valid draws 389,413 / 499; inference remains unreliable below 90 percent.
+PASS: DRDID 1.4.0; exact-ATT simulation 1.500000000000 (expected 1.5); maximum package/formula difference 1.16573417586e-15.
+PASS: 168 DR rows; 999 firm draws per row; 30 first-stage candidate rows; 499 two-stage firm draws per available outcome.
+PASS: 17 inputs, 421 existing outputs, 93 existing raw files unchanged (new price copy and appended manifest entry authorized).
+PASS: Rework 2 same-risk-set weighted/unweighted/difference rows 9; paired draws 1497; 32 other existing T066 outputs byte-identical.
+All point failures, bootstrap failures, complete-case exclusions, support trimming, mean-period observed dates and balance saved.
+Package is used for all point outcomes; ownership bootstrap tries package secondary nlm before damped Newton. All successful IPT refits pass the package moment gate; multi-outcome IPT/WLS score agrees within 1e-8.
+Repeat-run byte equality is checked for every staged output under identical verification context.

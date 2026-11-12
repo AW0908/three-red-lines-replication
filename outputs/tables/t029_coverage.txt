@@ -1,0 +1,71 @@
+T029: mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage.
+Minority interests may be genuine equity. Ex-MI is mechanical, not a deconsolidated balance sheet.
+Interpretation rule (specified before results): a large drop in b means bunching depends mechanically on post-2019 minority-interest growth; no drop means other items achieve bunching.
+All estimates are descriptive. No parallel-trends or causal policy interpretation is imposed.
+Seed 20261016; 999 whole-firm resamples, full histories, common paired draws; all statistics and polynomial fits re-estimated in each draw.
+Event-study uncertainty follows the card's explicit firm-clustered SE requirement (t critical value, G-1 df); not bootstrap SE.
+D = mean(C-C_frozen) is a net share difference among eligible firm-dates. fail_given_official = mean(1-C_frozen | C=1) is the requested conditional failure share; these differ when MI shrinks.
+Post=2020H2--2022H2. Placebo=2017H2--2019H2, frozen at 2016H2. Extension=2023H1--2024H2 separately (same end-2019 anchor).
+Date shares for 2017H1--2019H2 frozen at end-2019 are retrospective accounting comparisons, not the placebo.
+Flag: abs(MI_t-MI_(t-1)) > 0.5 E_t, consecutive scheduled half-years. Missing lag means unknown, retained; exclude_jump_dates removes only known jump dates; later dates retain the jump in the MI stock.
+Counterfactual total denominator must be positive; nonpositive counterfactual equity with positive denominator is retained and fails compliance. Invalid total denominators are missing, never treated as compliance.
+All scales are own-firm end-2019 assets. HK within-firm logs and scales assume unchanged reporting currency (D7 unresolved); no pooled absolute HK RMB levels.
+D19: no perpetual imputation or perpetual-specific analysis; parent equity includes unresolved perpetuals. D20: no economic-leverage measure. D22: N>0, E>0 required at analyzed dates.
+main: sample_main firms=136; MI_2019 unavailable=4 (2.9412%); N/E-domain excluded rows=19/1692; actual invariant rows=133, max error=2.2204460492503131e-16.
+main 2016-12-31: rows=133 firms=133; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=7; frozen_missing=9; exMI_missing=7; known_flags=0; flag_unknown=133; cf_equity_nonpositive=0.
+main 2017-06-30: rows=129 firms=129; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=7; frozen_missing=8; exMI_missing=7; known_flags=0; flag_unknown=8; cf_equity_nonpositive=0.
+main 2017-12-31: rows=136 firms=136; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=5; frozen_missing=6; exMI_missing=5; known_flags=0; flag_unknown=14; cf_equity_nonpositive=0.
+main 2018-06-30: rows=131 firms=131; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=3; frozen_missing=4; exMI_missing=3; known_flags=0; flag_unknown=5; cf_equity_nonpositive=0.
+main 2018-12-31: rows=135 firms=135; invalid_N_E=1; MI_2019_missing=3; MI_t_missing=3; frozen_missing=4; exMI_missing=4; known_flags=0; flag_unknown=9; cf_equity_nonpositive=1.
+main 2019-06-30: rows=132 firms=132; invalid_N_E=2; MI_2019_missing=3; MI_t_missing=4; frozen_missing=5; exMI_missing=5; known_flags=0; flag_unknown=5; cf_equity_nonpositive=1.
+main 2019-12-31: rows=135 firms=135; invalid_N_E=1; MI_2019_missing=3; MI_t_missing=3; frozen_missing=4; exMI_missing=4; known_flags=0; flag_unknown=8; cf_equity_nonpositive=1.
+main 2020-06-30: rows=131 firms=131; invalid_N_E=1; MI_2019_missing=2; MI_t_missing=1; frozen_missing=3; exMI_missing=2; known_flags=0; flag_unknown=3; cf_equity_nonpositive=1.
+main 2020-12-31: rows=132 firms=132; invalid_N_E=2; MI_2019_missing=2; MI_t_missing=1; frozen_missing=4; exMI_missing=3; known_flags=0; flag_unknown=6; cf_equity_nonpositive=2.
+main 2021-06-30: rows=130 firms=130; invalid_N_E=2; MI_2019_missing=2; MI_t_missing=3; frozen_missing=6; exMI_missing=5; known_flags=1; flag_unknown=5; cf_equity_nonpositive=2.
+main 2021-12-31: rows=124 firms=124; invalid_N_E=2; MI_2019_missing=1; MI_t_missing=3; frozen_missing=5; exMI_missing=5; known_flags=4; flag_unknown=5; cf_equity_nonpositive=1.
+main 2022-06-30: rows=124 firms=124; invalid_N_E=2; MI_2019_missing=1; MI_t_missing=3; frozen_missing=5; exMI_missing=5; known_flags=2; flag_unknown=5; cf_equity_nonpositive=1.
+main 2022-12-31: rows=120 firms=120; invalid_N_E=6; MI_2019_missing=0; MI_t_missing=2; frozen_missing=8; exMI_missing=8; known_flags=3; flag_unknown=8; cf_equity_nonpositive=6.
+extension: sample_main firms=136; MI_2019 unavailable=4 (2.9412%); N/E-domain excluded rows=197/2236; actual invariant rows=133, max error=2.2204460492503131e-16.
+extension 2016-12-31: rows=133 firms=133; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=7; frozen_missing=9; exMI_missing=7; known_flags=0; flag_unknown=133; cf_equity_nonpositive=0.
+extension 2017-06-30: rows=129 firms=129; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=7; frozen_missing=8; exMI_missing=7; known_flags=0; flag_unknown=8; cf_equity_nonpositive=0.
+extension 2017-12-31: rows=136 firms=136; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=5; frozen_missing=6; exMI_missing=5; known_flags=0; flag_unknown=14; cf_equity_nonpositive=0.
+extension 2018-06-30: rows=131 firms=131; invalid_N_E=0; MI_2019_missing=4; MI_t_missing=3; frozen_missing=4; exMI_missing=3; known_flags=0; flag_unknown=5; cf_equity_nonpositive=0.
+extension 2018-12-31: rows=135 firms=135; invalid_N_E=1; MI_2019_missing=3; MI_t_missing=3; frozen_missing=4; exMI_missing=4; known_flags=0; flag_unknown=9; cf_equity_nonpositive=1.
+extension 2019-06-30: rows=132 firms=132; invalid_N_E=2; MI_2019_missing=3; MI_t_missing=4; frozen_missing=5; exMI_missing=5; known_flags=0; flag_unknown=5; cf_equity_nonpositive=1.
+extension 2019-12-31: rows=135 firms=135; invalid_N_E=1; MI_2019_missing=3; MI_t_missing=3; frozen_missing=4; exMI_missing=4; known_flags=0; flag_unknown=8; cf_equity_nonpositive=1.
+extension 2020-06-30: rows=131 firms=131; invalid_N_E=1; MI_2019_missing=2; MI_t_missing=1; frozen_missing=3; exMI_missing=2; known_flags=0; flag_unknown=3; cf_equity_nonpositive=1.
+extension 2020-12-31: rows=132 firms=132; invalid_N_E=2; MI_2019_missing=2; MI_t_missing=1; frozen_missing=4; exMI_missing=3; known_flags=0; flag_unknown=6; cf_equity_nonpositive=2.
+extension 2021-06-30: rows=130 firms=130; invalid_N_E=2; MI_2019_missing=2; MI_t_missing=3; frozen_missing=6; exMI_missing=5; known_flags=1; flag_unknown=5; cf_equity_nonpositive=2.
+extension 2021-12-31: rows=124 firms=124; invalid_N_E=2; MI_2019_missing=1; MI_t_missing=3; frozen_missing=5; exMI_missing=5; known_flags=4; flag_unknown=5; cf_equity_nonpositive=1.
+extension 2022-06-30: rows=124 firms=124; invalid_N_E=2; MI_2019_missing=1; MI_t_missing=3; frozen_missing=5; exMI_missing=5; known_flags=2; flag_unknown=5; cf_equity_nonpositive=1.
+extension 2022-12-31: rows=120 firms=120; invalid_N_E=6; MI_2019_missing=0; MI_t_missing=2; frozen_missing=8; exMI_missing=8; known_flags=3; flag_unknown=8; cf_equity_nonpositive=6.
+extension 2023-06-30: rows=136 firms=136; invalid_N_E=39; MI_2019_missing=4; MI_t_missing=37; frozen_missing=41; exMI_missing=41; known_flags=0; flag_unknown=41; cf_equity_nonpositive=2.
+extension 2023-12-31: rows=136 firms=136; invalid_N_E=42; MI_2019_missing=4; MI_t_missing=40; frozen_missing=45; exMI_missing=45; known_flags=1; flag_unknown=45; cf_equity_nonpositive=2.
+extension 2024-06-30: rows=136 firms=136; invalid_N_E=45; MI_2019_missing=4; MI_t_missing=40; frozen_missing=47; exMI_missing=47; known_flags=0; flag_unknown=48; cf_equity_nonpositive=4.
+extension 2024-12-31: rows=136 firms=136; invalid_N_E=52; MI_2019_missing=4; MI_t_missing=42; frozen_missing=54; exMI_missing=54; known_flags=2; flag_unknown=54; cf_equity_nonpositive=9.
+ES anchor=2019-12-31 outcome=mi: available=1617 firms=131 excluded=75; N/E excluded=19; baseline TA invalid=4; baseline gap missing=12; outcome missing=53; collinear terms=.
+ES anchor=2019-12-31 outcome=parent_equity: available=1617 firms=131 excluded=75; N/E excluded=19; baseline TA invalid=4; baseline gap missing=12; outcome missing=53; collinear terms=.
+ES anchor=2019-12-31 outcome=ibd: available=1637 firms=133 excluded=55; N/E excluded=19; baseline TA invalid=4; baseline gap missing=12; outcome missing=33; collinear terms=.
+ES anchor=2019-12-31 outcome=N: available=1665 firms=134 excluded=27; N/E excluded=19; baseline TA invalid=4; baseline gap missing=12; outcome missing=5; collinear terms=.
+ES anchor=2019-06-30 outcome=mi: available=1586 firms=127 excluded=106; N/E excluded=19; baseline TA invalid=4; baseline gap missing=44; outcome missing=53; collinear terms=.
+ES anchor=2019-06-30 outcome=parent_equity: available=1586 firms=127 excluded=106; N/E excluded=19; baseline TA invalid=4; baseline gap missing=44; outcome missing=53; collinear terms=.
+ES anchor=2019-06-30 outcome=ibd: available=1606 firms=129 excluded=86; N/E excluded=19; baseline TA invalid=4; baseline gap missing=44; outcome missing=33; collinear terms=.
+ES anchor=2019-06-30 outcome=N: available=1634 firms=130 excluded=58; N/E excluded=19; baseline TA invalid=4; baseline gap missing=44; outcome missing=5; collinear terms=.
+Component identity: 464 transitions, 45 firms; complete components=461; max exact sum error=2.2204460492503131e-16. No selection on crossing.
+Component periods: pre destinations 2017H1--2019H2, post 2020H2--2022H2 (2020H1 excluded); only consecutive valid endpoints, no bridging gaps.
+Scaled components are signed raw item changes / TA_2019 (positive equity growth); log-odds components sign equity negatively. Parent equity includes unresolved perpetuals. Firm distributions are medians of all available transitions within firm/period.
+Post MI median LOFO range (log_odds): [-0.000304438743, -0.000070928289]; omitted firms=44.
+Post MI median LOFO range (delta_item_over_TA2019): [0.000019876654, 0.000086862099]; omitted firms=44.
+Incentive classification: end-2019 RL1>0.70 firms=70; rl1_only=20; rl1_plus=45; unclassified (missing RL2/RL3)=5.
+Part C D and fail_given_official compare post (2019 anchor) with placebo 2017H2--2019H2 (2016 anchor), never pre with a 2019 anchor. The near-threshold share retains its 2017H1--2019H2 pre comparison.
+Incentive B is the economic value of a relaxed cap; it need not be larger for rl1_only. Any ranking is an assumption about financing constraints, not a prediction. Tier description citation: jin2025deleveraging only; institutional rules not independently verified here.
+Part C gate is statistic-, scope-, variant- and period-specific: both groups must contribute at least 15 unique firms with finite outcomes. Contrasts require all contributing cells to pass; otherwise inference=descriptive_small_cell, no CI. Double differences are rl1_only minus rl1_plus.
+Part C: 52 inferential rows; 28 descriptive_small_cell rows (CIs suppressed). Counts-first rows are descriptive counts.
+For the end-2019 bin 0 <= g < 0.10, pre-policy MI coefficients are 2016H2: -0.0235 [-0.0436, -0.0033]; 2017H1: -0.0230 [-0.0382, -0.0077]; 2017H2: -0.0201 [-0.0344, -0.0059]; 2018H1: -0.0171 [-0.0304, -0.0038]. These pointwise intervals exclude zero: firms just above the threshold were already building MI faster than the reference group before 2020. Part B describes differential adjustment, not a policy effect.
+Part B: pointwise CIs, no multiple-testing correction.
+RESULT all: post D=0.11461794 [0.06876857,0.16189574] (129 firms); placebo D=0.04058442 [0.01298764,0.07280217] (125 firms); post-minus-placebo=0.07403352 [0.03099635,0.11822848]; post conditional failure=0.24350649 (79 firms).
+RESULT all: paired b_official=3.18180354, b_frozen=-0.52497830; drop=3.70678184 [1.60476046,6.14034657]; 999/999 paired valid draws, 129 firms.
+RESULT exclude_jump_dates: post D=0.11655405 [0.06996587,0.16470811] (129 firms); placebo D=0.04058442 [0.01298764,0.07280217] (125 firms); post-minus-placebo=0.07596964 [0.03283100,0.12019496]; post conditional failure=0.24350649 (79 firms).
+RESULT exclude_jump_dates: paired b_official=3.16250569, b_frozen=-0.52811235; drop=3.69061804 [1.59453989,6.08750329]; 999/999 paired valid draws, 129 firms.
+Existing outputs and both input panels guarded by exact SHA-256 before and after T029.
+Two-run and full-build byte comparisons are recorded separately in t029_verification.txt (not overwritten by this analysis).

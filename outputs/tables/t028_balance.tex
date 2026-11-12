@@ -1,0 +1,20 @@
+% T028 balance fragment; requires booktabs and graphicx.
+\begingroup\small
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Characteristic & Dose 0 & Dose 1 & Dose 2 & Dose 3 & Missing & Corr. with dose \\
+\midrule
+Log assets & 23.787292 & 24.273408 & 24.624617 & 25.180202 & 0 & 0.307754 \\
+ROA (annual) & 0.036615 & 0.016961 & 0.015692 & 0.010236 & 2 & -0.275388 \\
+Cash / assets & 0.161404 & 0.120389 & 0.115100 & 0.079485 & 0 & -0.450200 \\
+Inventory / assets & 0.456622 & 0.430613 & 0.500443 & 0.551607 & 0 & 0.237055 \\
+Revenue / assets (annual) & 0.199339 & 0.179483 & 0.178364 & 0.187350 & 2 & -0.055890 \\
+SOE share among known & 0.566667 & 0.371429 & 0.296296 & 0.222222 & 5 & -0.262180 \\
+Missing SOE share & 0.032258 & 0.054054 & 0.035714 & 0.035714 & 0 & -0.006541 \\
+HK share & 0.096774 & 0.486486 & 0.392857 & 0.535714 & 0 & 0.257015 \\
+Firms & 31 & 37 & 28 & 28 & & \\
+\bottomrule\end{tabular}}
+\par\smallskip\noindent\begin{minipage}{\linewidth}\footnotesize
+\textit{Notes:} Entries are means in original units, before standardization. Rounded exposure uses floor(exposure + 0.5), so half values round upward, as in T005 and T012. Correlations use observed firm means and continuous exposure, without zero imputation. Missing counts refer to all 124 firms. Controls are pre-period means from 2017H1 through 2019H2 interacted with time, chosen before estimation. Contemporaneous controls are excluded because the policy can itself change these balance-sheet variables. Continuous controls: log assets, annual ROA, cash over assets, inventory over assets, and annual revenue over assets. Each requires at least three dates; observed firm means are standardized across the 124 baseline firms, then missing values are set to zero with a separate missing indicator. June income statements cover six months and December statements twelve months in both EastMoney and Wind. ROA and revenue intensity therefore use December annual reports only, with at least three annual dates. Actual and mapped report dates are at or before December 31, 2019; 2 mapped rows with later actual dates are excluded from control construction. Ownership uses the prescribed fixed panel SOE category (0, 1, or missing) and market uses A-share or HK. The inherited ownership snapshot is June 2020 with some later disclosure coding (D9 and D18); its pre-2020 status cannot be verified from this panel. Log assets retain reported currency units; unresolved HK currencies limit comparability (D7). Firm and half-year fixed effects; standard errors clustered by firm, with default small-sample corrections. Identification requires conditional parallel counterfactual trends across exposure levels, no anticipation, and no remaining dose-correlated shocks. Pre-trend tests do not establish these assumptions; both exposure and the pre-period control means overlap the pre-test window (I9).
+\end{minipage}\par\endgroup

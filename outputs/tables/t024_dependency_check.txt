@@ -1,0 +1,80 @@
+T024 dependency preflight - 2026-10-20
+T023 status: DELIVERED (read from tasks/T023.md).
+No network access or package installation attempted.
+R preflight command (from the project root):
+Rscript --vanilla -e 'for (p in c("rdrobust", "rddensity", "lpdensity")) {\n  ok <- requireNamespace(p, quietly = TRUE)\n  cat(p, ": ", if (ok) as.character(packageVersion(p)) else "NOT INSTALLED", "\\n", sep = "")\n}\ncat("R library paths:\\n"); writeLines(.libPaths())\nif (!requireNamespace("rddensity", quietly = TRUE)) {\n  cat("STOP T024: rddensity unavailable; offline worker must not access a network repository.\\n")\n  quit(status = 1L)\n}\n'
+
+rdrobust: 4.1.1
+rddensity: NOT INSTALLED
+lpdensity: NOT INSTALLED
+R library paths:
+/Library/Frameworks/R.framework/Versions/4.6/Resources/library
+STOP T024: rddensity unavailable; offline worker must not access a network repository.
+Dependency-check exit code: 1
+
+Local archive search (rddensity/lpdensity, tar.gz/tgz/zip):
+/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis
+/private/tmp
+/Users/<local>/Library/Caches
+Matching archives: 0.
+STOP: required rddensity package is unavailable for this offline worker.
+Prescribed build command NOT executed after the stop condition:
+cd replication && Rscript run_all.R
+No RD estimation, bandwidth selection, density test or validity analysis executed.
+No changes to analysis code, setup, environment.lock, build entry points or README.
+Existing output files checked byte-for-byte with SHA-256: 52
+Existing output hashes unchanged: TRUE.
+
+SHA-256 manifest of existing outputs (before = after):
+ce3253c43850a369e4dfe2b31c8568c33a57ae9e9d9c026fe0aa6c7363ec77bb  replication/outputs/.DS_Store
+f7d6eecc5080bbdae61ca05b699e3cbe5f4572292ef10552f52eac008c318114  replication/outputs/figures/t005_breach_shares.pdf
+3cd175a438753447e2f0bc297aa0b2412f764058dc1cd49b182e1ec8d113563b  replication/outputs/figures/t005_bunching_rl1.pdf
+e87754215c5178ef5e5c306e8c24773c60fd77ffdf3d85f904c8c19897f48eec  replication/outputs/figures/t005_bunching_rl2.pdf
+5cee6251754e98a862d20584697698d10cabfe352fe30021249978e8551eac41  replication/outputs/figures/t005_bunching_rl3.pdf
+e5f2bdfd6b99e5b958936e495cf7cb3a3b49238938a2e8f2a3a7c66082643fe9  replication/outputs/figures/t009_es_jv_ta.pdf
+0a36be0a5901421588702a234e6db9432e655a42dba3634a43bc541c3966ad64  replication/outputs/figures/t009_es_mi_share.pdf
+a213b4782f533fd59f8147ee1dfc8dfc0d697482b90c47fbe63ed36ecffe554e  replication/outputs/figures/t009_es_rl1.pdf
+9a97532de9273f3a3aed62bd877bbdcbb8458474780ac483f098a852c44a8672  replication/outputs/figures/t009_es_rl2.pdf
+ae8dc291ee26a43d295efd9161d756bb769ae0682500126ca6bbb92c49293d9c  replication/outputs/figures/t009_es_rl2_gap.pdf
+bf44a125b4c24fdc70ae1db10451ea2a6b769d4f5f9eea3d1bbddfa9b3d3fb2f  replication/outputs/figures/t011_es_mi_share_distance.pdf
+be8cac54dd39a1c5efb14d6de80c130bb46f6c8fb815b05e68097cbdb4fbf68e  replication/outputs/figures/t011_es_mi_share_dose2018.pdf
+482338f768677f8ed55dd74b480b5a4211dec388020ded63471fd2099df8dc9e  replication/outputs/figures/t011_es_rl1_distance.pdf
+4af9ba1a564baaf8d37292584fce0c413943f9c13a4802064acc8504f020314d  replication/outputs/figures/t011_es_rl1_dose2018.pdf
+399291df94ed01288f72b02a6e0cc567dceffb8b4eec3e2e9f4b9dd23c139bed  replication/outputs/figures/t019_soe_coefficients.pdf
+d3e0a02f157891b1ba5483773aa247914f313448a20ee552c4f6209ea3346625  replication/outputs/figures/t023_bunching_rl1_vs_alt.pdf
+49f1c21514dc8d71c5175a7bed4c78d7b5ad422e08a5106614128d84a3705831  replication/outputs/figures/t023_excess_mass_rl1.pdf
+1998bbe073a60883f2ed121f416df2a951b5669006790c639de0ba4ccdc088e2  replication/outputs/tables/t004_item_coverage.csv
+db473180f041c9a5a255fc1d6cf9b090835cdc0ea7334cb6640343822d2743c9  replication/outputs/tables/t004_ownership_unresolved.csv
+a4c4cc8c7e9bd056db3977ece29f2ce9c7a88660cbe040224b7235c64759be2b  replication/outputs/tables/t004_panel_counts.csv
+33163fafd952421f016fede2373dce2636dabb00cfb709a9f780ea86c404cb58  replication/outputs/tables/t004_variable_dictionary.csv
+9a576142a4f96330404e3ae1fe6dedf3c8bd5544b8deae81b342760c2722ec94  replication/outputs/tables/t005_bunching_counts.csv
+ed615ae7207d1faf075fafc295705ea7c37a8ba80ab3b957d96368dbc24463f3  replication/outputs/tables/t005_by_dose.csv
+c96980fe9e91d296a1563684feef9137ff2476689b74ba2485eeba345842e036  replication/outputs/tables/t005_by_dose.tex
+7049089e40a9406a4d81f28fa6014402dfc6bb1e92217fec11bf45a9242733c9  replication/outputs/tables/t005_summary_stats.csv
+e3e7e4690c3ed5700beb2d9ca1ae210c115d27fd6796f9de46778c0cf378986f  replication/outputs/tables/t005_summary_stats.tex
+c90f55ed37b1b577579939230ec342337f8a1bd61ca200da753e64dd4aca2b93  replication/outputs/tables/t008_mde.csv
+99a6346e67c305642c3db0d4283b44c4c3739a7b83d330d09eb5cede089e31bd  replication/outputs/tables/t008_mde.tex
+25a55c179fe83b9d1320a783fd665779862d9726e63cfcda4b25935351eeec9f  replication/outputs/tables/t009_did_main.csv
+ee6f5e35db714652cd45662216b4b326adc238b4c0590cc18a9000005e5f0f2e  replication/outputs/tables/t009_did_main.tex
+b7701453ec85903c0f1260d9db5e6344706b1305c045634bfeba861434ff8dec  replication/outputs/tables/t009_event_study.csv
+9e30d27001799354b92911588691cdcced8c740da261e63a0a61184c8a983d45  replication/outputs/tables/t009_pretrend_tests.csv
+f34b54fe5b837fd733c597542ea7805713c4c403a16b4da080e566cd2c21e42c  replication/outputs/tables/t011_robustness.csv
+c5f9fff00335932e1f4e12a8a07284bdb7cc2d38b883eab87af68ef79c770e69  replication/outputs/tables/t011_robustness.tex
+0f8f7947a652f3ec41a98974f56ef086d5a4a34a810c9f41bf8f34074141dcc5  replication/outputs/tables/t011_treatment_definitions.csv
+ead486358e557f8bf0d95d98f5e58c471426b85434f1f6bcd1495c203dd42c8c  replication/outputs/tables/t015_ownership_counts.csv
+40b81ee0ce6c7f58c94332dcba69567e81b9bacc27155402dc5d4d2b5c309c6c  replication/outputs/tables/t015_rework_verification.txt
+6ab8ba57675e5ec55c445e74df07003848786c2458f3cce949507e8b770bf3b2  replication/outputs/tables/t015_soe_heterogeneity.csv
+00e4fd705ebf423584f1f763f5409320bb51f88c6a5976fe46827675a003843c  replication/outputs/tables/t015_soe_heterogeneity.tex
+8592d45b62d4cb9d5aebc64bfd9b0f12cbbea2211de31195e3137a54db8cf58e  replication/outputs/tables/t015_specification_checks.csv
+224158ca1fdbc14c2c0cf8bee93ef0c5becc6a09621815b75ef0a18deb198f87  replication/outputs/tables/t023_composition.csv
+289df85b7c0d67b0a5a3defbc704a12501283b85ab3b5be3d3557c2154fc726a  replication/outputs/tables/t023_coverage.csv
+e02f6cbc857290128a054568acb55e73ada48fa15e73f061e22deb31a959f71e  replication/outputs/tables/t023_excess_mass.csv
+0096b4625757c525654d503e806ae7de7a5ce2e73eda60e1b60f886fbda47eef  replication/outputs/tables/t023_excess_mass.tex
+8431e5afea1a2c029c393f531e29fb239d29d7ad5966c4bb1cf2f07c2bb2ab88  replication/outputs/tables/t023_excess_mass_bins.csv
+debe895b2f7975d42641c0621eb536f5204b3234cb1bfb16a1a4126b43d8ce10  replication/outputs/tables/t023_histogram_bins.csv
+10dbd880d1644c8777a70a91f15574345ac77d592a92dec87debcb0221601bd0  replication/outputs/tables/t023_placebo_definitions.csv
+0a21bab2b342ffc533e757d2164a4aef495f6069f413d681d0417c16d58dfb86  replication/outputs/tables/t023_placebo_definitions.tex
+d20ca65e4576552ad7b5ab55866914b55da58ad8fad8a1cd91f704d28fe0b7f7  replication/outputs/tables/t023_reporting_dates.csv
+163b8f565af3a2389018711585276fec2a20729b6e5f16f848087484d0bcc0bd  replication/outputs/tables/t023_reversal.csv
+f36bec00099976f0eea846b6d3792c312825f0ee45373e1b086bd77464e229e2  replication/outputs/tables/t023_reversal.tex
+fa9ec02aa2b373a7d3525024394d9130d79aaaea07f860e48b8c89286ed8e3ad  replication/outputs/tables/t023_verification.txt

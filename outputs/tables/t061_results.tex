@@ -1,0 +1,25 @@
+\begingroup\small
+\begin{tabular}{lrrrrr}
+\toprule
+Population / threshold & $b_{pre}$ & $b_{post}$ & $\Delta b$ & 95\% CI & Support pre/post \\
+\midrule
+Control A 0.70 & -0.177 & -0.750 & -0.574 & [-1.675, 0.439] & 207/159 \\
+Control A 0.60 & 0.402 & -0.169 & -0.571 & [-1.618, 0.364] & 324/269 \\
+Control A 0.80 & -0.559 & -0.556 & 0.003 & [-1.370, 1.316] & 103/88 \\
+Developers: all 0.70 & -0.877 & 3.143 & 4.020 & [1.671, 6.797] & 67/118 \\
+Developers: balanced 0.70 & -0.662 & 3.244 & 3.906 & [1.476, 6.856] & 66/109 \\
+Developers: A 0.70 & 0.151 & 2.247 & 2.096 & [-0.405, 5.406] & 50/63 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{lrrr}
+\toprule
+Developer comparison & $\Delta\Delta b$ & 95\% CI & Role \\
+\midrule
+Developers: all & 4.594 & [2.155, 7.469] & Co-primary \\
+Developers: balanced & 4.480 & [1.850, 7.642] & Co-primary \\
+Developers: A & 2.670 & [-0.223, 6.354] & Same market \\
+\bottomrule
+\end{tabular}
+\par\footnotesize Pre 2017H1--2019H2; post 2020H2--2022H2. 999 whole-firm bootstrap draws, resampled independently within each population; periods paired within firm. Pointwise percentile intervals; no multiplicity adjustment. All six estimation rows have N, firms, in-range counts and actual threshold-window support in t061\_estimates.csv. Control is balanced and survivor-selected; balanced developers are co-primary. Support and excess mass use only the four bins below the displayed threshold. Placebo fits at 0.60 and 0.80 additionally exclude [0.66,0.72), following T023; this extra exclusion does not enter placebo mass or its four-bin normalization. Fewer than 30 observations in either mass window flags low support. Broad and HK controls were dropped by the approved data route; ownership unavailable. Comparable counterfactual changes and smooth densities are identifying assumptions, not established by this table.
+\endgroup

@@ -1,0 +1,7 @@
+PASS: independent hist/lm/predict maximum error 1.13686837722e-13 (<1e-10).
+PASS: reproduction asserts delta developer 4.02, all/balanced developer-control 4.59/4.48.
+PASS: 198 simulation cells x 1000 replications; 16 co-main rows; 16 supplier rows; 3 one-observation rows; 26 date/population rows.
+PASS: 40 inputs, 392 existing outputs, 93 raw files unchanged.
+Simulation calibration uses the mandated pre-existing T040 validation differences; no new hand-collected data or raw manual file is used.
+Observation-selection intervals and simulation ranges are not sampling confidence intervals.
+Repeat-run byte equality is checked for every staged output under identical verification context.

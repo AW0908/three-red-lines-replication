@@ -1,0 +1,16 @@
+\begin{threeparttable}
+\begin{tabular}{p{0.47\linewidth}rrr}
+\toprule
+Check / date / draw & Firms & Estimate & 95\% interval \\
+\midrule
+Baseline degree 5 & 132 & 3.1429 & [1.0122, 5.8411] \\
+Narrow degree 1 & 132 & 5.4504 & [2.4955, 9.0281] \\
+Narrow degree 2 & 132 & 2.3498 & [0.3905, 4.9193] \\
+Local linear h=0.10 & 132 & 2.8827 & [0.7391, 5.5903] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; seed 20261016; 999 whole-firm resamples and complete re-estimation. Pointwise percentile intervals; no multiple-testing adjustment. Invalid draws are not replaced; fewer than 90 percent valid draws makes inference unreliable. CSVs give validity and observation counts. Smooth density and stable reporting selection are assumptions; these results are descriptive, not causal. All fits exclude [0.66,0.70); b is excess count divided by mean predicted mass-bin count. Baseline: degree five on [0.40,1.00]; others: [0.55,0.85]. Local linear uses tricube weights and fixed bandwidth 0.10 RL1 units on bin counts. No clipping.
+\end{tablenotes}
+\end{threeparttable}
+\par\medskip

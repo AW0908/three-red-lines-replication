@@ -1,0 +1,21 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{5.7cm}rrrrrl}
+\toprule
+Cell / statistic / period & N & Firms & Window N (firms) & Estimate & 95\% CI & S \\
+\midrule
+contemporaneous other lines / both met / b / pre & 319 & 88 & 37 (21) & 0.321 & [-1.579, 3.129] &  \\
+contemporaneous other lines / both met / b / post & 249 & 76 & 52 (22) & 3.338 & [0.282, 7.504] &  \\
+contemporaneous other lines / both met / delta b / post minus pre & 249/319 & 76/88 & 52/37 (22/21) & 3.018 & [0.218, 6.717] &  \\
+contemporaneous other lines / at least one breached / b / pre & 400 & 93 & 28 (20) & -1.401 & [-2.427, -0.202] &  \\
+contemporaneous other lines / at least one breached / b / post & 326 & 90 & 58 (26) & 2.920 & [-0.020, 6.536] &  \\
+contemporaneous other lines / at least one breached / delta b / post minus pre & 326/400 & 90/93 & 58/28 (26/20) & 4.320 & [1.381, 8.104] &  \\
+contemporaneous other lines / both met minus breached / difference in delta b / post minus pre & 249/326 & 76/90 & 52/58 (22/26) & -1.303 & [-5.294, 2.867] &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; pre 2017H1--2019H2, post 2020H2--2022H2 unless labeled. 999 joint whole-firm draws of the 136-firm universe, seed 20261016; density and statistics re-estimated each draw. Pointwise percentile CIs condition on valid draws; below 90 percent valid is unreliable. b is excess / mean fitted mass-bin count, degree 5, 0.01 bins over [0.40,1.00], excluding [0.66,0.70). All cells are descriptive; S flags fewer than 15 firms in the window. Smooth density and reporting comparability are assumptions. Contrasts list first/benchmark populations; delta rows list post/pre. Window is [0.66,0.70). Classification uses finite RL2 and RL3 at the SAME firm-date: both met means RL2 <=1 and RL3 >=1. T043 instead used fixed 2020H1 classes. A firm can change group over time; compositional change limits interpretation.
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

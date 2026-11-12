@@ -1,0 +1,47 @@
+T046 FINAL VERIFICATION
+Command (two runs, exit 0): cd replication && Rscript code/17_cash_backing_all.R
+13/13 T046 artifacts byte-identical, including PDF; SHA-256 in t046_reproducibility.csv.
+Independent validation PASS: 12 group-period rows; sums, residual identity, counts, >=50% shares and all percentile CIs independently recomputed.
+Independent validation PASS: 1056 unique source records; every value has provenance/unit; 20 PI checks and 6 manual values; no overlapping pilot differences.
+Independent validation PASS: all 232 outputs present at task start remain byte-identical.
+Build entry points: bash -n replication/run_all.sh and R parse(replication/run_all.R): PASS.
+LaTeX: 12pt article, one-inch margins; pdflatex exit 0; no overfull/underfull boxes; rendered page visually checked.
+Figure: final PDF rendered and visually checked; no overlaps/clipping.
+
+Final run 2 output (exit 0):
+T046 extraction verification PASS: 726 source values; 176 PDFs; 1056 canonical rows. 
+T046 coverage: 136 firms; 208/272 annual reports; 553/704 report-metric lines; 720 exact / 6 manual source values.
+T046 pilot: 72 rows; 37 same numeric; 8 both missing; 0 availability differences; 0 numeric differences; 15 outside window; 12 outside metrics.
+T046 All 2019: firms=28; firm-years=28/96 positive; capital=0.525928 [0.284802, 1.144061]; residual=0.295742 [-0.516848, 0.630117]; >=half=16/28.
+T046 All 2020: firms=43; firm-years=43/90 positive; capital=0.856690 [0.724662, 1.020310]; residual=-0.075731 [-0.223687, 0.036020]; >=half=30/43.
+T046 All 2021: firms=38; firm-years=38/68 positive; capital=0.909264 [0.758443, 1.063362]; residual=-0.111107 [-0.266226, 0.014492]; >=half=31/38.
+T046 All 2019-2021: firms=58; firm-years=109/254 positive; capital=0.795390 [0.607225, 0.994888]; residual=0.000975 [-0.208723, 0.226382]; >=half=77/109.
+T046 Crossers 2020: firms=18; firm-years=18/27 positive; capital=0.918704 [0.765015, 1.147568]; residual=-0.098476 [-0.307949, 0.038264]; >=half=13/18.
+T046 Crossers 2021: firms=15; firm-years=15/22 positive; capital=1.028398 [0.827951, 1.220023]; residual=-0.175132 [-0.366113, -0.008846]; >=half=15/15.
+T046 Crossers 2020-2021: firms=20; firm-years=33/49 positive; capital=0.965670 [0.843448, 1.111484]; residual=-0.131297 [-0.293766, -0.007421]; >=half=28/33.
+T046 Others 2020: firms=25; firm-years=25/63 positive; capital=0.804045 [0.601055, 1.074230]; residual=-0.056423 [-0.279915, 0.115146]; >=half=17/25.
+T046 Others 2021: firms=23; firm-years=23/46 positive; capital=0.813814 [0.628437, 1.037064]; residual=-0.059809 [-0.359848, 0.104117]; >=half=16/23.
+T046 Others 2020-2021: firms=34; firm-years=48/109 positive; capital=0.808367 [0.659644, 0.998011]; residual=-0.057921 [-0.254417, 0.087730]; >=half=33/48.
+T046 All Pre: 2019: firms=28; firm-years=28/96 positive; capital=0.525928 [0.284802, 1.144061]; residual=0.295742 [-0.516848, 0.630117]; >=half=16/28.
+T046 All Post: 2020-2021: firms=54; firm-years=81/158 positive; capital=0.879609 [0.771127, 1.000036]; residual=-0.091152 [-0.208637, 0.017432]; >=half=61/81.
+T046 guards PASS: 217 inputs and 241 protected outputs byte-identical.
+T046 complete: 1056 canonical cash rows; 408 firm-years; seed=20261029; draws=999.
+
+Final run 1 output:
+T046 extraction verification PASS: 726 source values; 176 PDFs; 1056 canonical rows. 
+T046 coverage: 136 firms; 208/272 annual reports; 553/704 report-metric lines; 720 exact / 6 manual source values.
+T046 pilot: 72 rows; 37 same numeric; 8 both missing; 0 availability differences; 0 numeric differences; 15 outside window; 12 outside metrics.
+T046 All 2019: firms=28; firm-years=28/96 positive; capital=0.525928 [0.284802, 1.144061]; residual=0.295742 [-0.516848, 0.630117]; >=half=16/28.
+T046 All 2020: firms=43; firm-years=43/90 positive; capital=0.856690 [0.724662, 1.020310]; residual=-0.075731 [-0.223687, 0.036020]; >=half=30/43.
+T046 All 2021: firms=38; firm-years=38/68 positive; capital=0.909264 [0.758443, 1.063362]; residual=-0.111107 [-0.266226, 0.014492]; >=half=31/38.
+T046 All 2019-2021: firms=58; firm-years=109/254 positive; capital=0.795390 [0.607225, 0.994888]; residual=0.000975 [-0.208723, 0.226382]; >=half=77/109.
+T046 Crossers 2020: firms=18; firm-years=18/27 positive; capital=0.918704 [0.765015, 1.147568]; residual=-0.098476 [-0.307949, 0.038264]; >=half=13/18.
+T046 Crossers 2021: firms=15; firm-years=15/22 positive; capital=1.028398 [0.827951, 1.220023]; residual=-0.175132 [-0.366113, -0.008846]; >=half=15/15.
+T046 Crossers 2020-2021: firms=20; firm-years=33/49 positive; capital=0.965670 [0.843448, 1.111484]; residual=-0.131297 [-0.293766, -0.007421]; >=half=28/33.
+T046 Others 2020: firms=25; firm-years=25/63 positive; capital=0.804045 [0.601055, 1.074230]; residual=-0.056423 [-0.279915, 0.115146]; >=half=17/25.
+T046 Others 2021: firms=23; firm-years=23/46 positive; capital=0.813814 [0.628437, 1.037064]; residual=-0.059809 [-0.359848, 0.104117]; >=half=16/23.
+T046 Others 2020-2021: firms=34; firm-years=48/109 positive; capital=0.808367 [0.659644, 0.998011]; residual=-0.057921 [-0.254417, 0.087730]; >=half=33/48.
+T046 All Pre: 2019: firms=28; firm-years=28/96 positive; capital=0.525928 [0.284802, 1.144061]; residual=0.295742 [-0.516848, 0.630117]; >=half=16/28.
+T046 All Post: 2020-2021: firms=54; firm-years=81/158 positive; capital=0.879609 [0.771127, 1.000036]; residual=-0.091152 [-0.208637, 0.017432]; >=half=61/81.
+T046 guards PASS: 217 inputs and 241 protected outputs byte-identical.
+T046 complete: 1056 canonical cash rows; 408 firm-years; seed=20261029; draws=999.

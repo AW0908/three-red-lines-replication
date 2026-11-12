@@ -1,0 +1,38 @@
+[
+  {
+    "file": "replication/data/raw/manual/handcollect/case_notes.md",
+    "bytes": 14612,
+    "sha256": "4d3bc86dae8c0fa09a17b725b4b0d13033b0eb38e0bfa456d05583fd365fcfda",
+    "mode": "append_only"
+  },
+  {
+    "file": "replication/data/raw/manual/handcollect/case_notes_verification.csv",
+    "bytes": 13344,
+    "sha256": "3ad479691d3d16b9fb58d15a32faf77304d3028a2573d87743d8376b01f743ae",
+    "mode": "row_identity_PI_updates"
+  },
+  {
+    "file": "state/handcollect/pilot_purposive.csv",
+    "bytes": 1311,
+    "sha256": "9c96de8a953e3875c5d9693d66e9ea137b79529a7ff4c4c0c01291e08acad666",
+    "mode": "unchanged"
+  },
+  {
+    "file": "replication/data/raw/manual/handcollect/nci_cashflow.csv",
+    "bytes": 10649,
+    "sha256": "be8489524d5f4f38a1815eb68c6ac9efda9f06f9931e2e237ac19ce7a7853f99",
+    "mode": "unchanged"
+  },
+  {
+    "file": "replication/data/processed/panel_firm_halfyear.csv",
+    "bytes": 1517469,
+    "sha256": "9b868659fbc52d2a5d67efb6a1889ca1bbd695731ca30bf17a0a5c3c54c1cb26",
+    "mode": "unchanged"
+  },
+  {
+    "file": "replication/data/raw/manual/handcollect/transactions.csv",
+    "bytes": 1549420,
+    "sha256": "479340ca5f4469b4ee0e1f3cca0791e4ab180179ada20ba8174dccb181d17c76",
+    "mode": "unchanged"
+  }
+]

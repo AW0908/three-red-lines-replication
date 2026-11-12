@@ -1,0 +1,48 @@
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrrrr}
+\toprule
+Outcome / spec & Candidate & Coef. & Cluster z & Wald & Pseudo R2 & Overlap & N firms \\
+\midrule
+rl1 Z1 & Z1 & -0.1272 & -0.5053 & 0.2554 & 0.5994 & 0.2018 & 114 \\
+rl1 Z2 & Z2 & -0.3928 & -0.7710 & 0.5945 & 0.5105 & 0.2661 & 124 \\
+rl1 Z3 & Z3 & -1.6830 & -1.3710 & 1.8796 & 0.5175 & 0.2742 & 124 \\
+rl1 joint & Z1 & -0.0394 & -0.1021 & 0.7198 & 0.6026 & 0.2018 & 114 \\
+rl1 joint & Z2 & 0.3960 & 0.4223 & 0.7198 & 0.6026 & 0.2018 & 114 \\
+rl1 joint & Z3 & 0.3296 & 0.1790 & 0.7198 & 0.6026 & 0.2018 & 114 \\
+rl2 Z1 & Z1 & 0.0678 & 0.5411 & 0.2927 & 0.3380 & 0.3246 & 114 \\
+rl2 Z2 & Z2 & -0.6004 & -1.5119 & 2.2859 & 0.3517 & 0.3952 & 124 \\
+rl2 Z3 & Z3 & -1.5411 & -1.2027 & 1.4465 & 0.3452 & 0.3871 & 124 \\
+rl2 joint & Z1 & 0.0515 & 0.3576 & 0.4734 & 0.3394 & 0.3333 & 114 \\
+rl2 joint & Z2 & -0.1341 & -0.2088 & 0.4734 & 0.3394 & 0.3333 & 114 \\
+rl2 joint & Z3 & 0.8163 & 0.4726 & 0.4734 & 0.3394 & 0.3333 & 114 \\
+mi\_share Z1 & Z1 & -0.0458 & -0.3348 & 0.1121 & 0.2906 & 0.4737 & 114 \\
+mi\_share Z2 & Z2 & -0.3814 & -0.9268 & 0.8589 & 0.2979 & 0.5000 & 124 \\
+mi\_share Z3 & Z3 & -1.3007 & -1.0280 & 1.0568 & 0.2972 & 0.5081 & 124 \\
+mi\_share joint & Z1 & -0.0300 & -0.2109 & 0.8629 & 0.2930 & 0.4737 & 114 \\
+mi\_share joint & Z2 & 0.0521 & 0.0944 & 0.8629 & 0.2930 & 0.4737 & 114 \\
+mi\_share joint & Z3 & 1.2430 & 0.7744 & 0.8629 & 0.2930 & 0.4737 & 114 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{llrrrrrr}
+\toprule
+Outcome / spec & Candidate & Coef. & Cluster z & Wald & Pseudo R2 & Overlap & N firms \\
+\midrule
+rl2\_gap Z1 & Z1 & 0.0734 & 0.6006 & 0.3607 & 0.3357 & 0.3246 & 114 \\
+rl2\_gap Z2 & Z2 & -0.5995 & -1.4707 & 2.1629 & 0.3515 & 0.3952 & 124 \\
+rl2\_gap Z3 & Z3 & -1.3933 & -1.3768 & 1.8956 & 0.3429 & 0.3790 & 124 \\
+rl2\_gap joint & Z1 & 0.0621 & 0.4345 & 0.4187 & 0.3365 & 0.3246 & 114 \\
+rl2\_gap joint & Z2 & -0.1000 & -0.1502 & 0.4187 & 0.3365 & 0.3246 & 114 \\
+rl2\_gap joint & Z3 & 0.6152 & 0.3480 & 0.4187 & 0.3365 & 0.3246 & 114 \\
+jv\_ta Z1 & Z1 & -0.3664 & -1.8893 & 3.5696 & 0.7268 & 0.2456 & 114 \\
+jv\_ta Z2 & Z2 & -0.0594 & -0.1008 & 0.0102 & 0.7045 & 0.3065 & 124 \\
+jv\_ta Z3 & Z3 & -1.1804 & -0.8406 & 0.7065 & 0.7067 & 0.3065 & 124 \\
+jv\_ta joint & Z1 & -0.4294 & -1.9536 & 3.9954 & 0.7310 & 0.2456 & 114 \\
+jv\_ta joint & Z2 & -0.5810 & -0.9664 & 3.9954 & 0.7310 & 0.2456 & 114 \\
+jv\_ta joint & Z3 & -0.9397 & -0.4393 & 3.9954 & 0.7310 & 0.2456 & 114 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\footnotesize Pooled post probit with T025 covariates and date effects; firm-clustered z and Wald tests on excluded candidates only. Wald at least 10 is the specified strength rule. Overlap is the share of firms whose mean predicted post reporting probability is strictly between 0.05 and 0.95 (equal firm weights, across the five post dates). Missing candidate firms are excluded and counted; no imputation. Strength does not establish the exclusion restriction.
+\endgroup

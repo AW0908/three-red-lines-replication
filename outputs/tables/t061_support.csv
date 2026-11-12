@@ -1,0 +1,7 @@
+"group","threshold","pre_n","pre_firms","pre_window_obs","pre_window_firms","post_n","post_firms","post_window_obs","post_window_firms","low_support"
+"control_A_Sina",0.7,4512,752,207,96,3760,752,159,91,FALSE
+"control_A_Sina",0.6,4512,752,324,170,3760,752,269,162,FALSE
+"control_A_Sina",0.8,4512,752,103,54,3760,752,88,52,FALSE
+"developers_all",0.7,797,136,67,35,630,132,118,43,FALSE
+"developers_balanced_13_dates",0.7,690,115,66,34,575,115,109,40,FALSE
+"developers_A",0.7,480,80,50,25,400,80,63,24,FALSE

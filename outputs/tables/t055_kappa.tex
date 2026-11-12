@@ -1,0 +1,86 @@
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{6.0cm}rrrrr}
+\toprule
+Period / scope / metric & N & Firms & Estimate & 95\% CI & Valid \\
+\midrule
+post paired b k=0.0 & 602 & 129 & 3.1818 & [1.0105, 6.0136] & 999/999 \\
+post paired compliant share k=0.0 & 602 & 129 & 0.5116 & [0.4295, 0.5906] & 999/999 \\
+post paired b k=0.1 & 602 & 129 & 1.6805 & [-0.1450, 4.0029] & 999/999 \\
+post paired compliant share k=0.1 & 602 & 129 & 0.4801 & [0.3967, 0.5614] & 999/999 \\
+post paired b k=0.2 & 602 & 129 & 0.7440 & [-0.8178, 2.6002] & 999/999 \\
+post paired compliant share k=0.2 & 602 & 129 & 0.4535 & [0.3718, 0.5389] & 999/999 \\
+post paired b k=0.3 & 602 & 129 & -0.2289 & [-1.5514, 1.5804] & 999/999 \\
+post paired compliant share k=0.3 & 602 & 129 & 0.4269 & [0.3451, 0.5136] & 999/999 \\
+post paired b k=0.4 & 602 & 129 & -0.4064 & [-1.6629, 1.3457] & 999/999 \\
+post paired compliant share k=0.4 & 602 & 129 & 0.4169 & [0.3349, 0.5043] & 999/999 \\
+post paired b k=0.5 & 602 & 129 & -0.6479 & [-1.9090, 0.9901] & 999/999 \\
+post paired compliant share k=0.5 & 602 & 129 & 0.4053 & [0.3240, 0.4924] & 999/999 \\
+post paired b k=0.6 & 602 & 129 & -0.9712 & [-2.1139, 0.6081] & 999/999 \\
+post paired compliant share k=0.6 & 602 & 129 & 0.3920 & [0.3118, 0.4739] & 999/999 \\
+post paired b k=0.7 & 602 & 129 & -0.7267 & [-2.0212, 0.8788] & 999/999 \\
+post paired compliant share k=0.7 & 602 & 129 & 0.3870 & [0.3039, 0.4705] & 999/999 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 common whole-firm resamples of the full 136-firm universe, seed 20261016. All CIs are pointwise percentile intervals; invalid draws omitted and counted in CSV; fewer than 90 percent valid is unreliable. Post: 2020H2--2022H2, anchor end-2019; placebo: 2017H2--2019H2, anchor end-2016. b: excess count / mean fitted mass-bin count; degree 5 over [0.40,1.00], 0.01 bins, excluded/mass window [0.66,0.70). Zero bins and final right edge retained; no clipping or integration constraint. Descriptive; no causal policy interpretation. For contrasts N/Firms show first/benchmark populations. R(k)=(N+k max(MI minus anchor MI,0))/(N+E). Same official/frozen eligible pairs at every k. Reclassification conserves total debt plus equity; compliance means R(k) at most 0.70. Break-even values below are first linear interpolations of grid estimates, not exact roots of the discontinuous histogram statistic. post : point k* 0.2765 ( interpolated\_first\_crossing ); CI k* 0.0875 ( interpolated\_first\_crossing ). placebo : point k* 0.0000 ( already\_nonpositive\_at\_zero ); CI k* 0.0000 ( CI\_includes\_zero\_at\_zero ).
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{6.0cm}rrrrr}
+\toprule
+Period / scope / metric & N & Firms & Estimate & 95\% CI & Valid \\
+\midrule
+post paired b k=0.8 & 602 & 129 & -0.9052 & [-2.1684, 0.7031] & 999/999 \\
+post paired compliant share k=0.8 & 602 & 129 & 0.3804 & [0.2999, 0.4633] & 999/999 \\
+post paired b k=0.9 & 602 & 129 & -1.0019 & [-2.1867, 0.5482] & 999/999 \\
+post paired compliant share k=0.9 & 602 & 129 & 0.3738 & [0.2937, 0.4560] & 999/999 \\
+post paired b k=1.0 & 602 & 129 & -1.1228 & [-2.3242, 0.4515] & 999/999 \\
+post paired compliant share k=1.0 & 602 & 129 & 0.3671 & [0.2873, 0.4503] & 999/999 \\
+placebo paired b k=0.0 & 616 & 125 & -1.0078 & [-2.0442, 0.4142] & 999/999 \\
+placebo paired compliant share k=0.0 & 616 & 125 & 0.4854 & [0.3992, 0.5683] & 999/999 \\
+placebo paired b k=0.1 & 616 & 125 & -1.1002 & [-2.1337, 0.2548] & 999/999 \\
+placebo paired compliant share k=0.1 & 616 & 125 & 0.4789 & [0.3948, 0.5623] & 999/999 \\
+placebo paired b k=0.2 & 616 & 125 & -1.2712 & [-2.2690, 0.1364] & 999/999 \\
+placebo paired compliant share k=0.2 & 616 & 125 & 0.4724 & [0.3872, 0.5556] & 999/999 \\
+placebo paired b k=0.3 & 616 & 125 & -1.1580 & [-2.1732, 0.2396] & 999/999 \\
+placebo paired compliant share k=0.3 & 616 & 125 & 0.4675 & [0.3850, 0.5513] & 999/999 \\
+placebo paired b k=0.4 & 616 & 125 & -1.3077 & [-2.2433, -0.0839] & 999/999 \\
+placebo paired compliant share k=0.4 & 616 & 125 & 0.4562 & [0.3752, 0.5381] & 999/999 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 common whole-firm resamples of the full 136-firm universe, seed 20261016. All CIs are pointwise percentile intervals; invalid draws omitted and counted in CSV; fewer than 90 percent valid is unreliable. Post: 2020H2--2022H2, anchor end-2019; placebo: 2017H2--2019H2, anchor end-2016. b: excess count / mean fitted mass-bin count; degree 5 over [0.40,1.00], 0.01 bins, excluded/mass window [0.66,0.70). Zero bins and final right edge retained; no clipping or integration constraint. Descriptive; no causal policy interpretation. For contrasts N/Firms show first/benchmark populations. R(k)=(N+k max(MI minus anchor MI,0))/(N+E). Same official/frozen eligible pairs at every k. Reclassification conserves total debt plus equity; compliance means R(k) at most 0.70. Break-even values below are first linear interpolations of grid estimates, not exact roots of the discontinuous histogram statistic. post : point k* 0.2765 ( interpolated\_first\_crossing ); CI k* 0.0875 ( interpolated\_first\_crossing ). placebo : point k* 0.0000 ( already\_nonpositive\_at\_zero ); CI k* 0.0000 ( CI\_includes\_zero\_at\_zero ).
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{threeparttable}
+\begin{tabular}{p{6.0cm}rrrrr}
+\toprule
+Period / scope / metric & N & Firms & Estimate & 95\% CI & Valid \\
+\midrule
+placebo paired b k=0.5 & 616 & 125 & -1.1025 & [-2.0594, 0.0804] & 999/999 \\
+placebo paired compliant share k=0.5 & 616 & 125 & 0.4529 & [0.3728, 0.5346] & 999/999 \\
+placebo paired b k=0.6 & 616 & 125 & -1.2519 & [-2.1367, -0.3101] & 999/999 \\
+placebo paired compliant share k=0.6 & 616 & 125 & 0.4432 & [0.3620, 0.5251] & 999/999 \\
+placebo paired b k=0.7 & 616 & 125 & -1.2540 & [-2.1617, -0.3177] & 999/999 \\
+placebo paired compliant share k=0.7 & 616 & 125 & 0.4351 & [0.3556, 0.5192] & 999/999 \\
+placebo paired b k=0.8 & 616 & 125 & -1.4016 & [-2.2927, -0.5188] & 999/999 \\
+placebo paired compliant share k=0.8 & 616 & 125 & 0.4302 & [0.3540, 0.5134] & 999/999 \\
+placebo paired b k=0.9 & 616 & 125 & -1.1735 & [-2.0276, -0.2953] & 999/999 \\
+placebo paired compliant share k=0.9 & 616 & 125 & 0.4221 & [0.3449, 0.5050] & 999/999 \\
+placebo paired b k=1.0 & 616 & 125 & -1.0571 & [-1.9946, -0.0877] & 999/999 \\
+placebo paired compliant share k=1.0 & 616 & 125 & 0.4188 & [0.3417, 0.5000] & 999/999 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] Main sample; 999 common whole-firm resamples of the full 136-firm universe, seed 20261016. All CIs are pointwise percentile intervals; invalid draws omitted and counted in CSV; fewer than 90 percent valid is unreliable. Post: 2020H2--2022H2, anchor end-2019; placebo: 2017H2--2019H2, anchor end-2016. b: excess count / mean fitted mass-bin count; degree 5 over [0.40,1.00], 0.01 bins, excluded/mass window [0.66,0.70). Zero bins and final right edge retained; no clipping or integration constraint. Descriptive; no causal policy interpretation. For contrasts N/Firms show first/benchmark populations. R(k)=(N+k max(MI minus anchor MI,0))/(N+E). Same official/frozen eligible pairs at every k. Reclassification conserves total debt plus equity; compliance means R(k) at most 0.70. Break-even values below are first linear interpolations of grid estimates, not exact roots of the discontinuous histogram statistic. post : point k* 0.2765 ( interpolated\_first\_crossing ); CI k* 0.0875 ( interpolated\_first\_crossing ). placebo : point k* 0.0000 ( already\_nonpositive\_at\_zero ); CI k* 0.0000 ( CI\_includes\_zero\_at\_zero ).
+\end{tablenotes}
+\end{threeparttable}
+\endgroup
+\par\medskip

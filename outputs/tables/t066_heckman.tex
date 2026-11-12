@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Revised Heckman sensitivity: no first stage reaches Wald $\chi^2 \geq 10$ (maximum 3.9954).}
+\begingroup\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrrrr}
+\toprule
+Outcome & Z & Dose x post & 95\% CI & Wald $\chi^2$ & \shortstack{Usable\\$\chi^2\geq10$} & N / firms & Valid \\
+\midrule
+rl1 & Z3 & -0.0219 & [-0.0423, 0.0025] & 1.8796 & No & 1544 / 124 & 499 / 499 \\
+rl2 & Z2 & -0.6678 & [-1.8737, 0.0918] & 2.2859 & No & 1523 / 124 & 499 / 499 \\
+mi\_share & Z3 & 0.0036 & [-0.0787, 0.0485] & 1.0568 & No & 1484 / 122 & 389 / 499 \\
+rl2\_gap & Z2 & 0.0127 & [-0.0429, 0.1163] & 2.1629 & No & 1523 / 124 & 499 / 499 \\
+jv\_ta & joint & 0.0018 & [-0.0044, 0.0094] & 3.9954 & No & 1178 / 95 & 413 / 499 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\footnotesize None of the candidate specifications reaches the usable threshold of Wald $\chi^2 \geq 10$; maximum across t066-first-stage is 3.9954. T025 outcome models retain firm/date effects and dose by post, adding the post inverse Mills ratio. Both stages refit in 499 whole-firm bootstrap draws. The largest raw candidate-only Wald selects the admissible specification separately by outcome, as the disclosed interpretation of strongest; df differs across single/joint candidates, so this is not a comparable-significance ranking. Prices and losses may directly reflect leverage/distress, so the exclusion restriction is assumed and these are sensitivity estimates. Dose is dose\_pre: the firm-constant mean number of breached red lines over 2017H1--2019H2, requiring at least three nonmissing dates (T025).
+\endgroup
+\end{table}

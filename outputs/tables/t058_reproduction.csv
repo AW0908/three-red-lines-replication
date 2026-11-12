@@ -1,0 +1,7 @@
+"metric","estimate","expected_rounded","assert_pass"
+"b_post",3.1428547576148,3.14,TRUE
+"b_pre",-0.877187033767494,-0.88,TRUE
+"delta_b",4.02004179138229,4.02,TRUE
+"D",0.114617940199336,0.1146,TRUE
+"paired_observations",602,602,TRUE
+"paired_firms",129,129,TRUE

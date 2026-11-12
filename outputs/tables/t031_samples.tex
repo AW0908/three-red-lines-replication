@@ -1,0 +1,15 @@
+\begin{threeparttable}
+\begin{tabular}{lrrrrr}
+\toprule
+Sample & Firms & Pre b & 95\% CI & Post b & 95\% CI \\
+\midrule
+A: All & 136 & -0.877 & [-1.850, 0.428] & 3.143 & [1.012, 5.841] \\
+B: All 13 dates & 115 & -0.662 & [-1.764, 0.733] & 3.244 & [1.017, 6.190] \\
+C: At least 3 per period & 124 & -0.727 & [-1.828, 0.543] & 3.096 & [0.926, 5.561] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Main sample; pre: 2017H1--2019H2; post: 2020H2--2022H2. T023 estimator: degree 5, 0.01 bins on [0.40,1.00], excluding [0.66,0.70). Excess mass b is measured in bins. Whole firms are resampled 999 times using seed 20261016; the counterfactual is refitted in every draw. Each restricted sample resamples its own fixed firm universe. Intervals are pointwise percentile intervals. Nonpositive fitted mass-bin counts invalidate a draw; intervals condition on valid draws, and fewer than 90 percent valid draws are unreliable. Smooth density and polynomial shape are assumed. This is descriptive evidence, not a causal policy effect. B requires observed RL1 at all 13 scheduled dates, 2016H2--2022H2; C requires at least three observed RL1 dates in each T023 period. See the CSV for cell counts and draw validity.
+\end{tablenotes}
+\end{threeparttable}

@@ -1,0 +1,43 @@
+% Requires booktabs. All effects are in the original outcome ratio units.
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\noindent
+\begin{tabular}{lrrrrrrr}
+\toprule
+Outcome & $N$ & Firms & SE & MDE & MDE/SD & MDE/within-SD & $3\times$MDE \\
+\midrule
+rl1 & 985 & 126 & 0.007300 & 0.020439 & 0.122816 & 0.345703 & 0.061318 \\
+rl2 & 972 & 126 & 0.125419 & 0.351172 & 0.196545 & 0.298514 & 1.053517 \\
+rl2\_adj & 972 & 126 & 0.125912 & 0.352553 & 0.194648 & 0.300318 & 1.057660 \\
+rl3 & 953 & 126 & 2.683931 & 7.515006 & 0.118559 & 0.228704 & 22.545018 \\
+rl2\_gap & 972 & 126 & 0.012841 & 0.035955 & 0.239637 & 0.335356 & 0.107864 \\
+mi\_share & 951 & 123 & 0.006325 & 0.017711 & 0.106200 & 0.309386 & 0.053132 \\
+mi\_gap & 845 & 120 & 0.080685 & 0.225917 & 0.200810 & 0.221117 & 0.677750 \\
+jv\_ta & 775 & 103 & 0.003755 & 0.010513 & 0.178992 & 0.411122 & 0.031538 \\
+perp\_te & 985 & 126 & 0.003131 & 0.008767 & 0.192441 & 0.324446 & 0.026302 \\
+inv\_ta & 984 & 126 & 0.007397 & 0.020713 & 0.108570 & 0.299315 & 0.062138 \\
+\midrule
+rl1 (SOE interaction) & 696 & 87 & 0.005355 & 0.014995 & 0.094277 & 0.254480 & 0.044984 \\
+rl2 (SOE interaction) & 683 & 87 & 0.083750 & 0.234501 & 0.226074 & 0.631316 & 0.703504 \\
+rl2\_gap (SOE interaction) & 683 & 87 & 0.029360 & 0.082207 & 0.515670 & 0.723198 & 0.246621 \\
+mi\_share (SOE interaction) & 682 & 86 & 0.011340 & 0.031753 & 0.194942 & 0.632194 & 0.095259 \\
+\midrule
+rl1 (main\_dose\_pre) & 969 & 124 & 0.009192 & 0.025736 & 0.150436 & 0.412284 & 0.077209 \\
+rl2 (main\_dose\_pre) & 961 & 124 & 0.155410 & 0.435148 & 0.233967 & 0.348539 & 1.305443 \\
+rl2\_adj (main\_dose\_pre) & 961 & 124 & 0.156597 & 0.438472 & 0.232901 & 0.351928 & 1.315417 \\
+rl3 (main\_dose\_pre) & 951 & 124 & 2.855660 & 7.995849 & 0.126890 & 0.246584 & 23.987546 \\
+rl2\_gap (main\_dose\_pre) & 961 & 124 & 0.015797 & 0.044231 & 0.293283 & 0.410284 & 0.132692 \\
+mi\_share (main\_dose\_pre) & 931 & 121 & 0.007238 & 0.020266 & 0.120239 & 0.342861 & 0.060798 \\
+mi\_gap (main\_dose\_pre) & 825 & 118 & 0.071416 & 0.199965 & 0.175659 & 0.193439 & 0.599895 \\
+jv\_ta (main\_dose\_pre) & 759 & 101 & 0.003830 & 0.010725 & 0.181185 & 0.415577 & 0.032176 \\
+perp\_te (main\_dose\_pre) & 965 & 124 & 0.003816 & 0.010684 & 0.232425 & 0.391441 & 0.032051 \\
+inv\_ta (main\_dose\_pre) & 968 & 124 & 0.008913 & 0.024957 & 0.131785 & 0.385558 & 0.074871 \\
+\bottomrule
+\end{tabular}\endgroup
+\par\smallskip
+\noindent\begin{minipage}{\linewidth}\footnotesize
+Notes: Main-sample firms with nonmissing dose; dates 2016-12-31 to 2020-06-30 only. Placebo post begins 2018-12-31. Firm and date fixed effects; standard errors clustered by firm. No post-policy outcomes or placebo point estimates are reported.
+MDE $=(1.96+0.84)\times\mathrm{SE}=2.8\times\mathrm{SE}$ approximates 80\% power at a two-sided 5\% level per additional breached line; $3\times$MDE is the dose 0-to-3 contrast.
+SD is the pooled sample SD on each regression's estimation sample. Within-SD is the sample SD after jointly removing firm and date fixed effects (both SDs use $N-1$). SOE rows use known ownership and measure the SOE-minus-private difference in the dose effect, controlling for the main dose-by-placebo-post interaction.
+All effects are in ratio units (multiply by 100 for percentage points). Precision from this placebo period is a planning assumption for the policy period; MDE/within-SD above 0.5 signals weak power.
+Rows labelled main\_dose\_pre use nonmissing dose\_pre in sample\_main with the same dates, placebo cutoff, fixed effects and clustering as the legacy dose rows. dose\_pre averages breaches over 2017H1--2019H2 (at least 3 dates); its construction overlaps the placebo period, so this is a precision exercise, not an independent test of parallel trends.
+\end{minipage}

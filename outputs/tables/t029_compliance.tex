@@ -1,0 +1,619 @@
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 1 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2017-06-30 official & All & 121 & 121 & 0.5372 & [0.4552, 0.6283] \\
+main by date 2017-06-30 frozen & All & 121 & 121 & 0.6860 & [0.6000, 0.7661] \\
+main by date 2017-06-30 ex mi & All & 121 & 121 & 0.4463 & [0.3606, 0.5346] \\
+main by date 2017-06-30 D & All & 121 & 121 & -0.1488 & [-0.2167, -0.0820] \\
+main by date 2017-06-30 fail given official & All & 65 & 65 & 0.0154 & [0.0000, 0.0545] \\
+main by date 2017-06-30 official fail frozen share & All & 121 & 121 & 0.0083 & [0.0000, 0.0261] \\
+main by date 2017-06-30 reverse compliance share & All & 121 & 121 & 0.1570 & [0.0965, 0.2250] \\
+main by date 2017-12-31 official & All & 130 & 130 & 0.4846 & [0.4047, 0.5725] \\
+main by date 2017-12-31 frozen & All & 130 & 130 & 0.5769 & [0.4884, 0.6667] \\
+main by date 2017-12-31 ex mi & All & 130 & 130 & 0.4077 & [0.3255, 0.4961] \\
+main by date 2017-12-31 D & All & 130 & 130 & -0.0923 & [-0.1462, -0.0397] \\
+main by date 2017-12-31 fail given official & All & 63 & 63 & 0.0159 & [0.0000, 0.0508] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 2 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2017-12-31 official fail frozen share & All & 130 & 130 & 0.0077 & [0.0000, 0.0234] \\
+main by date 2017-12-31 reverse compliance share & All & 130 & 130 & 0.1000 & [0.0526, 0.1533] \\
+main by date 2018-06-30 official & All & 127 & 127 & 0.4882 & [0.4000, 0.5773] \\
+main by date 2018-06-30 frozen & All & 127 & 127 & 0.5748 & [0.4921, 0.6641] \\
+main by date 2018-06-30 ex mi & All & 127 & 127 & 0.4016 & [0.3228, 0.4921] \\
+main by date 2018-06-30 D & All & 127 & 127 & -0.0866 & [-0.1395, -0.0325] \\
+main by date 2018-06-30 fail given official & All & 62 & 62 & 0.0161 & [0.0000, 0.0517] \\
+main by date 2018-06-30 official fail frozen share & All & 127 & 127 & 0.0079 & [0.0000, 0.0240] \\
+main by date 2018-06-30 reverse compliance share & All & 127 & 127 & 0.0945 & [0.0469, 0.1441] \\
+main by date 2018-12-31 official & All & 131 & 131 & 0.4809 & [0.3909, 0.5692] \\
+main by date 2018-12-31 frozen & All & 131 & 131 & 0.5191 & [0.4307, 0.6107] \\
+main by date 2018-12-31 ex mi & All & 131 & 131 & 0.3969 & [0.3158, 0.4848] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 3 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2018-12-31 D & All & 131 & 131 & -0.0382 & [-0.0736, -0.0076] \\
+main by date 2018-12-31 fail given official & All & 63 & 63 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2018-12-31 official fail frozen share & All & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2018-12-31 reverse compliance share & All & 131 & 131 & 0.0382 & [0.0076, 0.0736] \\
+main by date 2019-06-30 official & All & 127 & 127 & 0.4646 & [0.3798, 0.5548] \\
+main by date 2019-06-30 frozen & All & 127 & 127 & 0.4961 & [0.4077, 0.5888] \\
+main by date 2019-06-30 ex mi & All & 127 & 127 & 0.3858 & [0.3047, 0.4758] \\
+main by date 2019-06-30 D & All & 127 & 127 & -0.0315 & [-0.0640, -0.0076] \\
+main by date 2019-06-30 fail given official & All & 59 & 59 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-06-30 official fail frozen share & All & 127 & 127 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-06-30 reverse compliance share & All & 127 & 127 & 0.0315 & [0.0076, 0.0640] \\
+main by date 2019-12-31 official & All & 131 & 131 & 0.4733 & [0.3808, 0.5607] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 4 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2019-12-31 frozen & All & 131 & 131 & 0.4733 & [0.3808, 0.5607] \\
+main by date 2019-12-31 ex mi & All & 131 & 131 & 0.3511 & [0.2691, 0.4352] \\
+main by date 2019-12-31 D & All & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-12-31 fail given official & All & 62 & 62 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-12-31 official fail frozen share & All & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-12-31 reverse compliance share & All & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2020-06-30 official & All & 128 & 128 & 0.4297 & [0.3385, 0.5228] \\
+main by date 2020-06-30 frozen & All & 128 & 128 & 0.4375 & [0.3510, 0.5313] \\
+main by date 2020-06-30 ex mi & All & 128 & 128 & 0.3438 & [0.2598, 0.4286] \\
+main by date 2020-06-30 D & All & 128 & 128 & -0.0078 & [-0.0240, 0.0000] \\
+main by date 2020-06-30 fail given official & All & 55 & 55 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2020-06-30 official fail frozen share & All & 128 & 128 & 0.0000 & [0.0000, 0.0000] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 5 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2020-06-30 reverse compliance share & All & 128 & 128 & 0.0078 & [0.0000, 0.0240] \\
+main by date 2020-12-31 official & All & 128 & 128 & 0.4844 & [0.3984, 0.5736] \\
+main by date 2020-12-31 frozen & All & 128 & 128 & 0.4141 & [0.3279, 0.5041] \\
+main by date 2020-12-31 ex mi & All & 128 & 128 & 0.3281 & [0.2479, 0.4063] \\
+main by date 2020-12-31 D & All & 128 & 128 & 0.0703 & [0.0236, 0.1191] \\
+main by date 2020-12-31 fail given official & All & 62 & 62 & 0.1613 & [0.0724, 0.2547] \\
+main by date 2020-12-31 official fail frozen share & All & 128 & 128 & 0.0781 & [0.0325, 0.1250] \\
+main by date 2020-12-31 reverse compliance share & All & 128 & 128 & 0.0078 & [0.0000, 0.0238] \\
+main by date 2021-06-30 official & All & 124 & 124 & 0.4919 & [0.4065, 0.5807] \\
+main by date 2021-06-30 frozen & All & 124 & 124 & 0.3871 & [0.3071, 0.4758] \\
+main by date 2021-06-30 ex mi & All & 124 & 124 & 0.3226 & [0.2419, 0.4081] \\
+main by date 2021-06-30 D & All & 124 & 124 & 0.1048 & [0.0472, 0.1681] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 6 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2021-06-30 fail given official & All & 61 & 61 & 0.2459 & [0.1427, 0.3559] \\
+main by date 2021-06-30 official fail frozen share & All & 124 & 124 & 0.1210 & [0.0650, 0.1811] \\
+main by date 2021-06-30 reverse compliance share & All & 124 & 124 & 0.0161 & [0.0000, 0.0407] \\
+main by date 2021-12-31 official & All & 119 & 119 & 0.5210 & [0.4224, 0.6135] \\
+main by date 2021-12-31 frozen & All & 119 & 119 & 0.3866 & [0.3017, 0.4706] \\
+main by date 2021-12-31 ex mi & All & 119 & 119 & 0.3277 & [0.2457, 0.4146] \\
+main by date 2021-12-31 D & All & 119 & 119 & 0.1345 & [0.0769, 0.1964] \\
+main by date 2021-12-31 fail given official & All & 62 & 62 & 0.2581 & [0.1528, 0.3667] \\
+main by date 2021-12-31 official fail frozen share & All & 119 & 119 & 0.1345 & [0.0769, 0.1964] \\
+main by date 2021-12-31 reverse compliance share & All & 119 & 119 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2022-06-30 official & All & 119 & 119 & 0.5546 & [0.4583, 0.6397] \\
+main by date 2022-06-30 frozen & All & 119 & 119 & 0.3866 & [0.3032, 0.4720] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 7 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2022-06-30 ex mi & All & 119 & 119 & 0.3193 & [0.2338, 0.4032] \\
+main by date 2022-06-30 D & All & 119 & 119 & 0.1681 & [0.1017, 0.2374] \\
+main by date 2022-06-30 fail given official & All & 66 & 66 & 0.3182 & [0.2096, 0.4309] \\
+main by date 2022-06-30 official fail frozen share & All & 119 & 119 & 0.1765 & [0.1130, 0.2460] \\
+main by date 2022-06-30 reverse compliance share & All & 119 & 119 & 0.0084 & [0.0000, 0.0259] \\
+main by date 2022-12-31 official & All & 112 & 112 & 0.5089 & [0.4095, 0.5982] \\
+main by date 2022-12-31 frozen & All & 112 & 112 & 0.4107 & [0.3190, 0.5044] \\
+main by date 2022-12-31 ex mi & All & 112 & 112 & 0.3036 & [0.2202, 0.3868] \\
+main by date 2022-12-31 D & All & 112 & 112 & 0.0982 & [0.0370, 0.1639] \\
+main by date 2022-12-31 fail given official & All & 57 & 57 & 0.2281 & [0.1250, 0.3390] \\
+main by date 2022-12-31 official fail frozen share & All & 112 & 112 & 0.1161 & [0.0609, 0.1755] \\
+main by date 2022-12-31 reverse compliance share & All & 112 & 112 & 0.0179 & [0.0000, 0.0442] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 8 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+post  official & All & 602 & 129 & 0.5116 & [0.4295, 0.5906] \\
+post  frozen & All & 602 & 129 & 0.3970 & [0.3193, 0.4820] \\
+post  ex mi & All & 602 & 129 & 0.3206 & [0.2418, 0.4017] \\
+post  D & All & 602 & 129 & 0.1146 & [0.0688, 0.1619] \\
+post  fail given official & All & 308 & 79 & 0.2435 & [0.1609, 0.3314] \\
+post  official fail frozen share & All & 602 & 129 & 0.1246 & [0.0804, 0.1697] \\
+post  reverse compliance share & All & 602 & 129 & 0.0100 & [0.0016, 0.0204] \\
+placebo  official & All & 616 & 125 & 0.4854 & [0.3992, 0.5683] \\
+placebo  frozen & All & 616 & 125 & 0.4448 & [0.3668, 0.5261] \\
+placebo  ex mi & All & 616 & 125 & 0.3912 & [0.3143, 0.4732] \\
+placebo  D & All & 616 & 125 & 0.0406 & [0.0130, 0.0728] \\
+placebo  fail given official & All & 299 & 71 & 0.1037 & [0.0541, 0.1640] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 9 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+placebo  official fail frozen share & All & 616 & 125 & 0.0503 & [0.0261, 0.0800] \\
+placebo  reverse compliance share & All & 616 & 125 & 0.0097 & [0.0016, 0.0213] \\
+post minus placebo  D & All & 602 / 616 & 129 / 125 & 0.0740 & [0.0310, 0.1182] \\
+post minus placebo  fail given official & All & 308 / 299 & 79 / 71 & 0.1398 & [0.0692, 0.2172] \\
+post minus placebo  official fail frozen share & All & 602 / 616 & 129 / 125 & 0.0743 & [0.0326, 0.1177] \\
+post minus placebo  reverse compliance share & All & 602 / 616 & 129 / 125 & 0.0002 & [-0.0140, 0.0147] \\
+extension by date 2023-06-30 official & All & 95 & 95 & 0.5263 & [0.4255, 0.6263] \\
+extension by date 2023-06-30 frozen & All & 95 & 95 & 0.4632 & [0.3608, 0.5582] \\
+extension by date 2023-06-30 ex mi & All & 95 & 95 & 0.3263 & [0.2391, 0.4194] \\
+extension by date 2023-06-30 D & All & 95 & 95 & 0.0632 & [0.0000, 0.1369] \\
+extension by date 2023-06-30 fail given official & All & 50 & 50 & 0.1800 & [0.0789, 0.2980] \\
+extension by date 2023-06-30 official fail frozen share & All & 95 & 95 & 0.0947 & [0.0404, 0.1585] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 10 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+extension by date 2023-06-30 reverse compliance share & All & 95 & 95 & 0.0316 & [0.0000, 0.0722] \\
+extension by date 2023-12-31 official & All & 91 & 91 & 0.5165 & [0.4157, 0.6092] \\
+extension by date 2023-12-31 frozen & All & 91 & 91 & 0.4725 & [0.3647, 0.5700] \\
+extension by date 2023-12-31 ex mi & All & 91 & 91 & 0.3516 & [0.2556, 0.4500] \\
+extension by date 2023-12-31 D & All & 91 & 91 & 0.0440 & [-0.0217, 0.1125] \\
+extension by date 2023-12-31 fail given official & All & 47 & 47 & 0.1489 & [0.0526, 0.2553] \\
+extension by date 2023-12-31 official fail frozen share & All & 91 & 91 & 0.0769 & [0.0247, 0.1340] \\
+extension by date 2023-12-31 reverse compliance share & All & 91 & 91 & 0.0330 & [0.0000, 0.0753] \\
+extension by date 2024-06-30 official & All & 89 & 89 & 0.5056 & [0.4000, 0.6092] \\
+extension by date 2024-06-30 frozen & All & 89 & 89 & 0.4944 & [0.3864, 0.5953] \\
+extension by date 2024-06-30 ex mi & All & 89 & 89 & 0.3933 & [0.2921, 0.5000] \\
+extension by date 2024-06-30 D & All & 89 & 89 & 0.0112 & [-0.0449, 0.0706] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 11 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+extension by date 2024-06-30 fail given official & All & 45 & 45 & 0.0889 & [0.0200, 0.1765] \\
+extension by date 2024-06-30 official fail frozen share & All & 89 & 89 & 0.0449 & [0.0108, 0.0918] \\
+extension by date 2024-06-30 reverse compliance share & All & 89 & 89 & 0.0337 & [0.0000, 0.0769] \\
+extension by date 2024-12-31 official & All & 82 & 82 & 0.5488 & [0.4443, 0.6538] \\
+extension by date 2024-12-31 frozen & All & 82 & 82 & 0.5000 & [0.3913, 0.6061] \\
+extension by date 2024-12-31 ex mi & All & 82 & 82 & 0.4146 & [0.3150, 0.5244] \\
+extension by date 2024-12-31 D & All & 82 & 82 & 0.0488 & [-0.0145, 0.1235] \\
+extension by date 2024-12-31 fail given official & All & 45 & 45 & 0.1556 & [0.0526, 0.2654] \\
+extension by date 2024-12-31 official fail frozen share & All & 82 & 82 & 0.0854 & [0.0281, 0.1482] \\
+extension by date 2024-12-31 reverse compliance share & All & 82 & 82 & 0.0366 & [0.0000, 0.0805] \\
+extension  official & All & 357 & 96 & 0.5238 & [0.4262, 0.6195] \\
+extension  frozen & All & 357 & 96 & 0.4818 & [0.3789, 0.5774] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 12 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+extension  ex mi & All & 357 & 96 & 0.3697 & [0.2799, 0.4676] \\
+extension  D & All & 357 & 96 & 0.0420 & [-0.0137, 0.1017] \\
+extension  fail given official & All & 187 & 53 & 0.1444 & [0.0673, 0.2405] \\
+extension  official fail frozen share & All & 357 & 96 & 0.0756 & [0.0340, 0.1246] \\
+extension  reverse compliance share & All & 357 & 96 & 0.0336 & [0.0050, 0.0700] \\
+main by date 2017-06-30 official & Excl. dates & 121 & 121 & 0.5372 & [0.4552, 0.6283] \\
+main by date 2017-06-30 frozen & Excl. dates & 121 & 121 & 0.6860 & [0.6000, 0.7661] \\
+main by date 2017-06-30 ex mi & Excl. dates & 121 & 121 & 0.4463 & [0.3606, 0.5346] \\
+main by date 2017-06-30 D & Excl. dates & 121 & 121 & -0.1488 & [-0.2167, -0.0820] \\
+main by date 2017-06-30 fail given official & Excl. dates & 65 & 65 & 0.0154 & [0.0000, 0.0545] \\
+main by date 2017-06-30 official fail frozen share & Excl. dates & 121 & 121 & 0.0083 & [0.0000, 0.0261] \\
+main by date 2017-06-30 reverse compliance share & Excl. dates & 121 & 121 & 0.1570 & [0.0965, 0.2250] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 13 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2017-12-31 official & Excl. dates & 130 & 130 & 0.4846 & [0.4047, 0.5725] \\
+main by date 2017-12-31 frozen & Excl. dates & 130 & 130 & 0.5769 & [0.4884, 0.6667] \\
+main by date 2017-12-31 ex mi & Excl. dates & 130 & 130 & 0.4077 & [0.3255, 0.4961] \\
+main by date 2017-12-31 D & Excl. dates & 130 & 130 & -0.0923 & [-0.1462, -0.0397] \\
+main by date 2017-12-31 fail given official & Excl. dates & 63 & 63 & 0.0159 & [0.0000, 0.0508] \\
+main by date 2017-12-31 official fail frozen share & Excl. dates & 130 & 130 & 0.0077 & [0.0000, 0.0234] \\
+main by date 2017-12-31 reverse compliance share & Excl. dates & 130 & 130 & 0.1000 & [0.0526, 0.1533] \\
+main by date 2018-06-30 official & Excl. dates & 127 & 127 & 0.4882 & [0.4000, 0.5773] \\
+main by date 2018-06-30 frozen & Excl. dates & 127 & 127 & 0.5748 & [0.4921, 0.6641] \\
+main by date 2018-06-30 ex mi & Excl. dates & 127 & 127 & 0.4016 & [0.3228, 0.4921] \\
+main by date 2018-06-30 D & Excl. dates & 127 & 127 & -0.0866 & [-0.1395, -0.0325] \\
+main by date 2018-06-30 fail given official & Excl. dates & 62 & 62 & 0.0161 & [0.0000, 0.0517] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 14 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2018-06-30 official fail frozen share & Excl. dates & 127 & 127 & 0.0079 & [0.0000, 0.0240] \\
+main by date 2018-06-30 reverse compliance share & Excl. dates & 127 & 127 & 0.0945 & [0.0469, 0.1441] \\
+main by date 2018-12-31 official & Excl. dates & 131 & 131 & 0.4809 & [0.3909, 0.5692] \\
+main by date 2018-12-31 frozen & Excl. dates & 131 & 131 & 0.5191 & [0.4307, 0.6107] \\
+main by date 2018-12-31 ex mi & Excl. dates & 131 & 131 & 0.3969 & [0.3158, 0.4848] \\
+main by date 2018-12-31 D & Excl. dates & 131 & 131 & -0.0382 & [-0.0736, -0.0076] \\
+main by date 2018-12-31 fail given official & Excl. dates & 63 & 63 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2018-12-31 official fail frozen share & Excl. dates & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2018-12-31 reverse compliance share & Excl. dates & 131 & 131 & 0.0382 & [0.0076, 0.0736] \\
+main by date 2019-06-30 official & Excl. dates & 127 & 127 & 0.4646 & [0.3798, 0.5548] \\
+main by date 2019-06-30 frozen & Excl. dates & 127 & 127 & 0.4961 & [0.4077, 0.5888] \\
+main by date 2019-06-30 ex mi & Excl. dates & 127 & 127 & 0.3858 & [0.3047, 0.4758] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 15 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2019-06-30 D & Excl. dates & 127 & 127 & -0.0315 & [-0.0640, -0.0076] \\
+main by date 2019-06-30 fail given official & Excl. dates & 59 & 59 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-06-30 official fail frozen share & Excl. dates & 127 & 127 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-06-30 reverse compliance share & Excl. dates & 127 & 127 & 0.0315 & [0.0076, 0.0640] \\
+main by date 2019-12-31 official & Excl. dates & 131 & 131 & 0.4733 & [0.3808, 0.5607] \\
+main by date 2019-12-31 frozen & Excl. dates & 131 & 131 & 0.4733 & [0.3808, 0.5607] \\
+main by date 2019-12-31 ex mi & Excl. dates & 131 & 131 & 0.3511 & [0.2691, 0.4352] \\
+main by date 2019-12-31 D & Excl. dates & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-12-31 fail given official & Excl. dates & 62 & 62 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-12-31 official fail frozen share & Excl. dates & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2019-12-31 reverse compliance share & Excl. dates & 131 & 131 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2020-06-30 official & Excl. dates & 128 & 128 & 0.4297 & [0.3385, 0.5228] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 16 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2020-06-30 frozen & Excl. dates & 128 & 128 & 0.4375 & [0.3510, 0.5313] \\
+main by date 2020-06-30 ex mi & Excl. dates & 128 & 128 & 0.3438 & [0.2598, 0.4286] \\
+main by date 2020-06-30 D & Excl. dates & 128 & 128 & -0.0078 & [-0.0240, 0.0000] \\
+main by date 2020-06-30 fail given official & Excl. dates & 55 & 55 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2020-06-30 official fail frozen share & Excl. dates & 128 & 128 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2020-06-30 reverse compliance share & Excl. dates & 128 & 128 & 0.0078 & [0.0000, 0.0240] \\
+main by date 2020-12-31 official & Excl. dates & 128 & 128 & 0.4844 & [0.3984, 0.5736] \\
+main by date 2020-12-31 frozen & Excl. dates & 128 & 128 & 0.4141 & [0.3279, 0.5041] \\
+main by date 2020-12-31 ex mi & Excl. dates & 128 & 128 & 0.3281 & [0.2479, 0.4063] \\
+main by date 2020-12-31 D & Excl. dates & 128 & 128 & 0.0703 & [0.0236, 0.1191] \\
+main by date 2020-12-31 fail given official & Excl. dates & 62 & 62 & 0.1613 & [0.0724, 0.2547] \\
+main by date 2020-12-31 official fail frozen share & Excl. dates & 128 & 128 & 0.0781 & [0.0325, 0.1250] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 17 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2020-12-31 reverse compliance share & Excl. dates & 128 & 128 & 0.0078 & [0.0000, 0.0238] \\
+main by date 2021-06-30 official & Excl. dates & 123 & 123 & 0.4959 & [0.4098, 0.5854] \\
+main by date 2021-06-30 frozen & Excl. dates & 123 & 123 & 0.3902 & [0.3114, 0.4762] \\
+main by date 2021-06-30 ex mi & Excl. dates & 123 & 123 & 0.3252 & [0.2441, 0.4113] \\
+main by date 2021-06-30 D & Excl. dates & 123 & 123 & 0.1057 & [0.0472, 0.1694] \\
+main by date 2021-06-30 fail given official & Excl. dates & 61 & 61 & 0.2459 & [0.1427, 0.3559] \\
+main by date 2021-06-30 official fail frozen share & Excl. dates & 123 & 123 & 0.1220 & [0.0655, 0.1826] \\
+main by date 2021-06-30 reverse compliance share & Excl. dates & 123 & 123 & 0.0163 & [0.0000, 0.0410] \\
+main by date 2021-12-31 official & Excl. dates & 115 & 115 & 0.5391 & [0.4375, 0.6348] \\
+main by date 2021-12-31 frozen & Excl. dates & 115 & 115 & 0.4000 & [0.3118, 0.4876] \\
+main by date 2021-12-31 ex mi & Excl. dates & 115 & 115 & 0.3391 & [0.2523, 0.4286] \\
+main by date 2021-12-31 D & Excl. dates & 115 & 115 & 0.1391 & [0.0793, 0.2035] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 18 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2021-12-31 fail given official & Excl. dates & 62 & 62 & 0.2581 & [0.1528, 0.3667] \\
+main by date 2021-12-31 official fail frozen share & Excl. dates & 115 & 115 & 0.1391 & [0.0793, 0.2035] \\
+main by date 2021-12-31 reverse compliance share & Excl. dates & 115 & 115 & 0.0000 & [0.0000, 0.0000] \\
+main by date 2022-06-30 official & Excl. dates & 117 & 117 & 0.5641 & [0.4667, 0.6522] \\
+main by date 2022-06-30 frozen & Excl. dates & 117 & 117 & 0.3932 & [0.3109, 0.4819] \\
+main by date 2022-06-30 ex mi & Excl. dates & 117 & 117 & 0.3248 & [0.2393, 0.4099] \\
+main by date 2022-06-30 D & Excl. dates & 117 & 117 & 0.1709 & [0.1026, 0.2393] \\
+main by date 2022-06-30 fail given official & Excl. dates & 66 & 66 & 0.3182 & [0.2096, 0.4309] \\
+main by date 2022-06-30 official fail frozen share & Excl. dates & 117 & 117 & 0.1795 & [0.1150, 0.2479] \\
+main by date 2022-06-30 reverse compliance share & Excl. dates & 117 & 117 & 0.0085 & [0.0000, 0.0263] \\
+main by date 2022-12-31 official & Excl. dates & 109 & 109 & 0.5229 & [0.4230, 0.6091] \\
+main by date 2022-12-31 frozen & Excl. dates & 109 & 109 & 0.4220 & [0.3243, 0.5197] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 19 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+main by date 2022-12-31 ex mi & Excl. dates & 109 & 109 & 0.3119 & [0.2252, 0.3966] \\
+main by date 2022-12-31 D & Excl. dates & 109 & 109 & 0.1009 & [0.0381, 0.1682] \\
+main by date 2022-12-31 fail given official & Excl. dates & 57 & 57 & 0.2281 & [0.1250, 0.3390] \\
+main by date 2022-12-31 official fail frozen share & Excl. dates & 109 & 109 & 0.1193 & [0.0631, 0.1803] \\
+main by date 2022-12-31 reverse compliance share & Excl. dates & 109 & 109 & 0.0183 & [0.0000, 0.0450] \\
+post  official & Excl. dates & 592 & 129 & 0.5203 & [0.4380, 0.5993] \\
+post  frozen & Excl. dates & 592 & 129 & 0.4037 & [0.3254, 0.4924] \\
+post  ex mi & Excl. dates & 592 & 129 & 0.3260 & [0.2474, 0.4070] \\
+post  D & Excl. dates & 592 & 129 & 0.1166 & [0.0700, 0.1647] \\
+post  fail given official & Excl. dates & 308 & 79 & 0.2435 & [0.1609, 0.3314] \\
+post  official fail frozen share & Excl. dates & 592 & 129 & 0.1267 & [0.0827, 0.1730] \\
+post  reverse compliance share & Excl. dates & 592 & 129 & 0.0101 & [0.0017, 0.0206] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 20 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+placebo  official & Excl. dates & 616 & 125 & 0.4854 & [0.3992, 0.5683] \\
+placebo  frozen & Excl. dates & 616 & 125 & 0.4448 & [0.3668, 0.5261] \\
+placebo  ex mi & Excl. dates & 616 & 125 & 0.3912 & [0.3143, 0.4732] \\
+placebo  D & Excl. dates & 616 & 125 & 0.0406 & [0.0130, 0.0728] \\
+placebo  fail given official & Excl. dates & 299 & 71 & 0.1037 & [0.0541, 0.1640] \\
+placebo  official fail frozen share & Excl. dates & 616 & 125 & 0.0503 & [0.0261, 0.0800] \\
+placebo  reverse compliance share & Excl. dates & 616 & 125 & 0.0097 & [0.0016, 0.0213] \\
+post minus placebo  D & Excl. dates & 592 / 616 & 129 / 125 & 0.0760 & [0.0328, 0.1202] \\
+post minus placebo  fail given official & Excl. dates & 308 / 299 & 79 / 71 & 0.1398 & [0.0692, 0.2172] \\
+post minus placebo  official fail frozen share & Excl. dates & 592 / 616 & 129 / 125 & 0.0764 & [0.0339, 0.1200] \\
+post minus placebo  reverse compliance share & Excl. dates & 592 / 616 & 129 / 125 & 0.0004 & [-0.0139, 0.0151] \\
+extension by date 2023-06-30 official & Excl. dates & 95 & 95 & 0.5263 & [0.4255, 0.6263] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 21 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+extension by date 2023-06-30 frozen & Excl. dates & 95 & 95 & 0.4632 & [0.3608, 0.5582] \\
+extension by date 2023-06-30 ex mi & Excl. dates & 95 & 95 & 0.3263 & [0.2391, 0.4194] \\
+extension by date 2023-06-30 D & Excl. dates & 95 & 95 & 0.0632 & [0.0000, 0.1369] \\
+extension by date 2023-06-30 fail given official & Excl. dates & 50 & 50 & 0.1800 & [0.0789, 0.2980] \\
+extension by date 2023-06-30 official fail frozen share & Excl. dates & 95 & 95 & 0.0947 & [0.0404, 0.1585] \\
+extension by date 2023-06-30 reverse compliance share & Excl. dates & 95 & 95 & 0.0316 & [0.0000, 0.0722] \\
+extension by date 2023-12-31 official & Excl. dates & 90 & 90 & 0.5222 & [0.4189, 0.6190] \\
+extension by date 2023-12-31 frozen & Excl. dates & 90 & 90 & 0.4778 & [0.3678, 0.5779] \\
+extension by date 2023-12-31 ex mi & Excl. dates & 90 & 90 & 0.3556 & [0.2608, 0.4563] \\
+extension by date 2023-12-31 D & Excl. dates & 90 & 90 & 0.0444 & [-0.0218, 0.1134] \\
+extension by date 2023-12-31 fail given official & Excl. dates & 47 & 47 & 0.1489 & [0.0526, 0.2553] \\
+extension by date 2023-12-31 official fail frozen share & Excl. dates & 90 & 90 & 0.0778 & [0.0250, 0.1341] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 22 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+extension by date 2023-12-31 reverse compliance share & Excl. dates & 90 & 90 & 0.0333 & [0.0000, 0.0753] \\
+extension by date 2024-06-30 official & Excl. dates & 89 & 89 & 0.5056 & [0.4000, 0.6092] \\
+extension by date 2024-06-30 frozen & Excl. dates & 89 & 89 & 0.4944 & [0.3864, 0.5953] \\
+extension by date 2024-06-30 ex mi & Excl. dates & 89 & 89 & 0.3933 & [0.2921, 0.5000] \\
+extension by date 2024-06-30 D & Excl. dates & 89 & 89 & 0.0112 & [-0.0449, 0.0706] \\
+extension by date 2024-06-30 fail given official & Excl. dates & 45 & 45 & 0.0889 & [0.0200, 0.1765] \\
+extension by date 2024-06-30 official fail frozen share & Excl. dates & 89 & 89 & 0.0449 & [0.0108, 0.0918] \\
+extension by date 2024-06-30 reverse compliance share & Excl. dates & 89 & 89 & 0.0337 & [0.0000, 0.0769] \\
+extension by date 2024-12-31 official & Excl. dates & 80 & 80 & 0.5625 & [0.4507, 0.6707] \\
+extension by date 2024-12-31 frozen & Excl. dates & 80 & 80 & 0.5125 & [0.3999, 0.6216] \\
+extension by date 2024-12-31 ex mi & Excl. dates & 80 & 80 & 0.4250 & [0.3218, 0.5395] \\
+extension by date 2024-12-31 D & Excl. dates & 80 & 80 & 0.0500 & [-0.0150, 0.1264] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{RL1 compliance under mechanical minority-interest counterfactuals (panel 23 of 23)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\linewidth}lrrrr}
+\toprule
+Window, date and statistic & Sample & N & Firms & Estimate & 95\% CI \\
+\midrule
+extension by date 2024-12-31 fail given official & Excl. dates & 45 & 45 & 0.1556 & [0.0526, 0.2654] \\
+extension by date 2024-12-31 official fail frozen share & Excl. dates & 80 & 80 & 0.0875 & [0.0290, 0.1529] \\
+extension by date 2024-12-31 reverse compliance share & Excl. dates & 80 & 80 & 0.0375 & [0.0000, 0.0833] \\
+extension  official & Excl. dates & 354 & 96 & 0.5282 & [0.4277, 0.6232] \\
+extension  frozen & Excl. dates & 354 & 96 & 0.4859 & [0.3831, 0.5813] \\
+extension  ex mi & Excl. dates & 354 & 96 & 0.3729 & [0.2835, 0.4726] \\
+extension  D & Excl. dates & 354 & 96 & 0.0424 & [-0.0138, 0.1024] \\
+extension  fail given official & Excl. dates & 187 & 53 & 0.1444 & [0.0673, 0.2405] \\
+extension  official fail frozen share & Excl. dates & 354 & 96 & 0.0763 & [0.0343, 0.1251] \\
+extension  reverse compliance share & Excl. dates & 354 & 96 & 0.0339 & [0.0051, 0.0708] \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item[] These are mechanical accounting counterfactuals, not attainable balance sheets, causal effects, or economic leverage. Minority interests may be genuine equity. Official RL1 is N/(N+E), N=liabilities minus advances, E=total equity including minority interests. N and E must be positive. Frozen MI replaces current minority interests with their end-2019 level, holding all other observed items at their realized values; the pre-period placebo freezes them at end-2016. Ex-MI is mechanical, not a deconsolidated balance sheet. Nonpositive total counterfactual denominators are unavailable. All shares are proportions. N and firms count available observations and unique firms for each estimate; contributing contrast counts are identified in the table notes. Both variants are reported: all observations and exclude jump dates (known half-year minority-interest jumps above 50 percent of current equity). Unknown flags are retained; later dates retain the jump in the MI stock. Percentile 95 percent intervals use 999 whole-firm resamples with shared draws, full histories and complete re-estimation. Intervals are pointwise; no significance stars. HK changes assume unchanged reporting currency within firm; currency metadata remain unresolved. Compliance contrast rows show post / placebo N and unique-firm counts in that order. D is the net difference C minus frozen compliance among paired firm-dates. Fail given official is the share failing frozen MI conditional on official compliance; reverse compliance is also reported. Main date shares cover 2017H1--2022H2; pre-policy date shares with a 2019 anchor are retrospective comparisons. The actual placebo covers 2017H2--2019H2 with the 2016 anchor. Post covers 2020H2--2022H2. Extension covers 2023H1--2024H2 separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+

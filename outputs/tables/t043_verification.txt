@@ -1,0 +1,9 @@
+T043 Rework 4 verification, 2026-10-29 (rerun after the session-limit abort of 2026-10-28 21:37). Offline Worker self-check (Claude), not independent review.
+Rework 4 changes (TeX note of t043_integration.tex only, generated at 15_referee2.R:351-361): secondary variant's mass residual "equals minus the [0.70,0.74) column"; T023 baseline rows show -- for B_net and [0.70,0.74) with an explanatory note. No numerical change.
+Execution command on final code, twice: cd replication && Rscript code/15_referee2.R
+Both runs exit 0; console output redirected directly into t043_run1.log and t043_run2.log (identical, SHA-256 f22988c6...). All 22 staged files byte-identical between the two runs and identical to the state left by the aborted 2026-10-28 21:37 run.
+Against the pre-Rework-4 state (t043_reproducibility.csv): 20 of 22 unchanged; changed: t043_integration.tex (note and the two -- cells) and t043_input_output_guards.csv (protected set now 203 non-T043 outputs vs. 200 in Rework 3; the extra files were not written by this script, which only writes t043_*; not individually traced, presumably the parallel T044 session; none is a T043 input).
+Reproduction assertions: b_post=3.142854757615; b_pre=-0.877187033767; D=0.114617940199. All 30 period estimates in the 15-cell delta grid reproduce T023.
+Guards: 13 inputs and 203 protected non-T043 outputs byte-identical before/after each run (script assertion).
+Step 2 main (textbook Chetty et al. 2011), unchanged from Rework 3: post b_net=3.7630 [1.5964, 6.1461], 19 iterations; pre b_net=0.2004 [-1.5955, 2.3611], 17 iterations; Delta b_net=3.5626 [0.7492, 6.4921].
+No network, downloads, raw-value changes or task-status changes. No full run_all (it would rebuild outside this card's write scope).

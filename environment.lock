@@ -1,0 +1,23 @@
+# Software, packages and versions used to produce the outputs.
+# Update whenever a package is installed or upgraded.
+
+[R]
+R             4.6.0
+fixest        0.14.2
+did           2.5.1
+data.table    1.18.6.1
+ggplot2       4.0.3
+modelsummary  2.6.0
+rdrobust      4.1.1
+rddensity     3.0
+# Transitive dependency of rddensity (density plots)
+lpdensity     3.0.1
+readxl        1.5.0.1
+kableExtra    1.4.0
+scales        1.4.0
+# R-distributed packages explicitly used via ::
+stats         4.6.0
+grDevices     4.6.0
+tools         4.6.0
+
+# CRAN mirror used for installation: https://mirrors.ustc.edu.cn/CRAN/

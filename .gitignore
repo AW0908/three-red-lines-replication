@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+data/raw/wind/
+data/processed/panel_firm_halfyear.csv
+data/processed/panel_firm_halfyear_ext.csv
+.env

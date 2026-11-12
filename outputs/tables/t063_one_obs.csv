@@ -1,0 +1,4 @@
+"group","metric","median","p025","p975","valid","failed","random_draws","seed","exclusion_lower","exclusion_upper","mass_lower","mass_upper","inference"
+"developers_all","delta_b",3.98957693734766,1.21128129264158,7.15247014366587,999,0,999,20261018,0.66,0.7,0.66,0.7,"observation_selection_distribution_not_sampling_CI"
+"control_all","delta_b",-0.621915682883905,-2.17094775500812,0.905846579064902,999,0,999,20261018,0.66,0.7,0.66,0.7,"observation_selection_distribution_not_sampling_CI"
+"developers_all_minus_control_all","delta_delta_b",4.65445598015935,1.32753501431114,8.08897855321897,999,0,999,20261018,0.66,0.7,0.66,0.7,"observation_selection_distribution_not_sampling_CI"

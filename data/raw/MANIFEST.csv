@@ -1,0 +1,9 @@
+file,source,download_export_date,size_bytes,sha256
+data/raw/eastmoney/delisted_hk_balance.csv,Daten/akshare_output/delisted_hk_balance.csv,2026-10-13,5081975,3e589d9ba5c9f572409affac1395445b434eeeeaaa7e9fb52f409158ca648fc0
+data/raw/eastmoney/delisted_hk_income.csv,Daten/akshare_output/delisted_hk_income.csv,2026-10-13,2998778,8ab43841a4336225e935b645d382c6b3a0c72812963609f5aba334917ecfe524
+data/raw/eastmoney/firm_list.csv,Daten/akshare_output/firm_list.csv,2026-10-13,5508,26a0beb3aac57a30c3bb18619de46f854110aae6a54281886e4ea9e51f99c00c
+data/raw/eastmoney/raw_a_balance.csv,Daten/akshare_output/raw_a_balance.csv,2026-10-13,14153090,b14ecb525391389ed6e60bb99ec984c9feef99b7acba111dfa7b1a3b5b424feb
+data/raw/eastmoney/raw_a_income.csv,Daten/akshare_output/raw_a_income.csv,2026-10-13,9179484,82dab1bc9386f0d2da2c07a2d55d70630ed928c03b2eb74bd92a437633db12b1
+data/raw/eastmoney/raw_hk_balance.csv,Daten/akshare_output/raw_hk_balance.csv,2026-10-13,7573893,864eded01132fbd5b29103c428d14ca96a8fb359399304b002aa479a370fa1da
+data/raw/eastmoney/raw_hk_income.csv,Daten/akshare_output/raw_hk_income.csv,2026-10-13,4493028,ccb7941e284ba277d81b5888de8c1578ab9585d4e557afd3b96f26564146aae0
+data/raw/manual/prices_2019.csv,Daten/control/prices_2019.csv,unverified; PI file; price dates 2019-12-30/31,6234,ab6b2196daf5e821e84c5c4cc816d4e3959aa8358bfdec1c9ee40fd92df51991
