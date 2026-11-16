@@ -1,0 +1,26 @@
+"scenario","market","Mbar","target","status","reason","ci_low_pp","ci_high_pp"
+"primary","A",0,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","A",0.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","A",1,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","A",1.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","A",2,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","HK",0,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","HK",0.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","HK",1,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","HK",1.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"primary","HK",2,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","A",0,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","A",0.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","A",1,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","A",1.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","A",2,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","HK",0,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","HK",0.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","HK",1,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","HK",1.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"unbalanced_developers","HK",2,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"HK_no_imputation","HK",0,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"HK_no_imputation","HK",0.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"HK_no_imputation","HK",1,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"HK_no_imputation","HK",1.5,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA
+"HK_no_imputation","HK",2,"mean five post Z coefficients vs 2019H2","NOT RUN","HonestDiD not installed locally; no worker downloads",NA,NA

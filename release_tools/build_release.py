@@ -4,9 +4,16 @@ Do not execute fetch scripts. Run again before creating the release Git commit.
 import csv, hashlib, json, os, re, shutil, subprocess, sys, time, gzip
 from pathlib import Path
 from collections import Counter
+from t084_policy import accepted_code, output_scope_reason, export_process, narrative_clean, basic_clean
 ROOT=Path.cwd(); OUT=ROOT/'public_release'; REP=ROOT/'replication'
 assert (ROOT/'tasks/T073.md').exists()
 SEED=20261016
+
+# Fail before copying if the required scientific snapshot is not accepted.
+approvals=(ROOT/'state/approvals.log').read_text()
+for task in ['T076','T077','T082']:
+ assert re.search(r'^status: DELIVERED$',(ROOT/'tasks'/(task+'.md')).read_text(),re.M),task+' not delivered'
+ assert re.search(r'\b'+task+r' DELIVERED \(PI,',approvals),task+' missing PI acceptance'
 
 def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(rel,s):
@@ -27,9 +34,12 @@ firm=re.compile(r'(?<!\w)(?:\d{6}\.(?:SH|SZ)|\d{4,5}(?:!\d)?\.HK)(?!\w)')
 
 def clean(s,rel,audit=False):
  old=s
+ s=basic_clean(s,rel)
  s=local.sub('/Users/<local>',s);s=email.sub('<email-redacted>',s);s=secret.sub('<credential-redacted>',s)
  # Do not redact ordinary parameter names; redact literal credential assignments.
  s=assignment.sub('<credential-assignment-redacted>',s)
+ if audit:
+  s=narrative_clean(s,rel)
  if audit:
   lines=s.splitlines(True); fenced=False; result=[]
   for line in lines:
@@ -56,10 +66,18 @@ def copy(p,rel,audit=False):
 # Baseline immutable inputs, used for the after-build check.
 inputs=[]
 for base in ['replication','tasks','review']:
- inputs += [p for p in ((ROOT/base).rglob('*') if base=='replication' else (ROOT/base).glob('*.md')) if p.is_file() and p!=ROOT/'tasks/T073_report.md']
+ inputs += [p for p in ((ROOT/base).rglob('*') if base=='replication' else (ROOT/base).glob('*.md')) if p.is_file() and p not in {ROOT/'tasks/T073_report.md',ROOT/'tasks/T084_report.md'} and '__pycache__' not in p.parts]
 inputs += [ROOT/p for p in ['state/approvals.log','state/runs.log','AI_USAGE_LOG.md','Daten/fetch_control.py','Daten/fetch_control_sina.py','Daten/fetch_prices_2019.py','Daten/akshare_coverage_test.py','Daten/fetch_delisted.py']]
 baseline={str(p.relative_to(ROOT)):digest(p) for p in inputs}
 print('Input hashes captured',len(baseline),flush=True)
+# Exclude known editor/runtime debris; never touch Git or original sources.
+debris=[]
+for p in sorted(OUT.rglob('*')):
+ if not p.is_file() or '.git' in p.relative_to(OUT).parts: continue
+ if p.name=='.DS_Store' or '__pycache__' in p.parts or p.suffix=='.pyc' or p.relative_to(OUT).as_posix()=='audit/tasks/T084_report.md':
+  debris.append(dict(file=p.relative_to(OUT).as_posix(),sha256=digest(p),handling='excluded editor/runtime cache or current self-report; not payload'))
+  p.unlink()
+table('validation/T084_EXCLUDED_DEBRIS.csv',['file','sha256','handling'],debris)
 # Record removals from the build's explicit source labels, not a guessed delisted list.
 header,panel=read(REP/'data/processed/panel_firm_halfyear.csv')
 wind_ids={r['firm_id'] for r in panel if r['source']=='wind'}
@@ -73,8 +91,9 @@ public_header=[h for h in header if h not in removed]
 
 # Inventory BEFORE copying outputs; all firm-bearing outputs are conservatively withheld
 # unless their complete provenance is independently public (control data only).
-script_text={p.relative_to(REP).as_posix():p.read_text(errors='replace') for p in (REP/'code').rglob('*') if p.suffix in {'.R','.py'}}
+script_text={p.relative_to(REP).as_posix():p.read_text(errors='replace') for p in (REP/'code').rglob('*') if p.suffix in {'.R','.py'} and accepted_code(p)}
 producer_map=dict(zip(['t004','t005','t008','t009','t011','t015','t023','t024','t025','t027','t028','t029','t030','t031','t040','t041','t043','t044','t046','t047','t055','t058','t061','t063','t066','t072'],['01_clean.R','03_figures.R','t008_power.R','02_estimate.R','04_robustness.R','05_heterogeneity.R','06_bunching_tests.R','07_rd.R','09_selection.R','08_decomposition.R','10_controls.R','11_mechanism.R','01b_extend.R','14_core_robustness.R','13_rl1_validation.R','12_q1_robustness.R','15_referee2.R','16_pilot_magnitude.R','17_cash_backing_all.R','18_crossers_coding.R','19_referee3.R','20_referee4.R','21_diff_bunching.R','22_referee5.R','23_drdid.R','24_figures.R']))
+producer_map.update(t076='25_hk_control.R',t077='26_identification.R')
 rows=[]; withheld=[]
 for p in sorted((REP/'outputs').rglob('*')):
  if not p.is_file() or p.parts[-2] not in {'tables','figures'}: continue
@@ -102,6 +121,13 @@ for p in sorted((REP/'outputs').rglob('*')):
 
  if p.name=='t031_leave_one_out.csv':
   reason='Firm-specific influence estimates (delta_b, influence_rank); sample defined by Wind membership; 24 removed-firm IDs. Withheld under T073 Rework 1.'
+ if p.name in {'t076_hk_panel.csv','t076_hk_membership.csv'}:
+  reason=''
+  public_only=True
+ if p.name in {'t040_constructed_vs_published.pdf','f_validation.pdf'}:
+  kind='firm-specific graphical observations'
+  reason='Individual constructed RL1 points include Wind-sourced firm-dates (11 of 64 plotted observations); exact plot source is t040_matched_observations.csv. Withheld: a scatterplot is not an aggregate. Producers: code/13_rl1_validation.R:199-217; code/03_figures.R:83-88; code/24_figures.R:135-152.'
+ reason=output_scope_reason(p) or reason
  decision='withheld' if reason else 'included'
  row={'file':rel,'classification':kind,'decision':decision,'reason':reason,'producer_candidates':producer,'size_bytes':p.stat().st_size,'source_sha256':digest(p)}
  rows.append(row)
@@ -110,18 +136,27 @@ allowed={r['file'] for r in rows if r['decision']=='included'}
 for p in (OUT/'outputs').rglob('*'):
  if p.is_file() and p.relative_to(OUT).as_posix() not in allowed: p.unlink()
 table('OUTPUT_INVENTORY.csv',list(rows[0]),rows)
+# Plot coordinates require provenance checks even without searchable tickers.
+_,matched=read(REP/'outputs/tables/t040_matched_observations.csv')
+panel_sources={(r['firm_id'],r['date']):r['source'] for r in panel}
+graph_sources=Counter(panel_sources[(r['firm_id'],r['date'])] for r in matched if r['ratio']=='rl1' and r['error'] not in {'NA',''})
+table('validation/T084_GRAPHICAL_PROVENANCE.csv',['file','plotted_financial_source','observations','handling'],[
+ dict(file='outputs/figures/'+name,plotted_financial_source=source,observations=n,handling='entire figure withheld; individual observations include Wind')
+ for name in ['t040_constructed_vs_published.pdf','f_validation.pdf'] for source,n in sorted(graph_sources.items())])
 write('WITHHELD.md','# Withheld files\n\nComplete pre-copy classification: OUTPUT_INVENTORY.csv. Task-prefix producers are matched to the corresponding analysis scripts; other candidates are found by exact name/prefix references. Historical logs are runner captures, not independently generated tables. Firm-specific files with uncertain field provenance are excluded, never inferred safe from their names.\n\n01_clean.R lines 342–396 merge Wind ownership and industry; lines 530–543 select financial rows; 01b_extend.R freezes these fields and treatment history. Derived firm-level ratios and baselines therefore also require source review. Aggregated results are included under the PI decision of 12 November 2026.\n\n| File | Reason | Script(s) to inspect / rerun with licensed Wind |\n|---|---|---|\n'+''.join('| '+r['file']+' | '+r['reason'].replace('|','/')+' | '+r['producer_candidates']+' |\n' for r in withheld))
 # Copy only permitted sources.
 for p in (REP/'code').rglob('*'):
- if p.is_file() and '__pycache__' not in p.parts: copy(p,p.relative_to(REP).as_posix())
+ if p.is_file() and '__pycache__' not in p.parts and accepted_code(p): copy(p,p.relative_to(REP).as_posix())
+for p in (OUT/'code').rglob('*'):
+ if p.is_file() and not accepted_code(p): p.unlink()
 for n in ['run_all.R','run_all.sh','environment.lock','replication.Rproj']: copy(REP/n,n)
 for n in ['fetch_control.py','fetch_control_sina.py','fetch_prices_2019.py','akshare_coverage_test.py','fetch_delisted.py']:
  copy(ROOT/'Daten'/n,'code/fetch/'+n)
-for folder in ['eastmoney','control','manual']:
+for folder in ['eastmoney','control','control_hk','manual']:
  for p in (REP/'data/raw'/folder).rglob('*'):
   if p.is_file() and p.suffix.lower() not in {'.pdf','.pyc'}: copy(p,p.relative_to(REP).as_posix())
 # Filter original raw MANIFEST to non-Wind rows, retain provider/date/source checksums.
-h,m=read(REP/'data/raw/MANIFEST.csv');table('data/raw/MANIFEST.csv',h,[r for r in m if not r['file'].startswith('data/raw/wind/')])
+h,m=read(REP/'data/raw/MANIFEST.csv');table('data/raw/MANIFEST.csv',h,[r for r in m if not r['file'].startswith('data/raw/wind/') and (OUT/r['file']).exists()])
 copy(REP/'data/raw/manual/prices_2019.csv','data/prices_2019.csv')
 # Rework 1: manual ownership has AI consensus references, without complete primary
 # source citations in the authorized inputs. Do not claim verified non-Wind provenance.
@@ -167,7 +202,8 @@ for r in rows:
    assert q.stat().st_size<50_000_000
   else: copy(p,r['file'])
 for folder in ['tasks','review']:
- for p in sorted((ROOT/folder).glob('*.md')): copy(p,'audit/'+folder+'/'+p.name,audit=True)
+ for p in sorted((ROOT/folder).glob('*.md')):
+  if p.name!='T084_report.md': copy(p,'audit/'+folder+'/'+p.name,audit=True)
 for n in ['approvals.log','runs.log']: copy(ROOT/'state'/n,'audit/'+n,audit=True)
 copy(ROOT/'AI_USAGE_LOG.md','audit/AI_USAGE_LOG.md',audit=True)
 with (OUT/'audit/AI_USAGE_LOG.md').open('a') as f:
@@ -309,6 +345,7 @@ write('.gitignore','.DS_Store\n__pycache__/\n*.pyc\ndata/raw/wind/\ndata/process
 # Keep sanitized source snapshots independently auditable without copying Wind source data.
 table('validation/SOURCE_HASHES.csv',['file','sha256'],[{'file':k,'sha256':v} for k,v in sorted(baseline.items())])
 table('validation/SANITIZATION.csv',['file','action'],changes)
+export_process(ROOT, OUT, baseline)
 changed=[p for p,h in baseline.items() if not (ROOT/p).exists() or digest(ROOT/p)!=h]
 write('validation/INPUT_INTEGRITY.json',json.dumps({'seed':SEED,'checked_files':len(baseline),'changed_files':changed},indent=2)+'\n')
 assert not changed,changed

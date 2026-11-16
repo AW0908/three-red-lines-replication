@@ -1,0 +1,17 @@
+file,removed_ID_matches,interpretation
+data/prices_2019.csv,28,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/processed/REMOVED_FIRMS.csv,34,Public ID-only removal flag
+data/raw/manual/prices_2019.csv,28,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/rl1_validation/published_candidates.csv,10,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/rl1_validation/published_coded.csv,6,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/registry_todo.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/nci_cashflow.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/announcements_triage.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/nci_cashflow_all.csv,28,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/pilot_coding.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/rl1_published.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/nci_subsidiaries.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/transactions.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/contract_hits.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/crossers_coding.csv,3,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation
+data/raw/manual/handcollect/case_notes_verification.csv,1,Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation

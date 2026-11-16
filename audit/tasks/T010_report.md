@@ -1,6 +1,6 @@
 ## Ergebnis
 
-Das Replikationspaket baut alle 32 Ausgaben aus einer frischen Kopie außerhalb des Projekts erfolgreich neu auf. Zwölf Entwicklungsdateien wurden unverändert ausgelagert; die vier T011-Abbildungen werden jetzt neu erzeugt. Bestehende Projektausgaben und `Daten/` sind nach Abschluss byte-identisch zum Ausgangszustand.
+Das Replikationspaket baut alle [number withheld] Ausgaben aus einer frischen Kopie außerhalb des Projekts erfolgreich neu auf. Zwölf Entwicklungsdateien wurden unverändert ausgelagert; die vier T011-Abbildungen werden jetzt neu erzeugt. Bestehende Projektausgaben und `Daten/` sind nach Abschluss byte-identisch zum Ausgangszustand.
 
 ## Dateien
 
@@ -14,33 +14,33 @@ Das Replikationspaket baut alle 32 Ausgaben aus einer frischen Kopie außerhalb 
 - `replication/docs/provenance/t013_ownership_codex.csv`, `replication/docs/provenance/wind_nachholliste.csv` – unverändert verschoben.
 - `replication/README.md` – Buildumfang, Laufzeit, Ordnerstruktur und Provenienz dokumentiert.
 
-Prüfbelege liegen unter `/var/folders/zm/380qc22n60l8fdpk4zdbt7x00000gn/T/t010-evidence-jy6xbd02/`: `before.json`, `raw_check.txt`, `fresh_path.txt`, `fresh_run.log`, `fresh_result.json`, `fresh_comparison.csv`, `changes.json`, `verification.json`.
+Prüfbelege liegen unter `/var/folders/zm/[number withheld]qc2[number withheld]n6[number withheld]l8fdpk4zdbt7x0[number withheld]gn/T/t0[number withheld]-evidence-jy6xbd0[number withheld]/`: `before.json`, `raw_check.txt`, `fresh_path.txt`, `fresh_run.log`, `fresh_result.json`, `fresh_comparison.csv`, `changes.json`, `verification.json`.
 
 ## Ausführung
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Exitcode: **0**. Letzte Ausgabezeilen:
+Exitcode: **[number withheld]**. Letzte Ausgabezeilen:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Fresh-copy-Lauf: Exitcode **0**, **8,19 Sekunden**; vollständiges Protokoll in `fresh_run.log`.
+Fresh-copy-Lauf: Exitcode **[number withheld]**, **[number withheld] Sekunden**; vollständiges Protokoll in `fresh_run.log`.
 
 ## Abnahmekriterien
 
-1. **Erfüllt:** Keine `../`-Referenz unter `replication/code/`, einschließlich Provenienzskripten.
-2. **Erfüllt:** Alle **15 Rohdateien** im Manifest; Größen und SHA-256 stimmen mit den Originalen überein.
-3. **Erfüllt:** **32/32 Ausgaben** vollständig neu aufgebaut. Alle **19 CSV/TEX einschließlich Panel** und neun PDFs byte-identisch. Die vier ausdrücklich ausgenommenen T011-PDFs existieren und sind nicht leer; Unterschiede entstehen durch den ergänzten Plotstil und deterministische PDF-Metadaten.
-4. **Erfüllt:** Alle zehn direkt verwendeten R-Pakete stehen in Setup und Lockdatei. Installierte und dokumentierte Versionen stimmen überein.
-5. **Erfüllt:** `replication.Rproj` vorhanden; README beschreibt beide Startwege und gemessene Laufzeit.
-6. **Erfüllt:** **7.317 Dateien in `Daten/` unverändert**. Alle 32 verbliebenen Projektausgaben stimmen abschließend mit ihren Ausgangshashes überein; zwölf verschobene Provenienzdateien ebenfalls.
+[number withheld]. **Erfüllt:** Keine `../`-Referenz unter `replication/code/`, einschließlich Provenienzskripten.
+[number withheld]. **Erfüllt:** Alle **[number withheld] Rohdateien** im Manifest; Größen und SHA-[number withheld] stimmen mit den Originalen überein.
+[number withheld]. **Erfüllt:** **[number withheld]/[number withheld] Ausgaben** vollständig neu aufgebaut. Alle **[number withheld] CSV/TEX einschließlich Panel** und neun PDFs byte-identisch. Die vier ausdrücklich ausgenommenen T011-PDFs existieren und sind nicht leer; Unterschiede entstehen durch den ergänzten Plotstil und deterministische PDF-Metadaten.
+[number withheld]. **Erfüllt:** Alle zehn direkt verwendeten R-Pakete stehen in Setup und Lockdatei. Installierte und dokumentierte Versionen stimmen überein.
+[number withheld]. **Erfüllt:** `replication.Rproj` vorhanden; README beschreibt beide Startwege und gemessene Laufzeit.
+[number withheld]. **Erfüllt:** **[number withheld] Dateien in `Daten/` unverändert**. Alle [number withheld] verbliebenen Projektausgaben stimmen abschließend mit ihren Ausgangshashes überein; zwölf verschobene Provenienzdateien ebenfalls.
 
 ## Offene Fragen
 
-Windows wurde nicht praktisch getestet. R meldet für `data.table` und `readxl`, dass sie unter R 4.6.1 gebaut wurden; beide Läufe unter R 4.6.0 waren erfolgreich.
+Windows wurde nicht praktisch getestet. R meldet für `data.table` und `readxl`, dass sie unter R [number withheld] gebaut wurden; beide Läufe unter R [number withheld] waren erfolgreich.
 
 Die vier ursprünglichen T011-PDFs wurden nach dem Projektlauf wiederhergestellt, um die bestehenden Projektausgaben unverändert zu hinterlassen. Die neu erzeugten Fassungen liegen in der frischen Testkopie; deren Pfad steht in `fresh_path.txt`.
 
-Vorschlag für das KI-Nutzungsprotokoll nach Abnahme: „Codex setzte T010 um: Provenienzdateien ausgelagert, T011-Abbildungen reproduzierbar ergänzt und vollständigen Offline-Neuaufbau mit SHA-256-Vergleich geprüft.“
+Vorschlag für das KI-Nutzungsprotokoll nach Abnahme: „Codex setzte T010 um: Provenienzdateien ausgelagert, T011-Abbildungen reproduzierbar ergänzt und vollständigen Offline-Neuaufbau mit SHA-[number withheld]-Vergleich geprüft.“

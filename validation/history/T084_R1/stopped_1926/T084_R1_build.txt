@@ -1,0 +1,3 @@
+Input hashes captured 5037
+T084 process export: 729 sources; 693 withheld document checksums; 2126 HK raw files verified.
+Built 1880 rows x 77 columns; removed 34 firms, 12 columns; inventoried 740 outputs, withheld 371. Inputs unchanged: 5370.

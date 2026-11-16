@@ -1,6 +1,6 @@
 ## Ergebnis
 
-Punkte 1–7 wurden ohne neue Schätzung umgesetzt. Der Haupttext umfasst 15 Seiten; Abschnitt 2 wurde um 34 Prozent gekürzt. Punkt 0 ist teilweise offen, weil `proposal/appendix/ai_use.tex` außerhalb des ausdrücklich erlaubten Schreibbereichs liegt.
+Punkte [number withheld]–[number withheld] wurden ohne neue Schätzung umgesetzt. Der Haupttext umfasst [number withheld] Seiten; Abschnitt [number withheld] wurde um [number withheld] Prozent gekürzt. Punkt [number withheld] ist teilweise offen, weil `proposal/appendix/ai_use.tex` außerhalb des ausdrücklich erlaubten Schreibbereichs liegt.
 
 ## Dateien
 
@@ -16,42 +16,42 @@ Punkte 1–7 wurden ohne neue Schätzung umgesetzt. Der Haupttext umfasst 15 Sei
 - `proposal/tables/t050_counterfactuals.tex` – fünf Gegenfaktumsvergleiche.
 - `proposal/tables/t049_threats.tex` – Methodenbezeichnung und Symbol korrigiert.
 - `tasks/T050_report.md` – ausführliche Zahlen-/Quellenmatrix und Prüfbelege.
-- `review/T050_build/` – erzeugte Build-Dateien.
+- `review/T0[number withheld]_build/` – erzeugte Build-Dateien.
 
 Prüf-PDF:
 
-:codex-file-citation{path="/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/review/T050_build/main.pdf" purpose="output"}
+:codex-file-citation{path="/Users/<local>/Desktop/UNI/[number withheld]. Semester PKU/Policy Analysis/review/T0[number withheld]_build/main.pdf" purpose="output"}
 
 ## Ausführung
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Exit-Code 0. Letzte Ausgabe:
+Exit-Code [number withheld]. Letzte Ausgabe:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
 | Punkt | Ergebnis |
 |---|---|
-| 0: T049-Reste | Teilweise erfüllt; Änderungen am KI-Anhang offen. |
-| 1: Zeitreihe | Erfüllt; Figure 2, Histogramm in Appendix B. |
-| 2: Robustheit | Erfüllt; balanciertes Panel, Datumsauswahlen, Querschnitte und Perpetual-Variante berichtet. |
-| 3: Gegenfaktumstabelle | Erfüllt; fünf Zeilen, Levels und Differenzen klar bezeichnet. |
-| 4: Identifikation | Erfüllt am vorgesehenen Estimandenabsatz; vier Zeilen. |
-| 5: Hierarchie | Erfüllt; primary, secondary und exploratory konsistent. |
-| 6: Abstract | Erfüllt; unverändert. |
-| 7: Kürzung | Erfüllt; Abschnitt 2 von 536 auf 354 Wörter gekürzt. |
+| [number withheld]: T049-Reste | Teilweise erfüllt; Änderungen am KI-Anhang offen. |
+| [number withheld]: Zeitreihe | Erfüllt; Figure [number withheld], Histogramm in Appendix B. |
+| [number withheld]: Robustheit | Erfüllt; balanciertes Panel, Datumsauswahlen, Querschnitte und Perpetual-Variante berichtet. |
+| [number withheld]: Gegenfaktumstabelle | Erfüllt; fünf Zeilen, Levels und Differenzen klar bezeichnet. |
+| [number withheld]: Identifikation | Erfüllt am vorgesehenen Estimandenabsatz; vier Zeilen. |
+| [number withheld]: Hierarchie | Erfüllt; primary, secondary und exploratory konsistent. |
+| [number withheld]: Abstract | Erfüllt; unverändert. |
+| [number withheld]: Kürzung | Erfüllt; Abschnitt [number withheld] von [number withheld] auf [number withheld] Wörter gekürzt. |
 
-Haupttext: **14 → 15 Seiten**, TeXcount-Wörter **4.457 → 4.376**. Build ohne Warnungen, Fehler oder überstehende Boxen; alle 39 PDF-Seiten visuell geprüft. Alle 145 gesicherten Eingaben blieben prüfsummengleich.
+Haupttext: **[number withheld] → [number withheld] Seiten**, TeXcount-Wörter **[number withheld] → [number withheld]**. Build ohne Warnungen, Fehler oder überstehende Boxen; alle [number withheld] PDF-Seiten visuell geprüft. Alle [number withheld] gesicherten Eingaben blieben prüfsummengleich.
 
 Die vollständige Zuordnung **Zahl → CSV → Filter**, einschließlich sämtlicher neuer Tabellenwerte und Konfidenzintervalle, steht in `tasks/T050_report.md`.
 
 ## Offene Fragen
 
 - Die verlangten KI-Korrekturen benötigen eine Erweiterung des Schreibbereichs um `proposal/appendix/ai_use.tex`. Die Freigabefrage ist noch unbeantwortet; deshalb ist T050 insgesamt noch nicht vollständig erledigt.
-- „Section 4“ wurde als Datei `04_empirical_model.tex` ausgelegt: Der ausdrücklich genannte Estimandenabsatz liegt im aktuellen PDF in Abschnitt 5.
+- „Section [number withheld]“ wurde als Datei `04_empirical_model.tex` ausgelegt: Der ausdrücklich genannte Estimandenabsatz liegt im aktuellen PDF in Abschnitt [number withheld].
 - Für die Placebo-Überschussmasse fehlt ein vorhandener Outputwert; die Tabellenzelle bleibt entsprechend gekennzeichnet leer.
 - Unabhängiges Review und PI-Abnahme stehen aus. Kartenstatus unverändert.

@@ -1,0 +1,7 @@
+PASS all 27 provider/mode/effort CLI adapters; separate Claude/agy binaries; fresh sessions; readonly wrappers on all non-Codex reviews
+PASS default Codex and explicit role > reviewer-wide > global precedence
+PASS explicit selection for every role and antigravity alias
+PASS invalid provider and unavailable read-only sandbox fail closed
+PASS provider failure returned without silent Codex fallback
+PASS full mixed-provider review orchestration and declared/effective report disclosure in isolated fixture
+PASS interactive Co-PI entrypoint for all three providers

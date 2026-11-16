@@ -1,6 +1,6 @@
 ## Ergebnis
 
-Das Appendix-Layout wurde überarbeitet und alle 35 Anhangseiten visuell geprüft. Zahlen, Captions, Labels und die 15 Haupttextseiten sind unverändert. Eine bestehende Overfull-Box im Haupttext verhindert die vollständige Abnahme.
+Das Appendix-Layout wurde überarbeitet und alle [number withheld] Anhangseiten visuell geprüft. Zahlen, Captions, Labels und die [number withheld] Haupttextseiten sind unverändert. Eine bestehende Overfull-Box im Haupttext verhindert die vollständige Abnahme.
 
 ## Dateien
 
@@ -42,32 +42,32 @@ Die genannten Tabellen erhielten Spaltenabstände, Umbrüche oder angepasste Pla
 
 - `tasks/T071_report.md` – ausführlicher Bericht.
 - `review/T071_pages/final.pdf` – geprüfter Build.
-- `review/T071_pages/final-20.png` bis `review/T071_pages/final-54.png` – alle Anhangseiten bei 50 dpi.
+- `review/T071_pages/final-20.png` bis `review/T071_pages/final-54.png` – alle Anhangseiten bei [number withheld] dpi.
 - `review/T071_pages/final_contact_1.png` bis `review/T071_pages/final_contact_6.png` – Seitenübersichten.
-- `review/T071_pages/final.txt`, `review/T071_pages/final_bbox.html`, `review/T071_pages/before_bbox.html` – PDF-Extraktionen.
+- `review/T071_pages/final.txt`, `review/T0[number withheld]_pages/final_bbox.html`, `review/T0[number withheld]_pages/before_bbox.html` – PDF-Extraktionen.
 - `review/T071_pages/verify.py` – reproduzierbarer Inhaltsvergleich.
 - `review/T071_pages/verification.json`, `review/T071_pages/content_checks.json`, `review/T071_pages/number_inventory.json`, `review/T071_pages/build_checks.json` – Prüfnachweise.
 - `review/T071_pages/page_checks.md`, `review/T071_pages/page_checks.json` – Einzelprüfung aller Seiten.
 - `review/T071_pages/build.log` – Ausführungsprotokoll.
-- `review/T071_build/main.{atoc,aux,bbl,blg,fdb_latexmk,fls,log,out,pdf,toc,xdv}` – aktualisierte Builddateien.
+- `review/T0[number withheld]_build/main.{atoc,aux,bbl,blg,fdb_latexmk,fls,log,out,pdf,toc,xdv}` – aktualisierte Builddateien.
 
 ## Ausführung
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Exit-Code: 0. Letzte Ausgabe:
+Exit-Code: [number withheld]. Letzte Ausgabe:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Zusätzlich: `python3 review/T071_pages/verify.py` und vollständiges Appendix-Rendering mit `pdftoppm -r 50`.
+Zusätzlich: `python3 review/T071_pages/verify.py` und vollständiges Appendix-Rendering mit `pdftoppm -r [number withheld]`.
 
 ## Abnahmekriterien
 
-1. **Nicht vollständig erfüllt:** Der Anhang hat keine Overfull-Box > 1 pt, zusammenlaufenden Spalten oder verwaisten Einzelsätze. Inhaltsseiten erreichen etwa 60–98 % Füllung. Haupttext und Seitenende auf Seite 15 sind unverändert. Allerdings besteht im Haupttext weiterhin eine Overfull-Box von **20,83865 pt** in `proposal/sections/07_conclusion.tex`, Zeilen 8–9.
-2. **Erfüllt:** Inhaltszahlen je Datei identisch; Tabellenzahlen zusätzlich in unveränderter Zeilenfolge. Alle Caption-/Label-Strings identisch. Vollständige Extraktionen und Vergleiche stehen in `number_inventory.json`, `content_checks.json` und `verification.json`.
-3. **Erfüllt:** Jede Anhangseite wurde visuell geprüft; Füllschätzungen stehen unten.
+[number withheld]. **Nicht vollständig erfüllt:** Der Anhang hat keine Overfull-Box > [number withheld] pt, zusammenlaufenden Spalten oder verwaisten Einzelsätze. Inhaltsseiten erreichen etwa [number withheld]–[number withheld] % Füllung. Haupttext und Seitenende auf Seite [number withheld] sind unverändert. Allerdings besteht im Haupttext weiterhin eine Overfull-Box von **[number withheld] pt** in `proposal/sections/07_conclusion.tex`, Zeilen [number withheld]–[number withheld].
+[number withheld]. **Erfüllt:** Inhaltszahlen je Datei identisch; Tabellenzahlen zusätzlich in unveränderter Zeilenfolge. Alle Caption-/Label-Strings identisch. Vollständige Extraktionen und Vergleiche stehen in `number_inventory.json`, `content_checks.json` und `verification.json`.
+[number withheld]. **Erfüllt:** Jede Anhangseite wurde visuell geprüft; Füllschätzungen stehen unten.
 
 Keine neuen empirischen Zahlen oder Literaturangaben wurden eingefügt. Bestehende Quellenkommentare sind erhalten.
 
@@ -75,41 +75,41 @@ Vorher/nachher vergleicht dieselbe Seitenposition; Tabellen können gewandert se
 
 | Seite | Vorher | Nachher | Überlauf / zusammenlaufende Spalten / verwaister Text |
 |---|---:|---:|---|
-| A1 | 53 % | 53 % | nein / nein / nein |
-| A2 | 30 % | 30 % | nein / nein / nein |
-| A3 | 88 % | 88 % | nein / nein / nein |
-| A4 | 88 % | 88 % | nein / nein / nein |
-| A5 | 93 % | 97 % | nein / nein / nein |
-| A6 | 92 % | 92 % | nein / nein / nein |
-| A7 | 74 % | 98 % | nein / nein / nein |
-| A8 | 78 % | 84 % | nein / nein / nein |
-| A9 | 75 % | 75 % | nein / nein / nein |
-| A10 | 91 % | 90 % | nein / nein / nein |
-| A11 | 62 % | 97 % | nein / nein / nein |
-| A12 | 89 % | 64 % | nein / nein / nein |
-| A13 | 48 % | 96 % | nein / nein / nein |
-| A14 | 72 % | 84 % | nein / nein / nein |
-| A15 | 80 % | 68 % | nein / nein / nein |
-| A16 | 81 % | 84 % | nein / nein / nein |
-| A17 | 81 % | 65 % | nein / nein / nein |
-| A18 | 81 % | 85 % | nein / nein / nein |
-| A19 | 96 % | 75 % | nein / nein / nein |
-| A20 | 81 % | 88 % | nein / nein / nein |
-| A21 | 75 % | 63 % | nein / nein / nein |
-| A22 | 91 % | 74 % | nein / nein / nein |
-| A23 | 78 % | 81 % | nein / nein / nein |
-| A24 | 98 % | 96 % | nein / nein / nein |
-| A25 | 97 % | 60 % | nein / nein / nein |
-| A26 | 99 % | 98 % | nein / nein / nein |
-| A27 | 98 % | 76 % | nein / nein / nein |
-| A28 | 96 % | 87 % | nein / nein / nein |
-| A29 | 96 % | 75 % | nein / nein / nein |
-| A30 | 93 % | 83 % | nein / nein / nein |
-| A31 | 92 % | 63 % | nein / nein / nein |
-| A32 | 95 % | 97 % | nein / nein / nein |
-| A33 | 82 % | 91 % | nein / nein / nein |
-| A34 | 98 % | 82 % | nein / nein / nein |
-| A35 | 25 % | 63 % | nein / nein / nein |
+| A1 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A4 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A5 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A6 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A7 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A8 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A9 | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A1[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A2[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
+| A3[number withheld] | [number withheld] % | [number withheld] % | nein / nein / nein |
 
 ## Offene Fragen
 
@@ -117,4 +117,4 @@ Die vorhandene Overfull-Box im Haupttext benötigt eine gesonderte Aufgabenkarte
 
 Der vorhandene T071-Ausgangssnapshot wurde weiterverwendet; sein Preamble-Hash stimmt mit `review/T071_baseline.sha256` überein. Das automatisch erzeugte Deckblattdatum entspricht dem aktuellen Builddatum.
 
-Vorgeschlagener KI-Nutzungseintrag, wegen des Schreibbereichs nicht selbst ergänzt: „2026-11-09, Codex, T071: Appendix-Layout und Sichtprüfung aller 35 Anhangseiten; Zahlen/Beschriftungen und Haupttext unverändert geprüft; bestehenden Haupttext-Überlauf dokumentiert.“
+Vorgeschlagener KI-Nutzungseintrag, wegen des Schreibbereichs nicht selbst ergänzt: „2026-11-09, Codex, T071: Appendix-Layout und Sichtprüfung aller [number withheld] Anhangseiten; Zahlen/Beschriftungen und Haupttext unverändert geprüft; bestehenden Haupttext-Überlauf dokumentiert.“

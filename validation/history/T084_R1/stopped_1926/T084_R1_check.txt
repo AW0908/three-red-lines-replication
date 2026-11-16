@@ -1,0 +1,9 @@
+T084 STRUCTURE PASS: 729 source/public hash pairs; 28 accepted build steps; 54 accepted output freezes.
+Traceback (most recent call last):
+  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/public_release/release_tools/check_release.py", line 121, in <module>
+    scan_release(ROOT, OUT)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/public_release/release_tools/t084_scan.py", line 201, in scan_release
+    assert not worker_changes, 'Outside-scope changes detected; see validation/T084_SCOPE_CHECK.json'
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: Outside-scope changes detected; see validation/T084_SCOPE_CHECK.json

@@ -1,47 +1,60 @@
-Historical pre-rework worker report. Superseded by T073 Rework 1, WITHHELD.md, OUTPUT_RECHECK.csv and CHECKS.json. Its old counts and commit refer to the previous candidate.
-
 ## Ergebnis
 
-`public_release/` wurde erstellt und der ESCALATE-Konflikt gemäß PI-Entscheidung behoben. Von 411 geprüften Outputs sind 323 enthalten und 88 begründet zurückgehalten; das öffentliche Panel enthält 1.880 Zeilen, 150 Firmen und 77 Spalten. Git-Erstcommit `f9a664e` liegt auf `main`, das Arbeitsverzeichnis ist sauber; kein Push wurde ausgeführt.
+T073 Rework [number withheld] ist umgesetzt. Die Leave-one-out-Datei und die nicht ausreichend belegte manuelle Eigentümerdatei werden zurückgehalten; Provenienzangaben, MANIFEST und Prüfungen wurden erneuert. Neuer Git-Erstcommit: `e3ab3c7` auf `main`, sauberer Arbeitsbaum, kein Push.
 
 ## Dateien
 
-- `public_release/MANIFEST.csv` – vollständige Einzelliste der 812 Nutzdateien mit Größen und SHA-256 sowie 88 zurückgehaltenen Einträgen.
-- `public_release/README.md`, `public_release/REPRODUCIBILITY.csv` – Anleitung und Wind-Abhängigkeiten je Skript.
-- `public_release/OUTPUT_INVENTORY.csv`, `public_release/WITHHELD.md` – vollständige Konfliktinventur und Ausschlussbegründungen.
-- `public_release/data/processed/` – öffentliches Panel, entfernte Firmen und Spalten sowie Provenienzbelege.
-- `public_release/data/raw/manual/DOCUMENTS.md` – Dokumentenregister mit vorhandenen Quellen- und Seitenangaben.
-- `public_release/code/`, `public_release/data/`, `public_release/outputs/`, `public_release/audit/`, `public_release/software/` – freigegebene Archivbestandteile; jede einzelne Datei steht im MANIFEST.
-- `public_release/release_tools/`, `public_release/validation/` – Build- und Prüfroutinen samt Ergebnissen.
-- `public_release/LICENSE`, `public_release/LICENSE-data.md`, `public_release/.gitignore`, `public_release/.git/` – Lizenzen, Ausschlüsse und lokales Repository.
-- `tasks/T073_report.md` – ausführlicher Worker-Bericht.
+Alle folgenden Release-Pfade liegen unter `public_release/`:
+
+- `OUTPUT_INVENTORY.csv`, `WITHHELD.md`, `MANIFEST.csv` – korrigierte Klassifikation, Ausschlüsse und Prüfsummen.
+- `outputs/tables/t031_leave_one_out.csv`, `data/raw/manual/ownership_manual_coding.csv` – entfernt; Originale unverändert.
+- `data/raw/manual/DOCUMENTS.md`, `data/processed/REMOVED_COLUMNS.csv`, `data/raw/MANIFEST.csv`, `README.md` – Quellen und Ausschlussgründe ergänzt.
+- `release_tools/build_release.py`, `release_tools/check_release.py`, `release_tools/dry_run.py` – Build und Prüfungen angepasst.
+- `validation/OUTPUT_RECHECK.csv`, `validation/WITHHELD_INPUTS.csv`, `validation/CHECKS.json`, `validation/DATA_ID_MATCHES.csv`, `validation/DRY_RUN.md`, `validation/SOURCE_HASHES.csv` – erneuerte Prüfbelege.
+- `audit/AI_USAGE_LOG.md`, `audit/review/T073.md`, `audit/review/T073_data.md`, `audit/runs.log`, `audit/tasks/T073.md` – aktualisierte, bereinigte Auditkopien.
+- `audit/tasks/T073_report.md` – vorherigen Bericht als überholten Kandidatenbericht gekennzeichnet.
+- `.git/` – Erstcommit neu aufgebaut; alte Commit-Objekte entfernt.
+- `tasks/T073_report.md` im Projektordner – ausführlicher Worker-Bericht.
 
 ## Ausführung
 
-Exakter Kartenbefehl, Exitcode 0:
+Kartenbefehl ausgeführt, Exitcode [number withheld]:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Die Ausgabe endet mit dem README-Abschnitt `Privacy, licences and audit fidelity` und dem Satz:
+Die letzte Ausgabezeile endet mit:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Zusätzlich wurden Build, isolierte Dry Runs und Abschlussprüfung ausgeführt. Letzte Prüfausgabe:
+Zusätzlich ausgeführt:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
+
+Letzte Abschlussprüfungszeile:
+
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
-- **1 – erfüllt mit dokumentierten Grenzen:** MANIFEST vollständig; keine Wind-Exporte oder vollständigen Originalpanels enthalten. 34 Wind-Firmen und zwölf Wind-basierte Spalten entfernt; sämtliche erhaltenen Panelwerte stimmen zellweise mit dem Original überein.
-- **Datenschutzprüfung – erfüllt im dokumentierten Scan:** null Treffer für geprüfte Geheimnismuster, E-Mail-Adressen und unbereinigte Benutzerpfade.
-- **Größenprüfung – erfüllt:** 126.882.295 Bytes Nutzdaten; einschließlich Git 162.442.776 Bytes. Keine Datei über 50 MB.
-- **Dry Run – erfüllt mit dokumentierten Blockern:** Setup, A-Share-Audit, Theme und R-Simulationstest erfolgreich. HK-Audit und Panel-Build stoppen erwartungsgemäß am fehlenden Wind-Register. Fetcher-Start wurde mit gesperrtem Netzwerk geprüft.
-- **2 – erfüllt innerhalb des Schreibbereichs:** 985 geprüfte Eingaben unverändert; außerhalb des Release nur den ausdrücklich zugelassenen Worker-Bericht geschrieben. Kartenstatus unverändert.
-- **Git-Zusatz – erfüllt:** ein Commit auf `main`, Ziel-Remote konfiguriert, Arbeitsverzeichnis sauber, kein Push.
+- **Rework [number withheld] – erfüllt:** Leave-one-out-Datei mit [number withheld] Firmenzeilen und [number withheld] entfernten IDs zurückgehalten. Alle [number withheld] verbleibenden Outputs erneut geprüft, einschließlich PDF-Textextraktion; keine weiteren entsprechenden Ausschlüsse. Verbleibende firmenbezogene Dateien mit jeweils null entfernten IDs:
+  - `t061_control_panel.csv`: [number withheld] Zeilen.
+  - `t061_download_failures.csv`: [number withheld] Zeilen.
+  - `t063_control_membership.csv`: [number withheld] Zeilen.
+- **Rework [number withheld] – erfüllt:** fünf Provenienzzeilen dokumentiert. Vier Datensätze behalten; manuelle Eigentümerdatei wegen unvollständigen Primärquellenbelegs zurückgehalten. Die Cashflow-Datei enthält keine `panel_mi_check`-Diagnosen.
+- **Rework [number withheld] – erfüllt:** zwölf Spalten einzeln mit Quellen, Skriptzeilen und Begründungen dokumentiert; gemischte Eigentümerfelder konservativ entfernt.
+- **Wind-Prüfung und MANIFEST – erfüllt unter der PI-Freigabe für Aggregate:** öffentliches Panel mit [number withheld] Zeilen, [number withheld] Firmen und [number withheld] Spalten; [number withheld] Firmen und zwölf Spalten entfernt. Erhaltene Panelwerte stimmen zellweise mit dem Original überein. Alle Nutzdatei-Hashes verifiziert.
+- **Datenschutz – erfüllt im dokumentierten Scan:** null Treffer für geprüfte Geheimnis-, E-Mail- und unbereinigte Benutzerpfadmuster.
+- **Größe – erfüllt:** [number withheld] Bytes Nutzdateien; einschließlich Git [number withheld] Bytes. Größte Datei: [number withheld] Bytes.
+- **Dry Run – erfüllt mit dokumentierten Grenzen:** Setup, A-Share-Audit, Simulation und Theme abgeschlossen. HK-Audit und Panel-Build stoppen am fehlenden Wind-Register; Fetcher startet und stoppt an der blockierten Netzwerkgrenze.
+- **Schreibbereich – erfüllt:** [number withheld] geprüfte Eingaben unverändert; außerhalb des Release ausschließlich den zugelassenen Bericht geschrieben. Kartenstatus unverändert.
+- **Git – erfüllt:** ein Commit `e3ab3c7f5[number withheld]f3[number withheld]c9[number withheld]a9ef0a7bddcf0[number withheld]b9[number withheld]df4`, Branch `main`, [number withheld] versionierte Dateien, sauberer Arbeitsbaum, Ziel-Remote eingerichtet, kein Push.
 
 ## Offene Fragen
 
-Die vollständigen wissenschaftlichen Ergebnisse benötigen Wind-Zugang und weitere in den Originalskripten verlangte Projektdateien beziehungsweise PDFs. Unklare firmenbezogene Outputs bleiben gemäß PI-Regel 6 zurückgehalten. Providerrechte wurden offline nicht neu geprüft; fehlende Dokumenten-URLs und Seitenangaben sind gekennzeichnet. Das MANIFEST schließt sich selbst und Git-Verwaltungsdateien aus; der Datenschutzscan deckt die dokumentierten Muster ab.
+Für die zurückgehaltene Eigentümerdatei fehlen vollständige öffentliche Primärquellenbelege. PDFs und Providerrechte wurden offline nicht erneut geprüft; vollständige wissenschaftliche Reproduktion benötigt weiterhin Wind und weitere dokumentierte Eingaben.
+
+Der historische Simulationstest meldet trotz erfolgreichem Ablauf eine vorpolitische Periode ohne Null im Intervall; das bleibt im Dry-Run-Protokoll sichtbar. MANIFEST schließt sich selbst und Git-Verwaltungsdateien aus.

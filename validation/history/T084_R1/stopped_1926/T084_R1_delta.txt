@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/public_release/validation/T084_R1_verify.py", line 193, in <module>
+    elif sys.argv[1]=='delta':delta()
+                              ~~~~~^^
+  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/public_release/validation/T084_R1_verify.py", line 184, in delta
+    assert not changes,changes
+           ^^^^^^^^^^^
+AssertionError: ['.DS_Store', 'presentation/.DS_Store', 'state/followups.md']

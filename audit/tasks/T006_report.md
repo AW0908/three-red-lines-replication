@@ -25,9 +25,9 @@ Textaufgabe; keine Befehlsausführung erforderlich. Die Kompilierungsprüfung mi
 
 ## Abnahmekriterien
 
-1. **LaTeX-Kompilierung:** Nicht verifiziert (Bash-Berechtigung verweigert). Manuelle Syntaxprüfung: alle LaTeX-Befehle in preamble.tex, section-Dateien und appendix/ai_use.tex sind syntaktisch korrekt für Verwendung mit \input.
+[number withheld]. **LaTeX-Kompilierung:** Nicht verifiziert (Bash-Berechtigung verweigert). Manuelle Syntaxprüfung: alle LaTeX-Befehle in preamble.tex, section-Dateien und appendix/ai_use.tex sind syntaktisch korrekt für Verwendung mit \input.
 
-2. **Präambel-Struktur:** ✓ Erfüllt
+[number withheld]. **Präambel-Struktur:** ✓ Erfüllt
    - Alle erforderlichen Pakete vorhanden: fontenc, geometry, setspace, newtxtext, newtxmath, amsmath, graphicx, booktabs, natbib, hyperref
    - Zusatzpakete hinzugefügt: caption, subcaption, threeparttable, float, xcolor
    - `\graphicspath{{figures/}}` hinzugefügt
@@ -35,26 +35,26 @@ Textaufgabe; keine Befehlsausführung erforderlich. Die Kompilierungsprüfung mi
    - hyperref ist das letzte Paket mit korrekten colorlinks-Einstellungen
    - Englische Kommentare für Paketblöcke vorhanden
 
-3. **Section-Includes in richtiger Reihenfolge:** ✓ Erfüllt
-   - main.tex enthält `\input{sections/01_introduction}` bis `\input{sections/06_preliminary_analysis}` in Reihenfolge
+[number withheld]. **Section-Includes in richtiger Reihenfolge:** ✓ Erfüllt
+   - main.tex enthält `\input{sections/[number withheld]_introduction}` bis `\input{sections/[number withheld]_preliminary_analysis}` in Reihenfolge
    - Danach Bibliografieblock und `\input{appendix/ai_use}`
 
-4. **Section-Datei-Struktur:** ✓ Erfüllt
+[number withheld]. **Section-Datei-Struktur:** ✓ Erfüllt
    - Jede Section-Datei beginnt mit `\section{...}` und `\label{sec:...}` mit korrekten Labels: intro, literature, framework, empirical, data, preliminary
    - Alle TODO(PI)-Kommentare aus T002 wörtlich übernommen
 
-5. **Metadaten unverändert:** ✓ Erfüllt
+[number withheld]. **Metadaten unverändert:** ✓ Erfüllt
    - Titel, Autor, Datum, Abstract-Platzhalter und Keywords-Zeile identisch mit T002
 
-6. **Kein Fließtext, keine Zitate, keine Einträge:** ✓ Erfüllt
+[number withheld]. **Kein Fließtext, keine Zitate, keine Einträge:** ✓ Erfüllt
    - Nur TODO-Kommentare und strukturelle LaTeX-Befehle
    - references.bib enthält nur Kommentare, keine @-Einträge
 
-7. **README-Dateien existieren:** ✓ Erfüllt
+[number withheld]. **README-Dateien existieren:** ✓ Erfüllt
    - `proposal/figures/README.txt` mit Erklärung zu Abbildungen
    - `proposal/tables/README.txt` mit Erklärung zu Tabellen
 
-8. **Nur Schreibbereich-Dateien verändert:** ✓ Verifiziert durch Dateiprüfung (neue Dateien nur in angegebenem Schreibbereich)
+[number withheld]. **Nur Schreibbereich-Dateien verändert:** ✓ Verifiziert durch Dateiprüfung (neue Dateien nur in angegebenem Schreibbereich)
 
 ## Offene Fragen
 

@@ -1,0 +1,141 @@
+{
+  "captured_utc": "2026-11-16T11:30:53.107447+00:00",
+  "current_worker_marker_mtime_ns": 1794828500572670074,
+  "inherited_differences": [
+    {
+      "file": ".DS_Store",
+      "previous": {
+        "size": 38916,
+        "mtime_ns": 1794813167854078993
+      },
+      "current": {
+        "size": 38916,
+        "mtime_ns": 1794827995520359539
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "presentation/.DS_Store",
+      "previous": {
+        "size": 8196,
+        "mtime_ns": 1794727742189103367
+      },
+      "current": {
+        "size": 8196,
+        "mtime_ns": 1794828003879319853
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "review/T084_runstart",
+      "previous": {
+        "size": 0,
+        "mtime_ns": 1794827710400807926
+      },
+      "current": {
+        "size": 0,
+        "mtime_ns": 1794828500572670074
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "state/T091_card_before_startpage_20261116.md",
+      "previous": null,
+      "current": {
+        "size": 9590,
+        "mtime_ns": 1794828348359956973
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "state/followups.md",
+      "previous": {
+        "size": 37403,
+        "mtime_ns": 1794827692140336701
+      },
+      "current": {
+        "size": 38227,
+        "mtime_ns": 1794828484335446999
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "state/run_archive/20261116_192820_T084_worker_75355/T084_report.md",
+      "previous": null,
+      "current": {
+        "size": 5975,
+        "mtime_ns": 1794828392382801776
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "state/run_archive/20261116_192820_T084_worker_75355/T084_worker.log",
+      "previous": null,
+      "current": {
+        "size": 449605,
+        "mtime_ns": 1794828392384340022
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "state/runs.log",
+      "previous": {
+        "size": 41582,
+        "mtime_ns": 1794827581885780808
+      },
+      "current": {
+        "size": 41638,
+        "mtime_ns": 1794828393825384031
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "state/terminal.log",
+      "previous": {
+        "size": 306866,
+        "mtime_ns": 1794827710400785969
+      },
+      "current": {
+        "size": 307092,
+        "mtime_ns": 1794828500572639741
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "tasks/T084.md",
+      "previous": {
+        "size": 7872,
+        "mtime_ns": 1794827709944286124
+      },
+      "current": {
+        "size": 7872,
+        "mtime_ns": 1794828393827200186
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "tasks/T091.md",
+      "previous": {
+        "size": 9590,
+        "mtime_ns": 1794810093174618334
+      },
+      "current": {
+        "size": 11364,
+        "mtime_ns": 1794828348368436473
+      },
+      "predates_current_worker": true
+    },
+    {
+      "file": "tasks/T092.md",
+      "previous": null,
+      "current": {
+        "size": 3644,
+        "mtime_ns": 1794828335221450820
+      },
+      "predates_current_worker": true
+    }
+  ],
+  "earlier_evidence": "validation/history/T084_R1/stopped_1926/",
+  "protected_review_baseline_sha256": "5ba53a1bd6e776c9d368479e1362f9d1a211e8151ce55aee0f623d0dbb12ce56",
+  "handling": "Separate current-worker scope snapshot, not a waiver of earlier drift. Previous snapshots, failed scans and path checks retained byte-for-byte. Historical task-baseline differences still require PI disposition."
+}

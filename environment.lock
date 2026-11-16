@@ -16,8 +16,22 @@ readxl        1.5.0.1
 kableExtra    1.4.0
 scales        1.4.0
 # R-distributed packages explicitly used via ::
+base          4.6.0
+datasets      4.6.0
+graphics      4.6.0
+methods       4.6.0
+utils         4.6.0
 stats         4.6.0
 grDevices     4.6.0
 tools         4.6.0
+
+# Additional direct build dependencies (installed versions checked for T082).
+DRDID         1.4.0
+trust         0.1.9
+digest        0.6.39
+jsonlite      2.0.0
+systemfonts   1.3.2
+# HonestDiD / CVXR: pending T078; isolated library, outside this accepted build.
+# No package installation or download is performed by T082.
 
 # CRAN mirror used for installation: https://mirrors.ustc.edu.cn/CRAN/

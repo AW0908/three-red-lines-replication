@@ -1,0 +1,8 @@
+PASS routing from providers.conf: worker=codex, co-pi=claude, data=codex, estimation=claude, consistency=codex, language=claude, general=codex (default)
+PASS role models: estimation/co-pi Claude=opus, language Claude=sonnet; no Claude model name leaks to Codex/agy
+PASS environment switching per role (codex/claude/agy/antigravity alias) and model override; invalid provider fails closed
+PASS full review under project config: data/consistency fresh read-only Codex; estimation Claude opus and language Claude sonnet each in sandbox-exec deny-write with Read/Glob/Grep only; declared/effective/model disclosed
+PASS worker under project config: legacy card worker=claude routes to Codex workspace-write, medium effort, baseline created, EXECUTED
+PASS co-pi.sh default Claude opus in plan mode; explicit provider argument still selects Codex without Claude model
+PASS scope check ignores MTPA Vault/.obsidian metadata and presentation/slides (PI-managed) but still reports other outside writes
+PASS expired Claude login: clear re-login hint, status stays CANDIDATE, sandbox profile unchanged (deny all writes)

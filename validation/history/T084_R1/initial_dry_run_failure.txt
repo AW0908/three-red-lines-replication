@@ -1,0 +1,10 @@
+Rscript --vanilla run_all.R exit 1 seconds 1.1
+python [recorded project environment] code/provenance/t001_audit_a_shares.py exit 0 seconds 0.61
+Rscript --vanilla code/provenance/t007_r_setup_check.R exit 0 seconds 1.57
+Rscript --vanilla code/theme_proposal.R exit 0 seconds 0.11
+Rscript --vanilla code/25_hk_control.R exit 1 seconds 21.98
+Traceback (most recent call last):
+  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/public_release/release_tools/dry_run.py", line 51, in <module>
+    assert not changed, changed
+           ^^^^^^^^^^^
+AssertionError: ['validation/T084_R1_dry_run.txt']

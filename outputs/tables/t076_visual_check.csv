@@ -1,0 +1,3 @@
+"file","sha256","pdf_pages","check","pass"
+"/private/tmp/t076_rework_build/main.pdf","c54bc79ccbbdcc1e31af90ddfd26c4bcc1b54bacd7a8bb3092defabe9f4d4cb4","3,4,7,12,13,17,33,37,38,52","Rendered pages inspected: text, tables, page transitions; no clipping or overlap",TRUE
+"outputs/figures/f_hk_control_density.pdf","7889ba32a6b0b82efc8ee2be94edcecdbdaf00f04a24ac74548dceb671276988","1","Rendered density figure inspected: common scale, shared legend, legible labels",TRUE

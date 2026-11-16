@@ -1,0 +1,17 @@
+{
+  "checked_files": 24862,
+  "changed_files": [
+    ".DS_Store",
+    "presentation/.DS_Store",
+    "state/followups.md"
+  ],
+  "inherited_baseline_differences": [
+    ".DS_Store",
+    "presentation/.DS_Store",
+    "state/followups.md"
+  ],
+  "runner_handoff_files": [],
+  "git_files_checked": 845,
+  "git_changed_files": [],
+  "method": "size+mtime inventory; source SHA-256 checked separately; original baseline retained; explicitly documented wrapper files must predate current run marker; excluded managed metadata, environments, PI slide workspace and active worker transcript"
+}

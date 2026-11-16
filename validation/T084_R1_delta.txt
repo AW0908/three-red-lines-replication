@@ -1,0 +1,1 @@
+R1 DELTA/SCOPE PASS: 98 individually justified file changes; scientific payload and six release tools unchanged; 845 Git files unchanged; three historical input-baseline differences retained.

@@ -1,0 +1,46 @@
+file,action,previous_sha256,reason
+audit/approvals.log,modified,c1d7085a1e3bfbae43d8eda5b93efee80a4254310264c3de9fa41eba595a8f56,Unchanged build refreshed sanitized compatibility copy from current card/review/decision/run records.
+audit/review/T084.md,new,,Unchanged build refreshed sanitized compatibility copy from current card/review/decision/run records.
+audit/review/T084_consistency.md,new,,Unchanged build refreshed sanitized compatibility copy from current card/review/decision/run records.
+audit/review/T084_data.md,new,,Unchanged build refreshed sanitized compatibility copy from current card/review/decision/run records.
+audit/runs.log,modified,3b8b5a0ffe6df806defba9de90dafd679988be38c3f073ad582fd17b1ea29e03,Unchanged build refreshed sanitized compatibility copy from current card/review/decision/run records.
+audit/tasks/T084.md,modified,8d61a3cd3cd2c20e6d10039f3294904e6e024133d1f8945e8f59c34852fa54a0,Unchanged build refreshed sanitized compatibility copy from current card/review/decision/run records.
+process/SOURCE_INVENTORY.csv,modified,154f9bab0728b0ec44fb0f11b7148eb1d63d936c408520eda3d4186f82d133c4,Unchanged exporter regenerated process inventory/checksums and exclusions from current read-only sources.
+process/review/T084.md,new,,Unchanged exporter refreshed sanitized process source review/T084.md; original source hash absent -> 53c9e0fde0761ae482943765589ccb6e5beea31ffd549ac5108df4eaa51b7126.
+process/review/T084_consistency.md,new,,Unchanged exporter refreshed sanitized process source review/T084_consistency.md; original source hash absent -> 3c104439eb2f78f5d4b4dcbf008a9961b04097ef8d3f90ed1e58ee298b5d5d13.
+process/review/T084_data.md,new,,Unchanged exporter refreshed sanitized process source review/T084_data.md; original source hash absent -> 3863c11097685066484c04327f2355d8dc2f1723bb22efe4eddab7b98233e466.
+process/review/T084_frozen.sha256,new,,Unchanged exporter refreshed sanitized process source review/T084_frozen.sha256; original source hash absent -> 741c61229a38cd4dce286af106388e3bef1e75b01db1c47a00e2e768100da123.
+process/state/STATE.md,modified,f1ae2f63d9c4888ae8c857c793fbebace098656c3cad3520a71063b9de88d839,Unchanged exporter refreshed sanitized process source state/STATE.md; original source hash f37ebfe9d83730e425c33d8a4f45899e6e7af3c6adffe26f139506ff7a8babdb -> 79629586b41684ded645ba536cbb916eef32649390e7b275b1fc8ee4a944c935.
+process/state/approvals.log,modified,6e2bea55e153f83061f096105062ff30c1323c4d9311527391f4067b32e82f2b,Unchanged exporter refreshed sanitized process source state/approvals.log; original source hash 6e2bea55e153f83061f096105062ff30c1323c4d9311527391f4067b32e82f2b -> aac6da6ef9f421f31a93ba657826d2d50db75c4be0b4dad2023d097eef3e443b.
+process/state/followups.md,modified,586d012c0ee9972203b652b05035620e953e3bb7ca6e77098047b64c63eb9c16,Unchanged exporter refreshed sanitized process source state/followups.md; original source hash aa50df2ebb9d6aecb632ab3a1eec197b654e040ad39854517457fdfc12d68dc7 -> e5ceeaafc6bbcf4d3d68dda5bdaa7456e72bca4cc30af5bbf748b8b20ae60a15.
+process/state/runs.log,modified,eb9ed1580bbf712f223e24285b63fe3815a8897a51ab83a6e13180a8b5fcae74,Unchanged exporter refreshed sanitized process source state/runs.log; original source hash eb9ed1580bbf712f223e24285b63fe3815a8897a51ab83a6e13180a8b5fcae74 -> a48662032aaf69235ad307f336cf4a42d0a7aa53f0c526c58b0ffef5e2e3935c.
+process/tasks/T084.md,modified,8d61a3cd3cd2c20e6d10039f3294904e6e024133d1f8945e8f59c34852fa54a0,Unchanged exporter refreshed sanitized process source tasks/T084.md; original source hash a3d039dbf3ce371e4c9267a3c1c43d40ba0635bcd3e53a13a0e59b0284f3222d -> 699ccd942beaba14e85eff597abfc9c2b556c5ff1c6aac738fd31ee83bc64c4d.
+validation/CHECKS.json,modified,126fe948eab883606fee460674c0fd93c7c463e9e73f9ed1730f9ff16a438a9c,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/DRY_RUN.md,modified,db5bb5c88f94bed2089683c53f4607d6c04397eaf2e692e3261f674093bdf8e3,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/INPUT_INTEGRITY.json,modified,f3442379c31c43902d11d375318cb8965e29cc984ae2e976054e2c8540938820,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/SANITIZATION.csv,modified,cdcd93367567480266bb7903b121ed9a2f2569821b20d201cfd1a84def876f84,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/SOURCE_HASHES.csv,modified,0252cee6950e761332b56e518fa69ff803f568bb3e00bb5107b88d06abc94469,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_ACCEPTANCE.json,modified,60fad01b1ea569812077ed67c8f50b709b866625b1d3f1512db5df9b593c52e3,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_ANONYMITY.csv,modified,bf9415870cb5f3af083ddc64d601815ee6661564b1f97e6f7b6a01a52582a1a4,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_DRY_RUN.json,modified,baf47a51d21411dec3378e53c2b52417bc7bdf0cc63b00421e274bae4dd0ab08,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_R1.md,new,,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_R1_BEFORE.json,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_SCOPE.json,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_build.txt,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_changes.csv,new,,"This per-file change ledger; self-hash is in MANIFEST.csv, avoiding recursive hashing."
+validation/T084_R1_check.txt,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_cleanup.csv,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_delta.txt,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_dry_run.txt,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_path_check.csv,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_R1_verify.py,new,,"New R1 cleanup, source-baseline/scope, execution, per-file change, and delayed path verification evidence."
+validation/T084_REDACTIONS.csv,modified,d3aae58fdf5e0ab00937a3447fbdc832e9d7ceca3d6c4c2e7070e3e809bcb40f,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_SCAN_SUMMARY.json,modified,ac2faed4964d01a4489b5b81086c3bd7525e0e8d717c8ab4ad26f5223a59fa3d,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_SCOPE_CHECK.json,modified,e74504c055fe87b179ac341725be3b4f01e4c63a85722136e52e0dc1f6230fa2,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/T084_SESSION_BEFORE.json,modified,99635269288329ecc16f7d68caf7b0a80eb06a28db4a2effdfdb54b0170dc43a,R1-only session baseline; previous session retained unchanged in history. Protected review input baseline untouched.
+validation/T084_WIND_REFERENCES.csv,modified,9ea24e5023b6761f3f66f0716de33d28c4fe6a01fcee1fb000d66a727b319e53,"Existing checker/dry-run regenerated current R1 scan, integrity, acceptance or per-file evidence; historical inputs are preserved."
+validation/history/T084_R1/MANIFEST_before.csv,new,,New byte-preserved historical manifest/session/source inventory or explanatory history README.
+validation/history/T084_R1/README.md,new,,New byte-preserved historical manifest/session/source inventory or explanatory history README.
+validation/history/T084_R1/SESSION_before.json,new,,New byte-preserved historical manifest/session/source inventory or explanatory history README.
+validation/history/T084_R1/SOURCE_INVENTORY_before.csv,new,,New byte-preserved historical manifest/session/source inventory or explanatory history README.
+validation/history/T084_R1/initial_dry_run_failure.txt,new,,New byte-preserved historical manifest/session/source inventory or explanatory history README.

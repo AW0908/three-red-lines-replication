@@ -1,0 +1,11 @@
+"scenario","market","group","firms","rows","balanced"
+"primary","A","developer",80,1040,TRUE
+"primary","A","control",752,9776,TRUE
+"primary","HK","developer",35,455,TRUE
+"primary","HK","control",1230,15990,TRUE
+"unbalanced_developers","A","developer",80,1040,TRUE
+"unbalanced_developers","A","control",752,9776,TRUE
+"unbalanced_developers","HK","developer",56,651,FALSE
+"unbalanced_developers","HK","control",1230,15990,TRUE
+"HK_no_imputation","HK","developer",20,260,TRUE
+"HK_no_imputation","HK","control",119,1547,TRUE

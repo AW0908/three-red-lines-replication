@@ -1,0 +1,14 @@
+{
+  "outside_scope_changes": [],
+  "git_files_checked": 845,
+  "git_changed": [],
+  "existing_release_tool_changes": [],
+  "protected_task_baseline_differences": [
+    "replication/README.md",
+    "state/STATE.md",
+    "tasks/T082.md"
+  ],
+  "baseline_handling": "Known historical input drift retained, not reset or waived; formal PI disposition required.",
+  "content_changes_listed": 98,
+  "scientific_payload": "All prior manifested code/data/outputs are byte-identical; no scientific file changes permitted by this comparison."
+}

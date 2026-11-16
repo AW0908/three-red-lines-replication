@@ -1,0 +1,47 @@
+RUN 1
+Command: cd replication && Rscript code/26_identification.R
+Exit code: 0
+Elapsed seconds: 27.658
+T077 estimated primary A firms 80 752 
+T077 estimated primary HK firms 35 1230 
+T077 estimated unbalanced_developers A firms 80 752 
+T077 estimated unbalanced_developers HK firms 56 1230 
+T077 estimated HK_no_imputation HK firms 20 119 
+T077 protected files unchanged: 30619 
+T077 cell reconstructions PASS; maximum error: 0.00000000000004440892 
+ market estimate_pp ci_low_pp ci_high_pp p_raw p_holm_primary
+      A    9.041223  2.495434   15.90505 0.003          0.006
+     HK   19.370499  6.989053   31.93625 0.004          0.006
+T077 HonestDiD NOT RUN: verified local dependency unavailable; independent review pending.
+
+RUN 2 (final layout)
+Command: cd replication && Rscript code/26_identification.R
+Exit code: 0
+Elapsed seconds: 27.773
+T077 estimated primary A firms 80 752 
+T077 estimated primary HK firms 35 1230 
+T077 estimated unbalanced_developers A firms 80 752 
+T077 estimated unbalanced_developers HK firms 56 1230 
+T077 estimated HK_no_imputation HK firms 20 119 
+T077 protected files unchanged: 30619 
+T077 cell reconstructions PASS; maximum error: 0.00000000000004440892 
+ market estimate_pp ci_low_pp ci_high_pp p_raw p_holm_primary
+      A    9.041223  2.495434   15.90505 0.003          0.006
+     HK   19.370499  6.989053   31.93625 0.004          0.006
+T077 HonestDiD NOT RUN: verified local dependency unavailable; independent review pending.
+
+RUN 3 (final layout)
+Command: cd replication && Rscript code/26_identification.R
+Exit code: 0
+Elapsed seconds: 27.243
+T077 estimated primary A firms 80 752 
+T077 estimated primary HK firms 35 1230 
+T077 estimated unbalanced_developers A firms 80 752 
+T077 estimated unbalanced_developers HK firms 56 1230 
+T077 estimated HK_no_imputation HK firms 20 119 
+T077 protected files unchanged: 30619 
+T077 cell reconstructions PASS; maximum error: 0.00000000000004440892 
+ market estimate_pp ci_low_pp ci_high_pp p_raw p_holm_primary
+      A    9.041223  2.495434   15.90505 0.003          0.006
+     HK   19.370499  6.989053   31.93625 0.004          0.006
+T077 HonestDiD NOT RUN: verified local dependency unavailable; independent review pending.

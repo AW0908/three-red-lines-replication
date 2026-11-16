@@ -1,0 +1,6 @@
+Rscript --vanilla run_all.R exit 1 seconds 0.89
+python [recorded project environment] code/provenance/t001_audit_a_shares.py exit 0 seconds 0.45
+Rscript --vanilla code/provenance/t007_r_setup_check.R exit 0 seconds 1.16
+Rscript --vanilla code/theme_proposal.R exit 0 seconds 0.08
+Rscript --vanilla code/25_hk_control.R exit 1 seconds 20.21
+T084 DRY RUN: available checks complete; licensed-input boundaries documented; original payload unchanged.

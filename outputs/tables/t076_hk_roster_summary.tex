@@ -1,0 +1,27 @@
+% source: replication/outputs/tables/t076_hk_control.csv; t076_hk_support.csv; t076_hk_roster_summary.csv; t076_specification.csv (exact cells in t076_number_audit.csv)
+\begingroup\apptablefont
+\begin{appstar}{P{0.73\linewidth}r}\toprule
+Roster and coverage & Firms / rows \\
+\midrule
+HKEX equity roster & 2757 \\
+Eligible non-developers & 2122 \\
+Excluded (unique firms) & 635 \\
+Firms with any balance row & 2086 \\
+Eligible firms without a balance row & 36 \\
+Balanced finite-RL1 controls & 1230 \\
+With balance rows, failing balanced coverage & 856 \\
+Saved balance rows & 22539 \\
+\midrule
+\multicolumn{2}{l}{Exclusion tags (overlapping firm counts)} \\
+Developer panel / roster & 39 \\
+Real estate / property services & 260 \\
+Financials & 198 \\
+A+H dual listings & 211 \\
+\midrule
+Failure ledger stage & Events (firms) \\
+spot & 1 (0) \\
+validation & 11 (4) \\
+wide\_validation & 4 (4) \\
+\bottomrule\end{appstar}
+\floatnote{HKEX List of Securities, Main Board and GEM equities, selected on November 12, 2026; EastMoney statements via AKShare. Exclusion tags overlap; exclusive reason strings are retained in the CSV. Non-equities were removed before this roster. The spot event is a roster request, not a firm. Ledger events include repeat attempts. March/September fiscal-year reports map to the nearest June/December endpoint, as for developers. This current-listing, balanced-survivor sample does not recover delisted controls.}
+\endgroup

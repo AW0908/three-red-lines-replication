@@ -3,9 +3,9 @@
 
 ## Befunde
 
-1. **Die Unverändertheit der Prüfgrundlage ist ungeklärt.** Die übergebene SHA-256-Prüfung meldet `state/handcollect/PROTOCOL.md` als seit Ausführungsbeginn verändert oder gelöscht. Ohne ursprüngliche und eingefrorene Fassung lässt sich nicht feststellen, ob die Datenerhebung den freigegebenen Regeln entspricht. Das betrifft die Integrität der Prüfgrundlage und muss dem PI vorgelegt werden. Eine inhaltliche Datenverfälschung ist damit **nicht belegt**.
+[number withheld]. **Die Unverändertheit der Prüfgrundlage ist ungeklärt.** Die übergebene SHA-[number withheld]-Prüfung meldet `state/handcollect/PROTOCOL.md` als seit Ausführungsbeginn verändert oder gelöscht. Ohne ursprüngliche und eingefrorene Fassung lässt sich nicht feststellen, ob die Datenerhebung den freigegebenen Regeln entspricht. Das betrifft die Integrität der Prüfgrundlage und muss dem PI vorgelegt werden. Eine inhaltliche Datenverfälschung ist damit **nicht belegt**.
 
-2. **Die Einhaltung des Schreibbereichs ist ungeklärt.** Die übergebene Änderungszeitprüfung nennt unter anderem `replication/code/11_mechanism.R`, `replication/code/12_q1_robustness.R` und `replication/data/processed/panel_firm_halfyear_ext.csv` außerhalb des Schreibbereichs. Änderungszeiten allein belegen weder eine Inhaltsänderung noch deren Urheber. Ohne Karte und Inhaltsvergleich ist eine Zuordnung zu T032 nicht möglich.
+[number withheld]. **Die Einhaltung des Schreibbereichs ist ungeklärt.** Die übergebene Änderungszeitprüfung nennt unter anderem `replication/code/11_mechanism.R`, `replication/code/12_q1_robustness.R` und `replication/data/processed/panel_firm_halfyear_ext.csv` außerhalb des Schreibbereichs. Änderungszeiten allein belegen weder eine Inhaltsänderung noch deren Urheber. Ohne Karte und Inhaltsvergleich ist eine Zuordnung zu T032 nicht möglich.
 
 ## Abnahmekriterien
 

@@ -3,26 +3,26 @@
 
 ## Befunde
 
-1. **Die Kartenanforderung zum Plan setzt ein nicht vorhandenes Verweisziel voraus.** `tasks/T053.md:34` verlangt einen Verweis auf Plandetails in Abschnitt 6.5. Dieser Abschnitt enthält ausschließlich Diskussion und Grenzen (`proposal/sections/06_preliminary_analysis.tex:110–114`). Der Schreibbereich erlaubt dort nur das Kürzen vorhandener Plansätze (`tasks/T053.md:22`). Die Conclusion enthält deshalb keinen solchen Verweis (`proposal/sections/07_conclusion.tex:15`). Der PI muss entscheiden, ob die Verweispflicht entfällt oder Plandetails in 6.5 ergänzt werden dürfen. Der Worker benennt diese Abweichung transparent (`tasks/T053_report.md:50`).
+[number withheld]. **Die Kartenanforderung zum Plan setzt ein nicht vorhandenes Verweisziel voraus.** `tasks/T053.md:34` verlangt einen Verweis auf Plandetails in Abschnitt [number withheld]. Dieser Abschnitt enthält ausschließlich Diskussion und Grenzen (`proposal/sections/06_preliminary_analysis.tex:110–114`). Der Schreibbereich erlaubt dort nur das Kürzen vorhandener Plansätze (`tasks/T053.md:22`). Die Conclusion enthält deshalb keinen solchen Verweis (`proposal/sections/07_conclusion.tex:15`). Der PI muss entscheiden, ob die Verweispflicht entfällt oder Plandetails in [number withheld] ergänzt werden dürfen. Der Worker benennt diese Abweichung transparent (`tasks/T053_report.md:50`).
 
 ## Abnahmekriterien
 
-1. **Keine neuen Zahlen oder Referenzen; Empfehlungen als Implikationen: belegt erfüllt.**
-   - Δb = 4,02 und KI [1,67; 6,80] entsprechen `replication/outputs/tables/t043_delta_b.csv:2`.
-   - 11,5 Prozentpunkte entsprechen D = 0,11461794 in `replication/outputs/tables/t029_compliance.csv:89`.
+[number withheld]. **Keine neuen Zahlen oder Referenzen; Empfehlungen als Implikationen: belegt erfüllt.**
+   - Δb = [number withheld] und KI [[number withheld]; [number withheld]] entsprechen `replication/outputs/tables/t043_delta_b.csv:2`.
+   - [number withheld] Prozentpunkte entsprechen D = [number withheld] in `replication/outputs/tables/t029_compliance.csv:89`.
    - Die Trendaussage entspricht den negativen D-Werten; das Firmen-Trend-KI liegt vollständig unter null (`replication/outputs/tables/t043_trend_cf.csv:2–5`).
-   - 10 klassifizierte von 249 Transaktionen ergeben sich aus D/G/H/E/U = 4/5/0/1/239 (`replication/outputs/tables/t047_coding.csv:322–326`). Diese Zahlen stehen bereits im Abstract (`proposal/main.tex:52`).
+   - [number withheld] klassifizierte von [number withheld] Transaktionen ergeben sich aus D/G/H/E/U = [number withheld]/[number withheld]/[number withheld]/[number withheld]/[number withheld] (`replication/outputs/tables/t047_coding.csv:322–326`). Diese Zahlen stehen bereits im Abstract (`proposal/main.tex:52`).
    - Zehn fehlende lokale Abschlussberichte entsprechen zehn FALSE-Einträgen in `replication/outputs/audit/T047/source_inventory.csv`.
-   - Beide Literaturkeys werden bereits in Abschnitt 2 verwendet und lösen auf (`proposal/sections/02_literature.tex:16`; `review/T053_build/main.aux:118,128`).
+   - Beide Literaturkeys werden bereits in Abschnitt [number withheld] verwendet und lösen auf (`proposal/sections/02_literature.tex:16`; `review/T0[number withheld]_build/main.aux:[number withheld]`).
    - Empfehlungen sind mit „suggest“, „could“ und „would“ bedingt formuliert; Wirkungen, Kosten und Machbarkeit bleiben ausdrücklich offen (`proposal/sections/07_conclusion.tex:11`).
 
-2. **Haupttext spätestens Seite 15; sauberer Build: anhand der vorhandenen Build-Dateien belegt erfüllt.** Conclusion und Haupttextende liegen auf Seite 15 (`review/T053_build/main.aux:109–110`). Das Log enthält keine LaTeX-Fehler oder ungelösten Textverweise; vorhanden sind Fontsubstitutionswarnungen. Tatsächlich dokumentiert ist ein XeLaTeX-Build (`review/T053_build/main.log:1`).
+[number withheld]. **Haupttext spätestens Seite [number withheld]; sauberer Build: anhand der vorhandenen Build-Dateien belegt erfüllt.** Conclusion und Haupttextende liegen auf Seite [number withheld] (`review/T0[number withheld]_build/main.aux:[number withheld]–[number withheld]`). Das Log enthält keine LaTeX-Fehler oder ungelösten Textverweise; vorhanden sind Fontsubstitutionswarnungen. Tatsächlich dokumentiert ist ein XeLaTeX-Build (`review/T053_build/main.log:1`).
 
-3. **Bericht zitiert die Conclusion vollständig und nennt die Introduction-Änderungen: belegt erfüllt.** Der Wortlaut in `tasks/T053_report.md:18–22` entspricht den drei Textabsätzen der Conclusion. Die Änderungen stehen in Zeilen 24–27.
+[number withheld]. **Bericht zitiert die Conclusion vollständig und nennt die Introduction-Änderungen: belegt erfüllt.** Der Wortlaut in `tasks/T053_report.md:18–22` entspricht den drei Textabsätzen der Conclusion. Die Änderungen stehen in Zeilen [number withheld]–[number withheld].
 
-4. **Inhaltliche Struktur und Introduction-Fixes: überwiegend belegt erfüllt.** Frage, gewichtete Ergebnisse, Policy-Implikationen, Übertragbarkeit und Grenzen sind vorhanden. Die Introduction hat die verlangte Reihenfolge und Cap-Formulierung (`proposal/sections/01_introduction.tex:6`). **Die Plan-Verknüpfung ist nicht erfüllt**, siehe Befund 1. Satzanzahl und sprachliche Gestaltung: nicht meine Rolle.
+[number withheld]. **Inhaltliche Struktur und Introduction-Fixes: überwiegend belegt erfüllt.** Frage, gewichtete Ergebnisse, Policy-Implikationen, Übertragbarkeit und Grenzen sind vorhanden. Die Introduction hat die verlangte Reihenfolge und Cap-Formulierung (`proposal/sections/01_introduction.tex:6`). **Die Plan-Verknüpfung ist nicht erfüllt**, siehe Befund [number withheld]. Satzanzahl und sprachliche Gestaltung: nicht meine Rolle.
 
-5. **Übereinstimmung von Text und Outputs: im geprüften Umfang belegt erfüllt.** Die zentralen Ergebnisse stimmen zwischen Abstract, Introduction, Abschnitt 6 und Conclusion überein. Beide in Abschnitt 6 eingebundenen Abbildungen sind bytegleiche Kopien ihrer Outputs. Sämtliche `\ref`-, `\eqref`- und Literaturkeys der drei eingefrorenen Textdateien lösen auf.
+[number withheld]. **Übereinstimmung von Text und Outputs: im geprüften Umfang belegt erfüllt.** Die zentralen Ergebnisse stimmen zwischen Abstract, Introduction, Abschnitt [number withheld] und Conclusion überein. Beide in Abschnitt [number withheld] eingebundenen Abbildungen sind bytegleiche Kopien ihrer Outputs. Sämtliche `\ref`-, `\eqref`- und Literaturkeys der drei eingefrorenen Textdateien lösen auf.
 
 ## Nicht geprüft
 

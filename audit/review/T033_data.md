@@ -3,33 +3,33 @@
 
 ## Befunde
 
-[firm-specific excerpt withheld in public audit]
+[firm-specific excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
-1. **Datei-/Seitenbelege und mindestens 25 Stichprobenwerte: belegt erfüllt im geprüften Umfang.** Alle 1.954 gespeicherten Feldanker sowie 489 Vertragsbelege mit `yes` oder `no` sind wortgleich in den angegebenen Seitentexten vorhanden. Zusätzlich wurden **33 Werte inhaltlich unabhängig abgeglichen**:
+[number withheld]. **Datei-/Seitenbelege und mindestens [number withheld] Stichprobenwerte: belegt erfüllt im geprüften Umfang.** Alle [number withheld] gespeicherten Feldanker sowie [number withheld] Vertragsbelege mit `yes` oder `no` sind wortgleich in den angegebenen Seitentexten vorhanden. Zusätzlich wurden **[number withheld] Werte inhaltlich unabhängig abgeglichen**:
 
    | CSV-Zeilen | Geprüfte Felder | Anzahl | Quelle |
    |---|---|---:|---|
-   | T033-005-01 bis -03 | Beträge, Gegenpartei, Konzernzugehörigkeit, Beteiligungsquoten, Überschussmittelabruf, Zinsregel, Zahlungsfrist | 10 | Haichuan-Ankündigung 2021-05-26, S. 2, 4–5 |
-   | T033-004-01 bis -03 | Drei Beträge, Beteiligungsquoten, Konzernbeziehung, Überschussmittelabruf, Zahlungsfrist | 8 | Haichuan-Ankündigung 2021-10-19, S. 2, 4–5 |
-   | T033-002-01 bis -03 | Betrag, Beteiligung vorher/nachher, Konsolidierung, Nichtteilnahme der Minderheiten, deren neue Quoten | 7 | Haichuan-Ankündigung 2022-03-29, S. 2, 6 |
-   | T033-085-01 | Tochtername, Konzernzugehörigkeit, Erwerberanteil 34 %, Verkäuferanteil 26 % | 4 | Huixin-Ankündigung 2020-05-30, S. 1, 3–4 |
-   | T033-085-02 | Zweiter Verkäufer, Verkäuferanteil 8 %, beide Zahlungsfristen | 3 | Dieselbe Ankündigung, S. 1, 3–4 |
-   | T033-018-01 | `holder_type = group_affiliate` | 1 | Finanzdienstleistungs-Ankündigung 2022-04-09, S. 3 |
+   | T033[number withheld][number withheld] bis [number withheld] | Beträge, Gegenpartei, Konzernzugehörigkeit, Beteiligungsquoten, Überschussmittelabruf, Zinsregel, Zahlungsfrist | [number withheld] | Haichuan-Ankündigung 2021-05-26, S. [number withheld], [number withheld]–[number withheld] |
+   | T033[number withheld][number withheld] bis [number withheld] | Drei Beträge, Beteiligungsquoten, Konzernbeziehung, Überschussmittelabruf, Zahlungsfrist | [number withheld] | Haichuan-Ankündigung 2021-10-19, S. [number withheld], [number withheld]–[number withheld] |
+   | T033[number withheld][number withheld] bis [number withheld] | Betrag, Beteiligung vorher/nachher, Konsolidierung, Nichtteilnahme der Minderheiten, deren neue Quoten | [number withheld] | Haichuan-Ankündigung 2022-03-29, S. [number withheld], [number withheld] |
+   | T033[number withheld][number withheld] | Tochtername, Konzernzugehörigkeit, Erwerberanteil [number withheld] %, Verkäuferanteil [number withheld] % | [number withheld] | Huixin-Ankündigung 2020-05-30, S. [number withheld], [number withheld]–[number withheld] |
+   | T033[number withheld][number withheld] | Zweiter Verkäufer, Verkäuferanteil [number withheld] %, beide Zahlungsfristen | [number withheld] | Dieselbe Ankündigung, S. [number withheld], [number withheld]–[number withheld] |
+   | T033[number withheld][number withheld] | `holder_type = group_affiliate` | [number withheld] | Finanzdienstleistungs-Ankündigung 2022-04-09, S. [number withheld] |
 
    Die Stichproben stimmen einschließlich Einheiten und Richtung. Das Auffinden eines Belegankers allein bestätigt jedoch nicht die inhaltliche Richtigkeit sämtlicher übriger Felder.
 
-2. **Ausschließlich zugelassene Quellen, keine geratenen Gegenparteien oder Bedingungen: im geprüften Umfang belegt erfüllt.** Der Build liest das lokale Manifest, die Ankündigungen und T032-Dateien. Die geprüften Korrekturen sind quellengestützt. Die Namensverknüpfungen stimmen vollständig mit der dokumentierten Normalisierung überein: 19 exakte, vier normalisierte und 363 fehlende NCI-Zuordnungen. Keine zusätzlichen Zuordnungen gefunden.
+[number withheld]. **Ausschließlich zugelassene Quellen, keine geratenen Gegenparteien oder Bedingungen: im geprüften Umfang belegt erfüllt.** Der Build liest das lokale Manifest, die Ankündigungen und T032-Dateien. Die geprüften Korrekturen sind quellengestützt. Die Namensverknüpfungen stimmen vollständig mit der dokumentierten Normalisierung überein: [number withheld] exakte, vier normalisierte und [number withheld] fehlende NCI-Zuordnungen. Keine zusätzlichen Zuordnungen gefunden.
 
-3. **Haichuan-Benchmark vollständig: belegt erfüllt.** Neun Beteiligtenzeilen für die drei geforderten Ankündigungen vorhanden. Die Beträge, Konzernbeziehungen und Quoten stimmen. Die alleinige Einzahlung des Emittenten im März 2022 wird ausdrücklich von neuen Minderheiteneinzahlungen unterschieden. Überschussmittelabrufe und marktbasierte Zinsvereinbarungen sind erfasst.
+[number withheld]. **Haichuan-Benchmark vollständig: belegt erfüllt.** Neun Beteiligtenzeilen für die drei geforderten Ankündigungen vorhanden. Die Beträge, Konzernbeziehungen und Quoten stimmen. Die alleinige Einzahlung des Emittenten im März [number withheld] wird ausdrücklich von neuen Minderheiteneinzahlungen unterschieden. Überschussmittelabrufe und marktbasierte Zinsvereinbarungen sind erfasst.
 
-4. **`verified_by_PI` vorhanden und leer: belegt erfüllt.** In sämtlichen 386 Transaktionszeilen und 279 Triage-Zeilen leer.
+[number withheld]. **`verified_by_PI` vorhanden und leer: belegt erfüllt.** In sämtlichen [number withheld] Transaktionszeilen und [number withheld] Triage-Zeilen leer.
 
 Die zusätzlichen Datenprüfungen ergeben:
 
-[firm-specific excerpt withheld in public audit]
-- **Schlüssel und Verknüpfungen:** 386 eindeutige Transaktions-IDs; keine doppelten T032-Schlüssel für Firma × Bericht × Tochter beziehungsweise Firma × Bericht × Cashflow-Metrik.
+[firm-specific excerpt withheld in public process copy]
+- **Schlüssel und Verknüpfungen:** [number withheld] eindeutige Transaktions-IDs; keine doppelten T032-Schlüssel für Firma × Bericht × Tochter beziehungsweise Firma × Bericht × Cashflow-Metrik.
 - **Fehlende Werte:** Keine Nullimputation im gelesenen Verknüpfungscode. NCI-Veränderungen werden als Schlussbestand minus Anfangsbestand bei gleicher Einheit berechnet; Konzern-Cashflows werden nicht einzelnen Töchtern zugerechnet.
 - **Reproduzierbarkeit:** Relative Pfade, fester Seed und Ausgabepfade sind im Build erkennbar. Der Build wurde nicht ausgeführt.
 - **Regressionen und sprachliche Bewertung der Fallnotizen:** nicht meine Rolle.
@@ -37,7 +37,7 @@ Die zusätzlichen Datenprüfungen ergeben:
 ## Nicht geprüft
 
 - Keine Befehle, PDF-Konvertierungen oder Builds ausgeführt; keine Dateien verändert.
-- Keine vollständige inhaltliche Prüfung aller 386 Zeilen oder aller als `not stated` codierten Bedingungen.
+- Keine vollständige inhaltliche Prüfung aller [number withheld] Zeilen oder aller als `not stated` codierten Bedingungen.
 - Keine visuelle PDF-Prüfung oder OCR der zwölf als unlesbar protokollierten Dokumente.
 - Die gemeldeten Änderungen außerhalb des Schreibbereichs lassen sich anhand von Änderungszeiten keinem Verursacher zuordnen. Insbesondere Änderungen an `agents/dashboard.py` und `proposal/` sind damit nicht als Worker-Verstoß bewiesen. Die Seitentextdateien liegen dagegen im ausdrücklich erlaubten Schreibbereich.
-- Die historische Unverändertheit der vier Eingaben wurde nicht erneut geprüft; hierfür liegt die mitgelieferte SHA-256-Prüfmeldung vor.
+- Die historische Unverändertheit der vier Eingaben wurde nicht erneut geprüft; hierfür liegt die mitgelieferte SHA-[number withheld]-Prüfmeldung vor.

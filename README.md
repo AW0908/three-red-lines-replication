@@ -1,39 +1,89 @@
 # Three Red Lines replication archive
 
-Replication archive for the research proposal “Meeting the Red Lines: Threshold Targeting and Minority Equity among Chinese Property Developers” (Modern Tools for Policy Analysis, Peking University, Autumn 2026). When citing, give the commit hash and access date. No DOI is assigned.
+Meeting the Red Lines: Threshold Targeting and Minority Equity among Chinese Property
+Developers. Restricted-data public inspection archive, refreshed under T084 on 16 November
+2026. Cite the archive release/commit and access date. No DOI is assigned. The PI publishes.
 
-## What can be reproduced
+## Accepted replication snapshot
 
-This is a restricted-data release: aggregated estimates and figures are included, but the full original results cannot be regenerated without licensed Wind extracts. No raw Wind extract, original full panel, or extended full panel is included. The reduced public panel is for inspection only; it removes Wind firms and Wind ownership / industry / membership fields. Do not rename it to the full panel or interpret reruns on it as reproducing the original sample.
+This archive includes accepted code/results through T076 (Hong Kong control), and T082's
+accepted build-interface, environment and documentation changes. T082 was accepted by PI
+override on 16 November; the remaining escalation concerned append-only historical input
+drift, not a detected estimate change. See process/state/approvals.log and process/review/.
+The run_all entry points have the same 28 ordered steps as the accepted internal package:
+03 runs after 23 with --embed-proposal-fonts, then 24 and 25. Both integration switches
+MTPA_INTEGRATE_PROPOSAL and MTPA_INTEGRATE_SLIDES default off; do not enable them in this
+archive. They are historical opt-in integration modes, not part of ordinary reproduction.
 
-The complete script → output → Wind yes/no table is [REPRODUCIBILITY.csv](REPRODUCIBILITY.csv). Safe offline components are setup, the A-share EastMoney raw audit and the simulation environment check. Fetch scripts require network/provider access and retain their historical paths; they are not part of an offline build. The PDF extractor requires separately obtained annual reports. All substantive main-pipeline estimates rely on the full panel, frozen industry membership or upstream Wind-dependent results. Published hand coding and control raw files are independently inspectable. No change to the research estimand, filters or sample was made to create substitute estimates.
+HK raw CSVs (HKEX roster and public EastMoney statements) and their verified MANIFEST
+are in data/raw/control_hk/. The derived HK control panel and membership retain their
+independently public provenance. All third-party provider terms remain applicable.
+25_hk_control.R uses those raw inputs with MANIFEST checks; its full estimation additionally
+requires the licensed developer panel and accepted upstream results. Controls are current
+listings/reporting-complete survivors, with differential advance-item missingness; the
+same-market comparison does not remove developer-specific shocks. See accepted support,
+imputation-robustness tables and process/state/LIMITATIONS.md.
 
-## Layout
+## Additional accepted analyses, not yet in the proposal
 
-- `code/`: original analysis code, provenance helpers and `fetch/` downloads.
-- `data/raw/`: EastMoney, Sina control data and own manual coding; third-party annual reports and announcements are excluded. `data/raw/manual/DOCUMENTS.md` lists recorded sources and pages.
-- `data/processed/`: reduced public panel, removed IDs/columns and detailed provenance. `data/prices_2019.csv` is a convenience copy of the manual raw price file.
-- `outputs/tables/`, `outputs/figures/`: permitted aggregate results and independently public files.
-- `audit/`: sanitized historical cards, worker reports, reviews, approvals, runs and AI usage. Historical decisions may have been superseded. These are project-internal audit records, not other students' referee reports.
-- `OUTPUT_INVENTORY.csv` and `WITHHELD.md`: pre-copy conflict classification, provenance and withheld files.
-- `software/`: actual R session/package versions, Python environment versions; `environment.lock` records original build requirements.
-- `validation/`: scan, isolated dry-run and unchanged-input evidence. `release_tools/` contains the offline release build/check code.
-- `MANIFEST.csv`: size and SHA-256 of every payload file plus explicit withheld records. MANIFEST excludes itself to avoid a recursive hash; `.git/` is repository transport metadata and excluded.
+T077: code/26_identification.R and permitted outputs/tables/t077_* and figures/t077_*.
+Accepted by PI override on 14 November. These window-probability/triple contrasts differ
+from the proposal's polynomial excess-mass estimand. The memo was outcome-informed;
+pretrend and sparse-support limitations remain. HonestDiD sensitivity was NOT RUN.
+T077 is not added to run_all: integration requires a separate decision. Firm-level analysis
+panels/membership and potentially licensed audit inventories are withheld. T078–T081 and
+later analyses are not included as research code/results; their cards/reviews are historical
+process records, not endorsements or newly released research.
 
-## Running
+## Reproduction boundary
 
-From this directory, install the versions in `software/` / `environment.lock` separately, then run `bash run_all.sh` or `Rscript run_all.R`. Original entry points are preserved: they stop at `01_clean.R` when Wind inputs are absent, rather than silently producing different estimates. `00_setup.R` may install missing packages; install prerequisites separately before running offline.
+Wind raw files, full/extended panels and firm-specific Wind-derived outputs are absent.
+The two firm-observation validation scatterplots are withheld because their coordinates
+include Wind financial values; see validation/T084_GRAPHICAL_PROVENANCE.csv.
+The public panel removes every Wind-sourced firm and twelve ownership/industry/sample
+columns under the accepted T073 policy; it is an inspection dataset, not a substitute
+analysis sample. Do not rename it to the full panel. Aggregated estimates are included
+under the PI release decision. Field-level provenance and exclusions are in WITHHELD.md,
+data/processed/PUBLIC_PANEL.md and OUTPUT_INVENTORY.csv. Hand-coded files preserve source,
+page and pending PI-verification flags; their inclusion is not fresh verification. Ownership
+coding lacking complete primary-source provenance remains withheld.
 
-For available offline checks: `Rscript --vanilla code/00_setup.R`; `python3 code/provenance/t001_audit_a_shares.py`; `Rscript --vanilla code/provenance/t007_r_setup_check.R`. Use a working copy; outputs and protection hashes are historical and some helpers expect pre-existing output directories. Isolated results and exact blockers are documented in `validation/DRY_RUN.md`.
+A full standalone rebuild is NOT verified or currently possible. T082 accepted safe build
+interfaces and documented historical integrity gates, external sibling inputs and audit/PDF
+reproducibility gaps; it did not certify a full build. The current internal README snapshot
+is process/replication_README.md. Install prerequisites separately from environment.lock
+and software/ before any offline run. run_all stops at the missing licensed Wind register
+in 01_clean.R. Obtain your own Wind licence and the exact exports listed in that script;
+additional external project inputs are still required by later steps. Do not weaken guards
+or fabricate replacements. Full runtime is unmeasured; bootstrap-heavy stages can take hours.
 
-Wind access: obtain an institutional/commercial Wind licence, export the exact workbooks/register specified in `code/01_clean.R` and `data/processed/PUBLIC_PANEL.md`, and place them locally under `data/raw/wind/` (never commit). Additional 2023–2024 EastMoney exports, external project data/PDF directories and literature-screening files may be required by later scripts; inspect their input gates. These out-of-archive dependencies are not supplied or fabricated. Fetchers and full project path compatibility are documented in the source. The full-build runtime has not been measured in this restricted archive; allow hours for bootstrap-heavy stages, depending on hardware. The measured offline check times are in `validation/DRY_RUN.md`; no full-reproduction claim is made.
+Safe available components and their exact blockers are tested on an isolated copy from
+this archive in validation/DRY_RUN.md. REPRODUCIBILITY.csv maps supplied scripts to outputs
+and dependencies. Fetchers require network/provider access and are not run. No downloads,
+new estimates or substitute data are authorized by T084.
 
-## Hand collection and verification
+## Layout, provenance and privacy
 
-The manual folder freezes coding tables, report/page excerpts, statement IDs, transaction grouping, extraction logs and verification CSVs. Annual-report balances and NCI flows were transcribed/extracted with original currency and page references; contract features use statement-level evidence and explicit unresolved categories. Verification fields record the author's checks; missing or pending evidence is retained as such. `registry_todo.csv` records outstanding registry work. See the coding/extraction logs and historical T032–T047 audit records for rules and limitations. Inclusion is not a claim that every pending item has been verified by the author. PDFs must be obtained from the original issuer/exchange; the document register marks missing URLs/pages.
+code/, run_all.R/sh, environment.lock: accepted analysis sources and entry points.
+data/raw/: permitted public provider data and original coding, without third-party PDFs.
+data/processed/: reduced inspection panel and removed-field provenance.
+outputs/: permitted aggregate results and independently public controls.
+process/: scripts, roles, cards, reports, decisions, AI-use record, notes and historical team
+diagrams, with its own README and source/public checksums. audit/ retains the sanitized T073
+layout for compatibility. Numerical prose in public process narratives is conservatively
+redacted; use accepted code/tables for exact numbers. Local originals remain unchanged.
+Third-party PDFs have recorded URLs/checksums in process/THIRD_PARTY_DOCUMENTS.csv;
+unrecorded URLs are explicit. External referee reports and students' work are excluded.
 
-Ownership manual coding is withheld in this rework because the authorized inputs do not provide complete primary-source evidence; see WITHHELD.md and data/raw/manual/DOCUMENTS.md. The other four flagged raw datasets have field provenance documented there, including the exclusion of panel_mi_check from the canonical cash-flow file.
+validation/: source integrity, every sanitizer hit/handling, output rechecks, HK checksums,
+dry run and anonymity occurrences. The author-name/initials/account report includes text,
+PDF metadata and raw-byte occurrences. This named working archive is not automatically
+anonymous. The mirror's name replacement does not sanitize image text or Git authors;
+the PI must review remaining identifiers and transport metadata before publication.
+No Git command, commit or push was run by T084. Existing .git is left untouched and is not
+payload. MIT covers original code; LICENSE-data.md covers only author-held rights. No
+provider licence or permission to redistribute third-party copyrighted files is asserted.
 
-## Privacy, licences and audit fidelity
-
-Code: MIT (`LICENSE`). Own coding and outputs: CC BY 4.0, subject to the third-party caveats in `LICENSE-data.md`. EastMoney/AKShare and Sina data remain subject to provider terms; no additional provider permission is asserted. Wind material is excluded; only aggregate results derived from it (estimates, intervals, counts, figures) are published. The public audit replaces user directories with `<local>`, removes email/credential literals, and withholds fenced excerpts and firm-specific lines to avoid redistributing Wind observations. `validation/SANITIZATION.csv` records modified files. Original source hashes remain available for local review; public copies are intentionally not byte-identical where sanitized. No Git push was performed.
+MANIFEST.csv covers every payload file except itself, plus explicit withheld records;
+.git is transport metadata excluded from scans/manifest. See validation/T084_ANONYMITY.md
+before pushing either named or anonymous versions.

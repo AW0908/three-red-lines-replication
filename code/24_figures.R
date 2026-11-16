@@ -5,8 +5,14 @@ options(digits=17)
 set.seed(20261016)
 stopifnot(file.exists('code/theme_proposal.R'))
 source('code/theme_proposal.R')
-dir.create('../proposal/figures',recursive=TRUE,showWarnings=FALSE)
-dir.create('../presentation/slides/figures',recursive=TRUE,showWarnings=FALSE)
+# T082: external publication copies require explicit, independent opt-ins.
+integrate_proposal<-identical(Sys.getenv('MTPA_INTEGRATE_PROPOSAL'),'1')
+integrate_slides<-identical(Sys.getenv('MTPA_INTEGRATE_SLIDES'),'1')
+if(integrate_proposal)dir.create('../proposal/figures',recursive=TRUE,showWarnings=FALSE)
+slide_dir<-if(integrate_slides)'../presentation/slides/figures' else tempfile('t082_slide_check_')
+dir.create(slide_dir,recursive=TRUE,showWarnings=FALSE)
+if(!integrate_proposal)message('Build mode: proposal copies and wrapper disabled.')
+if(!integrate_slides)message('Build mode: slide PDFs checked in temporary storage; publication copies disabled.')
 readout<-function(name)read.csv(paste0('outputs/tables/',name,'.csv'),stringsAsFactors=FALSE,na.strings=c('','NA'))
 writeout<-function(x,name)write.csv(x,paste0('outputs/tables/t072_',name,'.csv'),row.names=FALSE,na='')
 sha<-function(p)unname(tools::sha256sum(p))
@@ -37,9 +43,9 @@ record<-function(name,src,values,w=6.5,h=4,size=12,width_fraction=1,height_fract
  if(!slide)stopifnot(size*scale>=9)
 }
 render<-function(name,draw,w=6.5,h=4,size=12,slide=FALSE) {
- path<-if(slide)paste0('../presentation/slides/figures/',name,'.pdf') else paste0('outputs/figures/',name,'.pdf')
+ path<-if(slide)file.path(slide_dir,paste0(name,'.pdf')) else paste0('outputs/figures/',name,'.pdf')
  proposal_pdf(path,w,h,size);draw();invisible(dev.off())
- if(!slide)stopifnot(file.copy(path,file.path('../proposal/figures',basename(path)),overwrite=TRUE))
+ if(!slide&&integrate_proposal)stopifnot(file.copy(path,file.path('../proposal/figures',basename(path)),overwrite=TRUE))
 }
 # Reconstruct Figure 3: T029's exact read_panel and mass_fit function expressions,
 # with the original sample, grid, firm universe, bootstrap seed and ordering.
@@ -344,8 +350,8 @@ render('f_pretrends',function(){
 },h=5.4,size=12)
 for(i in seq_along(keys))record('f_pretrends',c('t066_drdid','t066_placebo_audit'),subset(pre,comparison==keys[i]),page=i,h=5.4,height_fraction=.5)
 # Diagram exemption: PRISMA is an unchanged diagram, copied with the f_ prefix.
-stopifnot(file.copy('outputs/figures/prisma.pdf','outputs/figures/f_prisma.pdf',overwrite=TRUE),
- file.copy('outputs/figures/f_prisma.pdf','../proposal/figures/f_prisma.pdf',overwrite=TRUE))
+stopifnot(file.copy('outputs/figures/prisma.pdf','outputs/figures/f_prisma.pdf',overwrite=TRUE))
+if(integrate_proposal)stopifnot(file.copy('outputs/figures/f_prisma.pdf','../proposal/figures/f_prisma.pdf',overwrite=TRUE))
 prisma_info<-system2('pdfinfo','outputs/figures/f_prisma.pdf',stdout=TRUE)
 prisma_dims<-as.numeric(strsplit(trimws(sub(' pts.*','',sub('Page size:','',grep('^Page size:',prisma_info,value=TRUE)))), '[[:space:]]+x[[:space:]]+')[[1]])/72
 prisma_scale<-min(.8*paper_w/prisma_dims[1],.35*paper_h/prisma_dims[2])
@@ -391,12 +397,12 @@ runtex('xelatex',c('-interaction=nonstopmode','-halt-on-error','diagram.tex'))
 runtex('xelatex',c('-interaction=nonstopmode','-halt-on-error','diagram.tex'))
 setwd(oldwd)
 for(n in names(epoch_before))if(is.na(epoch_before[n]))Sys.unsetenv(n) else do.call(Sys.setenv,setNames(list(epoch_before[n]),n))
-stopifnot(file.copy(file.path(tmpdir,'diagram.pdf'),'outputs/figures/f_toc_nef.pdf',overwrite=TRUE),
- file.copy('outputs/figures/f_toc_nef.pdf','../proposal/figures/f_toc_nef.pdf',overwrite=TRUE))
+stopifnot(file.copy(file.path(tmpdir,'diagram.pdf'),'outputs/figures/f_toc_nef.pdf',overwrite=TRUE))
+if(integrate_proposal)stopifnot(file.copy('outputs/figures/f_toc_nef.pdf','../proposal/figures/f_toc_nef.pdf',overwrite=TRUE))
 wrapper<-c(diagram_source[seq_len(a-1)],
  '% source: replication/outputs/figures/f_toc_nef.pdf (T072, existing conceptual diagram)',
  '\\includegraphics[width=\\linewidth]{f_toc_nef}',diagram_source[(b+1):length(diagram_source)])
-writeLines(wrapper,'../proposal/figures/f_toc_nef.tex')
+if(integrate_proposal)writeLines(wrapper,'../proposal/figures/f_toc_nef.tex')
 unlink(tmpdir,recursive=TRUE)
 di<-system2('pdfinfo','outputs/figures/f_toc_nef.pdf',stdout=TRUE)
  dims<-as.numeric(strsplit(trimws(sub(' pts.*','',sub('Page size:','',grep('^Page size:',di,value=TRUE)))), '[[:space:]]+x[[:space:]]+')[[1]])/72
@@ -436,7 +442,10 @@ record('f_distributions_pre_post',c('t063_by_date_histograms','t063_by_date','t0
 # Poppler rounds its XML size to integer points; the audit retains exact sizes.
 font_checks<-list()
 for(slide in c(FALSE,TRUE)) {
- paths<-if(slide)list.files('../presentation/slides/figures',pattern='^f_.*\\.pdf$',full.names=TRUE) else list.files('outputs/figures',pattern='^f_.*\\.pdf$',full.names=TRUE)
+ # T082: check only this renderer's audited figures; other steps own their PDFs.
+ audited<-do.call(rbind,audit)
+ figures<-sort(unique(audited$figure[if(slide)audited$kind=='slide' else audited$kind!='slide']))
+ paths<-file.path(if(slide)slide_dir else 'outputs/figures',paste0(figures,'.pdf'))
  for(path in paths) {
   xml<-system2('pdftohtml',c('-xml','-zoom','1','-hidden','-i','-stdout',shQuote(path)),stdout=TRUE,stderr=FALSE)
   fs<-grep('<fontspec ',xml,value=TRUE)
@@ -444,7 +453,7 @@ for(slide in c(FALSE,TRUE)) {
   ar<-do.call(rbind,audit);ar<-ar[ar$figure==tools::file_path_sans_ext(basename(path))&ar$kind==if(slide)'slide' else if(grepl('f_toc_nef',path))'conceptual_diagram' else if(grepl('f_prisma',path))'unchanged_diagram' else 'paper',]
   stopifnot(length(sizes)>0,nrow(ar)>0)
   if(all(is.finite(ar$pdf_min_font_pt)))stopifnot(abs(min(sizes)-min(ar$pdf_min_font_pt))<=.51)
-  font_checks[[length(font_checks)+1L]]<-data.frame(file=path,xml_min_font_pt_rounded=min(sizes),
+  font_checks[[length(font_checks)+1L]]<-data.frame(file=if(slide)file.path('../presentation/slides/figures',basename(path)) else path,xml_min_font_pt_rounded=min(sizes),
      declared_min_font_pt=min(ar$pdf_min_font_pt),
      printed_min_font_pt=min(ar$printed_min_font_pt),
      exempt_diagram=grepl('f_prisma',path),pass=TRUE)
@@ -459,3 +468,5 @@ cat(sprintf('T072 reconstruction checks: %d PASS; tolerance 1e-9.\n',length(chec
 cat(sprintf('T072 guards: %d old outputs and %d data/code inputs byte-identical.\n',length(protected),length(inputs)))
 cat(sprintf('T072 audit: %d paper/slide pages; minimum empirical printed font %.3f pt.\n',nrow(do.call(rbind,audit)),min(subset(do.call(rbind,audit),kind=='paper')$printed_min_font_pt,na.rm=TRUE)))
 cat('T072 rendering complete: themed PDFs, proposal copies, 5 slide PDFs, persisted bins and audit.\n')
+
+if(!integrate_slides)unlink(slide_dir,recursive=TRUE)

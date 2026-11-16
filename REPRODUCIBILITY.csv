@@ -24,7 +24,9 @@ code/20_referee4.R,outputs/tables/t058_* and outputs/figures/t058_*,yes,Full pan
 code/21_diff_bunching.R,outputs/tables/t061_* and outputs/figures/t061_*,yes,Full panel or upstream results/membership require Wind; may also require external project paths (see source)
 code/22_referee5.R,outputs/tables/t063_* and outputs/figures/t063_*,yes,Full panel or upstream results/membership require Wind; may also require external project paths (see source)
 code/23_drdid.R,outputs/tables/t066_* and outputs/figures/t066_*,yes,Full panel or upstream results/membership require Wind; may also require external project paths (see source)
-code/24_figures.R,outputs/tables/t072_* and outputs/figures/t072_*; outputs/figures/f_*.pdf; external proposal/presentation copies,yes,Full panel or upstream results/membership require Wind; may also require external project paths (see source)
+code/24_figures.R,outputs/tables/t072_* and outputs/figures/t072_*; outputs/figures/f_*.pdf; external proposal/presentation copies,yes,Upstream accepted outputs/full Wind panel and external project sources required; proposal/slides copies opt-in only; default off.
+code/25_hk_control.R,outputs/tables/t076_*; outputs/figures/f_hk_control_density.pdf,yes,Public HK raw inputs included and hash-verified; full developer panel/upstream estimates require Wind. Default build mode; proposal integration off.
+code/26_identification.R,outputs/tables/t077_*; outputs/figures/t077_* (permitted aggregates only),yes,"Additional accepted analysis, not yet in proposal or run_all; full developer sample and upstream control panels required; optional HonestDiD NOT RUN."
 code/provenance/extract_nci_cashflow.py,data/raw/manual/handcollect/nci_cashflow_all.csv; outputs/tables/t046_*,yes,Full Wind-dependent panel (sample_main and HK MI checks) and original annual-report PDFs outside this archive required
 code/provenance/t001_audit_a_shares.py,docs/provenance/t001_*,no,No Wind; offline preflight/raw audit/simulation/helper
 code/provenance/t003_audit_hk.py,docs/provenance/t003_*,yes,Reads data/raw/wind/delistete_immobilienfirmen.csv before auditing EastMoney data

@@ -1,0 +1,5 @@
+file,plotted_financial_source,observations,handling
+outputs/figures/t040_constructed_vs_published.pdf,eastmoney,53,entire figure withheld; individual observations include Wind
+outputs/figures/t040_constructed_vs_published.pdf,wind,11,entire figure withheld; individual observations include Wind
+outputs/figures/f_validation.pdf,eastmoney,53,entire figure withheld; individual observations include Wind
+outputs/figures/f_validation.pdf,wind,11,entire figure withheld; individual observations include Wind

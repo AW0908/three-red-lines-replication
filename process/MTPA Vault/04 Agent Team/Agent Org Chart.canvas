@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "g_hum",
+      "type": "group",
+      "x": 720,
+      "y": -40,
+      "width": 500,
+      "height": 300,
+      "label": "Humans",
+      "color": "2"
+    },
+    {
+      "id": "g_files",
+      "type": "group",
+      "x": 1480,
+      "y": -40,
+      "width": 500,
+      "height": 640,
+      "label": "Shared files",
+      "color": "6"
+    },
+    {
+      "id": "g_ai",
+      "type": "group",
+      "x": -40,
+      "y": 640,
+      "width": 2020,
+      "height": 560,
+      "label": "AI team",
+      "color": "5"
+    },
+    {
+      "id": "g_data",
+      "type": "group",
+      "x": -40,
+      "y": 1280,
+      "width": 500,
+      "height": 480,
+      "label": "Data basis",
+      "color": "3"
+    },
+    {
+      "id": "g_tools",
+      "type": "group",
+      "x": 500,
+      "y": 1280,
+      "width": 1480,
+      "height": 320,
+      "label": "Tools: R/RStudio + Overleaf",
+      "color": "4"
+    },
+    {
+      "id": "legend",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 300,
+      "text": "**Workflow**\nPLAN → APPROVED → EXECUTED → CANDIDATE → PASS / REWORK / ESCALATE → DELIVERED\n\nWhoever executes does not review. Overrides via `pi.sh override` (T002, T006, T007).\n\n[[Agent Team Overview]] · [[Roles]] · [[Task Workflow]] · [[Scripts and Safeguards]]",
+      "color": "1"
+    },
+    {
+      "id": "pi",
+      "type": "text",
+      "x": 760,
+      "y": 0,
+      "width": 420,
+      "height": 220,
+      "text": "## PI – Anton\nDecides question, estimand, sample, data rules, claims.\n`agents/pi.sh` approve · accept · return · override\nReceives ESCALATE directly."
+    },
+    {
+      "id": "tasks",
+      "type": "text",
+      "x": 1520,
+      "y": 0,
+      "width": 420,
+      "height": 110,
+      "text": "**tasks/**\n`T###.md` cards (only status source) · `T###_report.md`"
+    },
+    {
+      "id": "review",
+      "type": "text",
+      "x": 1520,
+      "y": 130,
+      "width": 420,
+      "height": 110,
+      "text": "**review/**\n`T###.md` verdicts · `*_frozen.sha256` · `*_latex.txt`"
+    },
+    {
+      "id": "state",
+      "type": "text",
+      "x": 1520,
+      "y": 260,
+      "width": 420,
+      "height": 120,
+      "text": "**state/**\n`STATE.md` decisions · `runs.log` · `approvals.log` · `terminal.log`"
+    },
+    {
+      "id": "dash",
+      "type": "text",
+      "x": 1520,
+      "y": 400,
+      "width": 420,
+      "height": 160,
+      "text": "**Dashboard**\n`python3 agents/dashboard.py`\n→ http://localhost:8765\nreads only tasks/ review/ state/"
+    },
+    {
+      "id": "copi",
+      "type": "text",
+      "x": 760,
+      "y": 680,
+      "width": 420,
+      "height": 200,
+      "text": "## Co-PI – Claude Code\nWrites cards, runs worker, first-pass QA, freezes candidate.\nOnly session that edits project files outside tasks/ review/ state/."
+    },
+    {
+      "id": "wd",
+      "type": "text",
+      "x": 0,
+      "y": 960,
+      "width": 420,
+      "height": 200,
+      "text": "### Worker data/code – Codex\n`codex exec -s workspace-write`\nPython + `Rscript` (R [number withheld])\nwrites only the card's write scope"
+    },
+    {
+      "id": "rv",
+      "type": "text",
+      "x": 760,
+      "y": 960,
+      "width": 420,
+      "height": 200,
+      "text": "### Reviewer\nAntigravity `--mode plan` (data) · Codex `-s read-only` (text)\nVerdict → `review/T###.md` via script; ESCALATE → PI"
+    },
+    {
+      "id": "wt",
+      "type": "text",
+      "x": 1520,
+      "y": 960,
+      "width": 420,
+      "height": 200,
+      "text": "### Worker text – Claude\nseparate call, no chat history\n`Edit(./proposal/**)` only, no Bash"
+    },
+    {
+      "id": "ak",
+      "type": "text",
+      "x": 0,
+      "y": 1320,
+      "width": 420,
+      "height": 180,
+      "text": "**Daten/akshare_output/**\nEastMoney via AKShare: listed A + HK, delisted HK (raw CSV, read only)"
+    },
+    {
+      "id": "wind",
+      "type": "text",
+      "x": 0,
+      "y": 1530,
+      "width": 420,
+      "height": 200,
+      "text": "**Daten/wind_2[number withheld][number withheld][number withheld]/**\nWind visit [number withheld]: delisted A ([number withheld]) + HK ([number withheld]) statements, ownership (实际控制人属性)"
+    },
+    {
+      "id": "repl",
+      "type": "text",
+      "x": 540,
+      "y": 1320,
+      "width": 420,
+      "height": 240,
+      "text": "## replication/ (R / RStudio)\n`code/01_clean.R` → `data/processed/panel_firm_halfyear.csv`\n`outputs/tables`, `outputs/figures`\n[[Replication Package]]"
+    },
+    {
+      "id": "ol",
+      "type": "text",
+      "x": 1520,
+      "y": 1320,
+      "width": 420,
+      "height": 240,
+      "text": "## proposal/ ⇄ Overleaf\n`agents/overleaf.sh pull · check · push T###`\npush only at DELIVERED"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "pi",
+      "toNode": "copi",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "goal · approve · accept · override"
+    },
+    {
+      "id": "e2",
+      "fromNode": "pi",
+      "toNode": "state",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "approvals.log (pi.sh)",
+      "color": "2"
+    },
+    {
+      "id": "e3",
+      "fromNode": "copi",
+      "toNode": "state",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "cards · STATE.md"
+    },
+    {
+      "id": "e4",
+      "fromNode": "copi",
+      "toNode": "wd",
+      "fromSide": "left",
+      "toSide": "top",
+      "label": "worker.sh (data/code)"
+    },
+    {
+      "id": "e5",
+      "fromNode": "copi",
+      "toNode": "rv",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "candidate.sh → review.sh"
+    },
+    {
+      "id": "e6",
+      "fromNode": "copi",
+      "toNode": "wt",
+      "fromSide": "right",
+      "toSide": "top",
+      "label": "worker.sh (text)"
+    },
+    {
+      "id": "e7",
+      "fromNode": "g_data",
+      "toNode": "repl",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "read only (../Daten/)"
+    },
+    {
+      "id": "e8",
+      "fromNode": "wd",
+      "toNode": "repl",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "scripts + outputs"
+    },
+    {
+      "id": "e9",
+      "fromNode": "wt",
+      "toNode": "ol",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "LaTeX edits"
+    },
+    {
+      "id": "e10",
+      "fromNode": "repl",
+      "toNode": "ol",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "tables + figures (copy)"
+    }
+  ]
+}

@@ -1,16 +1,24 @@
-# Isolated offline dry run
+# T084 isolated offline dry run
 
-Executed on a disposable /private/tmp copy of public_release, with no parent project inputs. Source inputs and the archived outputs were not changed. Seed is supplied by each original script. Missing packages are not installed. Fetch smoke check blocks socket and HTTP access before starting the script. No provider download ran.
+All commands ran from a disposable copy of public_release, with no project sibling inputs. No network call, fetcher or package installation was run. Dependency preflight gates the full entry point to prevent setup installation. Seeds are those of the accepted scripts. Integration switches are explicitly off; guard overrides are unset. R user configuration and data directories are inside the copy. The original release payload remained byte-unchanged.
 
-## Rscript --vanilla code/00_setup.R
+## Rscript --vanilla -e [all setup dependencies available]
 
-Exit 0; elapsed 0.55 seconds.
+Exit 0; elapsed 0.00 seconds.
+
+Expected boundary: 0; no package installation.
 
 ```text
-R: installed 4.6.0 recorded 4.6.0 
-      package installed recorded
-   data.table  1.18.6.1 1.18.6.1
-       readxl   1.5.0.1  1.5.0.1
+
+```
+
+## Rscript --vanilla run_all.R
+
+Exit 1; elapsed 1.10 seconds.
+
+Expected boundary: nonzero at 01_clean.R: missing licensed Wind input; no full reproduction.
+
+```text
       ggplot2     4.0.3    4.0.3
        scales     1.4.0    1.4.0
        fixest    0.14.2   0.14.2
@@ -22,11 +30,26 @@ R: installed 4.6.0 recorded 4.6.0
     grDevices     4.6.0    4.6.0
         tools     4.6.0    4.6.0
 Setup complete.
+00_setup.R: exit 0, 0.71 seconds
+
+Running 01_clean.R 
+01_clean.R: exit 1, 0.26 seconds
+Warning messages:
+1: package ‘data.table’ was built under R version 4.6.1 
+2: package ‘readxl’ was built under R version 4.6.1 
+Error in fread("data/raw/wind/delistete_immobilienfirmen.csv", colClasses = list(character = "code")) : 
+  File 'data/raw/wind/delistete_immobilienfirmen.csv' does not exist or is non-readable. getwd()=='<isolated-copy>'
+Calls: fread -> stopf -> raise_condition -> signal
+Execution halted
+Error in (function() { : Build stopped at 01_clean.R (exit 1).
+Execution halted
 ```
 
 ## python [recorded project environment] code/provenance/t001_audit_a_shares.py
 
-Exit 0; elapsed 0.38 seconds.
+Exit 0; elapsed 1.05 seconds.
+
+Expected boundary: 0; independent public A-share raw audit.
 
 ```text
 Input: 9490 balance rows; 89 A-Share firms; no absent codes
@@ -39,7 +62,9 @@ Created: docs/provenance/t001_a_field_coverage.csv
 
 ## Rscript --vanilla code/provenance/t007_r_setup_check.R
 
-Exit 0; elapsed 1.09 seconds.
+Exit 0; elapsed 1.44 seconds.
+
+Expected boundary: 0; simulation environment test, not empirical evidence.
 
 ```text
       term coefficient  std_error   ci_lower   ci_upper    N
@@ -61,60 +86,33 @@ T007 completed: simulated estimates and environment versions exported.
 
 ## Rscript --vanilla code/theme_proposal.R
 
-Exit 0; elapsed 0.08 seconds.
+Exit 0; elapsed 0.09 seconds.
+
+Expected boundary: 0; theme definitions.
 
 ```text
 
 ```
 
-## python [recorded project environment] code/provenance/t003_audit_hk.py
+## Rscript --vanilla code/25_hk_control.R
 
-Exit 1; elapsed 0.21 seconds.
+Exit 1; elapsed 20.44 seconds.
 
-```text
-                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/Daten/.venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 1907, in _make_engine
-    self.handles = get_handle(
-                   ~~~~~~~~~~^
-        f,
-        ^^
-    ...<6 lines>...
-        storage_options=self.options.get("storage_options", None),
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/Daten/.venv/lib/python3.14/site-packages/pandas/io/common.py", line 930, in get_handle
-    handle = open(
-        handle,
-    ...<3 lines>...
-        newline="",
-    )
-FileNotFoundError: [Errno 2] No such file or directory: 'data/raw/wind/delistete_immobilienfirmen.csv'
-```
-
-## Rscript --vanilla code/01_clean.R
-
-Exit 1; elapsed 0.18 seconds.
+Expected boundary: nonzero: full licensed developer panel absent; HK raw inputs retained, not substituted.
 
 ```text
-Warning messages:
-1: package ‘data.table’ was built under R version 4.6.1 
-2: package ‘readxl’ was built under R version 4.6.1 
-Error in fread("data/raw/wind/delistete_immobilienfirmen.csv", colClasses = list(character = "code")) : 
-  File 'data/raw/wind/delistete_immobilienfirmen.csv' does not exist or is non-readable. getwd()=='<isolated-copy>/public_release'
-Calls: fread -> stopf -> raise_condition -> signal
+Warning message:
+package ‘data.table’ was built under R version 4.6.1 
+Build mode: HK MANIFEST verified; historical proposal integration disabled.
+Error in file(file, "rt", encoding = fileEncoding) : 
+  cannot open the connection
+Calls: read -> read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt", encoding = fileEncoding) :
+  cannot open file 'data/processed/panel_firm_halfyear.csv': No such file or directory
 Execution halted
-```
-
-## python [recorded project environment] offline_start.py
-
-Exit 1; elapsed 0.42 seconds.
-
-```text
-== A-Shares ==
-OFFLINE: provider network access blocked by smoke-check harness
 ```
 
 ## Interpretation
 
-Exit zero demonstrates completion of the available component. T003 and 01_clean are negative controls: a missing raw Wind register is the expected licensed-input gate. The AKShare fetcher is an online component; its startup only is checked with network explicitly blocked. Historical absolute project paths printed by code are redacted. A full scientific build and bootstrap runtime are not validated by these smoke checks.
+The full pipeline cannot reproduce the scientific results without licensed Wind and other documented project sources. The expected missing-input stops are evidence of the release boundary, not successful full reproduction. Setup/public raw audit/simulation/theme completion does not validate empirical identification. The simulation may flag a preperiod interval; its literal output is retained. HK public raw files are independently verified against their MANIFEST in T084_HK_MANIFEST_CHECK.csv; no altered sample or replacement developer panel was used.

@@ -3,23 +3,23 @@
 
 ## Befunde
 
-[firm-specific excerpt withheld in public audit]
+[firm-specific excerpt withheld in public process copy]
 
-2. **Der Merge verliert oder vervielfacht keine Kodierungen.** Die gelesenen Dateien enthalten 224 eindeutige Firma-Datum-Kennzahl-Schlüssel und eindeutige Firma-Datum-Schlüssel im Panel. Alle 224 Kodierungen finden einen Panel-Schlüssel; die Ausgabedatei enthält ebenfalls 224 eindeutige Zeilen. Die tatsächlichen Berichtsdaten stimmen für diese Beobachtungen mit den kodierten Stichtagen überein. Fehlende Kennzahlen bleiben fehlend: RL1 **64/64**, RL2 **85/96**, RL3 **59/64** verfügbare Vergleichspaare. Das entspricht `t040_validation.csv` und der Merge-Logik in `13_rl1_validation.R:65–94`.
+[number withheld]. **Der Merge verliert oder vervielfacht keine Kodierungen.** Die gelesenen Dateien enthalten [number withheld] eindeutige Firma-Datum-Kennzahl-Schlüssel und eindeutige Firma-Datum-Schlüssel im Panel. Alle [number withheld] Kodierungen finden einen Panel-Schlüssel; die Ausgabedatei enthält ebenfalls [number withheld] eindeutige Zeilen. Die tatsächlichen Berichtsdaten stimmen für diese Beobachtungen mit den kodierten Stichtagen überein. Fehlende Kennzahlen bleiben fehlend: RL1 **[number withheld]/[number withheld]**, RL2 **[number withheld]/[number withheld]**, RL3 **[number withheld]/[number withheld]** verfügbare Vergleichspaare. Das entspricht `t040_validation.csv` und der Merge-Logik in `13_rl1_validation.R:65–94`.
 
-3. **Filter und abgeleitete Daten sind nachvollziehbar.** Die Hauptstichprobe umfasst 1.692 Zeilen und 136 Firmen, davon 630 Post-Beobachtungen. Die positiven Original-N/E- und Gegenfaktualnenner-Bedingungen ergeben 602 Paare aus 129 Firmen. Die dokumentierte Matching-Regel ergibt 20 Firmen und 100 Post-Beobachtungen (`13_rl1_validation.R:51–60,117–129,144–156`; `t040_robustness.csv`). Keine zusätzliche stille Ausschlussregel gefunden.
+[number withheld]. **Filter und abgeleitete Daten sind nachvollziehbar.** Die Hauptstichprobe umfasst [number withheld] Zeilen und [number withheld] Firmen, davon [number withheld] Post-Beobachtungen. Die positiven Original-N/E- und Gegenfaktualnenner-Bedingungen ergeben [number withheld] Paare aus [number withheld] Firmen. Die dokumentierte Matching-Regel ergibt [number withheld] Firmen und [number withheld] Post-Beobachtungen (`[number withheld]_rl1_validation.R:[number withheld]–[number withheld]–[number withheld]–[number withheld]`; `t040_robustness.csv`). Keine zusätzliche stille Ausschlussregel gefunden.
 
-4. **Die Perpetual-Behandlung entspricht der Karte.** Für 273 Hauptstichprobenzeilen mit beobachtetem Perpetual-Posten wird `(tl−adv+perp)/(ta−adv)` verwendet; fehlende Posten werden anhand von `perp_missing` erkannt und behalten die ursprüngliche Kennzahl (`13_rl1_validation.R:96–105,121–129`). Beobachtetes Null ergibt die ursprüngliche Formel, positive Perpetuals erhöhen bei positivem Nenner RL1, Nenner ≤ 0 ergeben NA. Die vorhandene Nullspeicherung fehlender Perpetuals ist in `state/LIMITATIONS.md:56` dokumentiert. Neue NA-zu-Null-Imputationen wurden nicht eingeführt.
+[number withheld]. **Die Perpetual-Behandlung entspricht der Karte.** Für [number withheld] Hauptstichprobenzeilen mit beobachtetem Perpetual-Posten wird `(tl−adv+perp)/(ta−adv)` verwendet; fehlende Posten werden anhand von `perp_missing` erkannt und behalten die ursprüngliche Kennzahl (`[number withheld]_rl1_validation.R:[number withheld]–[number withheld]–[number withheld]`). Beobachtetes Null ergibt die ursprüngliche Formel, positive Perpetuals erhöhen bei positivem Nenner RL1, Nenner ≤ [number withheld] ergeben NA. Die vorhandene Nullspeicherung fehlender Perpetuals ist in `state/LIMITATIONS.md:56` dokumentiert. Neue NA-zu-Null-Imputationen wurden nicht eingeführt.
 
 ## Abnahmekriterien
 
-[firm-specific excerpt withheld in public audit]
+[firm-specific excerpt withheld in public process copy]
 
-2. **Reproduktion von T023/T029 vor Variation: nicht meine Rolle hinsichtlich Schätzung.** Die vorgeschalteten Assertions sind in `13_rl1_validation.R:58–63` vorhanden. Die zugrunde liegenden Datenfilter und Gegenfaktualvariablen wurden geprüft; die Ausgaben nennen b = 3,142854757615 und D = 0,114617940199.
+[number withheld]. **Reproduktion von T023/T029 vor Variation: nicht meine Rolle hinsichtlich Schätzung.** Die vorgeschalteten Assertions sind in `13_rl1_validation.R:58–63` vorhanden. Die zugrunde liegenden Datenfilter und Gegenfaktualvariablen wurden geprüft; die Ausgaben nennen b = [number withheld] und D = [number withheld].
 
-3. **Klare Validierungsaussage und Robustheitsänderungen: belegt erfüllt hinsichtlich Datenvalidierung; Schätzungsbewertung nicht meine Rolle.** `t040_verification.txt` berichtet 52 schwellennahe Vergleiche aus 26 Firmen, MAE 0,570 Prozentpunkte und 76,9 % innerhalb eines Prozentpunkts. Die sechs Klassifikationsabweichungen sind einzeln in `t040_disagreements.csv` enthalten. Die Klassifikation zählt 37 beidseitig konforme, 21 beidseitig verletzende und 6 abweichende Beobachtungen. Selektive Veröffentlichungsabdeckung und unterschiedliche Firmenkonventionen werden ausdrücklich begrenzt.
+[number withheld]. **Klare Validierungsaussage und Robustheitsänderungen: belegt erfüllt hinsichtlich Datenvalidierung; Schätzungsbewertung nicht meine Rolle.** `t040_verification.txt` berichtet [number withheld] schwellennahe Vergleiche aus [number withheld] Firmen, MAE [number withheld] Prozentpunkte und [number withheld] % innerhalb eines Prozentpunkts. Die sechs Klassifikationsabweichungen sind einzeln in `t040_disagreements.csv` enthalten. Die Klassifikation zählt [number withheld] beidseitig konforme, [number withheld] beidseitig verletzende und [number withheld] abweichende Beobachtungen. Selektive Veröffentlichungsabdeckung und unterschiedliche Firmenkonventionen werden ausdrücklich begrenzt.
 
-4. **Stop-Bedingung: belegt nicht ausgelöst.** RL1 liegt für 30 Firmen vor; die Mindestzahl beträgt 15.
+[number withheld]. **Stop-Bedingung: belegt nicht ausgelöst.** RL1 liegt für [number withheld] Firmen vor; die Mindestzahl beträgt [number withheld].
 
 ## Nicht geprüft
 

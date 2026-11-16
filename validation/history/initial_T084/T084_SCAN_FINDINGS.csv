@@ -1,0 +1,3 @@
+file,line,rule,handling
+.DS_Store,0,withheld_file_policy,FAIL
+data/raw/eastmoney/raw_a_income.csv,1,Wind_data_column,FAIL

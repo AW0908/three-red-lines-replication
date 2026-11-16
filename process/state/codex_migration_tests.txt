@@ -1,0 +1,12 @@
+PASS bash -n: all agent shell scripts
+PASS dashboard Python syntax
+PASS isolated mocked review: four fresh read-only Codex calls; legacy tools route to Codex; high effort; all PASS aggregation
+PASS isolated mocked REWORK/ESCALATE verdict propagation
+PASS freeze tampering rejected before CLI; status unchanged
+PASS changed input overrides mocked PASS with ESCALATE
+PASS outside-scope write overrides mocked PASS with ESCALATE
+PASS PLAN worker blocked before CLI; no worker execution
+PASS review rejects APPROVED; requires CANDIDATE
+PASS all twelve tool/priority routing combinations
+PASS scope boundary rejects sibling prefix
+Previously observed live smoke (not rerun by this offline test): codex-cli 0.162.1, gpt-6.1-sol, low, approval never, read-only; CODEX_READ_ONLY_SMOKE_OK (no tools)

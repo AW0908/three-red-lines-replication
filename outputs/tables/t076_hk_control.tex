@@ -1,0 +1,26 @@
+% source: replication/outputs/tables/t076_hk_control.csv; t076_hk_support.csv; t076_hk_roster_summary.csv; t076_specification.csv (exact cells in t076_number_audit.csv)
+\begingroup\apptablefont
+\begin{appstar}{P{0.27\linewidth}rrrrr}\toprule
+Group / comparison & Pre & Post & Change & 95\% CI & Valid draws \\
+\midrule
+HK control: $\Delta b$ & 0.29 & 0.30 & 0.01 & $[-1.10, 1.08]$ & 999 \\
+HK developers: $\Delta b$ & $-2.19$ & 4.55 & 6.74 & $[2.94, 12.25]$ & 999 \\
+HK within-market: $\Delta\Delta b$ & -- & -- & 6.73 & $[2.92, 12.56]$ & 999 \\
+A within-market: $\Delta\Delta b$ & -- & -- & 2.67 & $[-0.22, 6.35]$ & 999 \\
+Market-matched: $\Delta\Delta b$ & -- & -- & 4.34 & $[1.97, 7.54]$ & 999 \\
+HK: reported advances at all dates & -- & -- & 5.88 & $[0.66, 12.02]$ & 999 \\
+HK: unadjusted control ratio & -- & -- & 7.02 & $[3.14, 12.37]$ & 999 \\
+\bottomrule\end{appstar}
+\par\medskip
+\begin{appstar}{P{0.30\linewidth}rrrrr}\toprule
+Support & Firms & Obs. pre & Obs. post & Window pre & Window post \\
+\midrule
+A developers & 80/80 & 480 & 400 & 50 & 63 \\
+A controls & 752/752 & 4512 & 3760 & 207 & 159 \\
+HK developers & 56/52 & 317 & 230 & 17 & 55 \\
+HK controls & 1230/1230 & 7380 & 6150 & 281 & 238 \\
+HK controls: reported advances & 119/119 & 714 & 595 & 30 & 32 \\
+HK controls: unadjusted ratio & 1230/1230 & 7380 & 6150 & 279 & 232 \\
+\bottomrule\end{appstar}
+\floatnote{Pre: 2017H1--2019H2; post: 2020H2--2022H2. Degree 5 polynomial on $[0.40,1.00]$, bin width 0.01; fit excludes the mass window $[0.66,0.70)$. 999 whole-firm draws (seed 20261016), paired across periods and independent across groups; pointwise percentile intervals. HK within-market is the primary new contrast. Market-matched is the developer-share-weighted mean of the A and HK contrasts, with fixed weights 0.5882 and 0.4118. The last two estimates are HK developer minus control changes: controls either report an advance item at every endpoint, or use TL/TA on the primary control sample. Developer samples are unchanged; controls are balanced survivors. A low-support flag applies below 150 control firms or 20 window observations in either period; Primary HK controls pass; the reported-advance subset has only 119 firms. HK developers have only 17 pre-window observations. Pre/post levels refer to the named group; contrast levels are not defined. Smooth counterfactual densities and comparable counterfactual changes are assumptions; developer-specific shocks and survivor selection remain.}
+\endgroup

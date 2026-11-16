@@ -1,6 +1,6 @@
 ## Ergebnis
 
-Die vier REWORK-Punkte sind umgesetzt: fünf unbelegte Sätze entfernt, die Kontrollpopulation in Figure 2 benannt und B4 mit gemeinsamer Legende sowie identischer y-Skalierung versehen. Rendering und Proposal-Build gelingen; der Haupttext endet weiterhin auf Seite 15.
+Die vier REWORK-Punkte sind umgesetzt: fünf unbelegte Sätze entfernt, die Kontrollpopulation in Figure [number withheld] benannt und B4 mit gemeinsamer Legende sowie identischer y-Skalierung versehen. Rendering und Proposal-Build gelingen; der Haupttext endet weiterhin auf Seite [number withheld].
 
 ## Dateien
 
@@ -16,30 +16,30 @@ Die vier REWORK-Punkte sind umgesetzt: fünf unbelegte Sätze entfernt, die Kont
 
 ## Ausführung
 
-Zweimal ausgeführt, jeweils Exitcode 0:
+Zweimal ausgeführt, jeweils Exitcode [number withheld]:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 Letzte Ausgabe:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Proposal-Build, Exitcode 0:
+Proposal-Build, Exitcode [number withheld]:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
-1. **Erfüllt:** B4 hat eine gemeinsame Legende und identische y-Achsengrenzen. Haupttextende auf Seite **15**, References ab Seite 16; keine undefinierten Verweise oder Overfull-Boxen.
-2. **Erfüllt:** Audit unverändert mit **34 Seitenzeilen**. Kleinste empirische Druckschrift **9,257 pt**, bei B4 **11,308 pt**. Geplottete Werte unverändert.
-3. **Erfüllt:** **459 historische Outputs** unverändert; zwei aktuelle Läufe liefern **44/44 byte-identische Dateien**. Alle **32 Rekonstruktionschecks** bestehen, maximale Abweichung **1,954 × 10⁻¹⁴**.
-4. **Erfüllt:** Geänderte B4 erneut gerendert und angesehen; keine überlappenden oder abgeschnittenen Beschriftungen. Die übrigen **33 Grafikseiten** stimmen byte-identisch mit den zuvor sichtgeprüften PDFs überein. Betroffene Proposal-Layoutstellen zusätzlich geprüft.
+[number withheld]. **Erfüllt:** B4 hat eine gemeinsame Legende und identische y-Achsengrenzen. Haupttextende auf Seite **[number withheld]**, References ab Seite [number withheld]; keine undefinierten Verweise oder Overfull-Boxen.
+[number withheld]. **Erfüllt:** Audit unverändert mit **[number withheld] Seitenzeilen**. Kleinste empirische Druckschrift **[number withheld] pt**, bei B4 **[number withheld] pt**. Geplottete Werte unverändert.
+[number withheld]. **Erfüllt:** **[number withheld] historische Outputs** unverändert; zwei aktuelle Läufe liefern **[number withheld]/[number withheld] byte-identische Dateien**. Alle **[number withheld] Rekonstruktionschecks** bestehen, maximale Abweichung **[number withheld] × [number withheld]⁻¹⁴**.
+[number withheld]. **Erfüllt:** Geänderte B4 erneut gerendert und angesehen; keine überlappenden oder abgeschnittenen Beschriftungen. Die übrigen **[number withheld] Grafikseiten** stimmen byte-identisch mit den zuvor sichtgeprüften PDFs überein. Betroffene Proposal-Layoutstellen zusätzlich geprüft.
 
 Alle vier REWORK-Punkte erfüllt. Zahlen im neu ergänzten LaTeX-Text: **keine**. „All control firms“ ist durch `replication/outputs/tables/t063_by_date.csv`, Gruppe `control_all`, belegt. Keine `.bib`-Änderung.
 
@@ -49,4 +49,4 @@ Keine neue offene Frage. Bestehende Einschränkungen bleiben: erlaubte PRISMA-Di
 
 Kein vollständiger Analyse-Build, Netzwerkzugriff, Git oder Overleaf-Abgleich. Kartenstatus bleibt `REWORK`.
 
-KI-Log-Vorschlag für den Co-PI: „T072 REWORK 1: Abbildungsnoten und B4 korrigiert; Rekonstruktion, Byte-Identität, Audit, Sichtprüfung und Haupttextende geprüft.“ `AI_USAGE_LOG.md` blieb außerhalb des Schreibbereichs unverändert.
+KI-Log-Vorschlag für den Co-PI: „T072 REWORK [number withheld]: Abbildungsnoten und B4 korrigiert; Rekonstruktion, Byte-Identität, Audit, Sichtprüfung und Haupttextende geprüft.“ `AI_USAGE_LOG.md` blieb außerhalb des Schreibbereichs unverändert.

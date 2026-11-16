@@ -4,7 +4,7 @@ title: Kurzer Titel
 status: PLAN
 priority: normal
 worker: codex
-reviewer: agy
+reviewer: codex
 reviewers: data=codex, estimation=claude, consistency=codex
 created: JJJJ-MM-TT
 ---
@@ -26,18 +26,18 @@ Alles andere bleibt unverändert.
 
 ## Schritte
 
-1. …
+[number withheld]. …
 
 ## Abnahmekriterien
 
 Jedes Kriterium ist ohne Rückfrage prüfbar.
 
-1. …
+[number withheld]. …
 
 ## Ausführungsbefehl
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Stopp-Bedingungen
 

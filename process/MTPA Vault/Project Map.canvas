@@ -1,0 +1,533 @@
+{
+  "nodes": [
+    {
+      "id": "g5",
+      "type": "group",
+      "x": 0,
+      "y": 875,
+      "width": 1880,
+      "height": 230,
+      "color": "5",
+      "label": "⑤ How every task runs  (details: Agent Team Overview)"
+    },
+    {
+      "id": "g6",
+      "type": "group",
+      "x": 1960,
+      "y": 0,
+      "width": 330,
+      "height": 1105,
+      "color": "4",
+      "label": "⑥ Task status 16.10  (details: Task Board)"
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "x": 1440,
+      "y": 0,
+      "width": 400,
+      "height": 805,
+      "color": "4",
+      "label": "④ Proposal & deadlines"
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "x": 960,
+      "y": 0,
+      "width": 400,
+      "height": 805,
+      "color": "3",
+      "label": "③ Analysis in R  ·  replication/"
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "x": 480,
+      "y": 0,
+      "width": 400,
+      "height": 805,
+      "color": "2",
+      "label": "② Data basis"
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 805,
+      "color": "1",
+      "label": "① Question & design"
+    },
+    {
+      "id": "q",
+      "type": "text",
+      "text": "## Real or cosmetic deleveraging?\n*Did China's Three Red Lines policy reduce property developers' economic leverage, or did it primarily shift liabilities off the consolidated balance sheet?*  →  [[[number withheld] Home]]",
+      "x": 0,
+      "y": -230,
+      "width": 2290,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "rq",
+      "type": "text",
+      "text": "### [[Research Question]]\nTopic approved [number withheld] · question final by [number withheld]",
+      "x": 20,
+      "y": 30,
+      "width": 360,
+      "height": 90,
+      "color": "1"
+    },
+    {
+      "id": "pol",
+      "type": "text",
+      "text": "**[[Three Red Lines Policy]]**\nliabilities/assets > [number withheld] % · net gearing > [number withheld] % · cash/short-term debt < [number withheld]\n⚠ caps [number withheld]/[number withheld]/[number withheld] % unverified",
+      "x": 20,
+      "y": 142,
+      "width": 360,
+      "height": 120
+    },
+    {
+      "id": "dh",
+      "type": "text",
+      "text": "### [[Data Overview]]",
+      "x": 500,
+      "y": 30,
+      "width": 360,
+      "height": 60,
+      "color": "2"
+    },
+    {
+      "id": "tT001",
+      "type": "text",
+      "text": "[[T001 A-Share Audit]]\n✅ delivered",
+      "x": 1980,
+      "y": 30,
+      "width": 290,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "tT004",
+      "type": "text",
+      "text": "[[T004 Firm Panel and Red-Line Metrics]]\n✅ delivered [number withheld]",
+      "x": 1980,
+      "y": 670,
+      "width": 290,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "des",
+      "type": "text",
+      "text": "**[[Empirical Design]]**\n① bunching just below the thresholds\n② dose-response DiD, dose = lines breached on [number withheld]\n③ reported vs adjusted leverage",
+      "x": 20,
+      "y": 284,
+      "width": 360,
+      "height": 130
+    },
+    {
+      "id": "var",
+      "type": "text",
+      "text": "**[[Variables and Metrics]]**\nrl1–rl3, perpetual gap, minority share, JV share — decided [number withheld]",
+      "x": 20,
+      "y": 436,
+      "width": 360,
+      "height": 100
+    },
+    {
+      "id": "thr",
+      "type": "text",
+      "text": "**[[Identification Threats]]**\nCOVID · bank lending limits · anticipation · selection · SOE vs private",
+      "x": 20,
+      "y": 558,
+      "width": 360,
+      "height": 100
+    },
+    {
+      "id": "lit",
+      "type": "text",
+      "text": "**[[Literature Overview]]**\n[number withheld] papers (abstracts) + press evidence; gap = threshold-specific circumvention",
+      "x": 20,
+      "y": 680,
+      "width": 360,
+      "height": 100
+    },
+    {
+      "id": "src",
+      "type": "text",
+      "text": "**Sources**\nEastMoney/AKShare → listed A + HK\nWind, PKU Guanghua → delisted firms, ownership\nAnnual reports → restricted cash (open)",
+      "x": 500,
+      "y": 112,
+      "width": 360,
+      "height": 130
+    },
+    {
+      "id": "wind",
+      "type": "text",
+      "text": "**[[Wind Terminal]]**\nvisits [number withheld] + [number withheld] · quota mostly used",
+      "x": 500,
+      "y": 366,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "del",
+      "type": "text",
+      "text": "**[[Delisted Developers]]**\n[number withheld] delisted developers → no survivorship bias",
+      "x": 500,
+      "y": 468,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "iss",
+      "type": "text",
+      "text": "**[[Data Issues]]**\n✅ HK date rule, B-shares, [number withheld]\n⬜ currency · restricted cash · SOE coding ([number withheld] firms)",
+      "x": 500,
+      "y": 570,
+      "width": 360,
+      "height": 120
+    },
+    {
+      "id": "a5",
+      "type": "text",
+      "text": "**Co-PI**\nfirst QA, freeze",
+      "x": 1068,
+      "y": 915,
+      "width": 240,
+      "height": 150
+    },
+    {
+      "id": "a6",
+      "type": "text",
+      "text": "**Reviewer**\nGemini (data) · Codex (text)\nPASS / REWORK / ESCALATE",
+      "x": 1330,
+      "y": 915,
+      "width": 240,
+      "height": 150
+    },
+    {
+      "id": "daten",
+      "type": "text",
+      "text": "`Daten/`\nraw exports · never modified",
+      "x": 500,
+      "y": 264,
+      "width": 360,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "rp",
+      "type": "text",
+      "text": "### [[Replication Package]]\nonly place for code, data, outputs",
+      "x": 980,
+      "y": 30,
+      "width": 360,
+      "height": 90,
+      "color": "3"
+    },
+    {
+      "id": "c1",
+      "type": "text",
+      "text": "`01_clean.R`  ✅\nraw → panel, ratios, dose, SOE",
+      "x": 980,
+      "y": 142,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "fp",
+      "type": "text",
+      "text": "**[[Firm Panel]]**  ✅ delivered\n[number withheld] firm-half-years · [number withheld] firms\nmain [number withheld] / broad [number withheld] firms · SOE known [number withheld] %",
+      "x": 980,
+      "y": 244,
+      "width": 360,
+      "height": 120,
+      "color": "3"
+    },
+    {
+      "id": "c2",
+      "type": "text",
+      "text": "`02_estimate.R`  ⬜\nbunching + DiD, event study",
+      "x": 980,
+      "y": 386,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "c3",
+      "type": "text",
+      "text": "`03_figures.R`  🟡 T005\nsummary table, bunching histograms",
+      "x": 980,
+      "y": 488,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "renv",
+      "type": "text",
+      "text": "**[[R Environment and RStudio]]**\nR [number withheld] · fixest · did · modelsummary · rdrobust",
+      "x": 980,
+      "y": 590,
+      "width": 360,
+      "height": 90
+    },
+    {
+      "id": "po",
+      "type": "text",
+      "text": "### [[Proposal Outline]]\nLaTeX in Overleaf · sections still TODO",
+      "x": 1460,
+      "y": 30,
+      "width": 360,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "ol",
+      "type": "text",
+      "text": "**Overleaf**\n`proposal/` ⇄ `agents/overleaf.sh`\nupload only after your acceptance",
+      "x": 1460,
+      "y": 142,
+      "width": 360,
+      "height": 100
+    },
+    {
+      "id": "co",
+      "type": "text",
+      "text": "**[[Course Overview]]**\nsyllabus, requirements, lectures",
+      "x": 1460,
+      "y": 436,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "td",
+      "type": "text",
+      "text": "**[[To-Do]]**\nnext steps, decisions, timeline",
+      "x": 1460,
+      "y": 538,
+      "width": 360,
+      "height": 80
+    },
+    {
+      "id": "a1",
+      "type": "text",
+      "text": "**You (PI)**\nstate the goal\n\n→ [[Agent Team Overview]]",
+      "x": 20,
+      "y": 915,
+      "width": 240,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a2",
+      "type": "text",
+      "text": "**Co-PI** Claude Code\nwrites card → PLAN",
+      "x": 282,
+      "y": 915,
+      "width": 240,
+      "height": 150
+    },
+    {
+      "id": "a3",
+      "type": "text",
+      "text": "**You**\n`pi.sh approve`",
+      "x": 544,
+      "y": 915,
+      "width": 240,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a4",
+      "type": "text",
+      "text": "**Worker**\nCodex: data/R\nClaude: LaTeX text",
+      "x": 806,
+      "y": 915,
+      "width": 240,
+      "height": 150
+    },
+    {
+      "id": "tT002",
+      "type": "text",
+      "text": "[[T002 LaTeX Skeleton]]\n✅ delivered",
+      "x": 1980,
+      "y": 158,
+      "width": 290,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "tT006",
+      "type": "text",
+      "text": "[[T006 Overleaf Structure]]\n✅ delivered",
+      "x": 1980,
+      "y": 286,
+      "width": 290,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "tT007",
+      "type": "text",
+      "text": "[[T007 R Environment Check]]\n✅ delivered",
+      "x": 1980,
+      "y": 414,
+      "width": 290,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "tT003",
+      "type": "text",
+      "text": "[[T003 HK Raw Data Audit]]\n✅ delivered",
+      "x": 1980,
+      "y": 542,
+      "width": 290,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "a7",
+      "type": "text",
+      "text": "**You**\n`pi.sh accept` → Overleaf",
+      "x": 1592,
+      "y": 915,
+      "width": 240,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "tT005",
+      "type": "text",
+      "text": "[[T005 Descriptives and Bunching Plots]]\n▶️ executed [number withheld]:[number withheld] – QA next",
+      "x": 1980,
+      "y": 798,
+      "width": 290,
+      "height": 110,
+      "color": "3"
+    },
+    {
+      "id": "dl",
+      "type": "text",
+      "text": "**Deadlines** (tentative)\n[number withheld] first draft [number withheld] %\n[number withheld]./[number withheld] presentations\n[number withheld] two referee reports\n[number withheld] final paper + response",
+      "x": 1460,
+      "y": 262,
+      "width": 360,
+      "height": 150,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "fromNode": "a1",
+      "fromSide": "right",
+      "toNode": "a2",
+      "toSide": "left"
+    },
+    {
+      "id": "e1",
+      "fromNode": "a2",
+      "fromSide": "right",
+      "toNode": "a3",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "a3",
+      "fromSide": "right",
+      "toNode": "a4",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "a4",
+      "fromSide": "right",
+      "toNode": "a5",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "a5",
+      "fromSide": "right",
+      "toNode": "a6",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "a6",
+      "fromSide": "right",
+      "toNode": "a7",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "src",
+      "fromSide": "bottom",
+      "toNode": "daten",
+      "toSide": "top"
+    },
+    {
+      "id": "e7",
+      "fromNode": "daten",
+      "fromSide": "right",
+      "toNode": "c1",
+      "toSide": "left",
+      "label": "../Daten/"
+    },
+    {
+      "id": "e8",
+      "fromNode": "c1",
+      "fromSide": "bottom",
+      "toNode": "fp",
+      "toSide": "top"
+    },
+    {
+      "id": "e9",
+      "fromNode": "fp",
+      "fromSide": "bottom",
+      "toNode": "c2",
+      "toSide": "top"
+    },
+    {
+      "id": "e10",
+      "fromNode": "c2",
+      "fromSide": "bottom",
+      "toNode": "c3",
+      "toSide": "top"
+    },
+    {
+      "id": "e12",
+      "fromNode": "c3",
+      "fromSide": "right",
+      "toNode": "po",
+      "toSide": "left",
+      "label": "tables · figures"
+    },
+    {
+      "id": "e13",
+      "fromNode": "po",
+      "fromSide": "bottom",
+      "toNode": "ol",
+      "toSide": "top"
+    },
+    {
+      "id": "e14",
+      "fromNode": "rq",
+      "fromSide": "bottom",
+      "toNode": "pol",
+      "toSide": "top"
+    },
+    {
+      "id": "e15",
+      "fromNode": "pol",
+      "fromSide": "bottom",
+      "toNode": "des",
+      "toSide": "top"
+    }
+  ]
+}

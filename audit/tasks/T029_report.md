@@ -1,6 +1,6 @@
 ## Ergebnis
 
-Die Netto-Compliance-Differenz D beträgt **11,46 Prozentpunkte post gegenüber 4,06 im Placebo**; die Differenz beträgt **7,40 [3,10; 11,82]** (129/125 Firmen). Die bedingte Ausfallquote beträgt nach der Politik 24,35 % gegenüber 10,37 % im Placebo; ihr eigener Kontrast beträgt 0,140 [0,069; 0,217] (79/71 Firmen). Teil C verwendet jetzt den Placebo-Anker 2016, prüft die Inferenzgrenze je tatsächlicher Statistikzelle und berichtet die Gruppenkontraste; Teil A bleibt numerisch unverändert.
+Die Netto-Compliance-Differenz D beträgt **[number withheld] Prozentpunkte post gegenüber [number withheld] im Placebo**; die Differenz beträgt **[number withheld] [[number withheld]; [number withheld]]** ([number withheld]/[number withheld] Firmen). Die bedingte Ausfallquote beträgt nach der Politik [number withheld] % gegenüber [number withheld] % im Placebo; ihr eigener Kontrast beträgt [number withheld] [[number withheld]; [number withheld]] ([number withheld]/[number withheld] Firmen). Teil C verwendet jetzt den Placebo-Anker [number withheld], prüft die Inferenzgrenze je tatsächlicher Statistikzelle und berichtet die Gruppenkontraste; Teil A bleibt numerisch unverändert.
 
 ## Dateien
 
@@ -13,8 +13,8 @@ Die Netto-Compliance-Differenz D beträgt **11,46 Prozentpunkte post gegenüber 
 - `replication/outputs/tables/t029_incentive.csv`, `replication/outputs/tables/t029_incentive.tex` – korrigierte Anker, Gruppenkontraste und zellenspezifische Inferenzgrenzen.
 - `replication/outputs/tables/t029_distance_components.csv` – neu erzeugt, bytegleich.
 - `replication/outputs/tables/t029_coverage.txt` – aktualisierte Definitionen, Grenzen und Befunde.
-- `replication/outputs/tables/t029_verification.txt` – Laufprotokolle, unabhängige Prüfungen und SHA-256-Belege.
-- `replication/outputs/figures/t029_compliance_shares.pdf` – unverbundenes Erweiterungsfenster ab 2023H1.
+- `replication/outputs/tables/t029_verification.txt` – Laufprotokolle, unabhängige Prüfungen und SHA-[number withheld]-Belege.
+- `replication/outputs/figures/t029_compliance_shares.pdf` – unverbundenes Erweiterungsfenster ab [number withheld]H1.
 - `replication/outputs/figures/t029_distance_es.pdf` – Halbjahresbeschriftungen und Inferenzhinweis.
 - `replication/outputs/figures/t029_bunching_frozen.pdf` – neu erzeugt, bytegleich.
 
@@ -22,19 +22,19 @@ Die Netto-Compliance-Differenz D beträgt **11,46 Prozentpunkte post gegenüber 
 
 Zweimal vollständig ausgeführt:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 Letzte Ausgabe des zweiten Laufs:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
-1. **Erfüllt:** Gleichheitsfehler maximal 2,22e−16; T023 reproduziert b = 3,142854757615. Alle 139 geschützten Daten-/Ausgabedateien bleiben bytegleich; sämtliche 14 erzeugten T029-Artefakte sind zwischen beiden vollständigen Läufen bytegleich.
-2. **Erfüllt:** Vorgesehene Statistiken und Firmenzahlen sind ausgewiesen, ohne Sterne. Teil C enthält 52 inferentielle und 28 `descriptive_small_cell`-Zeilen; kleine Zellen haben keine Konfidenzintervalle und „--“ im TeX. Unabhängige Nachrechnung bestätigt alle Kennzahlen, Fallzahlen, Inferenzgrenzen und 52 Bootstrap-Intervalle; maximaler Intervallfehler 4,44e−16.
-3. **Erfüllt:** Das gepaarte Bunching fällt von 3,18 auf −0,52; Differenz 3,71 [1,60; 6,14], 129 Firmen. Nach der vorgegebenen Regel hängt das Bunching damit mechanisch am MI-Wachstum seit 2019. Das positive Placebo begrenzt die Interpretation zusätzlich: Die MI-Vorperiodenkoeffizienten für den knapp oberhalb liegenden Bin betragen 2016H2 bis 2018H1 −0,0235, −0,0230, −0,0201 und −0,0171; alle punktweisen Intervalle schließen null aus. Diese Firmen bauten MI bereits vor 2020 schneller auf; Teil B beschreibt differenzielle Anpassung, keinen Policy-Effekt.
+[number withheld]. **Erfüllt:** Gleichheitsfehler maximal [number withheld]e−[number withheld]; T023 reproduziert b = [number withheld]. Alle [number withheld] geschützten Daten-/Ausgabedateien bleiben bytegleich; sämtliche [number withheld] erzeugten T029-Artefakte sind zwischen beiden vollständigen Läufen bytegleich.
+[number withheld]. **Erfüllt:** Vorgesehene Statistiken und Firmenzahlen sind ausgewiesen, ohne Sterne. Teil C enthält [number withheld] inferentielle und [number withheld] `descriptive_small_cell`-Zeilen; kleine Zellen haben keine Konfidenzintervalle und „--“ im TeX. Unabhängige Nachrechnung bestätigt alle Kennzahlen, Fallzahlen, Inferenzgrenzen und [number withheld] Bootstrap-Intervalle; maximaler Intervallfehler [number withheld]e−[number withheld].
+[number withheld]. **Erfüllt:** Das gepaarte Bunching fällt von [number withheld] auf [number withheld]; Differenz [number withheld] [[number withheld]; [number withheld]], [number withheld] Firmen. Nach der vorgegebenen Regel hängt das Bunching damit mechanisch am MI-Wachstum seit [number withheld]. Das positive Placebo begrenzt die Interpretation zusätzlich: Die MI-Vorperiodenkoeffizienten für den knapp oberhalb liegenden Bin betragen [number withheld]H2 bis [number withheld]H1 [number withheld], [number withheld], [number withheld] und [number withheld]; alle punktweisen Intervalle schließen null aus. Diese Firmen bauten MI bereits vor [number withheld] schneller auf; Teil B beschreibt differenzielle Anpassung, keinen Policy-Effekt.
 
 Alle vier TeX-Fragmente kompilieren ohne Warnungen; Tabellen und Abbildungen wurden visuell geprüft.
 

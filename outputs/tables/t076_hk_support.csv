@@ -1,0 +1,13 @@
+"group","period","firms","firm_halfyears","window_firms","window_firm_halfyears","fit_range_obs","outside_range_obs","missing_rl1","minimum_firms","minimum_window_obs","low_support"
+"developers_A","pre",80,480,25,50,424,56,0,NA,20,FALSE
+"developers_A","post",80,400,24,63,337,63,0,NA,20,FALSE
+"control_A","pre",752,4512,96,207,2743,1769,0,150,20,FALSE
+"control_A","post",752,3760,91,159,2435,1325,0,150,20,FALSE
+"developers_HK","pre",56,317,10,17,289,28,1,NA,20,TRUE
+"developers_HK","post",52,230,19,55,220,10,0,NA,20,FALSE
+"control_HK","pre",1230,7380,164,281,3574,3806,0,150,20,FALSE
+"control_HK","post",1230,6150,143,238,3179,2971,0,150,20,FALSE
+"control_HK_no_imputation","pre",119,714,16,30,378,336,0,150,20,TRUE
+"control_HK_no_imputation","post",119,595,15,32,302,293,0,150,20,TRUE
+"control_HK_unadjusted","pre",1230,7380,162,279,3694,3686,0,150,20,FALSE
+"control_HK_unadjusted","post",1230,6150,145,232,3327,2823,0,150,20,FALSE

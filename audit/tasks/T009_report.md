@@ -1,6 +1,6 @@
 ## Ergebnis
 
-T009 ist umgesetzt: fünf gepoolte DiD-Schätzungen, 60 Event-Study-Koeffizienten, fünf gemeinsame Vortrendtests und fünf PDF-Abbildungen wurden erzeugt. Alle gepoolten 95%-Konfidenzintervalle enthalten null; die Ergebnisse stehen ohne weitergehende Interpretation unten.
+T009 ist umgesetzt: fünf gepoolte DiD-Schätzungen, [number withheld] Event-Study-Koeffizienten, fünf gemeinsame Vortrendtests und fünf PDF-Abbildungen wurden erzeugt. Alle gepoolten [number withheld]%-Konfidenzintervalle enthalten null; die Ergebnisse stehen ohne weitergehende Interpretation unten.
 
 ## Dateien
 
@@ -19,43 +19,43 @@ T009 ist umgesetzt: fünf gepoolte DiD-Schätzungen, 60 Event-Study-Koeffiziente
 
 Exakter Befehl, mit der finalen Skriptfassung zweimal erfolgreich ausgeführt:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 Letzte Ausgabezeilen:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
-1. **Erfüllt.** Beide finalen Läufe endeten mit Exitcode 0. SHA-256-Prüfsummen aller drei CSV-Dateien und der TEX-Datei waren zwischen den Läufen identisch.
-2. **Erfüllt.** Sämtliche Modelle verwenden ausschließlich `sample_main == TRUE` mit nicht fehlender `dose`, Firmen- und Datums-Fixed-Effects sowie firmengeclusterte Standardfehler. Skript und Tabellenanmerkungen dokumentieren diese Spezifikation und die Paralleltrendannahme.
-3. **Erfüllt.** Koeffizient und SE wurden für alle fünf Outcomes aus den Skript-Modellobjekten gegen den CSV-Export geprüft, mit Toleranz `1e-13`. Auszüge aus den mit 17 signifikanten Stellen gedruckten Modellobjekten, jeweils für `dose:post`:
+[number withheld]. **Erfüllt.** Beide finalen Läufe endeten mit Exitcode [number withheld]. SHA-[number withheld]-Prüfsummen aller drei CSV-Dateien und der TEX-Datei waren zwischen den Läufen identisch.
+[number withheld]. **Erfüllt.** Sämtliche Modelle verwenden ausschließlich `sample_main == TRUE` mit nicht fehlender `dose`, Firmen- und Datums-Fixed-Effects sowie firmengeclusterte Standardfehler. Skript und Tabellenanmerkungen dokumentieren diese Spezifikation und die Paralleltrendannahme.
+[number withheld]. **Erfüllt.** Koeffizient und SE wurden für alle fünf Outcomes aus den Skript-Modellobjekten gegen den CSV-Export geprüft, mit Toleranz `[number withheld]`. Auszüge aus den mit [number withheld] signifikanten Stellen gedruckten Modellobjekten, jeweils für `dose:post`:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
    Die vollständigen Ausdrucke nennen jeweils `Clustered (firm_id)`.
-4. **Erfüllt.** `t009_event_study.csv` enthält genau 60 Zeilen, zwölf je Outcome; die Referenz `2020-06-30` ist ausgeschlossen. Alle fünf PDFs zeigen 13 Stichtage einschließlich des auf null normalisierten Referenzpunkts, 95%-KIs, Nulllinie und gestrichelter Politikgrenze. Alle PDFs wurden gerendert und visuell geprüft.
-5. **Erfüllt.** Genau ein gemeinsamer `fixest::wald`-Test je Outcome, jeweils über sieben Koeffizienten für Stichtage strikt vor `2020-06-30`. Die CSV enthält fünf Zeilen sowie Zähler- und Nennerfreiheitsgrade.
-6. **Erfüllt.** Das TEX-Fragment enthält `\toprule` und `\bottomrule`, aber keine `\documentclass`.
-7. **Erfüllt.** Ergebnisse je zusätzlicher verletzter Linie, in Quoteneinheiten:
+[number withheld]. **Erfüllt.** `t009_event_study.csv` enthält genau [number withheld] Zeilen, zwölf je Outcome; die Referenz `2020-06-30` ist ausgeschlossen. Alle fünf PDFs zeigen [number withheld] Stichtage einschließlich des auf null normalisierten Referenzpunkts, [number withheld]%-KIs, Nulllinie und gestrichelter Politikgrenze. Alle PDFs wurden gerendert und visuell geprüft.
+[number withheld]. **Erfüllt.** Genau ein gemeinsamer `fixest::wald`-Test je Outcome, jeweils über sieben Koeffizienten für Stichtage strikt vor `2020-06-30`. Die CSV enthält fünf Zeilen sowie Zähler- und Nennerfreiheitsgrade.
+[number withheld]. **Erfüllt.** Das TEX-Fragment enthält `\toprule` und `\bottomrule`, aber keine `\documentclass`.
+[number withheld]. **Erfüllt.** Ergebnisse je zusätzlicher verletzter Linie, in Quoteneinheiten:
 
-   | Outcome | Koeffizient | 95%-KI | Vortrend-p | N | Firmen |
+   | Outcome | Koeffizient | [number withheld]%-KI | Vortrend-p | N | Firmen |
    |---|---:|---:|---:|---:|---:|
-   | `rl1` | 0,011016 | [−0,014738; 0,036770] | 0,003154 | 1.575 | 126 |
-   | `rl2` | −0,008203 | [−0,382422; 0,366015] | 0,235290 | 1.544 | 126 |
-   | `rl2_gap` | 0,007320 | [−0,050243; 0,064883] | 0,387946 | 1.544 | 126 |
-   | `mi_share` | 0,024786 | [−0,000515; 0,050088] | 0,579684 | 1.519 | 124 |
-   | `jv_ta` | 0,001738 | [−0,004548; 0,008024] | 0,453522 | 1.251 | 103 |
+   | `rl1` | [number withheld] | [[number withheld]; [number withheld]] | [number withheld] | [number withheld] | [number withheld] |
+   | `rl2` | [number withheld] | [[number withheld]; [number withheld]] | [number withheld] | [number withheld] | [number withheld] |
+   | `rl2_gap` | [number withheld] | [[number withheld]; [number withheld]] | [number withheld] | [number withheld] | [number withheld] |
+   | `mi_share` | [number withheld] | [[number withheld]; [number withheld]] | [number withheld] | [number withheld] | [number withheld] |
+   | `jv_ta` | [number withheld] | [[number withheld]; [number withheld]] | [number withheld] | [number withheld] | [number withheld] |
 
    N und Firmenzahlen gelten jeweils auch für die zugehörige Event Study.
-8. **Nicht erfüllt als globaler Unverändertheitsnachweis.** Meine Schreiboperationen betrafen ausschließlich die zehn freigegebenen Dateien. Der Vorher-nachher-Vergleich zeigte jedoch parallele Änderungen an `proposal/references.bib`, `review/T008_reviewer.log`, `state/terminal.log` und `tasks/T009_worker.log`; diese Dateien habe ich nicht bearbeitet. Eingabepanel und Aufgabenkarte blieben unverändert, einschließlich `status: APPROVED`.
+[number withheld]. **Nicht erfüllt als globaler Unverändertheitsnachweis.** Meine Schreiboperationen betrafen ausschließlich die zehn freigegebenen Dateien. Der Vorher-nachher-Vergleich zeigte jedoch parallele Änderungen an `proposal/references.bib`, `review/T008_reviewer.log`, `state/terminal.log` und `tasks/T009_worker.log`; diese Dateien habe ich nicht bearbeitet. Eingabepanel und Aufgabenkarte blieben unverändert, einschließlich `status: APPROVED`.
 
 ## Offene Fragen
 
-- **Ausfälle:** Ausgangsbasis sind 1.576 Beobachtungen bei 126 Firmen. Bei `rl1` entfällt eine Beobachtung, bei `rl2` und `rl2_gap` jeweils 32 wegen fehlender Outcomes. Bei `mi_share` entfallen 56 fehlende Outcomes und eine Singleton-Beobachtung. Bei `jv_ta` entfallen 322 fehlende Outcomes und drei Singletons, insgesamt **325/1.576 = 20,621827 %**. In allen 322 Zeilen fehlt der JV-Eingangswert; in einer davon fehlt zusätzlich die Bilanzsumme. Dieser über 5 % liegende Ausfall ist damit erklärt; es wurden keine Werte imputiert. Alle Modelle behalten mindestens 100 Firmen.
+- **Ausfälle:** Ausgangsbasis sind [number withheld] Beobachtungen bei [number withheld] Firmen. Bei `rl1` entfällt eine Beobachtung, bei `rl2` und `rl2_gap` jeweils [number withheld] wegen fehlender Outcomes. Bei `mi_share` entfallen [number withheld] fehlende Outcomes und eine Singleton-Beobachtung. Bei `jv_ta` entfallen [number withheld] fehlende Outcomes und drei Singletons, insgesamt **[number withheld]/[number withheld] = [number withheld] %**. In allen [number withheld] Zeilen fehlt der JV-Eingangswert; in einer davon fehlt zusätzlich die Bilanzsumme. Dieser über [number withheld] % liegende Ausfall ist damit erklärt; es wurden keine Werte imputiert. Alle Modelle behalten mindestens [number withheld] Firmen.
 - Die parallelen Änderungen außerhalb des Schreibbereichs müssen vor dem Einfrieren des Review-Pakets zugeordnet werden; ich habe sie nicht zurückgesetzt.
 - Die RL1-Definition bleibt entsprechend dem Projektstand gegenüber einer Primärquelle ungeprüft und ist so gekennzeichnet. Eine Einbindung und Kompilierung des TEX-Fragments im Proposal wurde nicht geprüft.
 - Vorschlag für das KI-Protokoll nach Abnahme: „Codex implementierte T009; geprüft durch wiederholte Ausführung, bytegleiche Tabellenexporte, Abgleich mit Modellobjekten und visuelle PDF-Kontrolle; unabhängiges Review ausstehend.“ `AI_USAGE_LOG.md` blieb außerhalb des Schreibbereichs unverändert.

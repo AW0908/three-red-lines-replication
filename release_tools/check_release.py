@@ -13,18 +13,15 @@ def table(p,fields,rows):
 # used locally as a denylist, never emitted into the release or validation reports.
 _,original=read(ROOT/'replication/data/processed/panel_firm_halfyear.csv')
 owner_names={r['owner_name'] for r in original if r['owner_name'] not in {'NA',''} and len(r['owner_name'])>=4}
-redacted=[]
-for p in (OUT/'audit').rglob('*'):
+owner_findings=[]
+for p in list((OUT/'audit').rglob('*'))+list((OUT/'process').rglob('*')):
  if not p.is_file():continue
- lines=p.read_text().splitlines(True);n=0
- for i,line in enumerate(lines):
-  if any(s in line for s in owner_names):lines[i]='[ownership excerpt withheld in public audit]\n';n+=1
- if n:p.write_text(''.join(lines));redacted.append({'file':str(p.relative_to(OUT)),'lines_redacted':n})
-ledger=OUT/'validation/OWNERSHIP_AUDIT_REDACTIONS.csv'
-if ledger.exists():
- _,old=read(ledger)
- redacted=old+redacted
-table(ledger,['file','lines_redacted'],redacted)
+ if p.suffix.lower() not in {'.md','.log','.txt','.csv','.json','.canvas','.base','.sh','.py','.conf','.html','.tex'}:continue
+ lines=p.read_text().splitlines()
+ for i,line in enumerate(lines,1):
+  if any(s in line for s in owner_names):owner_findings.append({'file':str(p.relative_to(OUT)),'line':i,'handling':'FAIL; rebuild with sanitizer'})
+table(OUT/'validation/T084_OWNER_FINDINGS.csv',['file','line','handling'],owner_findings)
+assert not owner_findings, 'Licensed ownership string in process/audit payload'
 # Policy scans report paths/counts, never secret or licensed values.
 patterns={
  'email':re.compile(rb'[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}'),
@@ -66,7 +63,7 @@ for p in (OUT/'data').rglob('*.csv'):
  matched={i for i in ids if i in p.read_text()}
  if matched:
   rel=p.relative_to(OUT).as_posix()
-  provenance='Public ID-only removal flag' if p.name=='REMOVED_FIRMS.csv' else 'Independent EastMoney/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation'
+  provenance='Public ID-only removal flag' if p.name=='REMOVED_FIRMS.csv' else 'Independent EastMoney/HKEX/manual/Sina/prices source; ID itself public under PI decision; not a Wind financial observation'
   data_matches.append({'file':rel,'removed_ID_matches':len(matched),'interpretation':provenance})
 # Extract references are prohibited in data values; REMOVED_COLUMNS is an explicit
 # provenance ledger, whose source filenames are required by T073 Rework 1.
@@ -81,7 +78,7 @@ assert not name_matches,name_matches
 # Repeat screening across every included output, including firm IDs hidden in text.
 _,inventory=read(OUT/'OUTPUT_INVENTORY.csv')
 recheck=[]
-public_firm_outputs={'t061_control_panel.csv','t061_download_failures.csv','t063_control_membership.csv'}
+public_firm_outputs={'t061_control_panel.csv','t061_download_failures.csv','t063_control_membership.csv','t076_hk_panel.csv','t076_hk_membership.csv'}
 for r in inventory:
  if r['decision']!='included':
   assert not (OUT/r['file']).exists(),r['file']
@@ -99,7 +96,8 @@ for r in inventory:
  # they contain no removed IDs. All other included outputs are aggregate/docs.
  assert not matches,(r['file'],len(matches))
  assert not firm_specific or p.name in public_firm_outputs,r['file']
- recheck.append({'file':r['file'],'classification':r['classification'],'removed_ID_matches':len(matches),'firm_specific':firm_specific,'evidence':('Public Sina control roster / EastMoney financial fields; code/21_diff_bunching.R and code/22_referee5.R; zero removed IDs' if firm_specific else 'Aggregate/figure/documentation; no firm-specific estimate for a removed ID'),'result':'PASS'})
+ evidence=('Public HKEX roster / EastMoney HK statements; code/25_hk_control.R; raw MANIFEST verified; zero removed IDs' if p.name.startswith('t076_hk_') else 'Public Sina control roster / EastMoney financial fields; code/21_diff_bunching.R and code/22_referee5.R; zero removed IDs') if firm_specific else 'Aggregate/figure/documentation; no firm-specific estimate for a removed ID'
+ recheck.append({'file':r['file'],'classification':r['classification'],'removed_ID_matches':len(matches),'firm_specific':firm_specific,'evidence':evidence,'result':'PASS'})
 table(OUT/'validation/OUTPUT_RECHECK.csv',list(recheck[0]),recheck)
 assert not (OUT/'outputs/tables/t031_leave_one_out.csv').exists()
 assert not (OUT/'data/raw/manual/ownership_manual_coding.csv').exists()
@@ -117,6 +115,28 @@ all_withheld=withheld+wi
 summary={'privacy_and_secrets_findings':len(findings),'source_inputs_checked':len(baseline),'source_inputs_changed':changed,'source_Wind_files_matched':0,'Wind_extract_name_matches_in_data':0,'public_panel_rows':len(panel),'public_panel_firms':len({r['firm_id'] for r in panel}),'public_panel_columns':panel_columns,'removed_firms':len(ids),'removed_columns':len(cols),'output_inventory_files':len(inventory),'outputs_withheld':len(withheld),'outputs_included':len(inventory)-len(withheld),'raw_inputs_withheld':len(wi),'outputs_rechecked':len(recheck),'removed_ID_matches_in_included_outputs':0,'Wind_extract_name_references_in_column_provenance':'Allowed source filenames in REMOVED_COLUMNS.csv only; no Wind values','oversize_original_output':'t066_rework1_old_new.csv is withheld: mixed firm-specific old/new values; no split/compressed copy required','manifest_convention':'All payload files except MANIFEST itself; excludes .git transport metadata; withheld files are explicit status=withheld rows with source hashes, not payload.'}
 (OUT/'validation/CHECKS.json').write_text(json.dumps(summary,indent=2)+'\n')
 assert not findings,findings
+from t084_scan import scan_release
+from t084_verify import verify_snapshot
+verify_snapshot(ROOT, OUT)
+scan_release(ROOT, OUT)
+# Complete per-file report inventory, including unchanged refreshed copies and
+# exclusions; no manifest hash here, avoiding a recursive checksum dependency.
+session=json.loads((OUT/'validation/T084_SESSION_BEFORE.json').read_text())
+previous=session['release']
+current={p.relative_to(OUT).as_posix():p for p in OUT.rglob('*') if p.is_file() and '.git' not in p.relative_to(OUT).parts}
+ledger='validation/T084_FILE_CHANGES.csv'
+current[ledger]=OUT/ledger
+changes=[]
+for rel in sorted(set(previous)|set(current)):
+ if rel not in current: action='excluded from payload'
+ elif rel in {'MANIFEST.csv',ledger}: action='generated inventory'
+ elif rel not in previous: action='new'
+ elif sha(current[rel])!=previous[rel]: action='modified'
+ else: action='byte-identical existing file (may have been refreshed)'
+ top=rel.split('/')[0]
+ purpose={'process':'sanitized governance/history and source inventory','audit':'sanitized T073 compatibility audit','code':'accepted analysis source/helper','data':'permitted raw/inspection data and provenance','outputs':'permitted accepted aggregate or public-control output','validation':'validation evidence or preserved historical evidence','release_tools':'offline export/check tools','software':'recorded software versions'}.get(top,'release documentation, licence or build entry point')
+ changes.append(dict(file='public_release/'+rel,action=action,purpose=purpose))
+table(OUT/ledger,['file','action','purpose'],changes)
 # Complete file list; includes validation scripts and reports but never Git internals.
 files=sorted(p for p in OUT.rglob('*') if p.is_file() and '.git' not in p.relative_to(OUT).parts and p!=OUT/'MANIFEST.csv')
 entries=[{'file':p.relative_to(OUT).as_posix(),'status':'included','size_bytes':p.stat().st_size,'sha256':sha(p)} for p in files]

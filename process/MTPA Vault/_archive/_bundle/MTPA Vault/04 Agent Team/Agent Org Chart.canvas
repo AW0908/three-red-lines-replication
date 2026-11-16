@@ -1,0 +1,299 @@
+{
+  "nodes": [
+    {
+      "id": "g_sub",
+      "type": "group",
+      "x": -1240,
+      "y": 640,
+      "width": 560,
+      "height": 420,
+      "color": "6",
+      "label": "Claude Code subagents (vault builders, 2026-10-14)"
+    },
+    {
+      "id": "pi",
+      "type": "text",
+      "x": -200,
+      "y": -560,
+      "width": 440,
+      "height": 220,
+      "text": "## PI – Anton (human)\nDecides question, estimand, sample, data, public claims.\nApproves plans · accepts results · overrides.\nOnly user of `agents/pi.sh`\n\n[[Role - PI]]",
+      "color": "2"
+    },
+    {
+      "id": "copi",
+      "type": "text",
+      "x": -200,
+      "y": -220,
+      "width": 440,
+      "height": 220,
+      "text": "## Co-PI – Claude Code\nWrites task cards (`PLAN`), triggers worker, first-pass QA, freezes candidate.\nNever runs `pi.sh`.\n\n[[Role - Co-PI]]",
+      "color": "5"
+    },
+    {
+      "id": "wd",
+      "type": "text",
+      "x": -640,
+      "y": 120,
+      "width": 400,
+      "height": 200,
+      "text": "### Worker (data/code) – Codex\n`codex exec -s workspace-write`\nwrites only card write scope (rule)\n\n[[Role - Worker]]",
+      "color": "4"
+    },
+    {
+      "id": "wt",
+      "type": "text",
+      "x": -160,
+      "y": 120,
+      "width": 400,
+      "height": 200,
+      "text": "### Worker (text) – Claude\nseparate call, no chat history\n`Edit(./proposal/**)` only, no Bash\n\n[[Role - Writer]]",
+      "color": "4"
+    },
+    {
+      "id": "ra",
+      "type": "text",
+      "x": 360,
+      "y": 120,
+      "width": 420,
+      "height": 180,
+      "text": "### Reviewer (data tasks) – Antigravity / Gemini\n`agy --mode plan`, reads only\n\n[[Role - Independent Reviewer]]",
+      "color": "3"
+    },
+    {
+      "id": "rc",
+      "type": "text",
+      "x": 360,
+      "y": 340,
+      "width": 420,
+      "height": 160,
+      "text": "### Reviewer (text tasks) – Codex\n`codex exec -s read-only`\n\n[[Role - Independent Reviewer]]",
+      "color": "3"
+    },
+    {
+      "id": "tasks",
+      "type": "text",
+      "x": -640,
+      "y": 640,
+      "width": 340,
+      "height": 140,
+      "text": "**tasks/**\n`T###.md` cards (status lives only here)\n`T###_report.md` worker reports"
+    },
+    {
+      "id": "review",
+      "type": "text",
+      "x": -260,
+      "y": 640,
+      "width": 340,
+      "height": 160,
+      "text": "**review/**\n`T###.md` verdicts\n`*_frozen.sha256`, `*_baseline.sha256`\n`*_proposal.diff`, `*_latex.txt`"
+    },
+    {
+      "id": "state",
+      "type": "text",
+      "x": 120,
+      "y": 640,
+      "width": 340,
+      "height": 140,
+      "text": "**state/**\n`STATE.md` decisions & open questions\n`runs.log` · `approvals.log`"
+    },
+    {
+      "id": "proposal",
+      "type": "text",
+      "x": 500,
+      "y": 640,
+      "width": 300,
+      "height": 120,
+      "text": "**proposal/** (git clone)\n`main.tex`, `references.bib`"
+    },
+    {
+      "id": "overleaf",
+      "type": "text",
+      "x": 500,
+      "y": 860,
+      "width": 300,
+      "height": 200,
+      "text": "## Overleaf\n`agents/overleaf.sh pull · check · push T###`\npush only at `DELIVERED`\n\n[[Overleaf Sync]]",
+      "color": "4"
+    },
+    {
+      "id": "sa_lead",
+      "type": "text",
+      "x": -1220,
+      "y": 700,
+      "width": 520,
+      "height": 70,
+      "text": "**Lead** – [number withheld] Home, Task Board, T003–T005, [number withheld] Progress"
+    },
+    {
+      "id": "sa_res",
+      "type": "text",
+      "x": -1220,
+      "y": 780,
+      "width": 520,
+      "height": 60,
+      "text": "**Research** – [number withheld] Research, [number withheld] Literature"
+    },
+    {
+      "id": "sa_data",
+      "type": "text",
+      "x": -1220,
+      "y": 850,
+      "width": 520,
+      "height": 60,
+      "text": "**Data** – Variables, [number withheld] Data"
+    },
+    {
+      "id": "sa_course",
+      "type": "text",
+      "x": -1220,
+      "y": 920,
+      "width": 520,
+      "height": 60,
+      "text": "**Course** – [number withheld] Course, [number withheld] Proposal"
+    },
+    {
+      "id": "sa_agents",
+      "type": "text",
+      "x": -1220,
+      "y": 990,
+      "width": 520,
+      "height": 60,
+      "text": "**Agent Team** – [number withheld] Agent Team, T001, T002, Run Log"
+    },
+    {
+      "id": "legend",
+      "type": "text",
+      "x": 340,
+      "y": -540,
+      "width": 460,
+      "height": 180,
+      "text": "**Workflow** PLAN → APPROVED → EXECUTED → CANDIDATE → PASS / REWORK / ESCALATE → DELIVERED\nWhoever executes does not review.\n\n[[Task Workflow]] · [[Agent Team Overview]] · [[Safeguards]]",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "pi",
+      "toNode": "copi",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "goal · approve · accept"
+    },
+    {
+      "id": "e2",
+      "fromNode": "copi",
+      "toNode": "wd",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "worker.sh (data)"
+    },
+    {
+      "id": "e3",
+      "fromNode": "copi",
+      "toNode": "wt",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "worker.sh (text)"
+    },
+    {
+      "id": "e4",
+      "fromNode": "copi",
+      "toNode": "ra",
+      "fromSide": "right",
+      "toSide": "top",
+      "label": "candidate.sh → review.sh"
+    },
+    {
+      "id": "e5",
+      "fromNode": "copi",
+      "toNode": "rc",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "candidate.sh → review.sh"
+    },
+    {
+      "id": "e6",
+      "fromNode": "ra",
+      "toNode": "pi",
+      "fromSide": "top",
+      "toSide": "right",
+      "label": "ESCALATE",
+      "color": "1"
+    },
+    {
+      "id": "e7",
+      "fromNode": "wd",
+      "toNode": "tasks",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "report"
+    },
+    {
+      "id": "e8",
+      "fromNode": "wt",
+      "toNode": "proposal",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "LaTeX edits"
+    },
+    {
+      "id": "e9",
+      "fromNode": "ra",
+      "toNode": "review",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "verdict (via script)"
+    },
+    {
+      "id": "e10",
+      "fromNode": "rc",
+      "toNode": "review",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "verdict (via script)"
+    },
+    {
+      "id": "e11",
+      "fromNode": "copi",
+      "toNode": "state",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "STATE.md"
+    },
+    {
+      "id": "e12",
+      "fromNode": "proposal",
+      "toNode": "overleaf",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "push (DELIVERED)"
+    },
+    {
+      "id": "e13",
+      "fromNode": "overleaf",
+      "toNode": "proposal",
+      "fromSide": "right",
+      "toSide": "right",
+      "label": "pull"
+    },
+    {
+      "id": "e14",
+      "fromNode": "pi",
+      "toNode": "state",
+      "fromSide": "left",
+      "toSide": "top",
+      "label": "approvals.log (pi.sh)",
+      "color": "2"
+    },
+    {
+      "id": "e15",
+      "fromNode": "g_sub",
+      "toNode": "tasks",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "read-only sources"
+    }
+  ]
+}

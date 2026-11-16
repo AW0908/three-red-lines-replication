@@ -8,40 +8,40 @@ VERDICT: PASS
 
 Keine inhaltlichen Inkonsistenzen zwischen Text, Abbildung und Outputs gefunden. Drei Hinweise ohne Urteilsfolge:
 
-[firm-specific excerpt withheld in public audit]
-2. **Annahmenkasten in der Abbildung (`proposal/figures/toc_nef.tex:44–45`).** „New equity is genuine" und „new equity carries risk" stehen nebeneinander und sagen inhaltlich fast dasselbe. Der Absatz in `03_framework.tex` nennt beides getrennt. Das ist nicht falsch, aber redundant.
-[firm-specific excerpt withheld in public audit]
+[firm-specific excerpt withheld in public process copy]
+[number withheld]. **Annahmenkasten in der Abbildung (`proposal/figures/toc_nef.tex:44–45`).** „New equity is genuine" und „new equity carries risk" stehen nebeneinander und sagen inhaltlich fast dasselbe. Der Absatz in `03_framework.tex` nennt beides getrennt. Das ist nicht falsch, aber redundant.
+[firm-specific excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
 Nur soweit meine Rolle (Konsistenz Text ↔ Output ↔ Abbildung) betroffen ist:
 
-1. **Abbildung nutzt nur Aussagen aus dem Text: belegt erfüllt.**
-   - *Need* („High developer leverage") und externer Faktor („Sector distress from 2021") stehen in `L002_Fan_2026.pdf`, S. 1–2: „26 of the nation's top 100 real estate enterprises encountered financial distress in 2021", „high leverage, high debt".
-   - *Aim* („Lower economic, not only reported, leverage") entspricht `03_framework.tex:24` (Abschnitt 3.2).
-   - *Activities*: Schwellen, Caps und „January 1, 2021" stehen in `05_context_data.tex:11`.
-   - „Group or partner capital" steht in `03_framework.tex:18`. „Opaque contract terms" deckt sich mit Finding 3 (239 von 249 Transaktionen U).
-   - „Rollover risk", „systemic risk", „financial stability" und „COVID-19" sind aus Abbildung und Absatz entfernt (Rework 1, Punkt 2).
-2. **Finding-3-Marker (Rework 1, Punkt 3): erfüllt.** Er steht im Annahmenkasten (`toc_nef.tex:45`). Der Pfeil zum Aim ist gestrichelt und mit „Not observed" beschriftet. Finding 1 steht am Pfeil Activities → Short-term, Finding 2 am Pfeil Short-term → Medium-term, passend zu den Abschnitten 6.1 und 6.2.
-3. **Querverweise: erfüllt.** `\ref{sec:preliminary}`, `\ref{fig:toc_nef}` und `\citep{fan2026deleverage}` zeigen auf das Gemeinte. Der Build-Log meldet keine undefinierten Verweise. `fan2026deleverage` steht in `references.bib:70` und in `02_literature.tex`.
-4. **Zahlen gegen Outputs: erfüllt.** Stichprobenhaft geprüft, alle stimmen:
-   - **`t040_validation.csv`:** MAE 0,57 Punkte (n=52), 76,9 % innerhalb eines Punkts, 64 Werte von 30 Entwicklern, 52 Werte im Bereich 0,60–0,80, 6 Klassifikationsabweichungen (1+5), Mittelwert 0,99 Punkte.
-   - **`t043_meas_error.csv`:** Mittel 2,01; Anteil 86 % bei 64 Paaren und 40 % bei 52 Paaren.
-   - **`t043_trend_cf.csv`:** D_trend = −9,8 [−15,1; −4,7], b_trend = 1,52 [0,14; 3,34], Bin-Trend −5,6 [−11,9; 1,0] mit CI über null.
-   - **`t046_cash_backing_all.csv`:** 79,5 % bei n=109; Crossers 96,6 % bei n=33; Others 80,8 % bei n=48.
-   - **`t047_coding.csv`, Zeile pooled:** D=4 (D1 1, D2 2, unspezifiziert 1).
-   - **`t044_attribution_totals.csv`:** 108,3 Mrd., 3,5 Mrd. (3,2 %), 104,8 Mrd.; neun Firmen.
+[number withheld]. **Abbildung nutzt nur Aussagen aus dem Text: belegt erfüllt.**
+   - *Need* („High developer leverage") und externer Faktor („Sector distress from [number withheld]") stehen in `L002_Fan_2026.pdf`, S. [number withheld]–[number withheld]: „[number withheld] of the nation's top [number withheld] real estate enterprises encountered financial distress in [number withheld]", „high leverage, high debt".
+   - *Aim* („Lower economic, not only reported, leverage") entspricht `03_framework.tex:24` (Abschnitt [number withheld]).
+   - *Activities*: Schwellen, Caps und „January [number withheld], [number withheld]" stehen in `05_context_data.tex:11`.
+   - „Group or partner capital" steht in `03_framework.tex:18`. „Opaque contract terms" deckt sich mit Finding [number withheld] ([number withheld] von [number withheld] Transaktionen U).
+   - „Rollover risk", „systemic risk", „financial stability" und „COVID-[number withheld]" sind aus Abbildung und Absatz entfernt (Rework [number withheld], Punkt [number withheld]).
+[number withheld]. **Finding-[number withheld]-Marker (Rework [number withheld], Punkt [number withheld]): erfüllt.** Er steht im Annahmenkasten (`toc_nef.tex:45`). Der Pfeil zum Aim ist gestrichelt und mit „Not observed" beschriftet. Finding [number withheld] steht am Pfeil Activities → Short-term, Finding [number withheld] am Pfeil Short-term → Medium-term, passend zu den Abschnitten [number withheld] und [number withheld].
+[number withheld]. **Querverweise: erfüllt.** `\ref{sec:preliminary}`, `\ref{fig:toc_nef}` und `\citep{fan2[number withheld]deleverage}` zeigen auf das Gemeinte. Der Build-Log meldet keine undefinierten Verweise. `fan2[number withheld]deleverage` steht in `references.bib:70` und in `02_literature.tex`.
+[number withheld]. **Zahlen gegen Outputs: erfüllt.** Stichprobenhaft geprüft, alle stimmen:
+   - **`t040_validation.csv`:** MAE [number withheld] Punkte (n=[number withheld]), [number withheld] % innerhalb eines Punkts, [number withheld] Werte von [number withheld] Entwicklern, [number withheld] Werte im Bereich [number withheld]–[number withheld], [number withheld] Klassifikationsabweichungen ([number withheld][number withheld]), Mittelwert [number withheld] Punkte.
+   - **`t043_meas_error.csv`:** Mittel [number withheld]; Anteil [number withheld] % bei [number withheld] Paaren und [number withheld] % bei [number withheld] Paaren.
+   - **`t043_trend_cf.csv`:** D_trend = [number withheld] [[number withheld]; [number withheld]], b_trend = [number withheld] [[number withheld]; [number withheld]], Bin-Trend [number withheld] [[number withheld]; [number withheld]] mit CI über null.
+   - **`t046_cash_backing_all.csv`:** [number withheld] % bei n=[number withheld]; Crossers [number withheld] % bei n=[number withheld]; Others [number withheld] % bei n=[number withheld].
+   - **`t047_coding.csv`, Zeile pooled:** D=[number withheld] (D1 [number withheld], D2 [number withheld], unspezifiziert [number withheld]).
+   - **`t044_attribution_totals.csv`:** [number withheld] Mrd., [number withheld] Mrd. ([number withheld] %), [number withheld] Mrd.; neun Firmen.
    - Die Zahlen sind laut Diff nicht verändert worden. Es gibt nur sprachliche Umstellungen.
-5. **Einheitlicher Kapitalbegriff: erfüllt.** „capital from minority shareholders" steht an allen genannten Stellen: 06:70, 06:88/89/91, Pilotabsatz, `t045_crosser_shares.tex`, `results.tex` (Begleittext, Tabellenkopf, Outputverzeichnis). Die Ausnahme „payment from minority shareholders" in `results.tex:146` ist sprachlich begründet und inhaltlich gleich.
-6. **Wind: erfüllt.** Die erste Erwähnung (`05_context_data.tex:17`) erklärt „Wind Financial Terminal, a Chinese financial-data service".
-7. **Haupttext ≤ 15 Seiten, keine Overfull-Box > 2 pt: nicht meine Rolle.** Der Log zeigt eine Overfull-Box mit 0,79 pt (`main.log:1815`), weitere nicht gefunden. Die Seitenzahl habe ich nicht selbst geprüft.
-8. **Schreibregeln und Sprachpunkte (Rechtschreibung, Stil): nicht meine Rolle.**
+[number withheld]. **Einheitlicher Kapitalbegriff: erfüllt.** „capital from minority shareholders" steht an allen genannten Stellen: [number withheld]:[number withheld], [number withheld]:[number withheld]/[number withheld]/[number withheld], Pilotabsatz, `t045_crosser_shares.tex`, `results.tex` (Begleittext, Tabellenkopf, Outputverzeichnis). Die Ausnahme „payment from minority shareholders" in `results.tex:146` ist sprachlich begründet und inhaltlich gleich.
+[number withheld]. **Wind: erfüllt.** Die erste Erwähnung (`05_context_data.tex:17`) erklärt „Wind Financial Terminal, a Chinese financial-data service".
+[number withheld]. **Haupttext ≤ [number withheld] Seiten, keine Overfull-Box > [number withheld] pt: nicht meine Rolle.** Der Log zeigt eine Overfull-Box mit [number withheld] pt (`main.log:1815`), weitere nicht gefunden. Die Seitenzahl habe ich nicht selbst geprüft.
+[number withheld]. **Schreibregeln und Sprachpunkte (Rechtschreibung, Stil): nicht meine Rolle.**
 
 ## Nicht geprüft
 
-- Die PDF-Ausgabe und die PNG-Dateien in `/tmp` habe ich nicht geöffnet. Ob die Abbildung lesbar ist und ob die Seitenzahl 15 stimmt, habe ich nicht verifiziert.
-- Folienseiten 23–26 der Lecture-Datei habe ich nicht gelesen. Die Behauptung, dass die Folien keine publizierte Quelle nennen, bleibt unverifiziert. Die Fußnote zitiert die Vorlesung.
-- Nicht jede Zahl in `06_preliminary_analysis.tex` wurde gegen ihre CSV geprüft, insbesondere Finding 1 und die Heterogenität (13,1 / 7,6 / 18,5 / 7,5 / 15,1 / 7,9). Diese Zeilen sind laut Diff unverändert gegenüber dem bereits begutachteten Stand.
+- Die PDF-Ausgabe und die PNG-Dateien in `/tmp` habe ich nicht geöffnet. Ob die Abbildung lesbar ist und ob die Seitenzahl [number withheld] stimmt, habe ich nicht verifiziert.
+- Folienseiten [number withheld]–[number withheld] der Lecture-Datei habe ich nicht gelesen. Die Behauptung, dass die Folien keine publizierte Quelle nennen, bleibt unverifiziert. Die Fußnote zitiert die Vorlesung.
+- Nicht jede Zahl in `06_preliminary_analysis.tex` wurde gegen ihre CSV geprüft, insbesondere Finding [number withheld] und die Heterogenität ([number withheld] / [number withheld] / [number withheld] / [number withheld] / [number withheld] / [number withheld]). Diese Zeilen sind laut Diff unverändert gegenüber dem bereits begutachteten Stand.
 - `review/T048_latex.txt` enthielt keine der gesuchten Meldungen. Ich habe das als Hinweis auf einen sauberen Lauf gewertet, aber nicht weiter ausgewertet.
 - Der Noto-Zweig der CJK-Schrift wurde laut Bericht nicht auf Overleaf getestet und liegt außerhalb meiner Rolle.
 - Der AI-Usage-Log-Vorschlag des Workers ist nicht umgesetzt; `AI_USAGE_LOG.md` habe ich nicht auf einen neuen Eintrag geprüft.

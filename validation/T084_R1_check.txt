@@ -1,0 +1,24 @@
+T084 STRUCTURE PASS: 730 source/public hash pairs; 28 accepted build steps; 54 accepted output freezes.
+T084 SAFETY PASS: {"payload_files_scanned": 3883, "unresolved_safety_findings": 0, "wind_reference_occurrences": 2999, "identity_occurrences": 332, "identity_files": 141, "scope": "payload excludes untouched .git; PDF text/metadata and PNG text decoded", "limitation": "pattern/provenance checks, not proof against arbitrary encoded secrets or image steganography"}
+{
+  "privacy_and_secrets_findings": 0,
+  "source_inputs_checked": 5371,
+  "source_inputs_changed": [],
+  "source_Wind_files_matched": 0,
+  "Wind_extract_name_matches_in_data": 0,
+  "public_panel_rows": 1880,
+  "public_panel_firms": 150,
+  "public_panel_columns": 77,
+  "removed_firms": 34,
+  "removed_columns": 12,
+  "output_inventory_files": 740,
+  "outputs_withheld": 371,
+  "outputs_included": 369,
+  "raw_inputs_withheld": 1,
+  "outputs_rechecked": 369,
+  "removed_ID_matches_in_included_outputs": 0,
+  "Wind_extract_name_references_in_column_provenance": "Allowed source filenames in REMOVED_COLUMNS.csv only; no Wind values",
+  "oversize_original_output": "t066_rework1_old_new.csv is withheld: mixed firm-specific old/new values; no split/compressed copy required",
+  "manifest_convention": "All payload files except MANIFEST itself; excludes .git transport metadata; withheld files are explicit status=withheld rows with source hashes, not payload."
+}
+MANIFEST PASS: 3883 payload files + 372 withheld entries; 487035627 bytes including manifest; maximum file 19814038 bytes. No .git metadata in manifest.

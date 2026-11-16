@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MTPA Agenten-Team</title>
+<style>
+/* Leitstand: Laufbanner oben, Kennzahlen, je Tool eine Karte, Ablauf-Tafel nach Status, Laufprotokoll, Terminal */
+:root{
+  --bg:#EEF0F3; --panel:#FFFFFF; --ink:#16202A; --muted:#5D6B78; --line:#D5DBE1; --sunk:#F5F7F9;
+  --accent:#2B5FD9; --codex:#1F8A70; --claude:#C46A2B; --agy:#5B5FC7;
+  --pass:#2E7D4F; --pass-bg:#DCEFE3; --rework:#A86A00; --rework-bg:#F7EBCF; --esc:#B3261E; --esc-bg:#F6DCDA;
+  --run:#2B5FD9; --run-bg:#DDE6FA; --term:#0F1720; --term-ink:#C9D4DE;
+  --f-ui:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0E1318; --panel:#161D24; --ink:#E1E7ED; --muted:#8E9BA7; --line:#2A343E; --sunk:#11171D;
+  --accent:#7EA2F5; --codex:#4CC3A2; --claude:#E79A5E; --agy:#9C9FF0;
+  --pass:#6CC48F; --pass-bg:#173326; --rework:#E3B556; --rework-bg:#3A2E12; --esc:#F07A72; --esc-bg:#3E1A18;
+  --run:#7EA2F5; --run-bg:#1C2A47; --term:#070B0F; --term-ink:#BAC6D1; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 var(--f-ui)}
+.wrap{max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:grid;gap:22px}
+h1{font-size:1.6rem;margin:0;letter-spacing:-.01em}
+h2{font-size:.78rem;margin:0 0 10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600}
+.mono{font-family:var(--f-mono)} .num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+header{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.live{display:inline-flex;align-items:center;gap:8px;font:12px var(--f-mono);color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pass)}
+.dot.stale{background:var(--esc)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;min-width:0}
+
+/* Laufbanner */
+.banner{border-radius:8px;padding:16px 18px;display:grid;gap:10px;border:1px solid var(--line);background:var(--panel)}
+.banner.on{border-color:var(--run);background:var(--run-bg)}
+.banner .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.banner b{font-size:1.1rem}
+.spin{width:16px;height:16px;border:2px solid var(--run);border-right-color:transparent;border-radius:50%;animation:s 1s linear infinite;flex:none}
+@keyframes s{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.banner pre{margin:0;max-height:180px;overflow:auto;background:var(--term);color:var(--term-ink);border-radius:6px;padding:10px 12px;font:12px/1.5 var(--f-mono);white-space:pre-wrap;word-break:break-word}
+.elapsed{font:600 1.1rem var(--f-mono)}
+
+/* Kennzahlen */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi .v{font:600 1.9rem/1.1 var(--f-ui);font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--muted);font-size:.82rem}
+
+/* Tools */
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tool{border-top:4px solid var(--c);display:grid;gap:10px;align-content:start}
+.tool .name{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tool .name b{font-size:1.05rem}
+.tool .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.tool .stats div{display:grid}
+.tool .stats strong{font:600 1.3rem var(--f-ui);font-variant-numeric:tabular-nums}
+.tool .stats span{font-size:.75rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:11px var(--f-mono);padding:2px 8px;border-radius:999px;background:var(--sunk);border:1px solid var(--line)}
+.share{height:6px;background:var(--sunk);border-radius:3px;overflow:hidden}
+.share i{display:block;height:100%;background:var(--c)}
+
+/* Ablauf-Tafel */
+.board{display:grid;grid-template-columns:repeat(7,minmax(130px,1fr));gap:10px;overflow-x:auto;padding-bottom:4px}
+.col{background:var(--sunk);border:1px solid var(--line);border-radius:8px;padding:10px;display:grid;gap:8px;align-content:start;min-height:90px}
+.col h3{margin:0;font:600 11px var(--f-mono);letter-spacing:.06em;color:var(--muted);display:flex;justify-content:space-between}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;display:grid;gap:4px}
+.card.running{border-color:var(--run);box-shadow:0 0 0 1px var(--run)}
+.card .id{font:600 12px var(--f-mono);display:flex;justify-content:space-between;gap:6px}
+.card .t{font-size:.8rem;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .who{font:11px var(--f-mono);color:var(--muted)}
+.prio{font:600 10px var(--f-mono);padding:1px 6px;border-radius:4px;background:var(--sunk);color:var(--muted)}
+.prio.high{background:var(--esc-bg);color:var(--esc)} .prio.low{opacity:.75}
+
+/* Tabellen */
+.grid2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.85rem}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{font:600 10.5px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.r,th.r{text-align:right}
+tr:last-child td{border-bottom:0}
+.tag{font:600 10.5px var(--f-mono);padding:2px 7px;border-radius:4px}
+.tag.PASS{background:var(--pass-bg);color:var(--pass)} .tag.REWORK{background:var(--rework-bg);color:var(--rework)} .tag.ESCALATE{background:var(--esc-bg);color:var(--esc)}
+.tool-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.bars{display:grid;gap:8px}
+.brow{display:grid;grid-template-columns:52px minmax(0,1fr) 80px;gap:10px;align-items:center;font-size:.85rem}
+.brow .track{height:12px;background:var(--sunk);border-radius:3px;overflow:hidden;display:flex}
+.brow .track i{display:block;height:100%}
+.term{margin:0;background:var(--term);color:var(--term-ink);border-radius:8px;padding:12px 14px;font:12px/1.5 var(--f-mono);max-height:340px;overflow:auto;white-space:pre-wrap;word-break:break-word}
+.note{font-size:.8rem;color:var(--muted);margin:10px 0 0;max-width:90ch}
+.err{color:var(--esc);font:12px var(--f-mono)}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tools,.grid2{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<p>Provider-Auswahl: agents/providers.conf und MTPA_*_PROVIDER. Codex ist Standard; alte Toolangaben bleiben historisch.</p>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="muted mono" style="font-size:12px" id="proj">Policy Analysis</div>
+      <h1>MTPA Agenten-Team</h1>
+    </div>
+    <span class="live"><span class="dot" id="dot"></span><span id="upd">verbinde …</span></span>
+  </header>
+
+  <div class="banner" id="banner"></div>
+
+  <div class="kpis">
+    <div class="panel kpi"><div class="v" id="k-runs">–</div><div class="l">Agenten-Läufe gesamt (Worker + Reviewer)</div></div>
+    <div class="panel kpi"><div class="v" id="k-tok">–</div><div class="l">Codex-Tokens (protokolliert)</div></div>
+    <div class="panel kpi"><div class="v" id="k-tasks">–</div><div class="l">Aufgaben geliefert / gesamt</div></div>
+    <div class="panel kpi"><div class="v" id="k-rev">–</div><div class="l">Reviews: PASS / REWORK / ESCALATE</div></div>
+  </div>
+
+  <section>
+    <h2>Verbrauch je Tool</h2>
+    <div class="tools" id="tools"></div>
+    <p class="note">Tokens schreibt nur Codex ins Protokoll, und zwar je Aufgabe und Rolle nur für den letzten Lauf (das Protokoll wird überschrieben). Claude als Text-Worker und Antigravity melden keine Tokenzahlen; dort zählen Läufe und Modellstufe. Der Co-PI (Claude Code im Chat) taucht in den Projektdateien nicht auf.</p>
+  </section>
+
+  <section>
+    <h2>Ablauf</h2>
+    <div class="board" id="board"></div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <h2>Laufprotokoll</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>Zeit</th><th>Aufgabe</th><th>Rolle</th><th>Tool</th><th>Stufe</th><th class="r">Tokens</th><th>Urteil</th></tr></thead>
+        <tbody id="runs"></tbody>
+      </table></div>
+    </section>
+    <section class="panel">
+      <h2>Läufe und Tokens je Aufgabe</h2>
+      <div class="bars" id="pertask"></div>
+      <h2 style="margin-top:20px">PI-Entscheidungen</h2>
+      <div class="tbl"><table><tbody id="appr"></tbody></table></div>
+    </section>
+  </div>
+
+  <section>
+    <h2>Terminal (state/terminal.log)</h2>
+    <pre class="term" id="term"></pre>
+  </section>
+</div>
+
+<script>
+const COLORS = {codex:"var(--codex)", claude:"var(--claude)", agy:"var(--agy)"};
+const NAMES = {codex:"Codex", claude:"Claude", agy:"Antigravity"};
+const COLS = [["PLAN","Plan"],["APPROVED","Freigegeben"],["EXECUTED","Ausgeführt"],["CANDIDATE","Kandidat"],["REWORK","Überarbeiten"],["PASS","Geprüft"],["DELIVERED","Geliefert"]];
+const nf = new Intl.NumberFormat("de-DE");
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let last = null, lastOk = 0;
+
+function dur(sec){ sec=Math.max(0,Math.floor(sec)); const h=Math.floor(sec/3600), m=Math.floor(sec%3600/60), s=sec%60;
+  return (h? h+":"+String(m).padStart(2,"0") : m)+":"+String(s).padStart(2,"0"); }
+function kb(b){ return b>=1e6? (b/1e6).toFixed(1)+" MB" : Math.round(b/1e3)+" KB"; }
+function tierLabel(tool,tier){ return tool==="codex"? "Aufwand "+tier : tool==="agy"? tier.replace("gemini-","Gemini ").replace("-flash-"," Flash ") : tier[0].toUpperCase()+tier.slice(1); }
+
+function render(d){
+  document.getElementById("proj").textContent = d.project;
+  const T = d.tasks, R = d.runs;
+
+  // Banner
+  const b = document.getElementById("banner");
+  if(d.active){
+    const a = d.active, t = T.find(x=>x.id===a.task) || {};
+    b.className = "banner on";
+    b.innerHTML = `<div class="top"><span class="spin"></span>
+      <b>${esc(a.task)} · ${NAMES[a.tool]||esc(a.tool)} als ${a.role==="worker"?"Worker":"Reviewer"}</b>
+      <span class="chip">Priorität ${esc(a.tier_hint)}</span>
+      <span class="elapsed num" id="elapsed" data-start="${a.started}">${dur(Date.now()/1000-a.started)}</span>
+      <span class="muted">${a.proc_alive? "Prozess aktiv" : "kein Prozess gefunden, Lauf evtl. abgebrochen"}${a.log? " · Protokoll "+esc(a.log.path)+" ("+kb(a.log.size)+")":""}</span></div>
+      <div class="muted">${esc(a.title)}</div>
+      ${a.log_tail && a.log_tail.length? `<pre>${esc(a.log_tail.join("\n"))}</pre>`:""}`;
+    const pre=b.querySelector("pre"); if(pre) pre.scrollTop=pre.scrollHeight;
+  } else {
+    b.className = "banner";
+    const lr = R[R.length-1];
+    b.innerHTML = `<div class="top"><b>Kein Agent läuft gerade</b><span class="muted">${lr? "Letzter Lauf: "+esc(lr.ts)+" · "+esc(lr.task)+" "+(NAMES[lr.tool]||lr.tool)+" ("+lr.role+")":""}</span></div>`;
+  }
+
+  // KPIs
+  const tokTotal = Object.values(d.tools).reduce((s,t)=>s+t.tokens_known,0);
+  const v = {PASS:0,REWORK:0,ESCALATE:0}; R.forEach(r=>{ if(r.verdict) v[r.verdict]++; });
+  document.getElementById("k-runs").textContent = R.length;
+  document.getElementById("k-tok").textContent = nf.format(tokTotal);
+  document.getElementById("k-tasks").textContent = (d.status_counts.DELIVERED||0)+" / "+T.length;
+  document.getElementById("k-rev").textContent = `${v.PASS} / ${v.REWORK} / ${v.ESCALATE}`;
+
+  // Tools
+  const maxRuns = Math.max(1,...Object.values(d.tools).map(t=>t.runs));
+  document.getElementById("tools").innerHTML = Object.entries(d.tools).map(([k,t])=>{
+    const isActive = d.active && d.active.tool===k;
+    return `<div class="panel tool" style="--c:${COLORS[k]}">
+      <div class="name"><b>${esc(t.name)}</b>${isActive? '<span class="tag" style="background:var(--run-bg);color:var(--run)">läuft</span>':`<span class="muted mono" style="font-size:11px">${t.last? "zuletzt "+esc(t.last):"noch kein Lauf"}</span>`}</div>
+      <div class="stats">
+        <div><strong>${t.runs}</strong><span>Läufe</span></div>
+        <div><strong>${t.worker_runs} / ${t.reviewer_runs}</strong><span>Worker / Review</span></div>
+        <div><strong>${t.runs_with_tokens? nf.format(t.tokens_known):"k. A."}</strong><span>Tokens${t.runs_with_tokens? " ("+t.runs_with_tokens+" Läufe)":""}</span></div>
+      </div>
+      <div class="share" title="Anteil an allen Läufen"><i style="width:${(t.runs/maxRuns*100).toFixed(0)}%"></i></div>
+      <div class="chips">${Object.entries(t.tiers).map(([tier,n])=>`<span class="chip">${esc(tierLabel(k,tier))} × ${n}</span>`).join("")||'<span class="muted" style="font-size:.8rem">–</span>'}</div>
+    </div>`;}).join("");
+
+  // Board
+  document.getElementById("board").innerHTML = COLS.map(([st,label])=>{
+    const items = T.filter(t=> st==="REWORK"? (t.status==="REWORK"||t.status==="ESCALATE") : t.status===st);
+    return `<div class="col"><h3><span>${label}</span><span>${items.length}</span></h3>${items.map(t=>`
+      <div class="card ${d.active&&d.active.task===t.id?"running":""}">
+        <div class="id"><span>${esc(t.id)}</span><span class="prio ${esc(t.priority)}">${esc(t.priority)}</span></div>
+        <div class="t" title="${esc(t.title)}">${esc(t.title)}</div>
+        <div class="who"><span class="tool-dot" style="background:${COLORS[t.worker]||"var(--muted)"}"></span>${esc(t.worker)} → ${esc(t.reviewer)}${t.runs.length? " · "+t.runs.length+" Läufe":""}</div>
+      </div>`).join("")}</div>`;}).join("");
+
+  // Runs
+  document.getElementById("runs").innerHTML = R.slice().reverse().map(r=>`<tr>
+    <td class="mono">${esc(r.ts.slice(5))}</td><td class="mono">${esc(r.task)}</td><td>${r.role==="worker"?"Worker":"Reviewer"}</td>
+    <td><span class="tool-dot" style="background:${COLORS[r.tool]}"></span>${NAMES[r.tool]||esc(r.tool)}</td>
+    <td class="muted">${esc(tierLabel(r.tool,r.tier))}</td>
+    <td class="r num mono">${r.tokens!=null? nf.format(r.tokens):"–"}</td>
+    <td>${r.verdict? `<span class="tag ${r.verdict}">${r.verdict}</span>`:""}</td></tr>`).join("") || `<tr><td colspan="7" class="muted">Noch keine Läufe.</td></tr>`;
+
+  // Per Aufgabe
+  const withRuns = T.filter(t=>t.runs.length);
+  const maxR = Math.max(1,...withRuns.map(t=>t.runs.length));
+  document.getElementById("pertask").innerHTML = withRuns.map(t=>{
+    const by = {}; t.runs.forEach(r=>by[r.tool]=(by[r.tool]||0)+1);
+    return `<div class="brow"><span class="mono">${esc(t.id)}</span>
+      <div class="track" title="${Object.entries(by).map(([k,n])=>NAMES[k]+": "+n).join(", ")}">${Object.entries(by).map(([k,n])=>`<i style="width:${n/maxR*100}%;background:${COLORS[k]}"></i>`).join("")}</div>
+      <span class="r num mono" style="text-align:right">${t.tokens? nf.format(t.tokens):"–"}</span></div>`;}).join("")
+    + `<div class="chips" style="margin-top:4px">${Object.keys(NAMES).map(k=>`<span class="chip"><span class="tool-dot" style="background:${COLORS[k]}"></span>${NAMES[k]}</span>`).join("")}<span class="chip">rechts: Codex-Tokens</span></div>`;
+
+  // Approvals
+  document.getElementById("appr").innerHTML = d.approvals.slice().reverse().map(a=>`<tr>
+    <td class="mono">${esc(a.ts.slice(5))}</td><td class="mono">${esc(a.task)}</td><td>${esc(a.status)}</td>
+    <td class="muted" style="white-space:normal">${a.override? "Override: "+esc(a.override):""}</td></tr>`).join("");
+
+  // Terminal
+  const term = document.getElementById("term");
+  const atBottom = term.scrollHeight - term.scrollTop - term.clientHeight < 30;
+  term.textContent = d.terminal_tail.join("\n");
+  if(atBottom || !last) term.scrollTop = term.scrollHeight;
+}
+
+async function poll(){
+  try{
+    const r = await fetch("/api/state",{cache:"no-store"});
+    const d = await r.json();
+    if(d.error) throw new Error(d.error);
+    render(d); last = d; lastOk = Date.now();
+  }catch(e){
+    document.getElementById("upd").innerHTML = `<span class="err">keine Verbindung: ${esc(e.message)}</span>`;
+  }
+}
+setInterval(()=>{
+  const el = document.getElementById("elapsed");
+  if(el) el.textContent = dur(Date.now()/1000 - parseFloat(el.dataset.start));
+  if(lastOk){
+    const age = (Date.now()-lastOk)/1000;
+    document.getElementById("dot").className = "dot"+(age>10?" stale":"");
+    if(age<=10) document.getElementById("upd").textContent = "live · aktualisiert vor "+Math.round(age)+" s";
+  }
+},1000);
+poll(); setInterval(poll, 3000);
+</script>
+</body>
+</html>

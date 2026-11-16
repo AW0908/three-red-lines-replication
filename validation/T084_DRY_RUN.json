@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "command": "Rscript --vanilla -e [all setup dependencies available]",
+      "exit": 0,
+      "seconds": 0,
+      "output": "",
+      "expected": "0; no package installation"
+    },
+    {
+      "command": "Rscript --vanilla run_all.R",
+      "exit": 1,
+      "seconds": 1.1,
+      "output": "      ggplot2     4.0.3    4.0.3\n       scales     1.4.0    1.4.0\n       fixest    0.14.2   0.14.2\n modelsummary     2.6.0    2.6.0\n   kableExtra     1.4.0    1.4.0\n     rdrobust     4.1.1    4.1.1\n    rddensity       3.0      3.0\n        stats     4.6.0    4.6.0\n    grDevices     4.6.0    4.6.0\n        tools     4.6.0    4.6.0\nSetup complete.\n00_setup.R: exit 0, 0.71 seconds\n\nRunning 01_clean.R \n01_clean.R: exit 1, 0.26 seconds\nWarning messages:\n1: package \u2018data.table\u2019 was built under R version 4.6.1 \n2: package \u2018readxl\u2019 was built under R version 4.6.1 \nError in fread(\"data/raw/wind/delistete_immobilienfirmen.csv\", colClasses = list(character = \"code\")) : \n  File 'data/raw/wind/delistete_immobilienfirmen.csv' does not exist or is non-readable. getwd()=='<isolated-copy>'\nCalls: fread -> stopf -> raise_condition -> signal\nExecution halted\nError in (function() { : Build stopped at 01_clean.R (exit 1).\nExecution halted",
+      "expected": "nonzero at 01_clean.R: missing licensed Wind input; no full reproduction"
+    },
+    {
+      "command": "python [recorded project environment] code/provenance/t001_audit_a_shares.py",
+      "exit": 0,
+      "seconds": 1.05,
+      "output": "Input: 9490 balance rows; 89 A-Share firms; no absent codes\nFilter: 13 dates, 2016-12-31 to 2022-12-31; 1155 rows\nFirm table: 89 rows; 9 B-Shares; n_stichtage 11 to 13\nCoverage table: 16 rows; n_gesamt=1155 throughout\nCreated: docs/provenance/t001_a_firms.csv\nCreated: docs/provenance/t001_a_field_coverage.csv",
+      "expected": "0; independent public A-share raw audit"
+    },
+    {
+      "command": "Rscript --vanilla code/provenance/t007_r_setup_check.R",
+      "exit": 0,
+      "seconds": 1.44,
+      "output": "      term coefficient  std_error   ci_lower   ci_upper    N\n dose:post  -0.4452805 0.03762643 -0.5196308 -0.3709302 1950\n period    estimate      lower       upper\n      1 -0.01683438 -0.1901236  0.15645482\n      2 -0.24182962 -0.4372455 -0.04641372\n      3  0.02958554 -0.1679932  0.22716424\n      4  0.03110826 -0.1568588  0.21907530\n      5 -0.12604507 -0.3173392  0.06524907\n      6 -0.09908985 -0.2971684  0.09898873\nWarning messages:\n1: package \u2018fixest\u2019 was built under R version 4.6.1 \n2: package \u2018did\u2019 was built under R version 4.6.1 \n3: package \u2018data.table\u2019 was built under R version 4.6.1 \nAcceptance criterion 5 NOT met: zero excluded in pre-policy period(s): 2. Simulation retained without seed selection or resampling.\nT007 completed: simulated estimates and environment versions exported.",
+      "expected": "0; simulation environment test, not empirical evidence"
+    },
+    {
+      "command": "Rscript --vanilla code/theme_proposal.R",
+      "exit": 0,
+      "seconds": 0.09,
+      "output": "",
+      "expected": "0; theme definitions"
+    },
+    {
+      "command": "Rscript --vanilla code/25_hk_control.R",
+      "exit": 1,
+      "seconds": 20.44,
+      "output": "Warning message:\npackage \u2018data.table\u2019 was built under R version 4.6.1 \nBuild mode: HK MANIFEST verified; historical proposal integration disabled.\nError in file(file, \"rt\", encoding = fileEncoding) : \n  cannot open the connection\nCalls: read -> read.csv -> read.table -> file\nIn addition: Warning message:\nIn file(file, \"rt\", encoding = fileEncoding) :\n  cannot open file 'data/processed/panel_firm_halfyear.csv': No such file or directory\nExecution halted",
+      "expected": "nonzero: full licensed developer panel absent; HK raw inputs retained, not substituted"
+    }
+  ],
+  "original_payload_changed": []
+}

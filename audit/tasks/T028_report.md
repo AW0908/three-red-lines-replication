@@ -22,33 +22,33 @@ Die REWORK-Punkte sind umgesetzt: einheitliche Dosisgruppen, vollständige Liste
 
 Exakter Befehl, zweimal in vollständigen isolierten Prüfkopien ausgeführt:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Beide Läufe: Exit 0, jeweils 50,48 Sekunden. Letzte Ausgabe des zweiten Laufs:
+Beide Läufe: Exit [number withheld], jeweils [number withheld] Sekunden. Letzte Ausgabe des zweiten Laufs:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 ## Abnahmekriterien
 
-1. **Erfüllt.** C0 reproduziert alle 55 numerischen T009-Felder; maximale Abweichung `2,22e-15`. Alle 13 erzeugten T028-Artefakte sind zwischen beiden Builds byte-identisch. Die 95 übrigen Ausgaben und 20 Datendateien bleiben unverändert. Auch alle numerischen T028-Schätzergebnisse entsprechen exakt dem Stand vor REWORK.
+[number withheld]. **Erfüllt.** C0 reproduziert alle [number withheld] numerischen T009-Felder; maximale Abweichung `[number withheld]`. Alle [number withheld] erzeugten T028-Artefakte sind zwischen beiden Builds byte-identisch. Die [number withheld] übrigen Ausgaben und [number withheld] Datendateien bleiben unverändert. Auch alle numerischen T028-Schätzergebnisse entsprechen exakt dem Stand vor REWORK.
 
-2. **Für finanzielle Kontrollen erfüllt; für SOE nicht vollständig prüfbar.** Datumsassertions und Kontrollzusammenfassung bestätigen ausschließlich finanzielle Eingaben bis einschließlich `2019-12-31`. Die vorgeschriebene SOE-Kategorie bleibt wegen D9/D18 zeitlich eingeschränkt überprüfbar.
+[number withheld]. **Für finanzielle Kontrollen erfüllt; für SOE nicht vollständig prüfbar.** Datumsassertions und Kontrollzusammenfassung bestätigen ausschließlich finanzielle Eingaben bis einschließlich `2019-12-31`. Die vorgeschriebene SOE-Kategorie bleibt wegen D9/D1[number withheld] zeitlich eingeschränkt überprüfbar.
 
-3. **Erfüllt.** Alle 30 C0–C5-Zellen bleiben enthalten. Änderungen gegenüber C0 in Baseline-SE-Einheiten:
+[number withheld]. **Erfüllt.** Alle [number withheld] C0–C5-Zellen bleiben enthalten. Änderungen gegenüber C0 in Baseline-SE-Einheiten:
 
    | Outcome | C3 | C4 | Einordnung |
    |---|---:|---:|---|
-   | RL1 | −3,34 | −3,34 | Nicht stabil |
-   | RL2 | −1,26 | −0,87 | Merklich kontrollsensitiv |
-   | RL2 gap | +0,25 | +0,26 | Weitgehend stabil |
-   | mi_share | −0,96 | −0,89 | Deutliche Abschwächung |
-   | jv_ta | +1,33 | +1,10 | Merklich kontrollsensitiv |
+   | RL1 | [number withheld] | [number withheld] | Nicht stabil |
+   | RL2 | [number withheld] | [number withheld] | Merklich kontrollsensitiv |
+   | RL2 gap | [number withheld] | [number withheld] | Weitgehend stabil |
+   | mi_share | [number withheld] | [number withheld] | Deutliche Abschwächung |
+   | jv_ta | [number withheld] | [number withheld] | Merklich kontrollsensitiv |
 
-   Der kontrollierte RL1-Vortrendtest verwirft mit `p = 0,000223`; der größere Koeffizient ist kein Beleg für einen stärkeren Policy-Effekt. Für mi_share verwirft der Test nicht (`p = 0,508751`). Überlappende Kontroll- und Vortrendfenster sowie die eingeschränkte CR1-Verlässlichkeit sind dokumentiert; JV-C4 verwendet 106 Steigungsparameter bei 101 Clustern.
+   Der kontrollierte RL1-Vortrendtest verwirft mit `p = [number withheld]`; der größere Koeffizient ist kein Beleg für einen stärkeren Policy-Effekt. Für mi_share verwirft der Test nicht (`p = [number withheld]`). Überlappende Kontroll- und Vortrendfenster sowie die eingeschränkte CR1-Verlässlichkeit sind dokumentiert; JV-C4 verwendet [number withheld] Steigungsparameter bei [number withheld] Clustern.
 
-4. **Erfüllt.** Fehlende finanzielle Kontrollwerte: Größe/ROA/Liquidität/Inventar/Umsatz = `0/2/0/0/2`; SOE fehlt bei fünf Firmen. C5 entfernt zwölf Firmen insgesamt, davon zehn im JV-Schätzsample (`101 → 91`). Die Balancegruppen enthalten nun `31/37/28/28` Firmen; alle 40 Balancezeilen wurden unabhängig nachgerechnet.
+[number withheld]. **Erfüllt.** Fehlende finanzielle Kontrollwerte: Größe/ROA/Liquidität/Inventar/Umsatz = `[number withheld]/[number withheld]/[number withheld]/[number withheld]/[number withheld]`; SOE fehlt bei fünf Firmen. C5 entfernt zwölf Firmen insgesamt, davon zehn im JV-Schätzsample (`[number withheld] → [number withheld]`). Die Balancegruppen enthalten nun `[number withheld]/[number withheld]/[number withheld]/[number withheld]` Firmen; alle [number withheld] Balancezeilen wurden unabhängig nachgerechnet.
 
 Beide TEX-Fragmente kompilieren ohne Überläufe. Tabellen und Abbildungen wurden visuell geprüft.
 

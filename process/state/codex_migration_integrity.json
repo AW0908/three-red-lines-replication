@@ -1,0 +1,32 @@
+{
+  "backup": "state/codex_migration_backup_20261113_164717",
+  "changed_hashes": [
+    "agents/worker.sh",
+    "agents/lib.sh",
+    "agents/review.sh",
+    "agents/roles/reviewer.md",
+    "agents/roles/co-pi.md",
+    "agents/roles/worker.md",
+    "AGENTS.md",
+    "agents/TEAM.md",
+    "tasks/_TEMPLATE.md",
+    "agents/dashboard.py",
+    "agents/dashboard.html",
+    "AI_USAGE_LOG.md"
+  ],
+  "changed_metadata": [
+    "AGENTS.md",
+    "AI_USAGE_LOG.md",
+    "tasks/_TEMPLATE.md",
+    "agents/dashboard.html",
+    "agents/dashboard.py",
+    "agents/worker.sh",
+    "agents/lib.sh",
+    "agents/TEAM.md",
+    "agents/review.sh",
+    "agents/roles/reviewer.md",
+    "agents/roles/co-pi.md",
+    "agents/roles/worker.md"
+  ],
+  "protected_hashes_unchanged": 157
+}

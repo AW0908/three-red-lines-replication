@@ -1,0 +1,72 @@
+phase,checked_utc,check,result,count,path,details
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,suffix_2_paths,PASS,0,,Final reporting files included; previous manifest retained after scope assertion.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,missing_manifest_files,PASS,0,,Final reporting files included; previous manifest retained after scope assertion.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch,FAIL,22,,Final reporting files included; previous manifest retained after scope assertion.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,audit/approvals.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,audit/runs.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,audit/tasks/T084.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,process/SOURCE_INVENTORY.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,process/state/STATE.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,process/state/approvals.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,process/state/followups.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,process/state/runs.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,process/tasks/T084.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/CHECKS.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/DRY_RUN.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/INPUT_INTEGRITY.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/SANITIZATION.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/SOURCE_HASHES.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_ACCEPTANCE.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_ANONYMITY.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_DRY_RUN.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_REDACTIONS.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_SCAN_SUMMARY.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_SCOPE_CHECK.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_SESSION_BEFORE.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,hash_mismatch_detail,FAIL,1,validation/T084_WIND_REFERENCES.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch,FAIL,18,,Final reporting files included; previous manifest retained after scope assertion.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,audit/approvals.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,audit/runs.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,audit/tasks/T084.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,process/SOURCE_INVENTORY.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,process/state/STATE.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,process/state/approvals.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,process/state/followups.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,process/state/runs.log,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,process/tasks/T084.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/SANITIZATION.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/SOURCE_HASHES.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_ANONYMITY.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_DRY_RUN.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_REDACTIONS.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_SCAN_SUMMARY.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_SCOPE_CHECK.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_SESSION_BEFORE.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,size_mismatch_detail,FAIL,1,validation/T084_WIND_REFERENCES.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files,FAIL,23,,Final reporting files included; previous manifest retained after scope assertion.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,audit/review/T084.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,audit/review/T084_consistency.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,audit/review/T084_data.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,process/review/T084.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,process/review/T084_consistency.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,process/review/T084_data.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,process/review/T084_frozen.sha256,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_BEFORE.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_SCOPE.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_build.txt,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_changes.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_check.txt,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_cleanup.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_delta.txt,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_dry_run.txt,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_path_check.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/T084_R1_verify.py,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/history/T084_R1/MANIFEST_before.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/history/T084_R1/README.md,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/history/T084_R1/SESSION_before.json,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/history/T084_R1/SOURCE_INVENTORY_before.csv,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,unmanifested_files_detail,FAIL,1,validation/history/T084_R1/initial_dry_run_failure.txt,Current file differs from or is absent in the retained previous manifest.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,anonymity_paths,PASS,0,,Final reporting files included; previous manifest retained after scope assertion.
+immediate_after_stop,2026-11-16T11:25:36.698988+00:00,README_and_acceptance_paths,PASS,8,,Required documented process paths exist.
+delayed,,complete_check_after_120_seconds,NOT RUN,,,Stopped at unchanged outside-scope guard; no two-pass success is claimed.

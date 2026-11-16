@@ -1,6 +1,6 @@
 ## Ergebnis
 
-Rework 4 setzt die zehn freigegebenen Ersetzungen um; sechs LaTeX-Dateien wurden geändert. Der Abstract hat 88 Wörter, der Haupttext endet auf Seite 14 und die Gesamtfassung bleibt bei 37 Seiten. Build, Schriftprüfung und Sichtprüfung bestehen.
+Rework [number withheld] setzt die zehn freigegebenen Ersetzungen um; sechs LaTeX-Dateien wurden geändert. Der Abstract hat [number withheld] Wörter, der Haupttext endet auf Seite [number withheld] und die Gesamtfassung bleibt bei [number withheld] Seiten. Build, Schriftprüfung und Sichtprüfung bestehen.
 
 ## Dateien
 
@@ -11,66 +11,66 @@ Rework 4 setzt die zehn freigegebenen Ersetzungen um; sechs LaTeX-Dateien wurden
 - `proposal/sections/07_conclusion.tex` – Trendwortlaut.
 - `proposal/appendix/results.tex` – Verifikationshinweis und Crosser-Anteile.
 - `review/T045_build/main.pdf` – geprüfte Gesamtfassung.
-- `review/T045_build/main.aux`, `main.fdb_latexmk`, `main.fls`, `main.log`, `main.out`, `main.toc`, `main.xdv` – Build-Nebenprodukte.
+- `review/T0[number withheld]_build/main.aux`, `main.fdb_latexmk`, `main.fls`, `main.log`, `main.out`, `main.toc`, `main.xdv` – Build-Nebenprodukte.
 - `tasks/T045_report.md` – vollständiger Bericht mit A1–F-Matrix, Zahlenquellen, Statement-IDs und Wortzählungen.
 
-:codex-file-citation{path="/Users/<local>/Desktop/UNI/5. Semester PKU/Policy Analysis/review/T045_build/main.pdf" purpose="output"}
+:codex-file-citation{path="/Users/<local>/Desktop/UNI/[number withheld]. Semester PKU/Policy Analysis/review/T0[number withheld]_build/main.pdf" purpose="output"}
 
 ## Ausführung
 
-Selbst ausgeführt, Exitcode 0:
+Selbst ausgeführt, Exitcode [number withheld]:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
 Letzte Ausgabezeilen:
 
-[fenced excerpt withheld in public audit]
-[fenced excerpt withheld in public audit]
+[fenced excerpt withheld in public process copy]
+[fenced excerpt withheld in public process copy]
 
-Zusätzlich: CSV- und Registerabgleich, SHA-256-Prüfung, `pdffonts`, `pdfinfo`, `detex` und Sichtprüfung aller 37 gerenderten Seiten.
+Zusätzlich: CSV- und Registerabgleich, SHA-[number withheld]-Prüfung, `pdffonts`, `pdfinfo`, `detex` und Sichtprüfung aller [number withheld] gerenderten Seiten.
 
 ## Abnahmekriterien
 
-| Rework-4-Punkt | Ergebnis und Fundstelle |
+| Rework-[number withheld]-Punkt | Ergebnis und Fundstelle |
 |---|---|
-| 1 | Erfüllt: Trendwortlaut wortgleich in `01_introduction.tex:19`, `06_preliminary_analysis.tex:61`, `07_conclusion.tex:5`. |
-| 2 | Erfüllt: Abstract-Satz ersetzt; 88 Wörter, `proposal/main.tex:51–52`. |
-| 3 | Erfüllt: Anführungszeichen geschlossen, `02_literature.tex:16`. |
-| 4 | Erfüllt: 602 Firmenhalbjahre/129 Firmen, `06_preliminary_analysis.tex:42`; CSV-Filter `window=post, variant=all, scope=paired, specification=main`. |
-[firm-specific excerpt withheld in public audit]
-| 6 | Erfüllt: 33 Firmenjahre für Crossers und 48 für übrige Firmen ausgeschrieben, `06_preliminary_analysis.tex:91`; gegen T046 geprüft. |
-| 7 | Erfüllt: „firm trend“ und „compliant share“ vereinheitlicht; erste Nennung je Absatz bereits „percentage points“. |
-| 8 | Erfüllt: vorsichtige Anreizformulierung, `06_preliminary_analysis.tex:67`. |
-| 9 | Erfüllt: Bezug „Such group-internal capital“, `06_preliminary_analysis.tex:97`. |
-| 10 | Erfüllt: beide Ersetzungen, `proposal/appendix/results.tex:143,146`. |
+| [number withheld] | Erfüllt: Trendwortlaut wortgleich in `01_introduction.tex:19`, `06_preliminary_analysis.tex:61`, `07_conclusion.tex:5`. |
+| [number withheld] | Erfüllt: Abstract-Satz ersetzt; [number withheld] Wörter, `proposal/main.tex:51–52`. |
+| [number withheld] | Erfüllt: Anführungszeichen geschlossen, `02_literature.tex:16`. |
+| [number withheld] | Erfüllt: [number withheld] Firmenhalbjahre/[number withheld] Firmen, `06_preliminary_analysis.tex:42`; CSV-Filter `window=post, variant=all, scope=paired, specification=main`. |
+[firm-specific excerpt withheld in public process copy]
+| [number withheld] | Erfüllt: [number withheld] Firmenjahre für Crossers und [number withheld] für übrige Firmen ausgeschrieben, `06_preliminary_analysis.tex:91`; gegen T046 geprüft. |
+| [number withheld] | Erfüllt: „firm trend“ und „compliant share“ vereinheitlicht; erste Nennung je Absatz bereits „percentage points“. |
+| [number withheld] | Erfüllt: vorsichtige Anreizformulierung, `06_preliminary_analysis.tex:67`. |
+| [number withheld] | Erfüllt: Bezug „Such group-internal capital“, `06_preliminary_analysis.tex:97`. |
+| [number withheld] | Erfüllt: beide Ersetzungen, `proposal/appendix/results.tex:[number withheld]`. |
 
 Die vollständige A1–F- und Zahlenzuordnung steht in `tasks/T045_report.md`.
 
-- **Zahlen:** Ausschließlich 602/129 neu ergänzt; beide CSV-bestätigt. Alle bisherigen numerischen Angaben unverändert. Die dokumentierten Ausnahmen von der strikten Output-CSV-Pflicht bleiben bestehen.
-- **Verifikation:** 47 qualitative Aussagen erneut `yes/meaning`; 109 beobachtete numerische Ledger-Operanden mindestens `yes/strings`. 54 fehlende Operanden bleiben fehlend.
-- **Build:** Keine Fehler oder undefinierten Referenzen; BibTeX-Log ohne Warnungen. Einzige Overfull-Box: 0,79266 pt, unter 2 pt.
-- **Umfang:** Haupttext 14 Seiten; Anhang B 15, Anhang C 3; insgesamt 37 PDF-Seiten.
-- **Schriften:** Alle 25 Ressourcen eingebettet; keine verbotenen Textfonts.
+- **Zahlen:** Ausschließlich [number withheld]/[number withheld] neu ergänzt; beide CSV-bestätigt. Alle bisherigen numerischen Angaben unverändert. Die dokumentierten Ausnahmen von der strikten Output-CSV-Pflicht bleiben bestehen.
+- **Verifikation:** [number withheld] qualitative Aussagen erneut `yes/meaning`; [number withheld] beobachtete numerische Ledger-Operanden mindestens `yes/strings`. [number withheld] fehlende Operanden bleiben fehlend.
+- **Build:** Keine Fehler oder undefinierten Referenzen; BibTeX-Log ohne Warnungen. Einzige Overfull-Box: [number withheld] pt, unter [number withheld] pt.
+- **Umfang:** Haupttext [number withheld] Seiten; Anhang B [number withheld], Anhang C [number withheld]; insgesamt [number withheld] PDF-Seiten.
+- **Schriften:** Alle [number withheld] Ressourcen eingebettet; keine verbotenen Textfonts.
 - **Interpretation:** Keine eigene Ergebnisaussage als kausaler Politikeffekt; Trendbefund in allen vier verlangten Teilen.
-- **Dateischutz:** Alle 414 inventarisierten Dateien unter `replication/` unverändert; Kartenstatus unverändert.
+- **Dateischutz:** Alle [number withheld] inventarisierten Dateien unter `replication/` unverändert; Kartenstatus unverändert.
 
 | Abschnitt | Vorher | Nachher |
 |---|---:|---:|
-| Introduction | 436 | 446 |
-| Literature | 551 | 551 |
-| Framework | 644 | 644 |
-| Empirical strategy | 798 | 798 |
-| Context/data | 814 | 814 |
-| Preliminary analysis | 1621 | 1642 |
-| Conclusion | 154 | 164 |
-| **Gesamt** | **5018** | **5059** |
+| Introduction | [number withheld] | [number withheld] |
+| Literature | [number withheld] | [number withheld] |
+| Framework | [number withheld] | [number withheld] |
+| Empirical strategy | [number withheld] | [number withheld] |
+| Context/data | [number withheld] | [number withheld] |
+| Preliminary analysis | [number withheld] | [number withheld] |
+| Conclusion | [number withheld] | [number withheld] |
+| **Gesamt** | **[number withheld]** | **[number withheld]** |
 
-Gezählt mit `detex -l`; Zusatzdesigns 48/50 Wörter, Fall (d) 89 Wörter.
+Gezählt mit `detex -l`; Zusatzdesigns [number withheld]/[number withheld] Wörter, Fall (d) [number withheld] Wörter.
 
 ## Offene Fragen
 
 - Unabhängiges Review und PI-Abnahme stehen aus; Status bleibt REWORK.
 - „Equity transactions“ im Abstract, „all eligible paired“ in `04_empirical_model.tex:32` und weitere Stilvorschläge bleiben gemäß der verbindlichen Beschränkung auf die zehn Ersetzungen unverändert.
 - Unveränderte Zahlenquellen und Firmenanteilszellen wurden in dieser Runde nicht vollständig erneut nachgerechnet; Vertragsseiten nicht erneut übersetzt. Die Analysepipeline wurde nicht ausgeführt.
-- KI-Protokolleintrag vorgeschlagen, da außerhalb des Schreibbereichs: „2026-10-30, Codex CLI, T045 Rework 4: zehn freigegebene Ersetzungen; CSV-, Register-, Build-, Schrift- und Sichtprüfung; Abstract 88 Wörter, Haupttext 14 Seiten/5.059 Wörter; Daten und Outputs unverändert.“
+- KI-Protokolleintrag vorgeschlagen, da außerhalb des Schreibbereichs: „2026-10-30, Codex CLI, T045 Rework [number withheld]: zehn freigegebene Ersetzungen; CSV-, Register-, Build-, Schrift- und Sichtprüfung; Abstract [number withheld] Wörter, Haupttext [number withheld] Seiten/[number withheld] Wörter; Daten und Outputs unverändert.“

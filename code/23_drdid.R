@@ -19,9 +19,18 @@ rawfiles<-rawfiles[!dir.exists(rawfiles)&rawfiles!='data/raw/MANIFEST.csv']
 raw_hash<-tools::sha256sum(rawfiles)
 # Card explicitly authorizes this new immutable copy and its MANIFEST entry.
 price_source<-'../Daten/control/prices_2019.csv';price_copy<-'data/raw/manual/prices_2019.csv'
-stopifnot(file.exists(price_source))
-if(!file.exists(price_copy))stopifnot(file.copy(price_source,price_copy,overwrite=FALSE))
-stopifnot(identical(unname(tools::sha256sum(price_source)),unname(tools::sha256sum(price_copy))))
+# T082: the immutable internal copy is sufficient when the PI source is absent.
+# If both exist they must agree; the stored MANIFEST hash authenticates either.
+price_manifest<-read('data/raw/MANIFEST.csv')
+price_expected<-as.character(price_manifest$sha256[price_manifest$file==price_copy])
+stopifnot(length(price_expected)==1L)
+if(file.exists(price_source)) {
+ stopifnot(identical(unname(tools::sha256sum(price_source)),price_expected))
+ if(!file.exists(price_copy))stopifnot(file.copy(price_source,price_copy,overwrite=FALSE))
+} else price_source<-price_copy
+stopifnot(file.exists(price_copy),
+ identical(unname(tools::sha256sum(price_copy)),price_expected),
+ identical(unname(tools::sha256sum(price_source)),unname(tools::sha256sum(price_copy))))
 manifest_path<-'data/raw/MANIFEST.csv';manifest<-read(manifest_path)
 entry<-data.frame(file=price_copy,source='Daten/control/prices_2019.csv',
  download_export_date='unverified; PI file; price dates 2019-12-30/31',size_bytes=file.info(price_copy)$size,
