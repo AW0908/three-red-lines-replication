@@ -1,0 +1,4 @@
+output_pattern,script,evidence
+outputs/figures/f_*,code/24_figures.R,"Exact render(stem, ...) or copy target in source; T084 filename inventory missed dynamic names"
+outputs/tables/t031_*,code/12_q1_robustness.R,Output stage prefix gate and csv/tex writers; T084 metadata interchanged t031/t041
+outputs/tables/t041_*,code/14_core_robustness.R,Output stage prefix gate and csv/tex writers; T084 metadata interchanged t031/t041

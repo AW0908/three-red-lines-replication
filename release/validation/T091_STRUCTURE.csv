@@ -1,0 +1,6 @@
+criterion,result,evidence
+root,PASS,Only required root entries plus .git transport
+proposal_map,PASS,89 unique displays from recursive proposal inputs
+independent_labels_N1,PASS,89 independently counted labels; identical CSV/README/HTML rows; see T091_MACRO_CHECKS.csv
+indexes,PASS,Every script and output exactly once
+README_lines,PASS,146

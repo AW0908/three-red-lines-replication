@@ -1,0 +1,5 @@
+criterion,result,evidence
+accepted_wording,PASS,Exact T076 sentences in original side of proposal diff; SHA-256 in README_FACTS.json; shared README/HTML facts
+producer_consistency,PASS,369 included outputs match inventory/index; all script-produced proposal displays match inventory
+appendix_context,PASS,Both reviewed nested tables inherit Online Appendix through the input graph
+public_language,PASS,All 39 script descriptions use verbs; no invalid replication-directory command; RL1 defined before use; question precedes answer in header; dated snapshot status; timeless publication wording; named switches; consistent placeholders and linked guide/memo; historical process prose preserved

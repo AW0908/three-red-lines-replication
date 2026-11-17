@@ -1,0 +1,13 @@
+{
+  "title": "Meeting the Red Lines: Threshold Targeting and Minority Equity among Chinese Property Developers",
+  "question": "I investigate whether developers targeted the RL1 threshold and which balance-sheet adjustments and capital terms underlie their reported compliance.",
+  "summary": "The answer matters because ratio-based rules work only if reported ratios track risk. I link a test of threshold targeting to accounting counterfactuals and contract evidence.",
+  "status": "Archive documentation updated November 17, 2026. Summary wording and research payload follow accepted task card T076, with build interfaces from task card T082. The results map follows the proposal snapshot indexed on November 16, 2026; task card T081 text revisions had not been reviewed or accepted at that date.",
+  "rl1_definition": "RL1 denotes the first of China's Three Red Lines, the liability-to-assets cap adjusted for advance receipts.",
+  "definitions": "Wind is a licensed financial-data terminal. Task cards record project work; the principal investigator (PI) approves it.",
+  "repository": "https://github.com/AW0908/three-red-lines-replication",
+  "summary_source": "Accepted T076 introduction; original lines in review/T091_proposal.diff (not in release)",
+  "question_source": "Accepted T076 introduction; original lines in review/T091_proposal.diff (not in release)",
+  "acceptance_source": "state/approvals.log: T076 DELIVERED, November 13, 2026 (original project log)",
+  "wording_evidence_sha256": "d1b5052997fdf217ccfaa959fc71687173ebccbea75a61a6adbb545930091387"
+}

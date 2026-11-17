@@ -34,7 +34,7 @@ Ich habe nur die Sprache geprüft, und zwar anhand von `review/T0[number withhel
 
 [number withheld]. Zahlen aus CSV, Referenzen lösen auf: nicht meine Rolle. Die Bib-Eintragung `santanna2[number withheld]doubly` ist vorhanden und im Text zitiert.
 [number withheld]. Hauptteil endet auf Seite [number withheld], Build sauber: nicht meine Rolle. Den Build-Log (`review/T069_latex.txt`) habe ich nicht auf Warnungen ausgewertet. Meine Suche nach „Warning" und „Overfull" lieferte keine Treffer, aber der Bash-Aufruf zum Lesen der Datei wurde verweigert und die Grep-Suche war die einzige Prüfung.
-[number withheld]. Punkte [number withheld]–[number withheld] je mit Zeile im Bericht: nicht meine Rolle. Sprachlich sind die Texte zu den Punkten [number withheld](a)–(h) vorhanden und verständlich. Den Absatz zu [number withheld](i) (Appendix C) habe ich nicht gefunden. `main.tex` und der AI-Appendix tauchen im Diff nicht auf. Ob [number withheld](i) geschrieben wurde, prüft die Consistency-Rolle.
+[number withheld]. Punkte [number withheld]–[number withheld] je mit Zeile im Bericht: nicht meine Rolle. Sprachlich sind die Texte zu den Punkten \[number withheld](a)–(h) vorhanden und verständlich. Den Absatz zu \[number withheld](i) (Appendix C) habe ich nicht gefunden. `main.tex` und der AI-Appendix tauchen im Diff nicht auf. Ob \[number withheld](i) geschrieben wurde, prüft die Consistency-Rolle.
 
 ## Nicht geprüft
 

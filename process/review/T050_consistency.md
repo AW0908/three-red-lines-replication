@@ -7,7 +7,7 @@
    - Zeile [number withheld]: „This writing pass (T049) awaits independent review and author acceptance." Das ist veraltet. `state/approvals.log` Zeile [number withheld] verbucht T049 am 2026-10-30 14:03 als DELIVERED mit OVERRIDE. Verlangt ist „[number withheld] task cards accepted before this revision; T049 and T050 are this revision".
    - Zeile [number withheld]: „From October [number withheld]-[number withheld], [number withheld]" statt „October [number withheld] to [number withheld], [number withheld]".
    - Zeile [number withheld]: „Claude Haiku" statt „Claude Code (Haiku)". Der Anhang führt das Tool damit unter zwei Namen. Verlangt ist ein Name pro Tool.
-   - Die Zeilen [number withheld] und [number withheld] und die Tabelle (Zeile [number withheld]) nennen ChatGPT und Grok schon. Das entspricht Punkt [number withheld](a) und dem `AI_USAGE_LOG.md`-Eintrag vom 2026-10-30.
+   - Die Zeilen [number withheld] und [number withheld] und die Tabelle (Zeile [number withheld]) nennen ChatGPT und Grok schon. Das entspricht Punkt \[number withheld](a) und dem `AI_USAGE_LOG.md`-Eintrag vom 2026-10-30.
    - Die Karte hat `ai_use.tex` nicht in den Schreibbereich aufgenommen, obwohl Punkt [number withheld] es verlangt. Das ist ein Kartenfehler, den der Co-PI beheben muss. Das Ergebnis bleibt trotzdem unvollständig.
 
 [number withheld]. **Notation: „Δb" ist in Abschnitt [number withheld] doppelt belegt.** `06_preliminary_analysis.tex` Zeile ~[number withheld]: „freezing MI lowers excess mass by $\Delta b=[number withheld]$ $[[number withheld]]$". Überall sonst ist $\Delta b$ die Post-minus-Pre-Änderung des Excess Mass (Zeilen [number withheld], [number withheld], Abschnitt [number withheld], Intro, Conclusion).
@@ -43,7 +43,7 @@ Soweit sie meine Rolle (Konsistenz) betreffen:
    - **Punkt [number withheld]:** Hierarchie in Intro, Abschnitt [number withheld] und Conclusion einheitlich.
    - **Punkt [number withheld]:** Abstract unverändert.
    - **Punkt [number withheld]:** Der Bericht gibt eine Kürzung von Abschnitt [number withheld] von [number withheld] auf [number withheld] Wörter an, das sind [number withheld] %. Das habe ich nicht nachgezählt. Befund [number withheld] betrifft den entfallenen CNKI-Befund.
-[number withheld]. **Punkt [number withheld](f) „one name per tool", „October [number withheld] to [number withheld], [number withheld]": nicht erfüllt** (Befund [number withheld]). „Mass-conserving fixed-point fit" und „drop $N$" in der Threats-Tabelle: belegt erfüllt.
+[number withheld]. **Punkt \[number withheld](f) „one name per tool", „October [number withheld] to [number withheld], [number withheld]": nicht erfüllt** (Befund [number withheld]). „Mass-conserving fixed-point fit" und „drop $N$" in der Threats-Tabelle: belegt erfüllt.
 
 ## Nicht geprüft
 

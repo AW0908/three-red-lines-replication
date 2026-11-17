@@ -1,11 +1,11 @@
 ## Rolle: consistency (claude, sonnet) – VERDICT: REWORK
 
 
-Die geprüften Zahlen im Text stimmen mit den CSVs überein. Ein Kartenpunkt ([number withheld](i), Appendix C) fehlt, dazu kommen drei kleine Formulierungsmängel.
+Die geprüften Zahlen im Text stimmen mit den CSVs überein. Ein Kartenpunkt (\[number withheld](i), Appendix C) fehlt, dazu kommen drei kleine Formulierungsmängel.
 
 ## Befunde
 
-[number withheld]. **Punkt [number withheld](i) fehlt.** Der AI-Appendix-Absatz ist nicht geschrieben (`tasks/T069_report.md`, "Offene Fragen"). Der Bericht begründet das mit dem Schreibbereich, der nur `results.tex` erlaubt. Die Karte fordert den Absatz aber ausdrücklich. Abnahmekriterium [number withheld] ("Punkte [number withheld]–[number withheld] je mit einer Zeile") ist damit nur teilweise erfüllt. Das ist eine Entscheidung für den Co-PI oder PI: Schreibbereich erweitern oder den Punkt streichen. Der Absatz darf nur persönliche Prüfungen behaupten, die Anton bestätigt.
+[number withheld]. **Punkt \[number withheld](i) fehlt.** Der AI-Appendix-Absatz ist nicht geschrieben (`tasks/T069_report.md`, "Offene Fragen"). Der Bericht begründet das mit dem Schreibbereich, der nur `results.tex` erlaubt. Die Karte fordert den Absatz aber ausdrücklich. Abnahmekriterium [number withheld] ("Punkte [number withheld]–[number withheld] je mit einer Zeile") ist damit nur teilweise erfüllt. Das ist eine Entscheidung für den Co-PI oder PI: Schreibbereich erweitern oder den Punkt streichen. Der Absatz darf nur persönliche Prüfungen behaupten, die Anton bestätigt.
 
 [number withheld]. **Nenner bei den Beträgen unklar** (`06_preliminary_analysis.tex:81`).
    - Der Text sagt, unter allen [number withheld] Crossern seien "just RMB [number withheld] billion of RMB [number withheld] billion in minority capital" zugeordnet.
@@ -39,7 +39,7 @@ Die geprüften Zahlen im Text stimmen mit den CSVs überein. Ein Kartenpunkt ([n
   - [number withheld]/[number withheld] und Einheit der Regulierung: `[number withheld]_context_data.tex:[number withheld]`.
   - Look-through-Formulierung: `07_conclusion.tex:11`.
   - Replikation: Zeile [number withheld] von `05_context_data.tex`, nur per Stichwort gefunden, nicht gelesen.
-- **Punkt [number withheld](j), gemeinsamer Tabellenhelfer:** Die neuen Tabellen laufen über `\apptable`, ob das der T070-Helfer ist, habe ich nicht gegengeprüft.
+- **Punkt \[number withheld](j), gemeinsamer Tabellenhelfer:** Die neuen Tabellen laufen über `\apptable`, ob das der T070-Helfer ist, habe ich nicht gegengeprüft.
 - **Punkt [number withheld], Kürzungen und Schreibbereich:** nicht meine Rolle.
 
 ## Nicht geprüft

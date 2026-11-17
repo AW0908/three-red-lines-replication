@@ -1,0 +1,89 @@
+# Three Red Lines replication archive
+
+Meeting the Red Lines: Threshold Targeting and Minority Equity among Chinese Property
+Developers. Restricted-data public inspection archive, refreshed under T084 on 16 November
+2026. Cite the archive release/commit and access date. No DOI is assigned. The PI publishes.
+
+## Accepted replication snapshot
+
+This archive includes accepted code/results through T076 (Hong Kong control), and T082's
+accepted build-interface, environment and documentation changes. T082 was accepted by PI
+override on 16 November; the remaining escalation concerned append-only historical input
+drift, not a detected estimate change. See process/state/approvals.log and process/review/.
+The run_all entry points have the same 28 ordered steps as the accepted internal package:
+03 runs after 23 with --embed-proposal-fonts, then 24 and 25. Both integration switches
+MTPA_INTEGRATE_PROPOSAL and MTPA_INTEGRATE_SLIDES default off; do not enable them in this
+archive. They are historical opt-in integration modes, not part of ordinary reproduction.
+
+HK raw CSVs (HKEX roster and public EastMoney statements) and their verified MANIFEST
+are in data/raw/control_hk/. The derived HK control panel and membership retain their
+independently public provenance. All third-party provider terms remain applicable.
+25_hk_control.R uses those raw inputs with MANIFEST checks; its full estimation additionally
+requires the licensed developer panel and accepted upstream results. Controls are current
+listings/reporting-complete survivors, with differential advance-item missingness; the
+same-market comparison does not remove developer-specific shocks. See accepted support,
+imputation-robustness tables and process/state/LIMITATIONS.md.
+
+## Additional accepted analyses, not yet in the proposal
+
+T077: code/26_identification.R and permitted outputs/tables/t077_* and figures/t077_*.
+Accepted by PI override on 14 November. These window-probability/triple contrasts differ
+from the proposal's polynomial excess-mass estimand. The memo was outcome-informed;
+pretrend and sparse-support limitations remain. HonestDiD sensitivity was NOT RUN.
+T077 is not added to run_all: integration requires a separate decision. Firm-level analysis
+panels/membership and potentially licensed audit inventories are withheld. T078–T081 and
+later analyses are not included as research code/results; their cards/reviews are historical
+process records, not endorsements or newly released research.
+
+## Reproduction boundary
+
+Wind raw files, full/extended panels and firm-specific Wind-derived outputs are absent.
+The two firm-observation validation scatterplots are withheld because their coordinates
+include Wind financial values; see validation/T084_GRAPHICAL_PROVENANCE.csv.
+The public panel removes every Wind-sourced firm and twelve ownership/industry/sample
+columns under the accepted T073 policy; it is an inspection dataset, not a substitute
+analysis sample. Do not rename it to the full panel. Aggregated estimates are included
+under the PI release decision. Field-level provenance and exclusions are in WITHHELD.md,
+data/processed/PUBLIC_PANEL.md and OUTPUT_INVENTORY.csv. Hand-coded files preserve source,
+page and pending PI-verification flags; their inclusion is not fresh verification. Ownership
+coding lacking complete primary-source provenance remains withheld.
+
+A full standalone rebuild is NOT verified or currently possible. T082 accepted safe build
+interfaces and documented historical integrity gates, external sibling inputs and audit/PDF
+reproducibility gaps; it did not certify a full build. The current internal README snapshot
+is process/replication_README.md. Install prerequisites separately from environment.lock
+and software/ before any offline run. run_all stops at the missing licensed Wind register
+in 01_clean.R. Obtain your own Wind licence and the exact exports listed in that script;
+additional external project inputs are still required by later steps. Do not weaken guards
+or fabricate replacements. Full runtime is unmeasured; bootstrap-heavy stages can take hours.
+
+Safe available components and their exact blockers are tested on an isolated copy from
+this archive in validation/DRY_RUN.md. REPRODUCIBILITY.csv maps supplied scripts to outputs
+and dependencies. Fetchers require network/provider access and are not run. No downloads,
+new estimates or substitute data are authorized by T084.
+
+## Layout, provenance and privacy
+
+code/, run_all.R/sh, environment.lock: accepted analysis sources and entry points.
+data/raw/: permitted public provider data and original coding, without third-party PDFs.
+data/processed/: reduced inspection panel and removed-field provenance.
+outputs/: permitted aggregate results and independently public controls.
+process/: scripts, roles, cards, reports, decisions, AI-use record, notes and historical team
+diagrams, with its own README and source/public checksums. audit/ retains the sanitized T073
+layout for compatibility. Numerical prose in public process narratives is conservatively
+redacted; use accepted code/tables for exact numbers. Local originals remain unchanged.
+Third-party PDFs have recorded URLs/checksums in process/THIRD_PARTY_DOCUMENTS.csv;
+unrecorded URLs are explicit. External referee reports and students' work are excluded.
+
+validation/: source integrity, every sanitizer hit/handling, output rechecks, HK checksums,
+dry run and anonymity occurrences. The author-name/initials/account report includes text,
+PDF metadata and raw-byte occurrences. This named working archive is not automatically
+anonymous. The mirror's name replacement does not sanitize image text or Git authors;
+the PI must review remaining identifiers and transport metadata before publication.
+No Git command, commit or push was run by T084. Existing .git is left untouched and is not
+payload. MIT covers original code; LICENSE-data.md covers only author-held rights. No
+provider licence or permission to redistribute third-party copyrighted files is asserted.
+
+MANIFEST.csv covers every payload file except itself, plus explicit withheld records;
+.git is transport metadata excluded from scans/manifest. See validation/T084_ANONYMITY.md
+before pushing either named or anonymous versions.

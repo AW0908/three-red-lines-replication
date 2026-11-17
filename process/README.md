@@ -1,44 +1,17 @@
 # Research-process record
 
-This is a sanitized historical record, not a new approval or an executable project checkout.
-The original workflow is PLAN → explicit PI approval → worker → Co-PI check → SHA-256
-freeze → separate read-only role reviews → PASS / REWORK / ESCALATE → PI acceptance.
-Only the PI runs pi.sh, accepts research or publishes the archive. Worker reports do not
-establish acceptance; consult cards together with state/approvals.log. Review is a phase.
+This is a sanitized historical record, not a new approval or an executable project checkout. The original workflow is PLAN → explicit principal investigator (PI) approval → worker → Co-PI check → SHA-256 freeze → separate read-only role reviews → PASS / REWORK / ESCALATE → PI acceptance. Only the PI runs `pi.sh`, accepts research or publishes the archive. Worker reports do not establish acceptance; consult cards together with `state/approvals.log`. Review is a phase.
 
-The configured roles are Co-PI Claude Opus, worker/writer Codex, data and consistency
-reviewers Codex, estimation reviewer Claude Opus, language reviewer Claude Sonnet.
-providers.conf and environment overrides determine effective routing. Historical cards,
-figures and logs may describe older assignments. Fresh processes establish process
-independence; shared model families do not establish model independence. Reviewer
-sandboxes, source baselines, write-scope checks, freezes and retained tests are documented
-in agents/TEAM.md and state/CODEX_MIGRATION.md. Test results are historical stub/live
-evidence as labelled, not rerun or upgraded by this export. Scripts are archived for
-inspection; do not launch PI/agent/network actions from this public copy.
+The configured roles are Co-PI Claude Opus, worker/writer Codex, data and consistency reviewers Codex, estimation reviewer Claude Opus, language reviewer Claude Sonnet. `providers.conf` and environment overrides determine effective routing. Historical cards, figures and logs may describe older assignments. Fresh processes establish process independence; shared model families do not establish model independence. Reviewer sandboxes, source baselines, write-scope checks, freezes and retained tests are documented in `agents/TEAM.md` and `state/CODEX_MIGRATION.md`. Test results are historical stub/live evidence as labeled, not rerun or upgraded by this export. Scripts are archived for inspection; do not launch PI/agent/network actions from this public copy.
 
-SOURCE_INVENTORY.csv records every original/public hash and handling. The local sources
-remain untouched. Privacy literals are replaced. In narrative cards, reports, state notes,
-AI logs and vault notes, firm-specific lines and fenced excerpts are withheld; all remaining
-numerical prose is conservatively redacted except dates, task identifiers, hashes, source
-URLs and file references. This deliberately also removes some public aggregate numbers,
-method settings and citation years. Use the accepted analysis code and aggregate outputs
-for exact specifications and results. Redactions are not evidence of an original error.
-Executable governance scripts/configuration and approval/run event logs keep operational
-constants and dates after privacy sanitization. Numerical observations are not published
-from process narratives. See validation/T084_REDACTIONS.csv and WITHHELD.md.
+`SOURCE_INVENTORY.csv` records every original/public hash and handling. The local sources remain untouched. Privacy literals are replaced. In narrative cards, reports, state notes, AI logs and vault notes, firm-specific lines and fenced excerpts are withheld; all remaining numerical prose is conservatively redacted except dates, task identifiers, hashes, source URLs and file references. This deliberately also removes some public aggregate numbers, method settings and citation years. Use the accepted analysis code and aggregate outputs for exact specifications and results. Redactions are not evidence of an original error. Executable governance scripts/configuration and approval/run event logs keep operational constants and dates after privacy sanitization. Numerical observations are not published from process narratives. See `validation/T084_REDACTIONS.csv` and `WITHHELD.md`.
 
-All cards and internal role reports are retained as history, including unaccepted or
-superseded work; their presence does not release their analyses. The research payload
-stops at accepted T076 plus T082 build interfaces, with T077 separately labelled as
-accepted but not yet in the proposal. Later research code/results are excluded.
+All cards and internal role reports are retained as history, including unaccepted or superseded work; their presence does not release their analyses. The research payload stops at accepted T076 plus T082 build interfaces, with T077 separately labeled as accepted but not yet in the proposal. Later research code/results are excluded.
 
-Vault notes/canvas (including text backups) are exported; .obsidian workspaces, opaque
-archive bundles and editor caches are excluded in EXCLUDED.csv. Canvas geometry is
-preserved. Team illustrations are original project workflow diagrams and may be outdated;
-agents/TEAM.md and current PI decisions govern. External referee reports and other students'
-materials are never opened or copied. Third-party PDFs are represented only by checksums
-and recorded source URLs in THIRD_PARTY_DOCUMENTS.csv; missing URLs are explicit.
+Vault notes/canvas (including text backups) are exported; `.obsidian` workspaces, opaque archive bundles and editor caches are excluded in `EXCLUDED.csv`. Canvas geometry is preserved. Team illustrations are original project workflow diagrams and may be outdated; `agents/TEAM.md` and current PI decisions govern. External referee reports and other students' materials are never opened or copied. Third-party PDFs are represented only by checksums and recorded source URLs in `THIRD_PARTY_DOCUMENTS.csv`; missing URLs are explicit.
 
-The original internal replication README is a sanitized historical snapshot. Its reproduction
-limitations remain applicable. No full standalone rebuild is claimed. A T084 AI-use entry
-is release-local; reviews and PI acceptance of T084 remain pending.
+The original internal replication README is a sanitized historical snapshot. Its reproduction limitations remain applicable. No full standalone rebuild is claimed. A T084 AI-use entry is release-local. At export time, reviews and PI acceptance of T084 were pending; T084 was subsequently accepted by PI override on November 16, 2026 (see the approval log linked below).
+
+## T091 navigation note
+
+The text above describes the historical T084 export; its navigation, terminology and acceptance-status explanation are updated here. Archived cards, reports and logs retain their historical wording. Here PI means principal investigator; task identifiers refer to archived project cards. The historical statement that T084 acceptance was pending describes the export-time status; T084 was subsequently accepted by PI override on November 16, 2026. Current PI acceptance is recorded in [the approval log](state/approvals.log); it governs statements that were pending when that description was written. The earlier audit layout has been merged here: [path ledger](../release/PATH_MAP.csv). [SOURCE_INVENTORY.csv](SOURCE_INVENTORY.csv) retains the original T084 public hashes. A [formatting ledger](../release/validation/T091_LINK_FORMATTING.csv) records the reversible escaping of literal redaction placeholders that accidentally formed Markdown links; no historical wording changed. Release scans now live under [release/validation](../release/validation/), and exclusions under [docs/WITHHELD.md](../docs/WITHHELD.md).

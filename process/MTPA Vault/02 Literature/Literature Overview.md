@@ -26,8 +26,8 @@ Back to [[[number withheld] Home]] · [[Research Question]] · [[Literature Gap]
 
 | Paper | Venue | What it does | Status |
 |---|---|---|---|
-| Ba, Huang & Zhang ([number withheld]) | *金融发展研究* [number withheld]([number withheld]) | Measures liability window dressing (粉饰负债) of A-share developers [number withheld]–[number withheld] | Abstract page opened (automated extraction) |
-| Cao & Ma ([number withheld]) | *技术经济* [number withheld]([number withheld]): [number withheld]–[number withheld] | DiD; Three Red Lines and developers' debt maturity structure | Abstract/PDF opened (automated extraction) |
+| Ba, Huang & Zhang ([number withheld]) | *金融发展研究* \[number withheld]([number withheld]) | Measures liability window dressing (粉饰负债) of A-share developers [number withheld]–[number withheld] | Abstract page opened (automated extraction) |
+| Cao & Ma ([number withheld]) | *技术经济* \[number withheld]([number withheld]): [number withheld]–[number withheld] | DiD; Three Red Lines and developers' debt maturity structure | Abstract/PDF opened (automated extraction) |
 
 Details and links: [[Literature Gap]].
 

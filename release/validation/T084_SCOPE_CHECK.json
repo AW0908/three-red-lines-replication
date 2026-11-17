@@ -1,0 +1,469 @@
+{
+  "checked_files": 24879,
+  "changed_files": [],
+  "inherited_baseline_differences": [
+    ".DS_Store",
+    "review/T091.md",
+    "review/T091_consistency.log",
+    "review/T091_consistency.md",
+    "review/T091_data.log",
+    "review/T091_data.md",
+    "review/T091_frozen.sha256",
+    "review/T091_language.log",
+    "review/T091_language.md",
+    "review/T091_latex.txt",
+    "review/T091_proposal.diff",
+    "review/T091_runstart",
+    "state/T091_card_before_rework3_20261117.md",
+    "state/approvals.log",
+    "state/run_archive/20261116_205758_T091_worker_91297/T091_report.md",
+    "state/run_archive/20261116_205758_T091_worker_91297/T091_worker.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091.md",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_consistency.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_consistency.md",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_data.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_data.md",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_language.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_language.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_consistency.log",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_consistency.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_data.log",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_data.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_language.log",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_language.md",
+    "state/run_archive/20261117_111924_T091_worker_71326/T091_report.md",
+    "state/run_archive/20261117_111924_T091_worker_71326/T091_worker.log",
+    "state/run_archive/20261117_120026_T091_review_76312/T091.md",
+    "state/run_archive/20261117_120026_T091_review_76312/T091_consistency.log",
+    "state/run_archive/20261117_120026_T091_review_76312/T091_consistency.md",
+    "state/run_archive/20261117_120026_T091_review_76312/T091_data.log",
+    "state/run_archive/20261117_120026_T091_review_76312/T091_data.md",
+    "state/run_archive/20261117_120026_T091_review_76312/T091_language.log",
+    "state/run_archive/20261117_120026_T091_review_76312/T091_language.md",
+    "state/run_archive/20261117_123111_T091_worker_80161/T091_report.md",
+    "state/run_archive/20261117_123111_T091_worker_80161/T091_worker.log",
+    "state/runs.log",
+    "state/terminal.log",
+    "tasks/T091.md"
+  ],
+  "runner_handoff_files": [
+    {
+      "file": ".DS_Store",
+      "previous": {
+        "size": 38916,
+        "mtime_ns": 1794827995520359539
+      },
+      "current": {
+        "size": 38916,
+        "mtime_ns": 1794889122162039835
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091.md",
+      "previous": null,
+      "current": {
+        "size": 24372,
+        "mtime_ns": 1794839097173028382
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_consistency.log",
+      "previous": null,
+      "current": {
+        "size": 588154,
+        "mtime_ns": 1794888530190861773
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_consistency.md",
+      "previous": null,
+      "current": {
+        "size": 7501,
+        "mtime_ns": 1794888530616445806
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_data.log",
+      "previous": null,
+      "current": {
+        "size": 1365883,
+        "mtime_ns": 1794888251210355996
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_data.md",
+      "previous": null,
+      "current": {
+        "size": 5587,
+        "mtime_ns": 1794888251671522851
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_frozen.sha256",
+      "previous": null,
+      "current": {
+        "size": 2306,
+        "mtime_ns": 1794888017320823734
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_language.log",
+      "previous": null,
+      "current": {
+        "size": 0,
+        "mtime_ns": 1794888530655505052
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_language.md",
+      "previous": null,
+      "current": {
+        "size": 9902,
+        "mtime_ns": 1794839096663135214
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_latex.txt",
+      "previous": null,
+      "current": {
+        "size": 30,
+        "mtime_ns": 1794888025820252564
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_proposal.diff",
+      "previous": null,
+      "current": {
+        "size": 43276,
+        "mtime_ns": 1794888017365549950
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "review/T091_runstart",
+      "previous": {
+        "size": 0,
+        "mtime_ns": 1794831406813674906
+      },
+      "current": {
+        "size": 0,
+        "mtime_ns": 1794889871168747572
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/T091_card_before_rework3_20261117.md",
+      "previous": null,
+      "current": {
+        "size": 13271,
+        "mtime_ns": 1794889827956563932
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/approvals.log",
+      "previous": {
+        "size": 22892,
+        "mtime_ns": 1794831406231786729
+      },
+      "current": {
+        "size": 23016,
+        "mtime_ns": 1794889870707375040
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_205758_T091_worker_91297/T091_report.md",
+      "previous": null,
+      "current": {
+        "size": 7587,
+        "mtime_ns": 1794832922631977445
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_205758_T091_worker_91297/T091_worker.log",
+      "previous": null,
+      "current": {
+        "size": 3869392,
+        "mtime_ns": 1794832922634046676
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091.md",
+      "previous": null,
+      "current": {
+        "size": 25703,
+        "mtime_ns": 1794833835167329668
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091_consistency.log",
+      "previous": null,
+      "current": {
+        "size": 571342,
+        "mtime_ns": 1794833721363459492
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091_consistency.md",
+      "previous": null,
+      "current": {
+        "size": 8802,
+        "mtime_ns": 1794833721946215903
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091_data.log",
+      "previous": null,
+      "current": {
+        "size": 503640,
+        "mtime_ns": 1794833324092645065
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091_data.md",
+      "previous": null,
+      "current": {
+        "size": 5767,
+        "mtime_ns": 1794833324586072954
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091_language.log",
+      "previous": null,
+      "current": {
+        "size": 0,
+        "mtime_ns": 1794833721983761735
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_211425_T091_review_93990/T091_language.md",
+      "previous": null,
+      "current": {
+        "size": 10535,
+        "mtime_ns": 1794833834734243473
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091.md",
+      "previous": null,
+      "current": {
+        "size": 25703,
+        "mtime_ns": 1794833835167329668
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091_consistency.log",
+      "previous": null,
+      "current": {
+        "size": 508892,
+        "mtime_ns": 1794838263637046225
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091_consistency.md",
+      "previous": null,
+      "current": {
+        "size": 8802,
+        "mtime_ns": 1794833721946215903
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091_data.log",
+      "previous": null,
+      "current": {
+        "size": 341372,
+        "mtime_ns": 1794835208830648986
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091_data.md",
+      "previous": null,
+      "current": {
+        "size": 5675,
+        "mtime_ns": 1794835209435702514
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091_language.log",
+      "previous": null,
+      "current": {
+        "size": 0,
+        "mtime_ns": 1794833721983761735
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261116_221110_T091_review_96991/T091_language.md",
+      "previous": null,
+      "current": {
+        "size": 10535,
+        "mtime_ns": 1794833834734243473
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_111924_T091_worker_71326/T091_report.md",
+      "previous": null,
+      "current": {
+        "size": 6617,
+        "mtime_ns": 1794834782932163320
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_111924_T091_worker_71326/T091_worker.log",
+      "previous": null,
+      "current": {
+        "size": 2084992,
+        "mtime_ns": 1794834782933729809
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091.md",
+      "previous": null,
+      "current": {
+        "size": 24372,
+        "mtime_ns": 1794839097173028382
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091_consistency.log",
+      "previous": null,
+      "current": {
+        "size": 609298,
+        "mtime_ns": 1794838988253226912
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091_consistency.md",
+      "previous": null,
+      "current": {
+        "size": 7295,
+        "mtime_ns": 1794838988874705261
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091_data.log",
+      "previous": null,
+      "current": {
+        "size": 390685,
+        "mtime_ns": 1794838617864395187
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091_data.md",
+      "previous": null,
+      "current": {
+        "size": 6578,
+        "mtime_ns": 1794838618535618591
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091_language.log",
+      "previous": null,
+      "current": {
+        "size": 0,
+        "mtime_ns": 1794838988917974994
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_120026_T091_review_76312/T091_language.md",
+      "previous": null,
+      "current": {
+        "size": 9902,
+        "mtime_ns": 1794839096663135214
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_123111_T091_worker_80161/T091_report.md",
+      "previous": null,
+      "current": {
+        "size": 5640,
+        "mtime_ns": 1794886261806778124
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/run_archive/20261117_123111_T091_worker_80161/T091_worker.log",
+      "previous": null,
+      "current": {
+        "size": 1118588,
+        "mtime_ns": 1794886261808763922
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/runs.log",
+      "previous": {
+        "size": 41903,
+        "mtime_ns": 1794830692618203267
+      },
+      "current": {
+        "size": 42731,
+        "mtime_ns": 1794888530628947623
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "state/terminal.log",
+      "previous": {
+        "size": 308711,
+        "mtime_ns": 1794831406813654948
+      },
+      "current": {
+        "size": 312677,
+        "mtime_ns": 1794889871168725946
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    },
+    {
+      "file": "tasks/T091.md",
+      "previous": {
+        "size": 13275,
+        "mtime_ns": 1794831406215550097
+      },
+      "current": {
+        "size": 15297,
+        "mtime_ns": 1794889870690356283
+      },
+      "handling": "runner/review handoff predates current worker; original baseline retained"
+    }
+  ],
+  "git_files_checked": 3885,
+  "git_changed_files": [],
+  "method": "size+mtime inventory; source SHA-256 checked separately; original baseline retained; explicitly documented wrapper files must predate current run marker; excluded managed metadata, environments, PI slide workspace and active worker transcript"
+}

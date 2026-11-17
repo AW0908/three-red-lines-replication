@@ -1,0 +1,22 @@
+{
+  "result": "STOPPED",
+  "reason": "Regular review archives were absent from the historical handoff allowlist.",
+  "outside_scope_findings": [
+    "state/run_archive/20261116_211425_T091_review_93990/T091.md",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_consistency.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_consistency.md",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_data.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_data.md",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_language.log",
+    "state/run_archive/20261116_211425_T091_review_93990/T091_language.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_consistency.log",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_consistency.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_data.log",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_data.md",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_language.log",
+    "state/run_archive/20261116_221110_T091_review_96991/T091_language.md"
+  ],
+  "git_changes": [],
+  "handling": "All flagged paths equal the separate language-round start snapshot and predate the worker marker. Preserve this failure; extend only the named review-archive handoff with the same temporal and snapshot guards."
+}

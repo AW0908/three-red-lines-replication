@@ -1,0 +1,10 @@
+{
+  "result": "STOPPED",
+  "reason": "New start-snapshot field was named outside instead of outside_scope",
+  "handling": "Corrected the field name without recapturing or changing any start metadata; historical baselines retained; final full check required",
+  "second_preliminary_check": {
+    "result": "STOPPED",
+    "reason": "Previously imported scope checker did not yet account for three inherited pre-worker metadata paths",
+    "handling": "Dedicated current-round snapshot; exactly the PI approval log, dated card backup and Finder metadata must match start and predate worker marker; original baseline unchanged"
+  }
+}

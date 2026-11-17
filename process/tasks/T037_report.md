@@ -24,7 +24,7 @@ Es gibt keinen Befehl, der Worker hat kein Bash. LaTeX wurde nicht kompiliert; d
 [number withheld]. **PI kompiliert `main.tex` ohne Fehler** – nicht geprüft (kein Bash). Ich habe keine neuen Pakete verwendet. Die Labels sec:framework, sec:data, sec:empirical, sec:preliminary und sec:conclusion gibt es; `%` und `&` stehen nur in Kommentaren.
 
 **`[cite]`-Marker für den PI** (sichtbar als `\textbf{[cite]}`, dazu jeweils ein Kommentar `% [CITE: ...]`):
-- Cao & Ma ([number withheld]), *技术经济* [number withheld]([number withheld]): [number withheld]–[number withheld] – in `01_introduction.tex` und `02_literature.tex`
+- Cao & Ma ([number withheld]), *技术经济* \[number withheld]([number withheld]): [number withheld]–[number withheld] – in `01_introduction.tex` und `02_literature.tex`
 - Kleven & Waseem ([number withheld]) – `02_literature.tex`
 - Degeorge, Patel & Zeckhauser ([number withheld]) – `02_literature.tex`
 

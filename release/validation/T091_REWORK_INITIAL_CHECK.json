@@ -1,0 +1,23 @@
+{
+  "result": "FAIL",
+  "stage": "inherited regular-review metadata versus initial T091 baseline",
+  "outside_scope_findings": [
+    "review/T091.md",
+    "review/T091_consistency.log",
+    "review/T091_consistency.md",
+    "review/T091_data.log",
+    "review/T091_data.md",
+    "review/T091_frozen.sha256",
+    "review/T091_language.log",
+    "review/T091_language.md",
+    "review/T091_latex.txt",
+    "review/T091_proposal.diff",
+    "state/run_archive/20261116_205758_T091_worker_91297/T091_report.md",
+    "state/run_archive/20261116_205758_T091_worker_91297/T091_worker.log",
+    "state/runs.log",
+    "tasks/T091.md"
+  ],
+  "safety_findings": 0,
+  "scientific_hashes": "2625 PASS",
+  "handling": "Original baseline retained; exact review/worker handoff paths permitted only if their mtime predates current runstart; captured pre-REWORK metadata must remain unchanged."
+}

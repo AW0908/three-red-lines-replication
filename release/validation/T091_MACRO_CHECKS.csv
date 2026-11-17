@@ -1,0 +1,7 @@
+criterion,result,evidence
+preamble_macro_fixture,PASS,"Known-answer fixture: inputtable, inputfigure, inputtablefloat, transitive alias, optional nested note, commented call; independent count 4"
+independent_label_count,PASS,89 unique literal labels after independent input/macro traversal; no float parser or generator input list used
+input_graph,PASS,63 independently reached files match proposal-input SHA-256 inventory
+entrypoint_parity,PASS,"All 89 CSV rows occur exactly once in README and HTML, in identical order"
+previous_map_preserved,PASS,Removing only the two added rows reconstructs the entire previous CSV byte-for-byte against its immutable start SHA-256; all 87 earlier rows unchanged
+reviewed_missing_tables,PASS,tab:did_main and tab:t024_rd_main map to included outputs and producers in Online Appendix

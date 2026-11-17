@@ -50,7 +50,7 @@ Ich habe keinen inhaltlichen Fehler in den Schätzungen gefunden. Die folgenden 
   - Post-minus-Pre-Kontrast: L = design(post) − design(pre).
   - CR1 = G/(G−[number withheld])·(N−[number withheld])/(N−K), t(G−[number withheld]); das entspricht fixest.
   - Prüfung der Schätzbarkeit bei Rangdefizit ist vorhanden.
-  - Ergebnis: [number withheld](nächstes RL1 > [number withheld]), streng größer, ohne Überbrücken von Lücken.
+  - Ergebnis: \[number withheld](nächstes RL1 > [number withheld]), streng größer, ohne Überbrücken von Lücken.
 - **Timing:**
   - Die Post-Masken entsprechen (i), (ii) und (iii); Pre ist immer [number withheld]H1–[number withheld]H2.
   - Die Zeile `T0[number withheld]_near` für (i) stimmt exakt mit `t023_reversal.csv` Z. [number withheld] überein ([number withheld]; [[number withheld]; [number withheld]]).

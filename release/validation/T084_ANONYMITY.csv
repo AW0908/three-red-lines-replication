@@ -1,0 +1,444 @@
+file,line,offset,identifier,channel
+CITATION.cff,6,248,author_given_name,text/raw bytes
+CITATION.cff,5,222,author_family_name,text/raw bytes
+CITATION.cff,8,302,author_account,text/raw bytes
+LICENSE,3,32,author_given_name,text/raw bytes
+LICENSE,3,38,author_family_name,text/raw bytes
+LICENSE-data.md,3,225,author_given_name,text/raw bytes
+LICENSE-data.md,3,231,author_family_name,text/raw bytes
+README.md,146,17236,author_given_name,text/raw bytes
+README.md,146,17242,author_family_name,text/raw bytes
+README.md,146,17378,author_account,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6065,435029,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6066,435102,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6067,435175,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6068,435247,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6069,435318,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6070,435389,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6071,435462,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6072,435534,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6073,435606,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6074,435678,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6075,435749,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6076,435819,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6077,435891,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6783,486697,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6784,486765,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6785,486834,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6786,486901,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6787,486976,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6788,487051,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6789,487128,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6790,487204,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6791,487283,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6792,487360,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6793,487436,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6794,487511,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,6795,487589,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16445,1165792,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16446,1165861,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16447,1165930,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16448,1165999,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16449,1166078,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16450,1166157,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16451,1166236,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16452,1166315,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16453,1166394,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16454,1166473,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16455,1166552,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16456,1166631,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_balance.csv,16457,1166710,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_roster.csv,695,64221,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_roster.csv,777,72957,author_given_name,text/raw bytes
+data/raw/control_hk/control_hk_roster.csv,2009,202997,author_given_name,text/raw bytes
+data/raw/control_hk/hkex_equities.csv,695,13289,author_given_name,text/raw bytes
+data/raw/control_hk/hkex_equities.csv,777,14830,author_given_name,text/raw bytes
+data/raw/control_hk/hkex_equities.csv,2009,37381,author_given_name,text/raw bytes
+data/raw/manual/handcollect/contract_hits.csv,8576,278411,author_given_name,text/raw bytes
+docs/index.html,13,3592,author_account,text/raw bytes
+docs/index.html,13,3698,author_account,text/raw bytes
+docs/index.html,14,3918,author_account,text/raw bytes
+docs/index.html,15,4457,author_account,text/raw bytes
+docs/index.html,15,4574,author_account,text/raw bytes
+docs/index.html,15,5091,author_account,text/raw bytes
+docs/index.html,15,5208,author_account,text/raw bytes
+docs/index.html,15,5559,author_account,text/raw bytes
+docs/index.html,15,5676,author_account,text/raw bytes
+docs/index.html,15,6683,author_account,text/raw bytes
+docs/index.html,15,6800,author_account,text/raw bytes
+docs/index.html,15,7004,author_account,text/raw bytes
+docs/index.html,15,7121,author_account,text/raw bytes
+docs/index.html,15,7318,author_account,text/raw bytes
+docs/index.html,15,7437,author_account,text/raw bytes
+docs/index.html,15,7645,author_account,text/raw bytes
+docs/index.html,15,7776,author_account,text/raw bytes
+docs/index.html,15,7975,author_account,text/raw bytes
+docs/index.html,15,8092,author_account,text/raw bytes
+docs/index.html,15,8268,author_account,text/raw bytes
+docs/index.html,15,8399,author_account,text/raw bytes
+docs/index.html,15,8598,author_account,text/raw bytes
+docs/index.html,15,8727,author_account,text/raw bytes
+docs/index.html,15,8919,author_account,text/raw bytes
+docs/index.html,15,9048,author_account,text/raw bytes
+docs/index.html,15,9237,author_account,text/raw bytes
+docs/index.html,15,9356,author_account,text/raw bytes
+docs/index.html,15,9553,author_account,text/raw bytes
+docs/index.html,15,9672,author_account,text/raw bytes
+docs/index.html,15,9871,author_account,text/raw bytes
+docs/index.html,15,9990,author_account,text/raw bytes
+docs/index.html,15,10187,author_account,text/raw bytes
+docs/index.html,15,10304,author_account,text/raw bytes
+docs/index.html,15,10510,author_account,text/raw bytes
+docs/index.html,15,10629,author_account,text/raw bytes
+docs/index.html,15,10818,author_account,text/raw bytes
+docs/index.html,15,10947,author_account,text/raw bytes
+docs/index.html,15,11140,author_account,text/raw bytes
+docs/index.html,15,11257,author_account,text/raw bytes
+docs/index.html,15,11460,author_account,text/raw bytes
+docs/index.html,15,11579,author_account,text/raw bytes
+docs/index.html,15,11772,author_account,text/raw bytes
+docs/index.html,15,11891,author_account,text/raw bytes
+docs/index.html,15,12094,author_account,text/raw bytes
+docs/index.html,15,12213,author_account,text/raw bytes
+docs/index.html,15,12404,author_account,text/raw bytes
+docs/index.html,15,12521,author_account,text/raw bytes
+docs/index.html,15,12743,author_account,text/raw bytes
+docs/index.html,15,12860,author_account,text/raw bytes
+docs/index.html,15,13079,author_account,text/raw bytes
+docs/index.html,15,13202,author_account,text/raw bytes
+docs/index.html,15,13404,author_account,text/raw bytes
+docs/index.html,15,13527,author_account,text/raw bytes
+docs/index.html,15,13739,author_account,text/raw bytes
+docs/index.html,15,13862,author_account,text/raw bytes
+docs/index.html,15,14073,author_account,text/raw bytes
+docs/index.html,15,14192,author_account,text/raw bytes
+docs/index.html,15,14363,author_account,text/raw bytes
+docs/index.html,15,14482,author_account,text/raw bytes
+docs/index.html,15,14673,author_account,text/raw bytes
+docs/index.html,15,14792,author_account,text/raw bytes
+docs/index.html,15,14991,author_account,text/raw bytes
+docs/index.html,15,15110,author_account,text/raw bytes
+docs/index.html,15,15305,author_account,text/raw bytes
+docs/index.html,15,15424,author_account,text/raw bytes
+docs/index.html,15,15612,author_account,text/raw bytes
+docs/index.html,15,15731,author_account,text/raw bytes
+docs/index.html,15,15919,author_account,text/raw bytes
+docs/index.html,15,16038,author_account,text/raw bytes
+docs/index.html,15,16222,author_account,text/raw bytes
+docs/index.html,15,16339,author_account,text/raw bytes
+docs/index.html,15,16557,author_account,text/raw bytes
+docs/index.html,15,16674,author_account,text/raw bytes
+docs/index.html,15,16893,author_account,text/raw bytes
+docs/index.html,15,17026,author_account,text/raw bytes
+docs/index.html,15,17383,author_account,text/raw bytes
+docs/index.html,15,17502,author_account,text/raw bytes
+docs/index.html,15,17690,author_account,text/raw bytes
+docs/index.html,15,17807,author_account,text/raw bytes
+docs/index.html,15,17989,author_account,text/raw bytes
+docs/index.html,15,18108,author_account,text/raw bytes
+docs/index.html,15,18309,author_account,text/raw bytes
+docs/index.html,15,18428,author_account,text/raw bytes
+docs/index.html,15,18630,author_account,text/raw bytes
+docs/index.html,15,18765,author_account,text/raw bytes
+docs/index.html,15,19296,author_account,text/raw bytes
+docs/index.html,15,19415,author_account,text/raw bytes
+docs/index.html,15,19606,author_account,text/raw bytes
+docs/index.html,15,19725,author_account,text/raw bytes
+docs/index.html,15,19932,author_account,text/raw bytes
+docs/index.html,15,20039,author_account,text/raw bytes
+docs/index.html,15,20227,author_account,text/raw bytes
+docs/index.html,15,20340,author_account,text/raw bytes
+docs/index.html,15,20526,author_account,text/raw bytes
+docs/index.html,15,20639,author_account,text/raw bytes
+docs/index.html,15,20825,author_account,text/raw bytes
+docs/index.html,15,20938,author_account,text/raw bytes
+docs/index.html,15,21124,author_account,text/raw bytes
+docs/index.html,15,21237,author_account,text/raw bytes
+docs/index.html,15,21423,author_account,text/raw bytes
+docs/index.html,15,21536,author_account,text/raw bytes
+docs/index.html,15,21725,author_account,text/raw bytes
+docs/index.html,15,21838,author_account,text/raw bytes
+docs/index.html,15,22033,author_account,text/raw bytes
+docs/index.html,15,22146,author_account,text/raw bytes
+docs/index.html,15,22341,author_account,text/raw bytes
+docs/index.html,15,22454,author_account,text/raw bytes
+docs/index.html,15,22645,author_account,text/raw bytes
+docs/index.html,15,22758,author_account,text/raw bytes
+docs/index.html,15,22971,author_account,text/raw bytes
+docs/index.html,15,23084,author_account,text/raw bytes
+docs/index.html,15,23285,author_account,text/raw bytes
+docs/index.html,15,23398,author_account,text/raw bytes
+docs/index.html,15,23599,author_account,text/raw bytes
+docs/index.html,15,23712,author_account,text/raw bytes
+docs/index.html,15,23907,author_account,text/raw bytes
+docs/index.html,15,24020,author_account,text/raw bytes
+docs/index.html,15,24255,author_account,text/raw bytes
+docs/index.html,15,24376,author_account,text/raw bytes
+docs/index.html,15,24577,author_account,text/raw bytes
+docs/index.html,15,24694,author_account,text/raw bytes
+docs/index.html,15,24884,author_account,text/raw bytes
+docs/index.html,15,25001,author_account,text/raw bytes
+docs/index.html,15,25191,author_account,text/raw bytes
+docs/index.html,15,25308,author_account,text/raw bytes
+docs/index.html,15,25498,author_account,text/raw bytes
+docs/index.html,15,25615,author_account,text/raw bytes
+docs/index.html,15,25805,author_account,text/raw bytes
+docs/index.html,15,25922,author_account,text/raw bytes
+docs/index.html,15,26112,author_account,text/raw bytes
+docs/index.html,15,26229,author_account,text/raw bytes
+docs/index.html,15,26419,author_account,text/raw bytes
+docs/index.html,15,26536,author_account,text/raw bytes
+docs/index.html,15,26726,author_account,text/raw bytes
+docs/index.html,15,26843,author_account,text/raw bytes
+docs/index.html,15,27033,author_account,text/raw bytes
+docs/index.html,15,27150,author_account,text/raw bytes
+docs/index.html,15,27341,author_account,text/raw bytes
+docs/index.html,15,27458,author_account,text/raw bytes
+docs/index.html,15,27650,author_account,text/raw bytes
+docs/index.html,15,27767,author_account,text/raw bytes
+docs/index.html,15,27963,author_account,text/raw bytes
+docs/index.html,15,28080,author_account,text/raw bytes
+docs/index.html,15,28276,author_account,text/raw bytes
+docs/index.html,15,28393,author_account,text/raw bytes
+docs/index.html,15,28589,author_account,text/raw bytes
+docs/index.html,15,28706,author_account,text/raw bytes
+docs/index.html,15,28902,author_account,text/raw bytes
+docs/index.html,15,29019,author_account,text/raw bytes
+docs/index.html,15,29205,author_account,text/raw bytes
+docs/index.html,15,29322,author_account,text/raw bytes
+docs/index.html,15,30006,author_account,text/raw bytes
+docs/index.html,15,30125,author_account,text/raw bytes
+docs/index.html,15,30236,author_account,text/raw bytes
+docs/index.html,16,30570,author_account,text/raw bytes
+docs/index.html,16,30826,author_account,text/raw bytes
+outputs/figures/t027_decomposition_rl1.pdf,230,41282,author_initials,raw bytes
+outputs/figures/t029_distance_es.pdf,103,18219,author_initials,raw bytes
+outputs/figures/t029_distance_es.pdf,620,140956,author_initials,raw bytes
+outputs/figures/t041_frozen_horizons.pdf,95,16401,author_initials,raw bytes
+outputs/figures/t041_frozen_horizons.pdf,368,95750,author_initials,raw bytes
+outputs/tables/t076_hk_panel.csv,6065,891863,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6066,892012,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6067,892161,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6068,892308,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6069,892450,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6070,892596,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6071,892745,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6072,892893,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6073,893040,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6074,893188,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6075,893336,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6076,893479,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6077,893628,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6783,997133,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6784,997277,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6785,997422,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6786,997563,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6787,997719,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6788,997875,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6789,998035,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6790,998193,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6791,998355,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6792,998514,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6793,998671,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6794,998827,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,6795,998988,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16445,2388449,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16446,2388586,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16447,2388723,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16448,2388860,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16449,2389011,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16450,2389162,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16451,2389313,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16452,2389464,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16453,2389615,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16454,2389766,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16455,2389917,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16456,2390068,author_given_name,text/raw bytes
+outputs/tables/t076_hk_panel.csv,16457,2390219,author_given_name,text/raw bytes
+process/AGENTS.md,10,470,author_given_name,text/raw bytes
+process/AGENTS.md,31,2121,author_given_name,text/raw bytes
+process/AGENTS.md,42,2880,author_given_name,text/raw bytes
+process/AGENTS.md,81,5698,author_given_name,text/raw bytes
+process/AGENTS.md,96,6439,author_given_name,text/raw bytes
+process/AGENTS.md,111,7656,author_given_name,text/raw bytes
+process/AGENTS.md,115,8122,author_given_name,text/raw bytes
+process/AGENTS.md,136,9798,author_given_name,text/raw bytes
+process/AGENTS.md,138,10030,author_given_name,text/raw bytes
+process/AGENTS.md,143,10359,author_given_name,text/raw bytes
+process/AGENTS.md,158,11312,author_given_name,text/raw bytes
+process/AGENTS.md,165,11997,author_given_name,text/raw bytes
+process/AGENTS.md,180,13014,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,12,697,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,23,8211,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,23,8706,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,23,8835,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,23,9066,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,23,9297,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,24,10009,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,25,10728,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,26,11529,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,27,12099,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,28,12970,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,29,13734,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,29,13864,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,31,15035,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,31,15285,author_given_name,text/raw bytes
+process/AI_USAGE_LOG.md,49,18133,author_given_name,text/raw bytes
+process/MTPA Vault/00 Home.md,13,517,author_given_name,text/raw bytes
+process/MTPA Vault/00 Home.md,13,523,author_family_name,text/raw bytes
+process/MTPA Vault/03 Data/AKShare EastMoney.md,40,2478,author_given_name,text/raw bytes
+process/MTPA Vault/03 Data/Firm Panel.md,13,447,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Agent Org Chart.canvas,70,1496,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Agent Team Overview.md,18,650,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Agent Team Overview.md,40,2079,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Roles.md,17,391,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Roles.md,18,677,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Scripts and Safeguards.md,17,582,author_given_name,text/raw bytes
+process/MTPA Vault/04 Agent Team/Scripts and Safeguards.md,63,4170,author_given_name,text/raw bytes
+process/MTPA Vault/05 Tasks/T001 A-Share Audit.md,25,850,author_given_name,text/raw bytes
+process/MTPA Vault/05 Tasks/T001 A-Share Audit.md,100,6097,author_given_name,text/raw bytes
+process/MTPA Vault/05 Tasks/T004 Firm Panel and Red-Line Metrics.md,12,352,author_given_name,text/raw bytes
+process/MTPA Vault/05 Tasks/T006 Overleaf Structure.md,35,1967,author_given_name,text/raw bytes
+process/MTPA Vault/06 Course/Course Overview.md,112,9866,author_given_name,text/raw bytes
+process/MTPA Vault/06 Course/Lecture 02 Guest - AI Agent Organization.md,97,10563,author_given_name,text/raw bytes
+process/MTPA Vault/08 Progress/To-Do.md,11,224,author_given_name,text/raw bytes
+process/MTPA Vault/09 Replication/R Environment and RStudio.md,12,199,author_given_name,text/raw bytes
+process/MTPA Vault/09 Replication/Replication Package.md,22,690,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Model Tiers.md,22,1073,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Overleaf Sync.md,22,1063,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Role - Co-PI.md,9,133,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Role - Co-PI.md,9,231,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Role - PI.md,9,96,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Role - PI.md,44,1849,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Role - PI.md,9,102,author_family_name,text/raw bytes
+process/MTPA Vault/_archive/Safeguards.md,33,2935,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Scripts Reference.md,14,560,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Scripts and Environment.md,40,2894,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Scripts and Environment.md,49,3541,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/Wind Visit 2 Checklist.md,9,290,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/00 Home.md,9,213,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/00 Home.md,9,219,author_family_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/01 Research/Research Question.md,11,366,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/01 Research/Research Question.md,27,1757,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/03 Data/AKShare EastMoney.md,52,3755,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/03 Data/Data Overview.md,12,575,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/03 Data/Scripts and Environment.md,40,2894,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/03 Data/Scripts and Environment.md,49,3541,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/03 Data/Wind Visit 2 Checklist.md,9,290,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Agent Org Chart.canvas,20,379,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Agent Team Overview.md,18,864,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Agent Team Overview.md,39,3077,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Agent Team Overview.md,45,3621,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Agent Team Overview.md,55,4633,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Model Tiers.md,22,1073,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Overleaf Sync.md,22,1063,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Role - Co-PI.md,9,133,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Role - Co-PI.md,9,231,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Role - PI.md,9,96,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Role - PI.md,44,1849,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Role - PI.md,9,102,author_family_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Safeguards.md,33,2935,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/04 Agent Team/Scripts Reference.md,14,560,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/05 Tasks/T001 A-Share Audit.md,23,841,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/05 Tasks/T001 A-Share Audit.md,98,6104,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/05 Tasks/T002 LaTeX Skeleton.md,40,2063,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/05 Tasks/T002 LaTeX Skeleton.md,100,8272,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/05 Tasks/T002 LaTeX Skeleton.md,106,8979,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/05 Tasks/T002 LaTeX Skeleton.md,40,2069,author_family_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/06 Course/Course Overview.md,112,9889,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/06 Course/Lecture 02 Guest - AI Agent Organization.md,95,10549,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/MTPA Vault/08 Progress/To-Do.md,9,96,author_given_name,text/raw bytes
+process/MTPA Vault/_archive/_bundle/tasks/T003.md,15,461,author_given_name,text/raw bytes
+process/Team_Ablauf.png,99,34744,author_initials,raw bytes
+process/Team_Ablauf.png,290,96069,author_initials,raw bytes
+process/Team_Ablauf.png,723,239576,author_initials,raw bytes
+process/Team_Ablauf.png,724,240733,author_initials,raw bytes
+process/Team_Ablauf.png,823,269280,author_initials,raw bytes
+process/Team_Ablauf.png,902,286037,author_initials,raw bytes
+process/Team_Ablauf.png,921,289108,author_initials,raw bytes
+process/Team_Workflow_EN.png,1148,369149,author_initials,raw bytes
+process/agents/TEAM.md,3,67,author_given_name,text/raw bytes
+process/agents/TEAM.md,22,1433,author_given_name,text/raw bytes
+process/agents/TEAM.md,24,1639,author_given_name,text/raw bytes
+process/agents/TEAM.md,65,4858,author_given_name,text/raw bytes
+process/agents/co-pi.sh,17,991,author_given_name,text/raw bytes
+process/agents/pi.sh,2,41,author_given_name,text/raw bytes
+process/agents/roles/co-pi.md,47,3204,author_given_name,text/raw bytes
+process/agents/roles/co-pi.md,62,4218,author_given_name,text/raw bytes
+process/agents/roles/reviewer.md,57,3686,author_given_name,text/raw bytes
+process/replication_README.md,5,125,author_given_name,text/raw bytes
+process/replication_README.md,1050,116118,author_given_name,text/raw bytes
+process/replication_README.md,5,131,author_family_name,text/raw bytes
+process/replication_README.md,1050,116124,author_family_name,text/raw bytes
+process/review/T010.md,15,1138,author_given_name,text/raw bytes
+process/review/T042.md,46,4963,author_given_name,text/raw bytes
+process/review/T042_language.md,7,535,author_given_name,text/raw bytes
+process/review/T043.md,122,15560,author_given_name,text/raw bytes
+process/review/T043_consistency.md,5,213,author_given_name,text/raw bytes
+process/review/T059.md,32,4220,author_given_name,text/raw bytes
+process/review/T059_consistency.md,16,3257,author_given_name,text/raw bytes
+process/review/T063.md,162,19374,author_given_name,text/raw bytes
+process/review/T063_consistency.md,11,1690,author_given_name,text/raw bytes
+process/review/T069.md,24,1542,author_given_name,text/raw bytes
+process/review/T069_consistency.md,8,801,author_given_name,text/raw bytes
+process/review/T082.md,24,1482,author_given_name,text/raw bytes
+process/review/T082_data.md,6,862,author_given_name,text/raw bytes
+process/state/CODEX_MIGRATION.md,7,339,author_given_name,text/raw bytes
+process/state/CODEX_MIGRATION.md,66,3170,author_given_name,text/raw bytes
+process/state/STATE.md,63,15102,author_given_name,text/raw bytes
+process/state/STATE.md,78,19908,author_given_name,text/raw bytes
+process/state/STATE.md,129,32826,author_given_name,text/raw bytes
+process/state/STATE.md,129,32832,author_family_name,text/raw bytes
+process/state/adoption_T077-T081.md,86,6062,author_given_name,text/raw bytes
+process/state/followups.md,108,32065,author_given_name,text/raw bytes
+process/state/followups.md,108,32072,author_family_name,text/raw bytes
+process/state/identification_design_2026-11-13.md,3,147,author_given_name,text/raw bytes
+process/tasks/T001.md,13,340,author_given_name,text/raw bytes
+process/tasks/T001.md,76,3954,author_given_name,text/raw bytes
+process/tasks/T001_report.md,38,2549,author_given_name,text/raw bytes
+process/tasks/T002.md,36,1243,author_given_name,text/raw bytes
+process/tasks/T002.md,36,1249,author_family_name,text/raw bytes
+process/tasks/T002_report.md,33,2772,author_given_name,text/raw bytes
+process/tasks/T003.md,15,466,author_given_name,text/raw bytes
+process/tasks/T007.md,18,618,author_given_name,text/raw bytes
+process/tasks/T017.md,36,2751,author_given_name,text/raw bytes
+process/tasks/T017.md,36,2757,author_family_name,text/raw bytes
+process/tasks/T017_report.md,2,415,author_given_name,text/raw bytes
+process/tasks/T017_report.md,19,2185,author_given_name,text/raw bytes
+process/tasks/T017_report.md,27,3304,author_given_name,text/raw bytes
+process/tasks/T041_report.md,48,4312,author_given_name,text/raw bytes
+process/tasks/T042.md,21,1016,author_given_name,text/raw bytes
+process/tasks/T042_report.md,133,15461,author_given_name,text/raw bytes
+process/tasks/T042_report.md,135,16557,author_given_name,text/raw bytes
+process/tasks/T046_report.md,60,6017,author_given_name,text/raw bytes
+process/tasks/T060_report.md,54,2985,author_given_name,text/raw bytes
+process/tasks/T073.md,58,4506,author_account,text/raw bytes
+process/tasks/T077.md,72,6288,author_given_name,text/raw bytes
+process/tasks/T078.md,14,434,author_given_name,text/raw bytes
+process/tasks/T079.md,50,8457,author_given_name,text/raw bytes
+process/tasks/T080.md,19,812,author_given_name,text/raw bytes
+process/tasks/T081.md,21,1214,author_given_name,text/raw bytes
+process/tasks/T081_report.md,64,10326,author_given_name,text/raw bytes
+process/tasks/T082.md,90,5532,author_given_name,text/raw bytes
+process/tasks/T084.md,55,4149,author_given_name,text/raw bytes
+process/tasks/T084.md,55,4158,author_family_name,text/raw bytes
+release/README_FACTS.json,8,1111,author_account,text/raw bytes
+release/release_tools/inspect_release.py,45,1807,author_account,text/raw bytes
+release/release_tools/t084_build.py,278,26229,author_given_name,text/raw bytes
+release/release_tools/t084_build.py,278,26327,author_given_name,text/raw bytes
+release/release_tools/t084_build.py,318,32556,author_given_name,text/raw bytes
+release/release_tools/t084_build.py,340,33852,author_given_name,text/raw bytes
+release/release_tools/t084_build.py,278,26235,author_family_name,text/raw bytes
+release/release_tools/t084_build.py,278,26317,author_family_name,text/raw bytes
+release/release_tools/t084_build.py,318,32562,author_family_name,text/raw bytes
+release/release_tools/t084_build.py,340,33858,author_family_name,text/raw bytes
+release/release_tools/t084_build.py,278,26452,author_account,text/raw bytes
+release/release_tools/t084_scan.py,51,2085,author_given_name,text/raw bytes
+release/release_tools/t084_scan.py,52,2143,author_family_name,text/raw bytes
+release/release_tools/t084_scan.py,53,2200,author_account,text/raw bytes
+release/release_tools/t084_scan.py,54,2282,author_initials,text/raw bytes
+release/release_tools/t091_layout.py,360,19538,author_given_name,text/raw bytes
+release/release_tools/t091_layout.py,423,26349,author_given_name,text/raw bytes
+release/release_tools/t091_layout.py,360,19511,author_family_name,text/raw bytes
+release/release_tools/t091_layout.py,423,26355,author_family_name,text/raw bytes
+release/release_tools/t091_layout.py,17,567,author_account,text/raw bytes

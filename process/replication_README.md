@@ -10,21 +10,21 @@ Anton Wilhelmi · Modern Tools for Policy Analysis (Course [number withheld]), S
 
 ## Contents
 
-[number withheld]. [Overview](#[number withheld]-overview)
-[number withheld]. [Quick start](#[number withheld]-quick-start)
-[number withheld]. [Folder structure](#[number withheld]-folder-structure)
-[number withheld]. [Computational requirements](#[number withheld]-computational-requirements)
-[number withheld]. [Data availability and provenance](#[number withheld]-data-availability-and-provenance)
-[number withheld]. [Description of the scripts](#[number withheld]-description-of-the-scripts)
-[number withheld]. [Variable definitions](#[number withheld]-variable-definitions)
-[number withheld]. [Empirical design](#[number withheld]-empirical-design)
-[number withheld]. [List of outputs](#[number withheld]-list-of-outputs)
-[number withheld]. [Reproducibility conventions](#[number withheld]-reproducibility-conventions)
-[number withheld]. [Known data issues](#[number withheld]-known-data-issues)
-[number withheld]. [Open decisions](#[number withheld]-open-decisions)
-[number withheld]. [Use of AI tools](#[number withheld]-use-of-ai-tools)
-[number withheld]. [Changelog](#[number withheld]-changelog)
-[number withheld]. [Contact](#[number withheld]-contact)
+[number withheld]. [Overview](#number-withheld-overview)
+[number withheld]. [Quick start](#number-withheld-quick-start)
+[number withheld]. [Folder structure](#number-withheld-folder-structure)
+[number withheld]. [Computational requirements](#number-withheld-computational-requirements)
+[number withheld]. [Data availability and provenance](#number-withheld-data-availability-and-provenance)
+[number withheld]. [Description of the scripts](#number-withheld-description-of-the-scripts)
+[number withheld]. [Variable definitions](#number-withheld-variable-definitions)
+[number withheld]. [Empirical design](#number-withheld-empirical-design)
+[number withheld]. [List of outputs](#number-withheld-list-of-outputs-pending)
+[number withheld]. [Reproducibility conventions](#number-withheld-reproducibility-conventions)
+[number withheld]. [Known data issues](#number-withheld-known-data-issues)
+[number withheld]. [Open decisions](#number-withheld-open-decisions)
+[number withheld]. [Use of AI tools](#number-withheld-use-of-ai-tools)
+[number withheld]. [Changelog](#number-withheld-changelog)
+[number withheld]. [Contact](#number-withheld-contact)
 
 ---
 
@@ -1265,7 +1265,7 @@ All uncertainty uses the common T023/T029 [number withheld] whole-firm resamples
 fits, reweighting distributions and fallback medians in every draw. Intervals
 are pointwise percentile CIs; valid/failed draw counts are retained.
 
-- `t055_mi_shift.csv/.tex`: means and medians of [number withheld](frozen minus reported RL1),
+- `t055_mi_shift.csv/.tex`: means and medians of \[number withheld](frozen minus reported RL1),
   post, placebo and their paired-bootstrap difference, both all eligible pairs
   and reported RL1 in [[number withheld]]. D is separately reported in share units.
   Placebo D is standardized to the paired post reported-RL1 distribution using

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the archive release or commit and access date."
+title: "Meeting the Red Lines: Threshold Targeting and Minority Equity among Chinese Property Developers"
+authors:
+  - family-names: Wilhelmi
+    given-names: Anton
+year: 2026
+repository-code: "https://github.com/AW0908/three-red-lines-replication"
+license: MIT
+# Code license; author-owned data/outputs: CC BY 4.0, with third-party exceptions.
