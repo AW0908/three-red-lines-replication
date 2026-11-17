@@ -122,11 +122,13 @@ from t091_checks import validate_structure, file_ledger
 validate_structure(OUT)
 from t093_site import validate_site
 validate_site(OUT)
-dom=subprocess.run(['node',str(OUT/'release/release_tools/t093_dom_check.js')],capture_output=True,text=True,check=True)
+from t094_check import verify_content
+verify_content()
+dom=subprocess.run(['node',str(OUT/'release/release_tools/t094_dom_check.js')],capture_output=True,text=True,check=True)
 dom_result=json.loads(dom.stdout)
 assert dom_result['result']=='PASS'
-(OUT/'release/validation/T093_DOM_CHECK.json').write_text(json.dumps(dom_result,indent=2)+'\n')
-print('T093 JAVASCRIPT PASS: 89 rows; filters/search; 151 map links; finite SVG geometry; clipboard fallback. No visual render.')
+(OUT/'release/validation/T094_DOM_CHECK.json').write_text(json.dumps(dom_result,indent=2)+'\n')
+print('T094 JAVASCRIPT PASS: motion/reduced/no-observer; seven exact counter endpoints; 89 rows; 151 map links; finite SVG geometry; clipboard fallback. No visual render.')
 file_ledger(OUT)
 from t093_site import file_ledger as t093_file_ledger
 t093_file_ledger()

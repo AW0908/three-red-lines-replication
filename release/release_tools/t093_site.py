@@ -18,6 +18,7 @@ OUT = Path(__file__).resolve().parents[2]
 VAL = OUT / 'release/validation'
 REPO = 'https://github.com/AW0908/three-red-lines-replication'
 PAGES = 'https://aw0908.github.io/three-red-lines-replication/'
+TASK = 'T094' if (VAL/'T094_BEFORE.json').exists() else 'T093'
 FIELDS = ['proposal_item', 'caption', 'section', 'producer_kind', 'script',
           'release_location', 'needs_Wind']
 
@@ -273,7 +274,18 @@ def numbers(d):
                 source='; '.join(dict.fromkeys(sources)) or 'UNCONFIRMED',
                 recomputed_value=token if sources else '', match='yes' if sources else 'no',
                 status='literal occurrence, linked to evidence above'))
-    write_csv('T093_NUMBERS.csv', audit)
+    if TASK == 'T094':
+        template = (OUT/'release/release_tools/site_template.html').read_text()
+        counters = re.findall(r'<[^>]+data-count="([^"]+)"[^>]*>([^<]+)<', template)
+        assert len(counters) == 7
+        for target, initial in counters:
+            matches = [r for r in audit if r['number_on_page'].replace(',', '') == target
+                       and r['match'] == 'yes' and r['source'] != 'UNCONFIRMED']
+            assert matches and Decimal(target) == Decimal(initial.replace(',', ''))
+            audit.append(dict(number_on_page=initial, page_location='Counter source and exact final text',
+                source=matches[0]['source'], recomputed_value=initial, match='yes',
+                status='existing numeric value; runtime exact-text restoration checked by t094_dom_check.js'))
+    write_csv(TASK+'_NUMBERS.csv', audit)
     assert all(r['match'] == 'yes' for r in audit), 'T093 STOP: unconfirmed number'
     return audit
 
@@ -349,7 +361,7 @@ def validate_site(out=OUT):
             mapped = p.relative_to(OUT).as_posix()
         rows.append(dict(target=target, release_target=mapped, result='PASS'))
     assert not re.search(r'@import|url\s*\(|\bfetch\s*\(|XMLHttpRequest|sendBeacon|WebSocket|https?://[^"\s]*\.(?:js|css)', text, re.I)
-    write_csv('T093_LINKS.csv', rows)
+    write_csv(TASK+'_LINKS.csv', rows)
     assert 'files' in page.ids and '#files' in page.links
     for folder in ['code', 'data', 'outputs', 'docs', 'process', 'release']:
         assert REPO+'/tree/main/'+folder in page.links
@@ -364,13 +376,16 @@ def validate_site(out=OUT):
     expected = before.replace('[Reader start page](docs/index.html)',
                               '[Reader start page](docs/index.html) · [GitHub Pages]('+PAGES+')')
     assert (OUT/'README.md').read_text() == expected
-    print('T093 SITE PASS: template layout/wording; density n=713/557/2743/2435; '
-          f'{len(read("release/validation/T093_NUMBERS.csv"))} number checks; '
-          f'{len(rows)} links; 2627 code/data/output files unchanged from 6ab039d.')
+    print(TASK+' SITE PASS: template layout/wording; density n=713/557/2743/2435; '
+          f'{len(read("release/validation/"+TASK+"_NUMBERS.csv"))} number checks; '
+          f'{len(rows)} links; scientific hashes verified (T094 commit comparison in T094_SCIENTIFIC_HASHES.csv).')
 
 
 def verify_scope(root, out=OUT):
     """Check the approved rework separately; never reset the historical baseline."""
+    if TASK == 'T094':
+        from t094_check import verify_scope
+        return verify_scope(root, out)
     snapshot = VAL/'T093_R6_BEFORE.json'
     before = json.loads(snapshot.read_text())
     current = {}
@@ -416,6 +431,9 @@ def verify_scope(root, out=OUT):
 
 
 def file_ledger():
+    if TASK == 'T094':
+        from t094_check import file_ledger
+        return file_ledger()
     for snapshot, filename in [('T093_BEFORE.json', 'T093_FILE_CHANGES.csv'),
                                ('T093_R1_BEFORE.json', 'T093_R1_FILE_CHANGES.csv'),
                                ('T093_R5_BEFORE.json', 'T093_R5_FILE_CHANGES.csv'),
@@ -457,7 +475,7 @@ def build():
     (OUT/'README.md').write_text(before.replace('[Reader start page](docs/index.html)',
         '[Reader start page](docs/index.html) · [GitHub Pages]('+PAGES+')'), encoding='utf-8')
     validate_site()
-    print('T093 BUILD PASS: archived CSVs → self-contained docs/index.html; no estimates run.')
+    print(TASK+' BUILD PASS: archived CSVs → self-contained docs/index.html; no estimates run.')
 
 
 if __name__ == '__main__':

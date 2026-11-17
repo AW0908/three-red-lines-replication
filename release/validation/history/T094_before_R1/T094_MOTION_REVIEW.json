@@ -1,0 +1,13 @@
+{
+  "reduced_motion_path": "present",
+  "charts_reveal_counters_disabled": true,
+  "resting_reveal_opacity": 0.4,
+  "counter_end_text": "runtime verified exact for all seven counters",
+  "strict_all_motion_off": false,
+  "template_limitations": [
+    "scroll listener and progress scale update are unconditional",
+    "navigation color/underline transitions are not disabled by reduced-motion CSS",
+    "hover shadow and folder-arrow transitions remain enabled"
+  ],
+  "handling": "Approved input copied byte-for-byte; no independent template correction made"
+}

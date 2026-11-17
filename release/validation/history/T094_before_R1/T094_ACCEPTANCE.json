@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "approved_visible_text_only": true,
+  "embedded_DATA_unchanged": true,
+  "template_exact": true,
+  "number_checks": 209,
+  "number_deviations": 0,
+  "half_year_definition": "H1: January\u2013June, H2: July\u2013December; definition, not a new empirical number",
+  "no_animation_dependency": "All prose and counter final values in source HTML; charts and archive table populated before motion setup; runtime modes checked separately",
+  "links": "Local targets only; no HTTP check or network"
+}

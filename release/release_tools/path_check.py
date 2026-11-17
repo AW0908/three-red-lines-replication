@@ -13,7 +13,7 @@ from inspect_release import inspect, read, sha
 
 def check(out, task='T091'):
     inspect(out)
-    assert task in {'T091','T093'}
+    assert task in {'T091','T093','T094'}
     p=out/('release/validation/'+task+'_path_check.csv')
     rows=read(p) if p.exists() else []
     now=time.time()
@@ -26,7 +26,7 @@ def check(out, task='T091'):
                      included_files=len(included),suffix_2_paths=0,missing_or_hash_mismatch=0,result='PASS'))
     with p.open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
-    if task=='T093':
+    if task in {'T093','T094'}:
         from t093_site import file_ledger
         file_ledger()
     files=sorted(q for q in out.rglob('*') if q.is_file() and '.git' not in q.relative_to(out).parts and q!=out/'release/MANIFEST.csv')
@@ -40,5 +40,5 @@ def check(out, task='T091'):
 if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
-    parser.add_argument('--task',choices=['T091','T093'],default='T091')
+    parser.add_argument('--task',choices=['T091','T093','T094'],default='T091')
     check(Path.cwd().resolve(),parser.parse_args().task)

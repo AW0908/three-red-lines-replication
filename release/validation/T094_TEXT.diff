@@ -1,0 +1,48 @@
+--- T093 visible text
++++ T094 visible text
+@@ -72,7 +72,7 @@
+ 136
+ listed developers: 80 A-share, 56 Hong Kong, 42 later delisted
+ 13
+-half-year balance sheets, 2016H2–2022H2
++half-year balance sheets, 2016H2–2022H2 (H1: January–June, H2: July–December)
+ 1,982
+ unregulated comparison firms in both markets
+ 33
+@@ -87,9 +87,10 @@
+ A-share and Hong Kong developers, each compared with unregulated firms in their own market. Among A-shares alone the interval includes zero, and the 2021 sector distress could also move developers.
+ Developers
+ Unregulated A-share firms
++Bars: all developers. Line: unregulated A-share firms. The estimate on the left compares each market with its own unregulated firms.
+ FINDING 2 · MECHANISM
+ Without minority-equity growth since 2019, the bunching disappears
+-Holding minority interests at their end-2019 level, the spike below 70% vanishes and the compliant share of developer half-years falls from 51.2% to 39.7% (602 firm-half-years, 129 developers).
++Holding minority interests at their end-2019 level, the spike below 70% vanishes and the compliant share of firm-half-years falls from 51.2% to 39.7% (602 firm-half-years, 129 developers).
+ 11.5
+ percentage points lower compliant share, 95% confidence interval 6.9 to 16.2
+ This shows that compliance depends on minority equity added since 2019, not that the policy caused that equity. Before the policy, the same calculation already moves compliance by 4.1 percentage points.
+@@ -98,7 +99,8 @@
+ FINDING 3 · SUBSTANCE
+ Public filings rarely reveal whether partner equity is real
+ Around the 33 crossings, company filings describe 249 transactions that add equity. Only 10 disclose their terms, and just one of them carries a fixed or guaranteed return.
+-10 of 249
++10
++of 249
+ transactions with known terms
+ Exits at market or project value keep project risk with the partner, so they are not debt in substance. If 28% of the new minority equity were debt-like, the bunching would disappear. Unknown terms are not proof of debt; they show what disclosure leaves open.
+ Transactions around 33 crossings below 70% at 31 developers, coded from company filings. The first three rows are the four transactions the proposal codes as D (debt-like) before splitting them by their terms: one fixed or guaranteed return, two exits at market value and one buyback with unspecified terms.
+@@ -156,7 +158,7 @@
+ Data licenses
+ Research process
+ Every step is on the record
+-The analysis was carried out as a series of task cards. AI agents executed each card, AI reviewers in fresh sessions, partly from a different model family, checked data, estimation, consistency and language, and I approved, returned or overrode each result with a stated reason. Cards, review reports, decisions and the AI-use log are published as they were written.
++The analysis was carried out as a series of task cards. AI agents executed each card. AI reviewers, working in fresh sessions and partly from a different model family, checked data, estimation, consistency and language. I approved, returned or overrode each result with a stated reason. Cards, review reports, decisions and the AI-use log are published as they were written.
+ Process guide
+ Task cards
+ Review reports
+@@ -173,4 +175,4 @@
+ }
+ Copy BibTeX
+ Anton Wilhelmi · Peking University · Modern Tools for Policy Analysis
+-Code: MIT · Author data and outputs: CC BY 4.0 · Preliminary results, November 2026
++Code: MIT · Author data and outputs: CC BY 4.0 · Preliminary results, November 2026 · Full references are listed in the research proposal.

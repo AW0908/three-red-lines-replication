@@ -1,0 +1,208 @@
+--- T093_delivered/docs/index.html
++++ T094/docs/index.html
+@@ -58,6 +58,29 @@
+ .chart{width:100%;height:auto;display:block}
+ .chart text{font-family:var(--ui);fill:var(--muted)}
+ .notice{margin-top:26px;display:flex;gap:10px;align-items:flex-start;font:.86rem/1.5 var(--ui);color:var(--muted);border-left:3px solid var(--red);padding:4px 0 4px 12px}
++/* motion: everything is readable at rest; motion only plays as content arrives */
++.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--green);transform-origin:0 50%;transform:scaleX(0)}
++nav a.l{position:relative;transition:color .2s}
++nav a.l::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--green);transform:scaleX(0);transition:transform .25s}
++nav a.l.active{color:var(--ink)} nav a.l.active::after{transform:scaleX(1)}
++.card,.folder,.btn,.chip,.tier{transition:transform .2s,box-shadow .2s,border-color .2s}
++.card:hover,.folder:hover,.tier:hover{transform:translateY(-3px);box-shadow:0 10px 24px -14px color-mix(in srgb,var(--ink) 40%,transparent)}
++.btn:hover{transform:translateY(-1px)}
++.folder .fn::after{content:" →";opacity:0;margin-left:2px;transition:opacity .2s,margin .2s}
++.folder:hover .fn::after{opacity:1;margin-left:6px}
++.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
++.rv.pre{opacity:.4;transform:translateY(22px)}
++.gauge .mark,.gauge .lab{transition:left 1s cubic-bezier(.2,.7,.2,1)}
++.gauge .bad{transition:left 1s cubic-bezier(.2,.7,.2,1),right 1s cubic-bezier(.2,.7,.2,1)}
++@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
++@keyframes drawdown{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
++@keyframes fadein{from{opacity:0}to{opacity:1}}
++svg .g{transform-box:fill-box;transform-origin:50% 100%;animation:grow .7s cubic-bezier(.2,.7,.2,1) both}
++svg .gx{transform-box:fill-box;transform-origin:0 50%;animation:growx .9s cubic-bezier(.2,.7,.2,1) both}
++@keyframes growx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
++svg .d{animation:drawdown .8s ease-out both}
++svg .f{animation:fadein .6s ease-out both}
++@media (prefers-reduced-motion:reduce){.rv,.rv.pre{opacity:1;transform:none;transition:none} svg .g,svg .gx,svg .d,svg .f{animation:none} .card:hover,.folder:hover,.tier:hover,.btn:hover{transform:none} .gauge *{transition:none}}
+ /* sections */
+ section{padding:64px 0;border-bottom:1px solid var(--line)}
+ .head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:30px}
+@@ -139,7 +162,7 @@
+ </style>
+ </head>
+ <body>
+-<nav aria-label="Sections"><div class="wrap">
++<nav aria-label="Sections"><div class="progress" id="progress" aria-hidden="true"></div><div class="wrap">
+   <a class="brand" href="#top">Meeting the Red Lines</a>
+   <a class="l" href="#policy">Policy</a>
+   <a class="l" href="#question">Question</a>
+@@ -208,10 +231,10 @@
+     <div class="card"><div class="kicker">Substance</div><h3 style="margin-top:6px">Contract audit</h3><p style="margin-top:8px">Code company filings around each crossing for buybacks, guaranteed returns, put rights, guarantees and shareholder loans.</p></div>
+   </div>
+   <div class="facts">
+-    <div class="fact"><b class="num">136</b><span>listed developers: 80 A-share, 56 Hong Kong, 42 later delisted</span></div>
+-    <div class="fact"><b class="num">13</b><span>half-year balance sheets, 2016H2–2022H2</span></div>
+-    <div class="fact"><b class="num">1,982</b><span>unregulated comparison firms in both markets</span></div>
+-    <div class="fact"><b class="num">33</b><span>crossings below 70% traced in company filings</span></div>
++    <div class="fact"><b class="num" data-count="136">136</b><span>listed developers: 80 A-share, 56 Hong Kong, 42 later delisted</span></div>
++    <div class="fact"><b class="num" data-count="13">13</b><span>half-year balance sheets, 2016H2–2022H2 (H1: January–June, H2: July–December)</span></div>
++    <div class="fact"><b class="num" data-count="1982">1,982</b><span>unregulated comparison firms in both markets</span></div>
++    <div class="fact"><b class="num" data-count="33">33</b><span>crossings below 70% traced in company filings</span></div>
+   </div>
+ </div></section>
+ 
+@@ -224,12 +247,13 @@
+       <div class="n">FINDING 1 · TARGETING</div>
+       <h3>Developers bunch just below 70% after the policy</h3>
+       <p>Before 2020, developers' RL1 values spread across the line. Afterwards a spike appears just below it. The rise is larger than among unregulated firms in the same market.</p>
+-      <div class="stat"><b>4.34</b><span>rise in excess mass relative to unregulated firms, 95% confidence interval 1.97 to 7.54</span></div>
++      <div class="stat"><b data-count="4.34">4.34</b><span>rise in excess mass relative to unregulated firms, 95% confidence interval 1.97 to 7.54</span></div>
+       <p class="caveat">A-share and Hong Kong developers, each compared with unregulated firms in their own market. Among A-shares alone the interval includes zero, and the 2021 sector distress could also move developers.</p>
+     </div>
+     <figure>
+       <svg class="chart" id="f1" viewBox="0 0 520 280" role="img" aria-label="Share of developer half-years by RL1 before and after the policy, with unregulated firms as a line"></svg>
+       <div class="legend"><span><i style="background:var(--green)"></i>Developers</span><span><i style="background:var(--muted);height:3px;vertical-align:3px"></i>Unregulated A-share firms</span></div>
++      <figcaption>Bars: all developers. Line: unregulated A-share firms. The estimate on the left compares each market with its own unregulated firms.</figcaption>
+     </figure>
+   </article>
+ 
+@@ -237,8 +261,8 @@
+     <div>
+       <div class="n">FINDING 2 · MECHANISM</div>
+       <h3>Without minority-equity growth since 2019, the bunching disappears</h3>
+-      <p>Holding minority interests at their end-2019 level, the spike below 70% vanishes and the compliant share of developer half-years falls from 51.2% to 39.7% (602 firm-half-years, 129 developers).</p>
+-      <div class="stat"><b>11.5</b><span>percentage points lower compliant share, 95% confidence interval 6.9 to 16.2</span></div>
++      <p>Holding minority interests at their end-2019 level, the spike below 70% vanishes and the compliant share of firm-half-years falls from 51.2% to 39.7% (602 firm-half-years, 129 developers).</p>
++      <div class="stat"><b data-count="11.5">11.5</b><span>percentage points lower compliant share, 95% confidence interval 6.9 to 16.2</span></div>
+       <p class="caveat">This shows that compliance depends on minority equity added since 2019, not that the policy caused that equity. Before the policy, the same calculation already moves compliance by 4.1 percentage points.</p>
+     </div>
+     <figure>
+@@ -252,7 +276,7 @@
+       <div class="n">FINDING 3 · SUBSTANCE</div>
+       <h3>Public filings rarely reveal whether partner equity is real</h3>
+       <p>Around the 33 crossings, company filings describe 249 transactions that add equity. Only 10 disclose their terms, and just one of them carries a fixed or guaranteed return.</p>
+-      <div class="stat"><b>10 of 249</b><span>transactions with known terms</span></div>
++      <div class="stat"><b><span data-count="10">10</span> of 249</b><span>transactions with known terms</span></div>
+       <p class="caveat">Exits at market or project value keep project risk with the partner, so they are not debt in substance. If 28% of the new minority equity were debt-like, the bunching would disappear. Unknown terms are not proof of debt; they show what disclosure leaves open.</p>
+     </div>
+     <figure>
+@@ -316,7 +340,7 @@
+ <section id="process"><div class="wrap">
+   <div class="head"><div class="kicker">Research process</div>
+     <div><h2>Every step is on the record</h2>
+-    <p class="prose" style="margin-top:12px">The analysis was carried out as a series of task cards. AI agents executed each card, AI reviewers in fresh sessions, partly from a different model family, checked data, estimation, consistency and language, and I approved, returned or overrode each result with a stated reason. Cards, review reports, decisions and the AI-use log are published as they were written.</p>
++    <p class="prose" style="margin-top:12px">The analysis was carried out as a series of task cards. AI agents executed each card. AI reviewers, working in fresh sessions and partly from a different model family, checked data, estimation, consistency and language. I approved, returned or overrode each result with a stated reason. Cards, review reports, decisions and the AI-use log are published as they were written.</p>
+     <div class="links">
+       <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/blob/main/process/README.md">Process guide</a>
+       <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/tree/main/process/tasks">Task cards</a>
+@@ -342,7 +366,7 @@
+ 
+ <footer><div class="wrap">
+   <span>Anton Wilhelmi · Peking University · Modern Tools for Policy Analysis</span>
+-  <span>Code: MIT · Author data and outputs: CC BY 4.0 · Preliminary results, November 2026</span>
++  <span>Code: MIT · Author data and outputs: CC BY 4.0 · Preliminary results, November 2026 · Full references are listed in the research proposal.</span>
+ </div></footer>
+ 
+ <script>
+@@ -364,19 +388,19 @@
+   return {X,Y};
+ }
+ function redline(svg,X,m,H,label){
+-  el("line",{x1:X(0.70),x2:X(0.70),y1:m.t-4,y2:H-m.b,stroke:css("--red"),"stroke-width":2.5},svg);
+-  if(label)txt(svg,X(0.70)+6,m.t+8,label,{"font-size":12,"font-weight":600,style:"fill:"+css("--red")});
++  el("line",{class:"rl",x1:X(0.70),x2:X(0.70),y1:m.t-4,y2:H-m.b,stroke:css("--red"),"stroke-width":2.5},svg);
++  if(label)txt(svg,X(0.70)+6,m.t+8,label,{class:"rlab","font-size":12,"font-weight":600,style:"fill:"+css("--red")});
+ }
+ function bars(svg,xs,ys,X,Y,col,outline){
+   const w=(X(0.42)-X(0.40))*0.88;
+   xs.forEach((x,i)=>{const y=ys[i];if(!y)return;
+-    el("rect",outline?{x:X(x)-w/2+1,y:Y(y),width:w-2,height:Y(0)-Y(y),fill:"none",stroke:col,"stroke-width":1.6}:{x:X(x)-w/2,y:Y(y),width:w,height:Y(0)-Y(y),fill:col,rx:1},svg);});
++    el("rect",outline?{class:"bar",x:X(x)-w/2+1,y:Y(y),width:w-2,height:Y(0)-Y(y),fill:"none",stroke:col,"stroke-width":1.6}:{class:"bar",x:X(x)-w/2,y:Y(y),width:w,height:Y(0)-Y(y),fill:col,rx:1},svg);});
+ }
+ function draw(){
+   const D=DATA, pct=v=>Math.round(v*100)+"%";
+   // hero: post developers
+   {const s=document.getElementById("hero-chart"),W=520,H=300,m={l:44,r:14,t:26,b:34};
+-   const ys=D.dens.post.s,max=Math.max(...ys)*1.12;const f=frame(s,W,H,m,max,pct,"Share of half-years");
++   const ys=D.dens.post.s,max=Math.max(...ys)*1.12;const f=frame(s,W,H,m,max,pct,"Share of firm-half-years");
+    bars(s,D.dens.post.x,ys,f.X,f.Y,css("--green"));redline(s,f.X,m,H,"70% cap");}
+   // f1: small multiples pre/post
+   {const s=document.getElementById("f1"),W=520,H=280;s.innerHTML="";
+@@ -387,14 +411,14 @@
+      const f=frame(sub,w,H,m,max,pct,null);
+      bars(sub,D.dens[k].x,D.dens[k].s,f.X,f.Y,css("--green"));
+      const p=D.dens[c].x.map((x,i)=>f.X(x)+","+f.Y(D.dens[c].s[i])).join(" ");
+-     el("polyline",{points:p,fill:"none",stroke:css("--muted"),"stroke-width":2},sub);
++     el("polyline",{class:"cl",points:p,fill:"none",stroke:css("--muted"),"stroke-width":2},sub);
+      redline(sub,f.X,m,H,null);
+      txt(sub,m.l,18,t,{"font-size":12,"font-weight":600,style:"fill:"+css("--ink")});
+    });}
+   // f2: frozen vs reported
+   {const s=document.getElementById("f2"),W=520,H=280,m={l:44,r:14,t:26,b:34};
+    const o=D.frozen.official,z=D.frozen.frozen,max=Math.max(...o.y,...z.y)*1.12;
+-   const f=frame(s,W,H,m,max,v=>Math.round(v),"Developer half-years");
++   const f=frame(s,W,H,m,max,v=>Math.round(v),"Firm-half-years");
+    bars(s,o.x,o.y,f.X,f.Y,css("--green"));bars(s,z.x,z.y,f.X,f.Y,css("--blue"),true);redline(s,f.X,m,H,"70% cap");}
+   // f3: transactions
+   {const s=document.getElementById("f3"),W=520,H=320;s.innerHTML="";
+@@ -402,7 +426,7 @@
+    const x0=205,x1=470,sc=v=>(x1-x0)*v/249;
+    rows.forEach((r,i)=>{const y=12+i*50;
+      txt(s,x0-12,y+21,r[0],{"text-anchor":"end","font-size":13,style:"fill:"+css("--ink")});
+-     el("rect",{x:x0,y:y+6,width:Math.max(sc(r[1]),3),height:22,rx:2,fill:css(r[2]),opacity:r[2]=="--muted"?0.45:1},s);
++     el("rect",{class:"hb",x:x0,y:y+6,width:Math.max(sc(r[1]),3),height:22,rx:2,fill:css(r[2]),opacity:r[2]=="--muted"?0.45:1},s);
+      txt(s,x0+Math.max(sc(r[1]),3)+8,y+22,String(r[1]),{"font-size":13,"font-weight":600,style:"fill:"+css("--ink")});});
+    el("line",{x1:x0,x2:x0,y1:12,y2:306,stroke:css("--line")},s);}
+ }
+@@ -441,6 +465,48 @@
+   const t=document.getElementById(b.dataset.copy).textContent;
+   (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent="Copied";setTimeout(()=>b.textContent=b.dataset.copy=="bib"?"Copy BibTeX":"Copy command",1600);},()=>{b.textContent="Select and copy the text above";});}));
+ rules();draw();table();
++// ---- motion (skipped entirely for reduced motion)
++const still=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
++const prog=document.getElementById("progress");
++function onScroll(){const h=document.documentElement;const p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);prog.style.transform="scaleX("+p+")";}
++window.addEventListener("scroll",()=>requestAnimationFrame(onScroll),{passive:true});onScroll();
++const links=[...document.querySelectorAll("nav a.l")];
++if("IntersectionObserver" in window){
++  const secIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}}),{rootMargin:"-40% 0px -55% 0px"});
++  document.querySelectorAll("main section[id]").forEach(s=>secIO.observe(s));
++}
++function animChart(svg){
++  if(still)return;
++  svg.querySelectorAll(".bar").forEach((b,i)=>{b.classList.remove("g");void b.getBBox;b.style.animationDelay=(i%40)*22+"ms";b.classList.add("g");});
++  svg.querySelectorAll(".hb").forEach((b,i)=>{b.style.animationDelay=i*120+"ms";b.classList.add("gx");});
++  svg.querySelectorAll(".rl").forEach(l=>{const len=Math.abs(l.y2.baseVal.value-l.y1.baseVal.value);l.style.setProperty("--len",len);l.setAttribute("stroke-dasharray",len);l.style.animationDelay="450ms";l.classList.add("d");});
++  svg.querySelectorAll(".rlab,.cl").forEach(x=>{x.style.animationDelay="700ms";x.classList.add("f");});
++}
++function countUp(el){
++  if(still)return;const end=parseFloat(el.dataset.count),txt0=el.textContent,dec=(el.dataset.count.split(".")[1]||"").length,t0=performance.now(),dur=1100;
++  function step(now){const k=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-k,3),v=end*e;
++    el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString("en-US");
++    if(k<1)requestAnimationFrame(step);else el.textContent=txt0;}
++  requestAnimationFrame(step);
++}
++if(!still&&"IntersectionObserver" in window){
++  const vh=window.innerHeight;
++  const rv=[...document.querySelectorAll(".card,.finding,.folder,.fact,.rule,.tier,.tablewrap,.formula")];
++  rv.forEach(e=>{e.classList.add("rv");if(e.getBoundingClientRect().top>vh*0.92)e.classList.add("pre");});
++  const gauges=document.getElementById("rules");const gBelow=gauges.getBoundingClientRect().top>vh*0.92;const marks=[];
++  if(gBelow)gauges.querySelectorAll(".gauge").forEach(g=>{const m=g.querySelector(".mark"),l=g.querySelector(".lab");marks.push([m,m.style.left,l,l.style.left]);m.style.left="0%";l.style.left="0%";});
++  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const x=e.target;io.unobserve(x);
++    if(x.classList.contains("pre"))x.classList.remove("pre");
++    if(x.tagName.toLowerCase()==="svg")animChart(x);
++    if(x.dataset&&x.dataset.count)countUp(x);
++    if(x===gauges)marks.forEach(([m,ml,l,ll])=>{m.style.left=ml;l.style.left=ll;});
++  }),{threshold:0.25});
++  rv.forEach(e=>io.observe(e));
++  document.querySelectorAll("svg.chart").forEach(s=>io.observe(s));
++  document.querySelectorAll("[data-count]").forEach(s=>io.observe(s));
++  io.observe(gauges);
++}
++
+ const mq=window.matchMedia("(prefers-color-scheme: dark)");mq.addEventListener&&mq.addEventListener("change",draw);
+ new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+ })();

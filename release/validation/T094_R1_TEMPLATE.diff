@@ -1,0 +1,29 @@
+--- T094 reviewed template
++++ T094 corrected Co-PI template
+@@ -80,7 +80,7 @@
+ @keyframes growx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+ svg .d{animation:drawdown .8s ease-out both}
+ svg .f{animation:fadein .6s ease-out both}
+-@media (prefers-reduced-motion:reduce){.rv,.rv.pre{opacity:1;transform:none;transition:none} svg .g,svg .gx,svg .d,svg .f{animation:none} .card:hover,.folder:hover,.tier:hover,.btn:hover{transform:none} .gauge *{transition:none}}
++@media (prefers-reduced-motion:reduce){.progress{display:none} nav a.l,nav a.l::after,.card,.folder,.btn,.chip,.tier,.folder .fn::after{transition:none} .card:hover,.folder:hover,.tier:hover{box-shadow:none} .rv,.rv.pre{opacity:1;transform:none;transition:none} svg .g,svg .gx,svg .d,svg .f{animation:none} .card:hover,.folder:hover,.tier:hover,.btn:hover{transform:none} .gauge *{transition:none}}
+ /* sections */
+ section{padding:64px 0;border-bottom:1px solid var(--line)}
+ .head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:30px}
+@@ -251,7 +251,7 @@
+       <p class="caveat">A-share and Hong Kong developers, each compared with unregulated firms in their own market. Among A-shares alone the interval includes zero, and the 2021 sector distress could also move developers.</p>
+     </div>
+     <figure>
+-      <svg class="chart" id="f1" viewBox="0 0 520 280" role="img" aria-label="Share of developer half-years by RL1 before and after the policy, with unregulated firms as a line"></svg>
++      <svg class="chart" id="f1" viewBox="0 0 520 280" role="img" aria-label="Share of firm-half-years by RL1 before and after the policy, with unregulated firms as a line"></svg>
+       <div class="legend"><span><i style="background:var(--green)"></i>Developers</span><span><i style="background:var(--muted);height:3px;vertical-align:3px"></i>Unregulated A-share firms</span></div>
+       <figcaption>Bars: all developers. Line: unregulated A-share firms. The estimate on the left compares each market with its own unregulated firms.</figcaption>
+     </figure>
+@@ -469,7 +469,7 @@
+ const still=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ const prog=document.getElementById("progress");
+ function onScroll(){const h=document.documentElement;const p=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight);prog.style.transform="scaleX("+p+")";}
+-window.addEventListener("scroll",()=>requestAnimationFrame(onScroll),{passive:true});onScroll();
++if(!still){window.addEventListener("scroll",()=>requestAnimationFrame(onScroll),{passive:true});onScroll();}
+ const links=[...document.querySelectorAll("nav a.l")];
+ if("IntersectionObserver" in window){
+   const secIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));}}),{rootMargin:"-40% 0px -55% 0px"});

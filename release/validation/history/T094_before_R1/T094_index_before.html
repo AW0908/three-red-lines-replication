@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meeting the Red Lines</title>
+<meta name="description" content="Threshold targeting and minority equity among Chinese property developers under the Three Red Lines policy. Research proposal and public archive.">
+<style>
+/* Layout idea: a quiet academic page in PKU green; the only bold color is the red threshold line, drawn wherever a red line appears. */
+:root{
+  --paper:#FAFBF8; --panel:#FFFFFF; --ink:#18211A; --muted:#5B6A5E; --line:#DCE3DA;
+  --green:#4F8E35; --green-soft:#E6EFDF; --blue:#2A579F; --red:#C0392B; --red-soft:#F8E3E0;
+  --display:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  --body:Charter,"Bitstream Charter","Sitka Text",Cambria,Georgia,serif;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111613; --panel:#171E19; --ink:#E7EDE6; --muted:#9AAA9D; --line:#2B362E;
+  --green:#7DBA5F; --green-soft:#1F2D1F; --blue:#7FA6E6; --red:#EF6B5C; --red-soft:#3A1D1A; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --paper:#111613; --panel:#171E19; --ink:#E7EDE6; --muted:#9AAA9D; --line:#2B362E;
+  --green:#7DBA5F; --green-soft:#1F2D1F; --blue:#7FA6E6; --red:#EF6B5C; --red-soft:#3A1D1A; color-scheme:dark;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:var(--green)} a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3vw,2.1rem)} h3{font-size:1.2rem}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.prose{max-width:66ch}
+.kicker{font:600 .78rem/1.2 var(--ui);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.small{font-size:.88rem;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:52px;overflow-x:auto;white-space:nowrap}
+nav .brand{font:600 1rem var(--display);color:var(--ink);text-decoration:none;margin-right:auto}
+nav a.l{font:500 .9rem var(--ui);color:var(--muted);text-decoration:none}
+nav a.l:hover{color:var(--ink)}
+nav a.gh{font:600 .85rem var(--ui);color:var(--panel);background:var(--ink);padding:6px 12px;border-radius:6px;text-decoration:none}
+/* hero */
+header.hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.4vw,3.9rem);letter-spacing:-.01em;margin:10px 0 14px}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:40ch}
+.hero .who{margin-top:22px;font:500 .92rem var(--ui);color:var(--muted)}
+.hero .who b{color:var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{font:600 .9rem var(--ui);padding:9px 14px;border-radius:7px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+figure{margin:0}
+figcaption{font:.82rem/1.45 var(--ui);color:var(--muted);margin-top:8px}
+.chart{width:100%;height:auto;display:block}
+.chart text{font-family:var(--ui);fill:var(--muted)}
+.notice{margin-top:26px;display:flex;gap:10px;align-items:flex-start;font:.86rem/1.5 var(--ui);color:var(--muted);border-left:3px solid var(--red);padding:4px 0 4px 12px}
+/* sections */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:30px}
+.head .kicker{padding-top:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{margin-bottom:8px}
+/* rules */
+.rule{display:grid;grid-template-columns:70px 1fr 210px;gap:18px;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.rule:last-of-type{border-bottom:1px solid var(--line)}
+.rule .id{font:600 1.35rem var(--display)}
+.gauge{position:relative;height:10px;border-radius:5px;background:var(--green-soft)}
+.gauge .bad{position:absolute;top:0;bottom:0;background:var(--red-soft);border-radius:0 5px 5px 0}
+.gauge .mark{position:absolute;top:-7px;bottom:-7px;width:3px;background:var(--red);border-radius:2px}
+.gauge .lab{position:absolute;top:16px;transform:translateX(-50%);font:600 .74rem var(--ui);color:var(--red)}
+.rule .def{font:.95rem/1.4 var(--body)}
+.rule .def span{display:block;font:.8rem var(--ui);color:var(--muted)}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:22px;max-width:520px}
+.tier{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--panel);font:.82rem var(--ui);color:var(--muted)}
+.tier b{display:block;font:600 1.3rem var(--display);color:var(--ink)}
+.formula{font:italic 1.5rem var(--display);text-align:center;padding:14px 0}
+.formula .frac{display:inline-flex;flex-direction:column;vertical-align:middle;font-style:italic}
+.formula .frac span:first-child{border-bottom:1.5px solid var(--ink);padding:0 6px}
+ul.tight{margin:10px 0 0;padding-left:18px} ul.tight li{margin:4px 0}
+.tag{display:inline-block;font:600 .72rem var(--ui);letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:20px}
+.tag.real{background:var(--green-soft);color:var(--green)} .tag.cos{background:var(--red-soft);color:var(--red)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.fact{border-top:2px solid var(--ink);padding-top:10px}
+.fact b{display:block;font:600 1.7rem var(--display)}
+.fact span{font:.84rem/1.4 var(--ui);color:var(--muted)}
+/* findings */
+.finding{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;padding:30px 0;border-top:1px solid var(--line)}
+.finding:first-of-type{border-top:0;padding-top:0}
+.finding .n{font:600 .8rem var(--ui);color:var(--muted);letter-spacing:.08em}
+.finding h3{font-size:1.45rem;margin:6px 0 10px}
+.stat{display:flex;align-items:baseline;gap:10px;margin:14px 0 8px}
+.stat b{font:600 2.3rem var(--display);font-variant-numeric:tabular-nums}
+.stat span{font:.9rem var(--ui);color:var(--muted)}
+.caveat{font:.86rem/1.5 var(--ui);color:var(--muted);margin-top:10px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font:.8rem var(--ui);color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+/* archive */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.chip{font:600 .82rem var(--ui);padding:6px 12px;border-radius:20px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+input[type=search]{font:.92rem var(--ui);padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);min-width:240px;flex:1;max-width:360px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel);max-height:520px;overflow-y:auto}
+table{border-collapse:collapse;width:100%;font:.86rem/1.4 var(--ui)}
+th{position:sticky;top:0;background:var(--panel);text-align:left;font-weight:600;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td code{font:.8rem var(--mono)}
+td .cap{color:var(--muted);display:block;margin-top:2px}
+.pill{font:600 .7rem var(--ui);padding:2px 7px;border-radius:10px;white-space:nowrap}
+.pill.y{background:var(--red-soft);color:var(--red)} .pill.n{background:var(--green-soft);color:var(--green)}
+.count{font:.85rem var(--ui);color:var(--muted)}
+.folders{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.folder{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;text-decoration:none;color:var(--ink)}
+.folder:hover{border-color:var(--green)}
+.folder .fn{display:block;font:600 1rem var(--mono);color:var(--green);margin-bottom:6px}
+.folder .fd{display:block;font:.88rem/1.45 var(--ui);color:var(--muted)}
+/* reproduce, cite */
+.level h3{display:flex;gap:10px;align-items:center}
+.level .dot{width:10px;height:10px;border-radius:50%}
+pre{font:.82rem/1.5 var(--mono);background:var(--green-soft);border-radius:8px;padding:12px 14px;overflow-x:auto;margin:12px 0 0;white-space:pre}
+.copy{font:600 .8rem var(--ui);padding:6px 11px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;margin-top:10px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+footer{padding:36px 0 50px;font:.84rem/1.6 var(--ui);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+@media (max-width:860px){
+  .hero .wrap,.finding,.grid2{grid-template-columns:1fr}
+  .grid3,.facts,.folders{grid-template-columns:1fr 1fr}
+  .head{grid-template-columns:1fr;gap:8px}
+  .rule{grid-template-columns:56px 1fr}
+  .rule .gw{grid-column:1/-1}
+}
+@media (max-width:520px){.folders{grid-template-columns:1fr} .grid3,.facts,.tiers{grid-template-columns:1fr 1fr} nav a.l.opt{display:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Sections"><div class="wrap">
+  <a class="brand" href="#top">Meeting the Red Lines</a>
+  <a class="l" href="#policy">Policy</a>
+  <a class="l" href="#question">Question</a>
+  <a class="l" href="#findings">Findings</a>
+  <a class="l" href="#archive">Archive</a>
+  <a class="l" href="#files">Files</a>
+  <a class="l opt" href="#reproduce">Reproduce</a>
+  <a class="l opt" href="#process">Process</a>
+  <a class="l opt" href="#cite">Cite</a>
+  <a class="gh" href="https://github.com/AW0908/three-red-lines-replication">GitHub</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="kicker">Research proposal · Peking University · 2026</div>
+    <h1>Meeting the Red&nbsp;Lines</h1>
+    <p class="sub">Threshold targeting and minority equity among Chinese property developers under the Three Red Lines policy.</p>
+    <p class="who"><b>Anton Wilhelmi</b> · Modern Tools for Policy Analysis</p>
+    <div class="btns">
+      <a class="btn primary" href="#findings">Preliminary findings</a>
+      <a class="btn" href="#archive">Explore tables and figures</a>
+      <a class="btn" href="https://github.com/AW0908/three-red-lines-replication">Code and data</a>
+    </div>
+  </div>
+  <figure>
+    <svg class="chart" id="hero-chart" viewBox="0 0 520 300" role="img" aria-label="Histogram of developers' reported RL1 (liabilities to assets, net of advance receipts) after the policy, with a spike just below the 70% line"></svg>
+    <figcaption>Developers' reported RL1, the first red line, from the second half of 2020 to the end of 2022 (557 firm-half-years). The red line is the 70% cap.</figcaption>
+  </figure>
+</div>
+<div class="wrap"><p class="notice">Results on this page are preliminary and stem from a research proposal. They describe patterns; causal attribution to the policy is still being tested.</p></div>
+</header>
+
+<main>
+<section id="policy"><div class="wrap">
+  <div class="head"><div class="kicker">The policy</div>
+    <div><h2>Three ratios decide how fast a developer may borrow</h2>
+    <p class="prose" style="margin-top:12px">China's property sector runs on credit: about a quarter of all bank loans go to real estate (Ding et al. 2017, IMF Working Paper 17/248). In August 2020, the People's Bank of China and the Ministry of Housing and Urban-Rural Development introduced three balance-sheet limits for developers, with the aim of controlled deleveraging and a stable housing market.</p></div></div>
+  <div id="rules"></div>
+  <p class="small" style="margin-top:12px">Liabilities and assets in RL1 are both net of advance receipts from home buyers.</p>
+  <div class="tiers" aria-label="Allowed annual growth of interest-bearing debt by number of breached lines">
+    <div class="tier"><b>15%</b>0 lines breached</div>
+    <div class="tier"><b>10%</b>1 line breached</div>
+    <div class="tier"><b>5%</b>2 lines breached</div>
+    <div class="tier"><b>0%</b>3 lines breached</div>
+  </div>
+  <p class="small" style="margin-top:8px">Allowed annual growth of interest-bearing debt. Sources: People's Bank of China notice of August 20, 2020; Chu et al. 2025; Huang 2023.</p>
+</div></section>
+
+<section id="question"><div class="wrap">
+  <div class="head"><div class="kicker">The question</div>
+    <div><h2>Did developers get below 70% by deleveraging, or only on paper?</h2>
+    <p class="prose" style="margin-top:12px">I investigate whether developers targeted the RL1 threshold and which balance-sheet adjustments and capital terms underlie their reported compliance. The answer matters because ratio-based rules work only if reported ratios track risk.</p></div></div>
+  <div class="grid2">
+    <div class="card"><span class="tag real">Real</span><h3 style="margin-top:10px">Economic leverage falls</h3>
+      <ul class="tight"><li>Repay debt: <i>N</i> falls</li><li>Raise risk-bearing equity: <i>E</i> rises, often as minority interests in project companies</li></ul></div>
+    <div class="card"><span class="tag cos">Cosmetic</span><h3 style="margin-top:10px">Economic leverage unchanged</h3>
+      <ul class="tight"><li>Partner equity with buyback or guaranteed return</li><li>Equity from the developer's own group</li><li>Perpetual bonds booked as equity</li></ul></div>
+  </div>
+  <div class="formula" aria-label="RL1 equals N over N plus E, at most 70%">RL1 = <span class="frac"><span>N</span><span>N + E</span></span> ≤ 70%</div>
+  <p class="small" style="text-align:center"><i>N</i>: liabilities net of advance receipts. <i>E</i>: total equity, including minority interests.<br>New partner equity raises <i>E</i> on both sides. Public balance sheets cannot tell real from cosmetic equity.</p>
+
+  <h3 style="margin-top:44px">Three research designs</h3>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><div class="kicker">Targeting</div><h3 style="margin-top:6px">Difference-in-bunching</h3><p style="margin-top:8px">Did excess mass just below 70% grow more for developers than for firms the rule does not cover? Excess mass is measured as in Kleven (2016).</p></div>
+    <div class="card"><div class="kicker">Mechanism</div><h3 style="margin-top:6px">Frozen minority interests</h3><p style="margin-top:8px">Recompute RL1 with minority interests held at their end-2019 level. Would developers still comply?</p></div>
+    <div class="card"><div class="kicker">Substance</div><h3 style="margin-top:6px">Contract audit</h3><p style="margin-top:8px">Code company filings around each crossing for buybacks, guaranteed returns, put rights, guarantees and shareholder loans.</p></div>
+  </div>
+  <div class="facts">
+    <div class="fact"><b class="num">136</b><span>listed developers: 80 A-share, 56 Hong Kong, 42 later delisted</span></div>
+    <div class="fact"><b class="num">13</b><span>half-year balance sheets, 2016H2–2022H2</span></div>
+    <div class="fact"><b class="num">1,982</b><span>unregulated comparison firms in both markets</span></div>
+    <div class="fact"><b class="num">33</b><span>crossings below 70% traced in company filings</span></div>
+  </div>
+</div></section>
+
+<section id="findings"><div class="wrap">
+  <div class="head"><div class="kicker">Preliminary findings</div>
+    <div><h2>Developers comply on paper; what stands behind it is hard to see</h2></div></div>
+
+  <article class="finding">
+    <div>
+      <div class="n">FINDING 1 · TARGETING</div>
+      <h3>Developers bunch just below 70% after the policy</h3>
+      <p>Before 2020, developers' RL1 values spread across the line. Afterwards a spike appears just below it. The rise is larger than among unregulated firms in the same market.</p>
+      <div class="stat"><b>4.34</b><span>rise in excess mass relative to unregulated firms, 95% confidence interval 1.97 to 7.54</span></div>
+      <p class="caveat">A-share and Hong Kong developers, each compared with unregulated firms in their own market. Among A-shares alone the interval includes zero, and the 2021 sector distress could also move developers.</p>
+    </div>
+    <figure>
+      <svg class="chart" id="f1" viewBox="0 0 520 280" role="img" aria-label="Share of developer half-years by RL1 before and after the policy, with unregulated firms as a line"></svg>
+      <div class="legend"><span><i style="background:var(--green)"></i>Developers</span><span><i style="background:var(--muted);height:3px;vertical-align:3px"></i>Unregulated A-share firms</span></div>
+    </figure>
+  </article>
+
+  <article class="finding">
+    <div>
+      <div class="n">FINDING 2 · MECHANISM</div>
+      <h3>Without minority-equity growth since 2019, the bunching disappears</h3>
+      <p>Holding minority interests at their end-2019 level, the spike below 70% vanishes and the compliant share of developer half-years falls from 51.2% to 39.7% (602 firm-half-years, 129 developers).</p>
+      <div class="stat"><b>11.5</b><span>percentage points lower compliant share, 95% confidence interval 6.9 to 16.2</span></div>
+      <p class="caveat">This shows that compliance depends on minority equity added since 2019, not that the policy caused that equity. Before the policy, the same calculation already moves compliance by 4.1 percentage points.</p>
+    </div>
+    <figure>
+      <svg class="chart" id="f2" viewBox="0 0 520 280" role="img" aria-label="Reported RL1 and RL1 with minority interests frozen at end-2019, after the policy"></svg>
+      <div class="legend"><span><i style="background:var(--green)"></i>Reported RL1</span><span><i style="border:2px solid var(--blue);background:transparent"></i>Minority interests frozen at end-2019</span></div>
+    </figure>
+  </article>
+
+  <article class="finding">
+    <div>
+      <div class="n">FINDING 3 · SUBSTANCE</div>
+      <h3>Public filings rarely reveal whether partner equity is real</h3>
+      <p>Around the 33 crossings, company filings describe 249 transactions that add equity. Only 10 disclose their terms, and just one of them carries a fixed or guaranteed return.</p>
+      <div class="stat"><b>10 of 249</b><span>transactions with known terms</span></div>
+      <p class="caveat">Exits at market or project value keep project risk with the partner, so they are not debt in substance. If 28% of the new minority equity were debt-like, the bunching would disappear. Unknown terms are not proof of debt; they show what disclosure leaves open.</p>
+    </div>
+    <figure>
+      <svg class="chart" id="f3" viewBox="0 0 520 320" role="img" aria-label="Transactions by contract terms: 1 fixed or guaranteed return, 2 exits at market value, 1 buyback terms unspecified, 5 own group, 1 outside equity, 239 unknown"></svg>
+      <figcaption>Transactions around 33 crossings below 70% at 31 developers, coded from company filings. The first three rows are the four transactions the proposal codes as D (debt-like) before splitting them by their terms: one fixed or guaranteed return, two exits at market value and one buyback with unspecified terms.</figcaption>
+    </figure>
+  </article>
+</div></section>
+
+<section id="archive"><div class="wrap">
+  <div class="head"><div class="kicker">The archive</div>
+    <div><h2>Every table and figure, traced to its script and file</h2>
+    <p class="prose" style="margin-top:12px">The proposal contains 89 tables and figures. Each row links to the script that produces it and to the published output. Some displays were assembled by hand or typed into the text; those name their source instead of a script.</p></div></div>
+  <div class="tools" role="group" aria-label="Filter the results map">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="Main text" aria-pressed="false">Main text</button>
+    <button class="chip" data-f="Online Appendix" aria-pressed="false">Online Appendix</button>
+    <label class="small" for="q" style="position:absolute;left:-9999px">Search</label>
+    <input type="search" id="q" placeholder="Search label, caption or script">
+    <span class="count" id="count"></span>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Display</th><th>Produced by</th><th>Output</th><th>Licensed data</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <p class="small" style="margin-top:10px">“Wind” marks displays that can only be rerun with the licensed Wind financial data; n/a means the display has no generating script. Source list: <a href="https://github.com/AW0908/three-red-lines-replication/blob/main/docs/RESULTS_MAP.csv">CSV</a>; indexes of all <a href="https://github.com/AW0908/three-red-lines-replication/blob/main/code/README.md">scripts</a> and <a href="https://github.com/AW0908/three-red-lines-replication/blob/main/outputs/README.md">outputs</a>.</p>
+</div></section>
+
+<section id="files"><div class="wrap">
+  <div class="head"><div class="kicker">Browse the files</div>
+    <div><h2>The whole archive, folder by folder</h2>
+    <p class="prose" style="margin-top:12px">Each folder opens on GitHub with its own index. Start with <code>docs/</code> if you want an overview, or with <code>code/</code> if you want to see how a result is produced.</p></div></div>
+  <div class="folders">
+    <a class="folder" href="https://github.com/AW0908/three-red-lines-replication/tree/main/code"><span class="fn">code/</span><span class="fd">Analysis scripts in run order, with a table of what each script produces and whether it needs licensed data.</span></a>
+    <a class="folder" href="https://github.com/AW0908/three-red-lines-replication/tree/main/data"><span class="fn">data/</span><span class="fd">Public inputs, hand-coded sources and a reduced inspection panel of 150 firms. Licensed Wind data are listed, not included.</span></a>
+    <a class="folder" href="https://github.com/AW0908/three-red-lines-replication/tree/main/outputs"><span class="fn">outputs/</span><span class="fd">Accepted tables and figures, grouped by project step.</span></a>
+    <a class="folder" href="https://github.com/AW0908/three-red-lines-replication/tree/main/docs"><span class="fn">docs/</span><span class="fd">Results map, reproduction guide, list of withheld files and this website.</span></a>
+    <a class="folder" href="https://github.com/AW0908/three-red-lines-replication/tree/main/process"><span class="fn">process/</span><span class="fd">Task cards, review reports, decisions and the AI-use log.</span></a>
+    <a class="folder" href="https://github.com/AW0908/three-red-lines-replication/tree/main/release"><span class="fn">release/</span><span class="fd">File manifest with checksums, validation reports, software versions and the tools that build this archive.</span></a>
+  </div>
+  <div class="links"><a class="btn" href="https://github.com/AW0908/three-red-lines-replication">Open the repository</a> <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/archive/refs/heads/main.zip">Download everything (ZIP; about 0.5 GB unpacked)</a></div>
+</div></section>
+
+<section id="reproduce"><div class="wrap">
+  <div class="head"><div class="kicker">Reproduce</div>
+    <div><h2>What you can check, and what needs licensed data</h2></div></div>
+  <div class="grid3">
+    <div class="card level"><h3><span class="dot" style="background:var(--green)"></span>Inspect offline</h3>
+      <p style="margin-top:8px">Verify every file hash, every results-map target and every documentation link. Python standard library only.</p>
+      <pre id="cmd">python3 release/release_tools/inspect_release.py</pre>
+      <button class="copy" data-copy="cmd">Copy command</button></div>
+    <div class="card level"><h3><span class="dot" style="background:var(--blue)"></span>Rerun public parts</h3>
+      <p style="margin-top:8px">Raw-data audits, simulations and checks that use public provider inputs and a reduced inspection panel of 150 firms.</p>
+      <div class="links"><a href="https://github.com/AW0908/three-red-lines-replication/blob/main/docs/REPRODUCIBILITY.md">Reproduction guide</a></div></div>
+    <div class="card level"><h3><span class="dot" style="background:var(--red)"></span>Full rerun</h3>
+      <p style="margin-top:8px">The full sample needs licensed Wind extracts, which cannot be shared. Every withheld file is listed with its checksum.</p>
+      <div class="links"><a href="https://github.com/AW0908/three-red-lines-replication/blob/main/docs/WITHHELD.md">Withheld files</a> <a href="https://github.com/AW0908/three-red-lines-replication/blob/main/LICENSE-data.md">Data licenses</a></div></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="head"><div class="kicker">Research process</div>
+    <div><h2>Every step is on the record</h2>
+    <p class="prose" style="margin-top:12px">The analysis was carried out as a series of task cards. AI agents executed each card, AI reviewers in fresh sessions, partly from a different model family, checked data, estimation, consistency and language, and I approved, returned or overrode each result with a stated reason. Cards, review reports, decisions and the AI-use log are published as they were written.</p>
+    <div class="links">
+      <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/blob/main/process/README.md">Process guide</a>
+      <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/tree/main/process/tasks">Task cards</a>
+      <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/tree/main/process/review">Review reports</a>
+      <a class="btn" href="https://github.com/AW0908/three-red-lines-replication/blob/main/process/AI_USAGE_LOG.md">AI-use log</a>
+    </div></div></div>
+</div></section>
+
+<section id="cite"><div class="wrap">
+  <div class="head"><div class="kicker">Cite</div>
+    <div><h2>How to cite this archive</h2>
+<pre id="bib">@misc{wilhelmi2026redlines,
+  author = {Wilhelmi, Anton},
+  title  = {Meeting the Red Lines: Threshold Targeting and Minority
+            Equity among Chinese Property Developers},
+  year   = {2026},
+  note   = {Research proposal and replication archive, release v1.0-proposal-draft},
+  url    = {https://github.com/AW0908/three-red-lines-replication}
+}</pre>
+    <button class="copy" data-copy="bib">Copy BibTeX</button></div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Anton Wilhelmi · Peking University · Modern Tools for Policy Analysis</span>
+  <span>Code: MIT · Author data and outputs: CC BY 4.0 · Preliminary results, November 2026</span>
+</div></footer>
+
+<script>
+const DATA = {"dens":{"pre":{"x":[0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63,0.65,0.67,0.69,0.71,0.73,0.75,0.77,0.79,0.81,0.83,0.85,0.87,0.89,0.91,0.93,0.95,0.97,0.99],"n":713,"s":[0.016830294530154277,0.016830294530154277,0.0182328190743338,0.019635343618513323,0.016830294530154277,0.029453015427769985,0.016830294530154277,0.021037868162692847,0.029453015427769985,0.04207573632538569,0.04628330995792426,0.037868162692847124,0.030855539971949508,0.043478260869565216,0.05049088359046283,0.07152875175315568,0.08274894810659186,0.08134642356241234,0.06451612903225806,0.05750350631136045,0.056100981767180924,0.05750350631136045,0.029453015427769985,0.021037868162692847,0.016830294530154277,0.011220196353436185,0.005610098176718092,0.001402524544179523,0.0070126227208976155,0.0]},"post":{"x":[0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63,0.65,0.67,0.69,0.71,0.73,0.75,0.77,0.79,0.81,0.83,0.85,0.87,0.89,0.91,0.93,0.95,0.97,0.99],"n":557,"s":[0.008976660682226212,0.008976660682226212,0.010771992818671455,0.017953321364452424,0.003590664272890485,0.012567324955116697,0.01615798922800718,0.01436265709156194,0.01436265709156194,0.03590664272890485,0.03052064631956912,0.04308797127468582,0.03949730700179533,0.0718132854578097,0.1400359066427289,0.10053859964093358,0.06283662477558348,0.0807899461400359,0.05745062836624776,0.04847396768402154,0.03770197486535009,0.03590664272890485,0.02333931777378815,0.019748653500897665,0.008976660682226212,0.010771992818671455,0.017953321364452424,0.012567324955116697,0.008976660682226212,0.005385996409335727]},"cpre":{"x":[0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63,0.65,0.67,0.69,0.71,0.73,0.75,0.77,0.79,0.81,0.83,0.85,0.87,0.89,0.91,0.93,0.95,0.97,0.99],"n":2743,"s":[0.05577834487787094,0.057965730951512945,0.05687203791469194,0.06015311702515494,0.06306963179001093,0.057601166605905946,0.04958075100255195,0.06088224571636894,0.058330295297119944,0.05978855267954794,0.05067444403937295,0.047757929274516955,0.042289464090411955,0.04083120670798396,0.034633612832664966,0.031717098067808966,0.02989427633977397,0.03062340503098797,0.01932191031717098,0.01822821728034998,0.011666059059423988,0.015676266861100983,0.015311702515493984,0.006562158220925993,0.008020415603353991,0.005833029529711994,0.0032810791104629965,0.004010207801676996,0.0025519504192489974,0.001093693036820999]},"cpost":{"x":[0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63,0.65,0.67,0.69,0.71,0.73,0.75,0.77,0.79,0.81,0.83,0.85,0.87,0.89,0.91,0.93,0.95,0.97,0.99],"n":2435,"s":[0.05626283367556468,0.055441478439425054,0.05872689938398357,0.057494866529774126,0.05462012320328542,0.06119096509240246,0.061601642710472276,0.06652977412731007,0.05585215605749486,0.05462012320328542,0.04887063655030801,0.05790554414784394,0.042299794661190965,0.031211498973305954,0.034086242299794664,0.031211498973305954,0.02792607802874743,0.027104722792607804,0.0188911704312115,0.01724845995893224,0.015195071868583163,0.014784394250513347,0.013963039014373716,0.00944558521560575,0.009034907597535934,0.0024640657084188913,0.004106776180698152,0.0032854209445585215,0.0053388090349075976,0.0032854209445585215]}},"frozen":{"official":{"x":[0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63,0.65,0.67,0.69,0.71,0.73,0.75,0.77,0.79,0.81,0.83,0.85,0.87,0.89,0.91,0.93,0.95,0.97,0.99],"y":[5,5,6,9,1,7,9,8,8,19,17,24,19,39,77,55,34,45,32,27,21,20,13,11,5,6,10,7,5,3],"n":547},"frozen":{"x":[0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63,0.65,0.67,0.69,0.71,0.73,0.75,0.77,0.79,0.81,0.83,0.85,0.87,0.89,0.91,0.93,0.95,0.97,0.99],"y":[8,2,7,8,2,7,8,8,8,17,11,19,22,27,32,53,46,51,38,37,34,27,22,23,10,10,5,4,3,0],"n":549}},"map":[{"proposal_item":"fig:toc_nef","caption":"Policy theory of change and the links examined by the three preliminary findings","section":"Main text","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_toc_nef.pdf","needs_Wind":"yes"},{"proposal_item":"tab:summary","caption":"Selected summary statistics, main sample","section":"Main text","producer_kind":"inline","script":"not applicable","release_location":"proposal/sections/05_context_data.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:identification","caption":"What each comparison can establish","section":"Main text","producer_kind":"inline","script":"not applicable","release_location":"proposal/sections/04_empirical_model.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"fig:bunching_date","caption":"RL1 concentration by reporting date","section":"Main text","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_by_date.pdf","needs_Wind":"yes"},{"proposal_item":"tab:robustness","caption":"Excess mass and difference-in-bunching at RL1","section":"Main text","producer_kind":"inline","script":"not applicable","release_location":"proposal/tables/t051_robustness.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"fig:bunching_frozen","caption":"Reported RL1 and RL1 with minority interests frozen","section":"Main text","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_frozen_mi.pdf","needs_Wind":"yes"},{"proposal_item":"tab:frozen","caption":"Reported RL1 and accounting counterfactuals","section":"Main text","producer_kind":"inline","script":"not applicable","release_location":"proposal/tables/t050_counterfactuals.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:substance","caption":"Public evidence for the crossing sample","section":"Main text","producer_kind":"inline","script":"not applicable","release_location":"proposal/sections/06_preliminary_analysis.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:threats","caption":"Alternative explanations and remaining limits","section":"Main text","producer_kind":"inline","script":"not applicable","release_location":"proposal/tables/t049_threats.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:variables","caption":"Variable definitions","section":"Online Appendix","producer_kind":"inline","script":"not applicable","release_location":"proposal/appendix/variables.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:sample_composition","caption":"Composition of the main sample","section":"Online Appendix","producer_kind":"inline","script":"not applicable","release_location":"proposal/tables/t049_sample_composition.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:summary_full","caption":"Full summary statistics, main sample","section":"Online Appendix","producer_kind":"script","script":"code/03_figures.R","release_location":"outputs/tables/t005_summary_stats.tex","needs_Wind":"yes"},{"proposal_item":"fig:excess_mass","caption":"RL1 excess mass below 0.70 after the policy","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_excess_mass.pdf","needs_Wind":"yes"},{"proposal_item":"tab:falsification","caption":"Excess mass at 0.70: RL1 versus the unadjusted liability-to-asset ratio","section":"Online Appendix","producer_kind":"script","script":"code/19_referee3.R","release_location":"outputs/tables/t055_falsification.tex","needs_Wind":"yes"},{"proposal_item":"tab:t040_validation","caption":"Constructed versus published ratios","section":"Online Appendix","producer_kind":"script","script":"code/13_rl1_validation.R","release_location":"outputs/tables/t040_validation.tex","needs_Wind":"yes"},{"proposal_item":"fig:t040_scatter","caption":"Constructed versus published RL1","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"docs/WITHHELD.md","needs_Wind":"yes"},{"proposal_item":"tab:t040_robustness","caption":"Excess mass and frozen-MI statistics with perpetual bonds as debt","section":"Online Appendix","producer_kind":"script","script":"code/13_rl1_validation.R","release_location":"outputs/tables/t040_robustness.tex","needs_Wind":"yes"},{"proposal_item":"tab:t031_samples","caption":"Excess mass by sample restriction","section":"Online Appendix","producer_kind":"script","script":"code/12_q1_robustness.R","release_location":"outputs/tables/t031_samples.tex","needs_Wind":"yes"},{"proposal_item":"tab:t031_timing","caption":"Timing and reversal checks","section":"Online Appendix","producer_kind":"script","script":"code/12_q1_robustness.R","release_location":"outputs/tables/t031_timing.tex","needs_Wind":"yes"},{"proposal_item":"tab:t043_delta","caption":"Direct post-minus-pre excess-mass tests","section":"Online Appendix","producer_kind":"script","script":"code/15_referee2.R","release_location":"outputs/tables/t043_delta_b.tex","needs_Wind":"yes"},{"proposal_item":"tab:t043_integration","caption":"Mass-conserving fixed-point fit and boundary variants","section":"Online Appendix","producer_kind":"script","script":"code/15_referee2.R","release_location":"outputs/tables/t043_integration.tex","needs_Wind":"yes"},{"proposal_item":"tab:t043_error","caption":"Independent measurement-error simulations","section":"Online Appendix","producer_kind":"script","script":"code/15_referee2.R","release_location":"outputs/tables/t043_meas_error.tex","needs_Wind":"yes"},{"proposal_item":"fig:t043_error","caption":"Measurement-error perturbations of excess mass","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_measurement_error.pdf","needs_Wind":"yes"},{"proposal_item":"tab:t063_noise","caption":"Calibrated targeting errors: selected cells and observed concentration","section":"Online Appendix","producer_kind":"script","script":"code/22_referee5.R","release_location":"outputs/tables/t063_noise.tex","needs_Wind":"yes"},{"proposal_item":"tab:t061_control","caption":"Excess mass and changes relative to unregulated firms","section":"Online Appendix","producer_kind":"script","script":"code/21_diff_bunching.R","release_location":"outputs/tables/t061_results.tex","needs_Wind":"yes"},{"proposal_item":"fig:t061_control","caption":"RL1 density among unregulated listed firms","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_control_density.pdf","needs_Wind":"yes"},{"proposal_item":"tab:t063_window","caption":"Co-main broad exclusion window: lower and total mass","section":"Online Appendix","producer_kind":"script","script":"code/22_referee5.R","release_location":"outputs/tables/t063_window.tex","needs_Wind":"yes"},{"proposal_item":"tab:t063_suppliers","caption":"Removing supplier industries and retaining only suppliers","section":"Online Appendix","producer_kind":"script","script":"code/22_referee5.R","release_location":"outputs/tables/t063_control_sens.tex","needs_Wind":"yes"},{"proposal_item":"tab:t063_one_obs","caption":"One observation per firm and period, and distinct window firms","section":"Online Appendix","producer_kind":"script","script":"code/22_referee5.R","release_location":"outputs/tables/t063_one_obs.tex","needs_Wind":"yes"},{"proposal_item":"fig:t063_dates","caption":"Developer RL1 distributions by reporting date","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_distributions_by_date.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t063_dates_control","caption":"Control RL1 distributions by reporting date","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_distributions_by_date.pdf","needs_Wind":"yes"},{"proposal_item":"tab:t076_hk_control","caption":"Hong Kong controls and within-market changes in excess mass","section":"Online Appendix","producer_kind":"script","script":"code/25_hk_control.R","release_location":"outputs/tables/t076_hk_control.tex","needs_Wind":"yes"},{"proposal_item":"fig:t076_hk_density","caption":"RL1 density among unregulated Hong Kong firms","section":"Online Appendix","producer_kind":"script","script":"code/25_hk_control.R","release_location":"outputs/figures/f_hk_control_density.pdf","needs_Wind":"yes"},{"proposal_item":"tab:t076_hk_roster","caption":"Hong Kong roster, coverage and failure ledger","section":"Online Appendix","producer_kind":"script","script":"code/25_hk_control.R","release_location":"outputs/tables/t076_hk_roster_summary.tex","needs_Wind":"yes"},{"proposal_item":"tab:t058_pilot","caption":"Pilot exposure and rollout contrasts","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"docs/WITHHELD.md","needs_Wind":"yes"},{"proposal_item":"tab:t058_notch","caption":"Pre-specified notch-intensity contrast","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"outputs/tables/t058_notch.tex","needs_Wind":"yes"},{"proposal_item":"tab:t058_symmetric","caption":"Symmetric freezes and normalized minority-interest contrasts","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"outputs/tables/t058_symmetric.tex","needs_Wind":"yes"},{"proposal_item":"tab:t058_attrition","caption":"Balanced panels and the distribution before reporting exits","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"outputs/tables/t058_attrition.tex","needs_Wind":"yes"},{"proposal_item":"tab:t058_above","caption":"Excess mass below and above the threshold under a common fit","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"outputs/tables/t058_above.tex","needs_Wind":"yes"},{"proposal_item":"tab:t058_checks","caption":"Calendar-window and accounting-standard checks","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"outputs/tables/t058_window.csv","needs_Wind":"yes"},{"proposal_item":"tab:t058_grid","caption":"Specification-grid summary in common bin units","section":"Online Appendix","producer_kind":"script","script":"code/20_referee4.R","release_location":"outputs/tables/t058_grid.tex","needs_Wind":"yes"},{"proposal_item":"fig:t058_grid","caption":"Specification curve for the change in excess mass","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_specification_curve.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t027_decomposition","caption":"Decomposition of RL1 crossings","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_crossing_decomposition.pdf","needs_Wind":"yes"},{"proposal_item":"tab:t041_horizons","caption":"Net compliance dependence at matched horizons","section":"Online Appendix","producer_kind":"script","script":"code/14_core_robustness.R","release_location":"outputs/tables/t041_frozen_horizons.tex","needs_Wind":"yes"},{"proposal_item":"tab:t045_rl2","caption":"RL2 crossing decomposition, all events","section":"Online Appendix","producer_kind":"inline","script":"not applicable","release_location":"proposal/appendix/results.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:mi_shift","caption":"Minority-interest shift in RL1 and reweighted placebo","section":"Online Appendix","producer_kind":"script","script":"code/19_referee3.R","release_location":"outputs/tables/t055_mi_shift.tex","needs_Wind":"yes"},{"proposal_item":"fig:kappa","caption":"Excess mass and compliance when a share \\kappa of MI growth is counted as debt","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_kappa.pdf","needs_Wind":"yes"},{"proposal_item":"tab:t043_trend","caption":"Minority-interest trend counterfactuals","section":"Online Appendix","producer_kind":"script","script":"code/15_referee2.R","release_location":"outputs/tables/t043_trend_cf.tex","needs_Wind":"yes"},{"proposal_item":"tab:t043_heterogeneity","caption":"Descriptive heterogeneity in bunching and compliance dependence","section":"Online Appendix","producer_kind":"script","script":"code/15_referee2.R","release_location":"outputs/tables/t043_heterogeneity.tex","needs_Wind":"yes"},{"proposal_item":"tab:t046_cash","caption":"Full-sample cash backing, complete positive-growth firm-years","section":"Online Appendix","producer_kind":"script","script":"code/17_cash_backing_all.R","release_location":"outputs/tables/t046_cash_backing_all.tex","needs_Wind":"yes"},{"proposal_item":"tab:t045_shares","caption":"Attributed capital from minority shareholders as a share of each crosser's minority-interest increase (percent)","section":"Online Appendix","producer_kind":"inline","script":"not applicable","release_location":"proposal/tables/t070_crosser_shares.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:t044_comparison","caption":"Purposive comparison cases outside pilot group A","section":"Online Appendix","producer_kind":"inline","script":"not applicable","release_location":"proposal/appendix/results.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:did_main","caption":"Pooled difference-in-differences estimates: pre-policy dose \\times post","section":"Online Appendix","producer_kind":"script","script":"code/02_estimate.R","release_location":"outputs/tables/t009_did_main.tex","needs_Wind":"yes"},{"proposal_item":"tab:pretrend","caption":"Joint tests of pre-policy event-study coefficients","section":"Online Appendix","producer_kind":"script","script":"code/19_referee3.R","release_location":"outputs/tables/t055_pretrend_tests.tex","needs_Wind":"yes"},{"proposal_item":"tab:t024_rd_main","caption":"Supplementary RL1 sharp regression discontinuity (ITT): primary fixed bandwidth","section":"Online Appendix","producer_kind":"script","script":"code/07_rd.R","release_location":"outputs/tables/t024_rd_main.tex","needs_Wind":"yes"},{"proposal_item":"tab:t066_dr","caption":"DR-DiD: A-share developers versus unregulated firms","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_drdid.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_dr_2","caption":"DR-DiD: All developers versus A-share unregulated firms","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_drdid.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_dr_3","caption":"DR-DiD: A-share developers versus controls excluding suppliers","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_drdid.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_dr_4","caption":"DR-DiD: All developers versus controls excluding suppliers","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_drdid.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_dr_5","caption":"DR-DiD: Private versus state-owned A-share developers","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_drdid.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_balance","caption":"Covariate balance: developer comparisons","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_balance.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_balance_2","caption":"Covariate balance: excluding suppliers","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_balance.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_balance_3","caption":"Covariate balance: ownership","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_balance.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_owner","caption":"Ownership and change in excess mass, both markets","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_ownership_bunching.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_first","caption":"Reporting first stages","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_first_stage.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_first_2","caption":"Reporting first stages (continued)","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_first_stage.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_heckman","caption":"Revised Heckman sensitivity estimates","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_heckman.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_reporting","caption":"Reporting weights: same-sample levels, changes and paired differences","section":"Online Appendix","producer_kind":"script","script":"code/23_drdid.R","release_location":"outputs/tables/t066_reporting_same_sample_bunching.csv","needs_Wind":"yes"},{"proposal_item":"tab:t066_lee","caption":"Lee bounds for supplementary exposure outcomes","section":"Online Appendix","producer_kind":"script","script":"code/09_selection.R","release_location":"outputs/tables/t025_lee_bounds.csv","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_1","caption":"Overlap: A-share developers versus unregulated firms (main)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_2","caption":"Overlap: A-share developers versus unregulated firms (period averages)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_3","caption":"Overlap: all developers versus A-share unregulated firms (main)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_4","caption":"Overlap: all developers versus A-share unregulated firms (period averages)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_5","caption":"Overlap: A-share developers versus controls excluding suppliers (main)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_6","caption":"Overlap: A-share developers versus controls excluding suppliers (period averages)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_7","caption":"Overlap: all developers versus controls excluding suppliers (main)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_8","caption":"Overlap: all developers versus controls excluding suppliers (period averages)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_9","caption":"Overlap: private versus state-owned A-share developers (main)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_overlap_10","caption":"Overlap: private versus state-owned A-share developers (period averages)","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_overlap.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_pretrends_1","caption":"Earlier-date contrasts: A-share developers versus unregulated firms","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_pretrends.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_pretrends_2","caption":"Earlier-date contrasts: all developers versus A-share unregulated firms","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_pretrends.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_pretrends_3","caption":"Earlier-date contrasts: A-share developers versus controls excluding suppliers","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_pretrends.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_pretrends_4","caption":"Earlier-date contrasts: all developers versus controls excluding suppliers","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_pretrends.pdf","needs_Wind":"yes"},{"proposal_item":"fig:t066_pretrends_5","caption":"Earlier-date contrasts: private versus state-owned A-share developers","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_pretrends.pdf","needs_Wind":"yes"},{"proposal_item":"fig:prisma","caption":"PRISMA 2020 flow diagram of the systematic literature search","section":"Online Appendix","producer_kind":"script","script":"code/24_figures.R","release_location":"outputs/figures/f_prisma.pdf","needs_Wind":"yes"},{"proposal_item":"tab:wos_queries","caption":"Web of Science queries","section":"Online Appendix","producer_kind":"manual","script":"not applicable","release_location":"state/litsearch/search_log.csv (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:cnki_queries","caption":"China National Knowledge Infrastructure (CNKI) queries","section":"Online Appendix","producer_kind":"manual","script":"not applicable","release_location":"state/litsearch/search_log.csv (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:further_outputs","caption":"Further robustness outputs in the replication package","section":"Online Appendix","producer_kind":"inline","script":"not applicable","release_location":"proposal/appendix/results.tex (not in release)","needs_Wind":"not applicable"},{"proposal_item":"tab:ai_use","caption":"AI use by purpose","section":"Online Appendix","producer_kind":"manual","script":"not applicable","release_location":"process/AI_USAGE_LOG.md; process/state/runs.log; process/state/approvals.log","needs_Wind":"not applicable"}]};
+(function(){
+const NS="http://www.w3.org/2000/svg";
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
+function txt(p,x,y,s,a){const e=el("text",Object.assign({x,y},a||{}),p);e.textContent=s;return e;}
+// scales on [0.40,1.00]
+function frame(svg,W,H,m,ymax,yfmt,ylab){
+  svg.innerHTML="";
+  const X=v=>m.l+(v-0.40)/0.60*(W-m.l-m.r), Y=v=>H-m.b-v/ymax*(H-m.t-m.b);
+  el("rect",{x:X(0.66),y:m.t,width:X(0.70)-X(0.66),height:H-m.t-m.b,fill:css("--green-soft")},svg);
+  [0.4,0.5,0.6,0.7,0.8,0.9,1.0].forEach(v=>txt(svg,X(v),H-m.b+16,v.toFixed(1),{"text-anchor":"middle","font-size":11}));
+  const ticks=4;for(let i=0;i<=ticks;i++){const v=ymax*i/ticks;el("line",{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),stroke:css("--line"),"stroke-width":1},svg);txt(svg,m.l-6,Y(v)+4,yfmt(v),{"text-anchor":"end","font-size":11});}
+  if(ylab)txt(svg,m.l,m.t-8,ylab,{"font-size":11});
+  txt(svg,(m.l+W-m.r)/2,H-4,"RL1",{"text-anchor":"middle","font-size":11});
+  return {X,Y};
+}
+function redline(svg,X,m,H,label){
+  el("line",{x1:X(0.70),x2:X(0.70),y1:m.t-4,y2:H-m.b,stroke:css("--red"),"stroke-width":2.5},svg);
+  if(label)txt(svg,X(0.70)+6,m.t+8,label,{"font-size":12,"font-weight":600,style:"fill:"+css("--red")});
+}
+function bars(svg,xs,ys,X,Y,col,outline){
+  const w=(X(0.42)-X(0.40))*0.88;
+  xs.forEach((x,i)=>{const y=ys[i];if(!y)return;
+    el("rect",outline?{x:X(x)-w/2+1,y:Y(y),width:w-2,height:Y(0)-Y(y),fill:"none",stroke:col,"stroke-width":1.6}:{x:X(x)-w/2,y:Y(y),width:w,height:Y(0)-Y(y),fill:col,rx:1},svg);});
+}
+function draw(){
+  const D=DATA, pct=v=>Math.round(v*100)+"%";
+  // hero: post developers
+  {const s=document.getElementById("hero-chart"),W=520,H=300,m={l:44,r:14,t:26,b:34};
+   const ys=D.dens.post.s,max=Math.max(...ys)*1.12;const f=frame(s,W,H,m,max,pct,"Share of half-years");
+   bars(s,D.dens.post.x,ys,f.X,f.Y,css("--green"));redline(s,f.X,m,H,"70% cap");}
+  // f1: small multiples pre/post
+  {const s=document.getElementById("f1"),W=520,H=280;s.innerHTML="";
+   const max=Math.max(...D.dens.post.s,...D.dens.pre.s)*1.1;
+   [["Before: 2017H1–2019H2","pre","cpre",0],["After: 2020H2–2022H2","post","cpost",260]].forEach(([t,k,c,ox])=>{
+     const g=el("g",{transform:"translate("+ox+",0)"},s);const m={l:38,r:10,t:30,b:34},w=260;
+     const sub=el("svg",{x:0,y:0,width:w,height:H,viewBox:"0 0 "+w+" "+H},g);
+     const f=frame(sub,w,H,m,max,pct,null);
+     bars(sub,D.dens[k].x,D.dens[k].s,f.X,f.Y,css("--green"));
+     const p=D.dens[c].x.map((x,i)=>f.X(x)+","+f.Y(D.dens[c].s[i])).join(" ");
+     el("polyline",{points:p,fill:"none",stroke:css("--muted"),"stroke-width":2},sub);
+     redline(sub,f.X,m,H,null);
+     txt(sub,m.l,18,t,{"font-size":12,"font-weight":600,style:"fill:"+css("--ink")});
+   });}
+  // f2: frozen vs reported
+  {const s=document.getElementById("f2"),W=520,H=280,m={l:44,r:14,t:26,b:34};
+   const o=D.frozen.official,z=D.frozen.frozen,max=Math.max(...o.y,...z.y)*1.12;
+   const f=frame(s,W,H,m,max,v=>Math.round(v),"Developer half-years");
+   bars(s,o.x,o.y,f.X,f.Y,css("--green"));bars(s,z.x,z.y,f.X,f.Y,css("--blue"),true);redline(s,f.X,m,H,"70% cap");}
+  // f3: transactions
+  {const s=document.getElementById("f3"),W=520,H=320;s.innerHTML="";
+   const rows=[["Fixed or guaranteed return",1,"--red"],["Exit at market value",2,"--blue"],["Buyback, terms unspecified",1,"--red"],["Equity from own group",5,"--red"],["Plain outside equity",1,"--green"],["Terms unknown",239,"--muted"]];
+   const x0=205,x1=470,sc=v=>(x1-x0)*v/249;
+   rows.forEach((r,i)=>{const y=12+i*50;
+     txt(s,x0-12,y+21,r[0],{"text-anchor":"end","font-size":13,style:"fill:"+css("--ink")});
+     el("rect",{x:x0,y:y+6,width:Math.max(sc(r[1]),3),height:22,rx:2,fill:css(r[2]),opacity:r[2]=="--muted"?0.45:1},s);
+     txt(s,x0+Math.max(sc(r[1]),3)+8,y+22,String(r[1]),{"font-size":13,"font-weight":600,style:"fill:"+css("--ink")});});
+   el("line",{x1:x0,x2:x0,y1:12,y2:306,stroke:css("--line")},s);}
+}
+// rules
+function rules(){
+  const R=[["RL1","Liabilities / assets","net of advance receipts","≤ 70%",0.70,0.40,1.00,"up"],
+           ["RL2","Net debt / equity","net gearing","≤ 100%",1.00,0,2.0,"up"],
+           ["RL3","Cash / short-term debt","liquidity","≥ 1.0×",1.0,0,2.0,"down"]];
+  const box=document.getElementById("rules");box.innerHTML="";
+  R.forEach(([id,def,sub,lab,t,a,b,dir])=>{
+    const pos=(t-a)/(b-a)*100;
+    const d=document.createElement("div");d.className="rule";
+    d.innerHTML='<div class="id">'+id+'</div><div class="def">'+def+'<span>'+sub+'</span></div><div class="gw"><div class="gauge">'+
+      '<div class="bad" style="'+(dir=="up"?'left:'+pos+'%;right:0':'left:0;right:'+(100-pos)+'%;border-radius:5px 0 0 5px')+'"></div>'+
+      '<div class="mark" style="left:calc('+pos+'% - 1.5px)"></div><div class="lab" style="left:'+pos+'%">'+lab+'</div></div></div>';
+    box.appendChild(d);});
+}
+// archive
+const GH="https://github.com/AW0908/three-red-lines-replication/blob/main/";
+let filt="all";
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function table(){
+  const q=document.getElementById("q").value.toLowerCase().trim();
+  const rows=DATA.map.filter(r=>(filt=="all"||r.section==filt)&&(!q||(r.proposal_item+" "+r.caption+" "+r.script).toLowerCase().includes(q)));
+  document.getElementById("count").textContent=rows.length+" of "+DATA.map.length;
+  document.getElementById("rows").innerHTML=rows.map(r=>{
+    const prod=r.producer_kind=="script"?'<a href="'+GH+r.script+'"><code>'+esc(r.script.replace("code/",""))+'</code></a>':'<span class="small">'+(r.producer_kind=="manual"?"assembled by hand":"typed into the text")+'</span>';
+    const inRel=!/not in release/.test(r.release_location);
+    const out=inRel?r.release_location.split('; ').map(p=>'<a href="'+GH+p+'"><code>'+esc(p.split("/").pop())+'</code></a>').join('; '):'<span class="small">source in proposal text</span>';
+    const w=r.needs_Wind=="yes"?'<span class="pill y">Wind</span>':'<span class="small">n/a</span>';
+    return '<tr><td><code>'+esc(r.proposal_item)+'</code><span class="cap">'+esc(r.caption)+'</span><span class="cap">'+esc(r.section)+'</span></td><td>'+prod+'</td><td>'+out+'</td><td>'+w+'</td></tr>';}).join("");
+}
+document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{filt=b.dataset.f;document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",String(c===b)));table();}));
+document.getElementById("q").addEventListener("input",table);
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
+  const t=document.getElementById(b.dataset.copy).textContent;
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent="Copied";setTimeout(()=>b.textContent=b.dataset.copy=="bib"?"Copy BibTeX":"Copy command",1600);},()=>{b.textContent="Select and copy the text above";});}));
+rules();draw();table();
+const mq=window.matchMedia("(prefers-color-scheme: dark)");mq.addEventListener&&mq.addEventListener("change",draw);
+new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+})();
+</script>
+</body>
+</html>

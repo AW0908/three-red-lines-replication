@@ -1,0 +1,182 @@
+{
+  "result": "PASS",
+  "modes": [
+    {
+      "result": "PASS",
+      "mode": "motion",
+      "runtime": "Node VM with minimal DOM; no visual render",
+      "counter_initial_text": [
+        "136",
+        "13",
+        "1,982",
+        "33",
+        "4.34",
+        "11.5",
+        "10"
+      ],
+      "counter_final_text": [
+        "136",
+        "13",
+        "1,982",
+        "33",
+        "4.34",
+        "11.5",
+        "10"
+      ],
+      "content_before_intersection": "PASS; four charts, rules and 89 table rows",
+      "scroll_listener_registered": true,
+      "reduced_motion_no_frames": null,
+      "static_section_observer_only": null,
+      "file": "docs/index.html",
+      "rows": 89,
+      "rendered_links": 151,
+      "filter_and_search": "PASS",
+      "multi_source_links": "PASS",
+      "finite_svg_geometry": {
+        "hero-chart": 53,
+        "f1": 108,
+        "f2": 82,
+        "f3": 20
+      },
+      "contract_chart_labels_and_counts": [
+        "Fixed or guaranteed return",
+        "1",
+        "Exit at market value",
+        "2",
+        "Buyback, terms unspecified",
+        "1",
+        "Equity from own group",
+        "5",
+        "Plain outside equity",
+        "1",
+        "Terms unknown",
+        "239"
+      ],
+      "estimator_period_labels": [
+        "Before: 2017H1\u20132019H2",
+        "After: 2020H2\u20132022H2"
+      ],
+      "compliance_observation_unit": "602 firm-half-years, 129 developers",
+      "folder_tiles_and_repository_download": "PASS; six local directories; HTTP availability not checked",
+      "clipboard_unavailable_fallback": "PASS"
+    },
+    {
+      "result": "PASS",
+      "mode": "reduced",
+      "runtime": "Node VM with minimal DOM; no visual render",
+      "counter_initial_text": [
+        "136",
+        "13",
+        "1,982",
+        "33",
+        "4.34",
+        "11.5",
+        "10"
+      ],
+      "counter_final_text": [
+        "136",
+        "13",
+        "1,982",
+        "33",
+        "4.34",
+        "11.5",
+        "10"
+      ],
+      "content_before_intersection": "PASS; four charts, rules and 89 table rows",
+      "scroll_listener_registered": false,
+      "reduced_motion_no_frames": true,
+      "static_section_observer_only": true,
+      "file": "docs/index.html",
+      "rows": 89,
+      "rendered_links": 151,
+      "filter_and_search": "PASS",
+      "multi_source_links": "PASS",
+      "finite_svg_geometry": {
+        "hero-chart": 53,
+        "f1": 108,
+        "f2": 82,
+        "f3": 20
+      },
+      "contract_chart_labels_and_counts": [
+        "Fixed or guaranteed return",
+        "1",
+        "Exit at market value",
+        "2",
+        "Buyback, terms unspecified",
+        "1",
+        "Equity from own group",
+        "5",
+        "Plain outside equity",
+        "1",
+        "Terms unknown",
+        "239"
+      ],
+      "estimator_period_labels": [
+        "Before: 2017H1\u20132019H2",
+        "After: 2020H2\u20132022H2"
+      ],
+      "compliance_observation_unit": "602 firm-half-years, 129 developers",
+      "folder_tiles_and_repository_download": "PASS; six local directories; HTTP availability not checked",
+      "clipboard_unavailable_fallback": "PASS"
+    },
+    {
+      "result": "PASS",
+      "mode": "no-observer",
+      "runtime": "Node VM with minimal DOM; no visual render",
+      "counter_initial_text": [
+        "136",
+        "13",
+        "1,982",
+        "33",
+        "4.34",
+        "11.5",
+        "10"
+      ],
+      "counter_final_text": [
+        "136",
+        "13",
+        "1,982",
+        "33",
+        "4.34",
+        "11.5",
+        "10"
+      ],
+      "content_before_intersection": "PASS; four charts, rules and 89 table rows",
+      "scroll_listener_registered": true,
+      "reduced_motion_no_frames": null,
+      "static_section_observer_only": null,
+      "file": "docs/index.html",
+      "rows": 89,
+      "rendered_links": 151,
+      "filter_and_search": "PASS",
+      "multi_source_links": "PASS",
+      "finite_svg_geometry": {
+        "hero-chart": 53,
+        "f1": 108,
+        "f2": 82,
+        "f3": 20
+      },
+      "contract_chart_labels_and_counts": [
+        "Fixed or guaranteed return",
+        "1",
+        "Exit at market value",
+        "2",
+        "Buyback, terms unspecified",
+        "1",
+        "Equity from own group",
+        "5",
+        "Plain outside equity",
+        "1",
+        "Terms unknown",
+        "239"
+      ],
+      "estimator_period_labels": [
+        "Before: 2017H1\u20132019H2",
+        "After: 2020H2\u20132022H2"
+      ],
+      "compliance_observation_unit": "602 firm-half-years, 129 developers",
+      "folder_tiles_and_repository_download": "PASS; six local directories; HTTP availability not checked",
+      "clipboard_unavailable_fallback": "PASS"
+    }
+  ]
+}

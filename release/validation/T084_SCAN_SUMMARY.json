@@ -1,9 +1,9 @@
 {
-  "payload_files_scanned": 3548,
+  "payload_files_scanned": 3580,
   "unresolved_safety_findings": 0,
   "wind_reference_occurrences": 1683,
-  "identity_occurrences": 580,
-  "identity_files": 119,
+  "identity_occurrences": 1063,
+  "identity_files": 132,
   "scope": "payload excludes untouched .git; PDF text/metadata and PNG text decoded",
   "limitation": "pattern/provenance checks, not proof against arbitrary encoded secrets or image steganography"
 }

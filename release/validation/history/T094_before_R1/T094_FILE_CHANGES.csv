@@ -1,0 +1,26 @@
+file,action
+public_release/docs/index.html,modified
+public_release/release/MANIFEST.csv,generated inventory
+public_release/release/release_tools/path_check.py,modified
+public_release/release/release_tools/site_template.html,modified
+public_release/release/release_tools/t091_check.py,modified
+public_release/release/release_tools/t093_site.py,modified
+public_release/release/release_tools/t094_check.py,created
+public_release/release/release_tools/t094_dom_check.js,created
+public_release/release/validation/T084_ANONYMITY.csv,modified
+public_release/release/validation/T084_GIT_SCAN.json,modified
+public_release/release/validation/T084_SCAN_SUMMARY.json,modified
+public_release/release/validation/T091_FILE_CHANGES.csv,modified
+public_release/release/validation/T094_ACCEPTANCE.json,created
+public_release/release/validation/T094_BEFORE.json,created
+public_release/release/validation/T094_DOM_CHECK.json,created
+public_release/release/validation/T094_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T094_INDEX.diff,created
+public_release/release/validation/T094_LINKS.csv,created
+public_release/release/validation/T094_MOTION_REVIEW.json,created
+public_release/release/validation/T094_NUMBERS.csv,created
+public_release/release/validation/T094_SCIENTIFIC_HASHES.csv,created
+public_release/release/validation/T094_SCOPE_CHECK.json,created
+public_release/release/validation/T094_TEXT.diff,created
+public_release/release/validation/T094_index_before.html,created
+public_release/release/validation/T094_path_check.csv,created

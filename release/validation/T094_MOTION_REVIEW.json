@@ -1,0 +1,20 @@
+{
+  "reduced_motion_path": "present",
+  "charts_reveal_counters_disabled": true,
+  "resting_reveal_opacity": 0.4,
+  "counter_end_text": "runtime verified exact for all seven counters",
+  "strict_all_motion_off": true,
+  "reduced_motion_css_rules_verified": [
+    ".progress{display:none}",
+    "nav a.l,nav a.l::after,.card,.folder,.btn,.chip,.tier,.folder .fn::after{transition:none}",
+    ".card:hover,.folder:hover,.tier:hover{box-shadow:none}",
+    ".rv,.rv.pre{opacity:1;transform:none;transition:none}",
+    "svg .g,svg .gx,svg .d,svg .f{animation:none}",
+    ".card:hover,.folder:hover,.tier:hover,.btn:hover{transform:none}",
+    ".gauge *{transition:none}"
+  ],
+  "scroll_listener": "guarded by !still; runtime listener and frame checks in T094_DOM_CHECK.json",
+  "active_section": "static highlighting retained; transitions disabled",
+  "template_limitations": [],
+  "handling": "Corrected Co-PI input copied byte-for-byte"
+}
