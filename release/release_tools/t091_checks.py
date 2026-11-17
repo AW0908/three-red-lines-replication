@@ -108,7 +108,8 @@ def verify_macro_coverage(out,rows):
     assert manifest_inputs=={'proposal/'+file for file in files},'Generator and independent input graphs differ'
     readme=(out/'README.md').read_text();site=(out/'docs/index.html').read_text()
     markdown_labels=re.findall(r'^\| ((?:tab|fig):[^| ]+) \|',readme,re.M)
-    html_labels=re.findall(r'<th scope="row">((?:tab|fig):[^<]+)</th>',site)
+    html_labels=([r['proposal_item'] for r in json.loads(re.search(r'const DATA = (.*);\n\(function', site)[1])['map']]
+                 if 'const DATA = ' in site else re.findall(r'<th scope="row">((?:tab|fig):[^<]+)</th>',site))
     ordered=[r['proposal_item'] for r in rows]
     assert markdown_labels==html_labels==ordered,'README/HTML result rows differ from CSV'
     # This rework adds only the two reviewed omissions. Reconstruct the entire
@@ -219,7 +220,7 @@ def verify_rework(out,rows):
     facts=json.loads((out/'release/README_FACTS.json').read_text())
     assert facts['question']==QUESTION and facts['summary']==SUMMARY
     assert facts['wording_evidence_sha256']==sha(ROOT/'review/T091_proposal.diff')
-    for name in ['README.md','docs/index.html']:
+    for name in (['README.md'] if 'const DATA = ' in (out/'docs/index.html').read_text() else ['README.md','docs/index.html']):
         import html
         text=html.unescape((out/name).read_text())
         assert QUESTION in text and SUMMARY in text and facts['status'] in text
@@ -252,9 +253,10 @@ def verify_rework(out,rows):
     site=(out/'docs/index.html').read_text()
     guide=(out/'docs/REPRODUCIBILITY.md').read_text()
     import html
-    header=html.unescape(site.split('<header>',1)[1].split('</header>',1)[0])
+    designed='const DATA = ' in site
+    header=html.unescape(site.split('<header>',1)[1].split('</header>',1)[0]) if not designed else ''
     assert RL1_DEFINITION+' '+QUESTION+' '+SUMMARY in readme
-    assert RL1_DEFINITION+' '+QUESTION+' '+SUMMARY in header
+    assert designed or RL1_DEFINITION+' '+QUESTION+' '+SUMMARY in header
     assert 'current local proposal' not in readme+site
     assert 'await review and acceptance' not in readme+site
     assert 'had not been reviewed or accepted at that date' in facts['status']
@@ -264,10 +266,11 @@ def verify_rework(out,rows):
     assert 'Release tags identify accepted archive states.' in readme
     assert 'MTPA_INTEGRATE_PROPOSAL' in guide and 'MTPA_INTEGRATE_SLIDES' in guide
     assert 'HonestDiD NOT RUN' not in guide and 'HonestDiD was not run.' in guide
-    assert '<a href="REPRODUCIBILITY.md">reproduction guide</a>' in site
+    assert ('docs/REPRODUCIBILITY.md' in site if designed else '<a href="REPRODUCIBILITY.md">reproduction guide</a>' in site)
     for r in rows:
         if r['producer_kind']!='script':
-            assert producer_label(r) in readme and producer_label(r) in site
+            assert producer_label(r) in readme
+            assert designed or producer_label(r) in site
     import re
     descriptions=[line.split(' | ')[1] for line in code_index.splitlines() if line.startswith('| [')]
     assert len(descriptions)==39
@@ -275,7 +278,7 @@ def verify_rework(out,rows):
     assert '(see memo)' not in readme
     assert '[integration memo](process/state/integration_memo_2026-11-14.md)' in readme
     table('release/validation/T091_REWORK_CHECKS.csv',['criterion','result','evidence'],[
-        dict(criterion='accepted_wording',result='PASS',evidence='Exact T076 sentences in original side of proposal diff; SHA-256 in README_FACTS.json; shared README/HTML facts'),
+        dict(criterion='accepted_wording',result='PASS',evidence='Exact T076 README sentences and SHA-256 in README_FACTS.json; T093 website separately checked against approved template'),
         dict(criterion='producer_consistency',result='PASS',evidence=str(checked)+' included outputs match inventory/index; all script-produced proposal displays match inventory'),
         dict(criterion='appendix_context',result='PASS',evidence='Both reviewed nested tables inherit Online Appendix through the input graph'),
         dict(criterion='public_language',result='PASS',evidence='All 39 script descriptions use verbs; no invalid replication-directory command; RL1 defined before use; question precedes answer in header; dated snapshot status; timeless publication wording; named switches; consistent placeholders and linked guide/memo; historical process prose preserved')])

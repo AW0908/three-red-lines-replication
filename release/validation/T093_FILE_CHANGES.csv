@@ -1,0 +1,42 @@
+file,action
+public_release/README.md,modified
+public_release/docs/index.html,modified
+public_release/release/MANIFEST.csv,generated inventory
+public_release/release/release_tools/README.md,modified
+public_release/release/release_tools/build_release.py,modified
+public_release/release/release_tools/inspect_release.py,modified
+public_release/release/release_tools/path_check.py,modified
+public_release/release/release_tools/site_template.html,created
+public_release/release/release_tools/t084_scan.py,modified
+public_release/release/release_tools/t091_check.py,modified
+public_release/release/release_tools/t091_checks.py,modified
+public_release/release/release_tools/t093_dom_check.js,created
+public_release/release/release_tools/t093_site.py,created
+public_release/release/validation/T084_ANONYMITY.csv,modified
+public_release/release/validation/T084_GIT_SCAN.json,modified
+public_release/release/validation/T084_SCAN_SUMMARY.json,modified
+public_release/release/validation/T091_FILE_CHANGES.csv,modified
+public_release/release/validation/T091_REWORK_CHECKS.csv,modified
+public_release/release/validation/T093_BEFORE.json,created
+public_release/release/validation/T093_DOM_CHECK.json,created
+public_release/release/validation/T093_FILES_STOP.json,created
+public_release/release/validation/T093_FILES_STOP.py,created
+public_release/release/validation/T093_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_LINKS.csv,created
+public_release/release/validation/T093_NUMBERS.csv,created
+public_release/release/validation/T093_PROPOSAL_RECEIPT.json,created
+public_release/release/validation/T093_R1_BEFORE.json,created
+public_release/release/validation/T093_R1_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_R5_BEFORE.json,created
+public_release/release/validation/T093_R5_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_R6_BEFORE.json,created
+public_release/release/validation/T093_R6_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_README_BEFORE.txt,created
+public_release/release/validation/T093_SCIENTIFIC_HASHES.csv,created
+public_release/release/validation/T093_SCOPE_CHECK.json,created
+public_release/release/validation/T093_path_check.csv,created
+public_release/release/validation/history/T093_before_R5_T093_NUMBERS.csv,created
+public_release/release/validation/history/T093_before_R5_T093_SCOPE_CHECK.json,created
+public_release/release/validation/history/T093_before_R5_T093_path_check.csv,created
+public_release/release/validation/history/T093_before_R6_T093_NUMBERS.csv,created
+public_release/release/validation/history/T093_before_R6_T093_SCOPE_CHECK.json,created

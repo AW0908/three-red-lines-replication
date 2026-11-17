@@ -1,0 +1,20 @@
+{
+  "result": "STOP: number not confirmed",
+  "claim": "Download everything (ZIP, about 450 MB)",
+  "claim_source": "state/website/website_template.html",
+  "claim_source_sha256": "23ae438b6f0df319f8ed09ff9d70be18c2bc440429af586c9eec78adbad1c38e",
+  "manifest_before_evidence": {
+    "file": "release/MANIFEST.csv",
+    "sha256": "19b8da0ec0e595f65642c38025e6e6d14580dbaaa955e7a5e293b68425940ec3",
+    "included_files": 3538,
+    "verified_size_and_hash_mismatches": 0,
+    "included_payload_bytes": 512967266,
+    "decimal_MB": 512.967266,
+    "binary_MiB": 489.203706741333,
+    "convention": "included rows only; excludes MANIFEST itself and withheld rows"
+  },
+  "limitation": "Payload bytes are uncompressed. No compressed ZIP size is recorded by the manifest; 450 MB ZIP cannot be confirmed. No ZIP was downloaded or generated.",
+  "page_sha256_unchanged": "afa7d6dd26611089b43fc9440402c4a0eea81e05b37fb7b101033d87594cb3a6",
+  "release_template_sha256_unchanged": "0c796b619932514a4cabbf64c3e4a3be096f82559cef7d0c1b5b0214c2774fb9",
+  "action": "Stopped before template copy and build, as required by T093. Only stop evidence, numeric audit and payload manifest updated. Historical baselines and earlier audit rows retained."
+}

@@ -1,0 +1,18 @@
+{
+  "outside_files_checked": 32317,
+  "outside_changes": [],
+  "git_files_checked": 3983,
+  "git_changes": [],
+  "current_run_snapshot": "release/validation/T093_R5_BEFORE.json",
+  "historical_input_drift": [
+    "state/website/website_preview.html",
+    "state/website/website_template.html"
+  ],
+  "historical_baseline_status": "PI decision required; original SHA-256 baseline retained",
+  "exclusions": [
+    "active worker transcript (runner-managed)",
+    "task report (authorized)"
+  ],
+  "method": "size+mtime for all outside regular files, including environments; SHA-256 of template/proposal inputs and all Git metadata; paths in outside baseline are SHA-256 encoded",
+  "result": "PASS"
+}

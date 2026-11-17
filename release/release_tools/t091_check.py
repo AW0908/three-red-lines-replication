@@ -117,10 +117,19 @@ summary={'privacy_and_secrets_findings':len(findings),'source_inputs_checked':le
 (OUT/'release/validation/CHECKS.json').write_text(json.dumps(summary,indent=2)+'\n')
 assert not findings,findings
 from t084_scan import scan_release
-scan_release(ROOT, OUT)
+scan_release(ROOT, OUT, scope_task='T093')
 from t091_checks import validate_structure, file_ledger
 validate_structure(OUT)
+from t093_site import validate_site
+validate_site(OUT)
+dom=subprocess.run(['node',str(OUT/'release/release_tools/t093_dom_check.js')],capture_output=True,text=True,check=True)
+dom_result=json.loads(dom.stdout)
+assert dom_result['result']=='PASS'
+(OUT/'release/validation/T093_DOM_CHECK.json').write_text(json.dumps(dom_result,indent=2)+'\n')
+print('T093 JAVASCRIPT PASS: 89 rows; filters/search; 151 map links; finite SVG geometry; clipboard fallback. No visual render.')
 file_ledger(OUT)
+from t093_site import file_ledger as t093_file_ledger
+t093_file_ledger()
 # Complete file list; includes validation scripts and reports but never Git internals.
 files=sorted(p for p in OUT.rglob('*') if p.is_file() and '.git' not in p.relative_to(OUT).parts and p!=OUT/'release/MANIFEST.csv')
 entries=[{'file':p.relative_to(OUT).as_posix(),'status':'included','size_bytes':p.stat().st_size,'sha256':sha(p)} for p in files]

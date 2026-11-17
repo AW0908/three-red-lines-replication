@@ -43,6 +43,7 @@ class Links(HTMLParser):
 def documentation_links(out):
     errors=[];count=0
     repo='https://github.com/AW0908/three-red-lines-replication/blob/main/'
+    repo_root=repo.removesuffix('/blob/main/')
     for p in sorted(out.rglob('*.md')):
         if '.git' in p.relative_to(out).parts:continue
         for target in markdown_targets(p.read_text()):
@@ -61,12 +62,29 @@ def documentation_links(out):
             if target.startswith(repo):
                 q=out/unquote(target[len(repo):])
                 if not q.is_file():errors.append(('docs/index.html',target))
+            elif target==repo_root:pass
+            elif target==repo_root+'/archive/refs/heads/main.zip':
+                # Approved download: local payload checked, no HTTP/ZIP-size claim.
+                if not (out/'release/MANIFEST.csv').is_file():errors.append(('docs/index.html',target))
+            elif target.startswith(repo_root+'/tree/main/'):
+                directory=out/unquote(target[len(repo_root+'/tree/main/'):])
+                if not directory.is_dir():errors.append(('docs/index.html',target))
             elif urlsplit(target).scheme:errors.append(('docs/index.html','Unexpected external link: '+target))
             elif target.startswith('#'):
                 if target[1:] not in parser.ids:errors.append(('docs/index.html',target))
             elif not (site.parent/unquote(urlsplit(target).path)).exists():errors.append(('docs/index.html',target))
-        assert not parser.resources,'External/resource tags prohibited'
-        assert all(x in parser.ids for x in ['question','results','reproduce','data','process'])
+        assert all(tag=='script' and not attrs.get('src') for tag,attrs in parser.resources),'External/resource tags prohibited'
+        assert all(x in parser.ids for x in (['question','findings','archive','policy','reproduce','process','cite'] if 'const DATA = ' in site.read_text() else ['question','results','reproduce','data','process']))
+        if 'const DATA = ' in site.read_text():
+            import json
+            embedded=json.loads(re.search(r'const DATA = (.*);\n\(function',site.read_text())[1])
+            manifest_files={r['file'] for r in read(out/'release/MANIFEST.csv') if r['status']=='included'}
+            for r in embedded['map']:
+                targets=(r['script'].split('; ') if r['producer_kind']=='script' else [])
+                if 'not in release' not in r['release_location']:targets+=r['release_location'].split('; ')
+                for target in targets:
+                    count+=1
+                    if target not in manifest_files:errors.append(('docs/index.html',target))
         assert not re.search(r'@import|url\s*\(',site.read_text(),re.I),'External CSS resource'
     return count,errors
 
@@ -88,7 +106,8 @@ def inspect(out):
             assert r['release_location'],r
     count,errors=documentation_links(out)
     assert not errors,errors
-    assert not any(p.name.endswith(' 2') for p in out.rglob('*') if '.git' not in p.relative_to(out).parts)
+    assert not any(re.search(r' 2(?:\.|$)',part) for p in out.rglob('*')
+                   if '.git' not in p.relative_to(out).parts for part in p.relative_to(out).parts)
     print(f'OFFLINE INSPECTION PASS: {len(included)} manifest files; {len(result)} proposal displays; {count} documentation links; no suffix-2 paths.')
 
 if __name__=='__main__': inspect(Path.cwd())

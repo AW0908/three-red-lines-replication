@@ -1,0 +1,19 @@
+file,action
+public_release/docs/index.html,modified
+public_release/release/MANIFEST.csv,generated inventory
+public_release/release/release_tools/README.md,modified
+public_release/release/release_tools/site_template.html,modified
+public_release/release/release_tools/t093_site.py,modified
+public_release/release/validation/T084_ANONYMITY.csv,modified
+public_release/release/validation/T084_SCAN_SUMMARY.json,modified
+public_release/release/validation/T091_FILE_CHANGES.csv,modified
+public_release/release/validation/T093_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_NUMBERS.csv,modified
+public_release/release/validation/T093_R1_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_R5_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_R6_BEFORE.json,created
+public_release/release/validation/T093_R6_FILE_CHANGES.csv,generated inventory
+public_release/release/validation/T093_SCOPE_CHECK.json,modified
+public_release/release/validation/T093_path_check.csv,modified
+public_release/release/validation/history/T093_before_R6_T093_NUMBERS.csv,created
+public_release/release/validation/history/T093_before_R6_T093_SCOPE_CHECK.json,created

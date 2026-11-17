@@ -6,7 +6,7 @@ Archive documentation updated November 17, 2026. Summary wording and research pa
 
 Wind is a licensed financial-data terminal. Task cards record project work; the principal investigator (PI) approves it. See the [research-process guide](process/README.md).
 
-[Reader start page](docs/index.html) · [Citation](CITATION.cff)
+[Reader start page](docs/index.html) · [GitHub Pages](https://aw0908.github.io/three-red-lines-replication/) · [Citation](CITATION.cff)
 
 ```text
 code/       analysis scripts and downloads

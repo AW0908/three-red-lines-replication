@@ -40,7 +40,7 @@ def decoded(p):
     return [('text/raw bytes', raw)]
 
 
-def scan_release(root, out):
+def scan_release(root, out, scope_task='T091'):
     findings = []
     wind = []
     identities = []
@@ -165,6 +165,12 @@ use a separate referee archive. This is an inventory, not anonymous-mirror certi
                    limitation='pattern/provenance checks, not proof against arbitrary encoded secrets or image steganography')
     (out/'release/validation/T084_SCAN_SUMMARY.json').write_text(json.dumps(summary,indent=2)+'\n')
     assert not findings, f'T084 scan failed: {len(findings)} findings; see validation/T084_SCAN_FINDINGS.csv'
+    if scope_task == 'T093':
+        from t093_site import verify_scope
+        verify_scope(root, out)
+        print('T084 SAFETY PASS: '+json.dumps(summary), flush=True)
+        return
+    assert scope_task == 'T091', 'Unknown scope baseline'
     # Read-only scope comparison. Hash-based source checks are separate and stronger
     # for the explicitly captured inputs; this wider inventory uses size+mtime.
     session = json.loads((out/'release/validation/T091_BASELINE.json').read_text())

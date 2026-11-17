@@ -1,0 +1,13 @@
+{
+  "file": "proposal/sections/06_preliminary_analysis.tex",
+  "sha256": "7fb7b7966d90874606e0b4c414b7208f79345dbdfc0706b24858a3d930277d8b",
+  "lines": {
+    "46": "In 33 post-policy crossings by 31 firms, equity supplies over half the ratio decline in 69.7 percent of cases (57.1 before), and interest-bearing debt falls in 66.7 percent (selected transitions; Online Appendix Figure~\\ref{fig:t027_decomposition}).",
+    "75": "Treating a share $\\kappa$ of post-2019 MI growth as debt removes the excess mass at $\\kappa^*=0.28$, and its interval includes zero from $\\kappa=0.09$ (Table~\\ref{tab:frozen}): this is a reclassification benchmark, not an estimate of hidden debt. Finding~3 audits whether the relevant terms are observable.",
+    "87": "The rubric distinguishes debt-like terms (D), group equity (G), hybrids (H), plain outside equity (E) and unknown terms (U). The post-coding D split separates fixed-price or guaranteed-return claims (D1) from exits at market or project value (D2), which preserve project risk. The pilot classifies 107 of 117 economic transactions as U; among all 31 crossers, only 10 of 249 transactions have classifiable terms, and in the 20 of 33 crossing firm-years with observed capital, just RMB 0.4 billion of RMB 190.5 billion received from minority shareholders can be attributed to a transaction (Table~\\ref{tab:substance}). Missing documents, available documents with incomplete terms, and transactions without an identifiable link to a capital receipt are distinct gaps. Within this search window, missing terms leave $\\kappa$ unidentified. Term counts and attributed capital measure different coverage gaps, not a population debt share. Supervisors may hold non-public financial-position reports submitted to the PBoC and MOHURD~\\citep[p.~550]{chu2025leverage}; this finding concerns public information and motivates public disclosure. I machine-translated Chinese documents with DeepL and checked numbers and meaning on the cited page.",
+    "96": " D: economic transactions & 4: D1 1; D2 2; unspecified 1 \\\\",
+    "97": " G / H / E: economic transactions & 5 / 0 / 1 \\\\",
+    "98": " U: economic transactions & 239 (32 boundary cases excluded) \\\\",
+    "103": " \\floatnote{Coding: 33 crossings by 31 firms, unique economic transactions, including plans and historical terms. Attributed capital covers 20 of 33 required firm-years with observed capital; 0.2 percent is a lower bound because transaction searches end at the crossing date. Zero in a category does not mean no such financing. Gross capital ratios use 33 complete firm-years for crossers and 48 for others, before dividends. Firm-level shares and missingness: Online Appendix~\\ref{app:res_substance}.}"
+  }
+}
