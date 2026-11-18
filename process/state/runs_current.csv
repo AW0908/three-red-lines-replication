@@ -1,0 +1,642 @@
+line_number,date,time,task,role,provider,tier_model,priority,verdict,note_type,pairing,paired_line,raw
+1,2026-10-13,16:51,T001,worker,codex,medium,normal,,run,,,2026-10-13 16:51 T001 worker codex medium (priority normal)
+2,2026-10-13,16:58,T001,reviewer,agy,gemini-3.8-flash-medium,normal,PASS,run,,,2026-10-13 16:58 T001 reviewer agy gemini-3.8-flash-medium (priority normal) PASS
+3,2026-10-13,17:17,T002,worker,claude,sonnet,normal,,run,,,2026-10-13 17:17 T002 worker claude sonnet (priority normal)
+4,2026-10-13,17:19,T002,worker,claude,sonnet,normal,,run,,,2026-10-13 17:19 T002 worker claude sonnet (priority normal)
+5,2026-10-13,17:20,T002,worker,claude,sonnet,normal,,run,,,2026-10-13 17:20 T002 worker claude sonnet (priority normal)
+6,2026-10-13,17:27,T002,reviewer,codex,medium,normal,REWORK,run,,,2026-10-13 17:27 T002 reviewer codex medium (priority normal) REWORK
+7,2026-10-13,20:21,T002,reviewer,codex,medium,normal,REWORK,run,,,2026-10-13 20:21 T002 reviewer codex medium (priority normal) REWORK
+8,2026-10-15,13:49,T006,worker,claude,,,,start_note,paired,9,"2026-10-15 13:49 T006 worker claude Rechte: dontAsk, Read/Glob/Grep, Edit/Write nur ./proposal/**, kein Bash"
+9,2026-10-15,13:51,T006,worker,claude,haiku,low,,run,,,2026-10-15 13:51 T006 worker claude haiku (priority low)
+10,2026-10-15,13:53,T006,reviewer,codex,low,low,REWORK,run,,,2026-10-15 13:53 T006 reviewer codex low (priority low) REWORK
+11,2026-10-16,10:26,T007,worker,codex,low,low,,run,,,2026-10-16 10:26 T007 worker codex low (priority low)
+12,2026-10-16,10:30,T007,reviewer,agy,gemini-3.8-flash-low,low,ESCALATE,run,,,2026-10-16 10:30 T007 reviewer agy gemini-3.8-flash-low (priority low) ESCALATE
+13,2026-10-16,15:30,T003,worker,codex,medium,normal,,run,,,2026-10-16 15:30 T003 worker codex medium (priority normal)
+14,2026-10-16,15:34,T003,worker,codex,medium,normal,,run,,,2026-10-16 15:34 T003 worker codex medium (priority normal)
+15,2026-10-16,15:38,T003,reviewer,agy,gemini-3.8-flash-medium,normal,PASS,run,,,2026-10-16 15:38 T003 reviewer agy gemini-3.8-flash-medium (priority normal) PASS
+16,2026-10-16,15:42,T004,worker,codex,high,high,,run,,,2026-10-16 15:42 T004 worker codex high (priority high)
+17,2026-10-16,15:54,T004,worker,codex,high,high,,run,,,2026-10-16 15:54 T004 worker codex high (priority high)
+18,2026-10-16,15:58,T004,worker,codex,high,high,,run,,,2026-10-16 15:58 T004 worker codex high (priority high)
+19,2026-10-16,16:06,T004,worker,codex,high,high,,run,,,2026-10-16 16:06 T004 worker codex high (priority high)
+20,2026-10-16,16:10,T004,worker,codex,high,high,,run,,,2026-10-16 16:10 T004 worker codex high (priority high)
+21,2026-10-16,16:17,T004,worker,codex,high,high,,run,,,2026-10-16 16:17 T004 worker codex high (priority high)
+22,2026-10-16,16:25,T004,worker,codex,high,high,,run,,,2026-10-16 16:25 T004 worker codex high (priority high)
+23,2026-10-16,16:32,T004,reviewer,agy,gemini-3.8-flash-high,high,ESCALATE,run,,,2026-10-16 16:32 T004 reviewer agy gemini-3.8-flash-high (priority high) ESCALATE
+24,2026-10-16,16:39,T005,worker,codex,medium,normal,,run,,,2026-10-16 16:39 T005 worker codex medium (priority normal)
+25,2026-10-16,16:44,T005,worker,codex,medium,normal,,run,,,2026-10-16 16:44 T005 worker codex medium (priority normal)
+26,2026-10-16,16:56,T005,reviewer,agy,gemini-3.8-flash-medium,normal,PASS,run,,,2026-10-16 16:56 T005 reviewer agy gemini-3.8-flash-medium (priority normal) PASS
+27,2026-10-16,17:00,T008,worker,codex,medium,normal,,run,,,2026-10-16 17:00 T008 worker codex medium (priority normal)
+28,2026-10-16,17:06,T008,reviewer,agy,gemini-3.8-flash-medium,normal,PASS,run,,,2026-10-16 17:06 T008 reviewer agy gemini-3.8-flash-medium (priority normal) PASS
+29,2026-10-16,17:14,T009,worker,codex,high,high,,run,,,2026-10-16 17:14 T009 worker codex high (priority high)
+30,2026-10-16,17:24,T009,reviewer,agy,gemini-3.8-flash-high,high,PASS,run,,,2026-10-16 17:24 T009 reviewer agy gemini-3.8-flash-high (priority high) PASS
+31,2026-10-16,17:32,T011,worker,codex,high,high,,run,,,2026-10-16 17:32 T011 worker codex high (priority high)
+32,2026-10-16,17:50,T011,reviewer,agy,gemini-3.8-flash-high,high,PASS,run,,,2026-10-16 17:50 T011 reviewer agy gemini-3.8-flash-high (priority high) PASS
+33,2026-10-16,18:03,T012,worker,codex,high,high,,run,,,2026-10-16 18:03 T012 worker codex high (priority high)
+34,2026-10-16,18:05,T013,worker,codex,medium,normal,,run,,,2026-10-16 18:05 T013 worker codex medium (priority normal)
+35,2026-10-17,15:39,T012,reviewer,claude,opus,high,REWORK,run,,,2026-10-17 15:39 T012 reviewer claude opus (priority high) REWORK
+36,2026-10-17,15:42,T013,reviewer,claude,sonnet,normal,REWORK,run,,,2026-10-17 15:42 T013 reviewer claude sonnet (priority normal) REWORK
+37,2026-10-17,15:48,T012,worker,codex,high,high,,run,,,2026-10-17 15:48 T012 worker codex high (priority high)
+38,2026-10-17,15:53,T012,reviewer,claude,opus,high,PASS,run,,,2026-10-17 15:53 T012 reviewer claude opus (priority high) PASS
+39,2026-10-17,16:02,T010,worker,codex,medium,normal,,run,,,2026-10-17 16:02 T010 worker codex medium (priority normal)
+40,2026-10-17,16:10,T010,worker,codex,medium,normal,,run,,,2026-10-17 16:10 T010 worker codex medium (priority normal)
+41,2026-10-17,16:28,T010,worker,codex,medium,normal,,run,,,2026-10-17 16:28 T010 worker codex medium (priority normal)
+42,2026-10-17,16:34,T010,reviewer,claude,sonnet,normal,PASS,run,,,2026-10-17 16:34 T010 reviewer claude sonnet (priority normal) PASS
+43,2026-10-17,17:02,T016,worker,claude,,,,start_note,paired,45,"2026-10-17 17:02 T016 worker claude Rechte: dontAsk, Read/Glob/Grep, Edit nur ./proposal/**, kein Bash"
+44,2026-10-17,17:04,T014,worker,codex,high,high,,run,,,2026-10-17 17:04 T014 worker codex high (priority high)
+45,2026-10-17,17:04,T016,worker,claude,sonnet,normal,,run,,,2026-10-17 17:04 T016 worker claude sonnet (priority normal)
+46,2026-10-17,17:07,T014,reviewer,claude,opus,high,REWORK,run,,,2026-10-17 17:07 T014 reviewer claude opus (priority high) REWORK
+47,2026-10-17,17:07,T016,reviewer,codex,medium,normal,REWORK,run,,,2026-10-17 17:07 T016 reviewer codex medium (priority normal) REWORK
+48,2026-10-17,17:09,T016,worker,claude,,,,start_note,paired,50,"2026-10-17 17:09 T016 worker claude Rechte: dontAsk, Read/Glob/Grep, Edit nur ./proposal/**, kein Bash"
+49,2026-10-17,17:09,T015,worker,codex,high,high,,run,,,2026-10-17 17:09 T015 worker codex high (priority high)
+50,2026-10-17,17:10,T016,worker,claude,sonnet,normal,,run,,,2026-10-17 17:10 T016 worker claude sonnet (priority normal)
+51,2026-10-17,17:11,T016,reviewer,codex,medium,normal,PASS,run,,,2026-10-17 17:11 T016 reviewer codex medium (priority normal) PASS
+52,2026-10-17,17:14,T017,worker,claude,,,,start_note,paired,53,"2026-10-17 17:14 T017 worker claude Rechte: dontAsk, Read/Glob/Grep, Edit nur ./proposal/**, kein Bash"
+53,2026-10-17,17:15,T017,worker,claude,sonnet,normal,,run,,,2026-10-17 17:15 T017 worker claude sonnet (priority normal)
+54,2026-10-17,17:15,T014,worker,codex,high,high,,run,,,2026-10-17 17:15 T014 worker codex high (priority high)
+55,2026-10-17,17:17,T017,worker,claude,,,,start_note,paired,57,"2026-10-17 17:17 T017 worker claude Rechte: dontAsk, Read/Glob/Grep, Edit nur ./proposal/**, kein Bash"
+56,2026-10-17,17:17,T014,reviewer,claude,opus,high,PASS,run,,,2026-10-17 17:17 T014 reviewer claude opus (priority high) PASS
+57,2026-10-17,17:18,T017,worker,claude,sonnet,normal,,run,,,2026-10-17 17:18 T017 worker claude sonnet (priority normal)
+58,2026-10-18,14:59,T015,worker,codex,high,high,,run,,,2026-10-18 14:59 T015 worker codex high (priority high)
+59,2026-10-18,15:23,T015,worker,codex,high,high,,run,,,2026-10-18 15:23 T015 worker codex high (priority high)
+60,2026-10-18,15:36,T015,reviewer,claude,opus,high,REWORK,run,,,2026-10-18 15:36 T015 reviewer claude opus (priority high) REWORK
+61,2026-10-18,15:41,T017,worker,claude,,,,start_note,paired,62,"2026-10-18 15:41 T017 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+62,2026-10-18,15:41,T017,worker,claude,sonnet,normal,,run,,,2026-10-18 15:41 T017 worker claude sonnet (priority normal)
+63,2026-10-18,15:44,T017,reviewer,codex,medium,normal,REWORK,run,,,2026-10-18 15:44 T017 reviewer codex medium (priority normal) REWORK
+64,2026-10-18,15:44,T015,worker,codex,high,high,,run,,,2026-10-18 15:44 T015 worker codex high (priority high)
+65,2026-10-18,15:46,T015,reviewer,claude,opus,high,PASS,run,,,2026-10-18 15:46 T015 reviewer claude opus (priority high) PASS
+66,2026-10-18,15:50,T018,worker,claude,,,,start_note,paired,67,"2026-10-18 15:50 T018 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+67,2026-10-18,15:55,T018,worker,claude,opus,high,,run,,,2026-10-18 15:55 T018 worker claude opus (priority high)
+68,2026-10-18,15:58,T018,reviewer,codex,high,high,REWORK,run,,,2026-10-18 15:58 T018 reviewer codex high (priority high) REWORK
+69,2026-10-18,16:04,T018,worker,claude,,,,start_note,paired,70,"2026-10-18 16:04 T018 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+70,2026-10-18,16:08,T018,worker,claude,opus,high,,run,,,2026-10-18 16:08 T018 worker claude opus (priority high)
+71,2026-10-18,16:11,T018,reviewer,codex,high,high,REWORK,run,,,2026-10-18 16:11 T018 reviewer codex high (priority high) REWORK
+72,2026-10-18,16:14,T018,worker,claude,,,,start_note,paired,73,"2026-10-18 16:14 T018 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+73,2026-10-18,16:16,T018,worker,claude,opus,high,,run,,,2026-10-18 16:16 T018 worker claude opus (priority high)
+74,2026-10-18,16:19,T018,reviewer,codex,high,high,REWORK,run,,,2026-10-18 16:19 T018 reviewer codex high (priority high) REWORK
+75,2026-10-18,16:26,T020,worker,claude,,,,start_note,paired,77,"2026-10-18 16:26 T020 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+76,2026-10-18,16:27,T019,worker,codex,medium,normal,,run,,,2026-10-18 16:27 T019 worker codex medium (priority normal)
+77,2026-10-18,16:44,T020,worker,claude,opus,high,,run,,,2026-10-18 16:44 T020 worker claude opus (priority high)
+78,2026-10-18,16:53,T019,reviewer,claude,sonnet,normal,PASS,run,,,2026-10-18 16:53 T019 reviewer claude sonnet (priority normal) PASS
+79,2026-10-18,17:37,T020,worker,claude,,,,start_note,paired,80,"2026-10-18 17:37 T020 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+80,2026-10-18,17:38,T020,worker,claude,opus,high,,run,,,2026-10-18 17:38 T020 worker claude opus (priority high)
+81,2026-10-18,17:45,T020,reviewer,codex,high,high,ESCALATE,run,,,2026-10-18 17:45 T020 reviewer codex high (priority high) ESCALATE
+82,2026-10-18,17:49,T020,worker,claude,,,,start_note,paired,83,"2026-10-18 17:49 T020 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+83,2026-10-18,17:51,T020,worker,claude,opus,high,,run,,,2026-10-18 17:51 T020 worker claude opus (priority high)
+84,2026-10-18,17:54,T020,reviewer,codex,high,high,REWORK,run,,,2026-10-18 17:54 T020 reviewer codex high (priority high) REWORK
+85,2026-10-18,17:56,T021,worker,claude,,,,start_note,paired,86,"2026-10-18 17:56 T021 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+86,2026-10-18,18:03,T021,worker,claude,opus,high,,run,,,2026-10-18 18:03 T021 worker claude opus (priority high)
+87,2026-10-18,18:06,T021,reviewer,codex,high,high,REWORK,run,,,2026-10-18 18:06 T021 reviewer codex high (priority high) REWORK
+88,2026-10-19,12:59,T022,worker,codex,medium,normal,,run,,,2026-10-19 12:59 T022 worker codex medium (priority normal)
+89,2026-10-19,12:59,T022,reviewer:estimation,claude,sonnet,normal,PASS,run,,,2026-10-19 12:59 T022 reviewer[estimation] claude sonnet (priority normal) PASS
+90,2026-10-19,13:00,T022,reviewer:consistency,claude,sonnet,normal,PASS,run,,,2026-10-19 13:00 T022 reviewer[consistency] claude sonnet (priority normal) PASS
+91,2026-10-19,13:17,T021,worker,claude,,,,start_note,paired,92,"2026-10-19 13:17 T021 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+92,2026-10-19,13:18,T021,worker,claude,opus,high,,run,,,2026-10-19 13:18 T021 worker claude opus (priority high)
+93,2026-10-19,13:21,T021,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-19 13:21 T021 reviewer[consistency] codex high (priority high) REWORK
+94,2026-10-19,13:22,T021,reviewer:language,codex,high,high,REWORK,run,,,2026-10-19 13:22 T021 reviewer[language] codex high (priority high) REWORK
+95,2026-10-19,13:26,T026,worker,claude,,,,start_note,paired,96,"2026-10-19 13:26 T026 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+96,2026-10-19,13:33,T026,worker,claude,opus,high,,run,,,2026-10-19 13:33 T026 worker claude opus (priority high)
+97,2026-10-19,13:34,T026,reviewer:estimation,codex,high,high,ESCALATE,run,,,2026-10-19 13:34 T026 reviewer[estimation] codex high (priority high) ESCALATE
+98,2026-10-19,13:36,T023,worker,codex,high,high,,run,,,2026-10-19 13:36 T023 worker codex high (priority high)
+99,2026-10-19,13:36,T026,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-10-19 13:36 T026 reviewer[consistency] codex high (priority high) ESCALATE
+100,2026-10-19,13:38,T026,reviewer:language,codex,high,high,REWORK,run,,,2026-10-19 13:38 T026 reviewer[language] codex high (priority high) REWORK
+101,2026-10-19,13:38,T023,reviewer:data,claude,opus,high,ESCALATE,run,,,2026-10-19 13:38 T023 reviewer[data] claude opus (priority high) ESCALATE
+102,2026-10-19,13:41,T023,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-19 13:41 T023 reviewer[estimation] claude opus (priority high) PASS
+103,2026-10-19,13:42,T023,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-19 13:42 T023 reviewer[consistency] claude opus (priority high) PASS
+104,2026-10-19,13:52,T021,worker,claude,,,,start_note,paired,105,"2026-10-19 13:52 T021 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+105,2026-10-19,13:53,T021,worker,claude,opus,high,,run,,,2026-10-19 13:53 T021 worker claude opus (priority high)
+106,2026-10-19,13:59,T021,reviewer:consistency,codex,high,high,PASS,run,,,2026-10-19 13:59 T021 reviewer[consistency] codex high (priority high) PASS
+107,2026-10-19,14:01,T021,reviewer:language,codex,high,high,REWORK,run,,,2026-10-19 14:01 T021 reviewer[language] codex high (priority high) REWORK
+108,2026-10-19,14:14,T026,worker,claude,,,,start_note,paired,109,"2026-10-19 14:14 T026 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+109,2026-10-19,14:18,T026,worker,claude,opus,high,,run,,,2026-10-19 14:18 T026 worker claude opus (priority high)
+110,2026-10-19,14:20,T026,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-19 14:20 T026 reviewer[estimation] codex high (priority high) REWORK
+111,2026-10-19,14:22,T023,worker,codex,high,high,,run,,,2026-10-19 14:22 T023 worker codex high (priority high)
+112,2026-10-19,14:22,T026,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-19 14:22 T026 reviewer[consistency] codex high (priority high) REWORK
+113,2026-10-19,14:24,T026,reviewer:language,codex,high,high,REWORK,run,,,2026-10-19 14:24 T026 reviewer[language] codex high (priority high) REWORK
+114,2026-10-19,14:25,T023,reviewer:data,claude,opus,high,PASS,run,,,2026-10-19 14:25 T023 reviewer[data] claude opus (priority high) PASS
+115,2026-10-19,14:27,T023,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-19 14:27 T023 reviewer[estimation] claude opus (priority high) REWORK
+116,2026-10-19,14:29,T023,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-19 14:29 T023 reviewer[consistency] claude opus (priority high) PASS
+117,2026-10-19,14:57,T026,worker,claude,,,,start_note,paired,118,"2026-10-19 14:57 T026 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+118,2026-10-19,14:59,T026,worker,claude,opus,high,,run,,,2026-10-19 14:59 T026 worker claude opus (priority high)
+119,2026-10-19,15:02,T026,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-19 15:02 T026 reviewer[estimation] codex high (priority high) REWORK
+120,2026-10-19,15:04,T026,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-19 15:04 T026 reviewer[consistency] codex high (priority high) REWORK
+121,2026-10-19,15:06,T023,worker,codex,high,high,,run,,,2026-10-19 15:06 T023 worker codex high (priority high)
+122,2026-10-19,15:06,T026,reviewer:language,codex,high,high,REWORK,run,,,2026-10-19 15:06 T026 reviewer[language] codex high (priority high) REWORK
+123,2026-10-19,15:08,T023,reviewer:data,claude,opus,high,PASS,run,,,2026-10-19 15:08 T023 reviewer[data] claude opus (priority high) PASS
+124,2026-10-19,15:10,T026,worker,claude,,,,start_note,paired,127,"2026-10-19 15:10 T026 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+125,2026-10-19,15:10,T023,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-19 15:10 T023 reviewer[estimation] claude opus (priority high) PASS
+126,2026-10-19,15:12,T023,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-19 15:12 T023 reviewer[consistency] claude opus (priority high) PASS
+127,2026-10-19,15:12,T026,worker,claude,opus,high,,run,,,2026-10-19 15:12 T026 worker claude opus (priority high)
+128,2026-10-20,16:39,T026,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-20 16:39 T026 reviewer[estimation] codex high (priority high) REWORK
+129,2026-10-20,16:42,T026,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-20 16:42 T026 reviewer[consistency] codex high (priority high) REWORK
+130,2026-10-20,16:45,T026,reviewer:language,codex,high,high,REWORK,run,,,2026-10-20 16:45 T026 reviewer[language] codex high (priority high) REWORK
+131,2026-10-20,16:47,T026,worker,claude,,,,start_note,paired,132,"2026-10-20 16:47 T026 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+132,2026-10-20,16:53,T026,worker,claude,opus,high,,run,,,2026-10-20 16:53 T026 worker claude opus (priority high)
+133,2026-10-20,16:55,T026,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-20 16:55 T026 reviewer[estimation] codex high (priority high) REWORK
+134,2026-10-20,16:57,T026,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-20 16:57 T026 reviewer[consistency] codex high (priority high) REWORK
+135,2026-10-20,17:00,T026,reviewer:language,codex,high,high,REWORK,run,,,2026-10-20 17:00 T026 reviewer[language] codex high (priority high) REWORK
+136,2026-10-20,17:00,T026,worker,claude,,,,start_note,paired,137,"2026-10-20 17:00 T026 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+137,2026-10-20,17:03,T026,worker,claude,opus,high,,run,,,2026-10-20 17:03 T026 worker claude opus (priority high)
+138,2026-10-20,17:06,T026,reviewer:estimation,codex,high,high,PASS,run,,,2026-10-20 17:06 T026 reviewer[estimation] codex high (priority high) PASS
+139,2026-10-20,17:09,T026,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-20 17:09 T026 reviewer[consistency] codex high (priority high) REWORK
+140,2026-10-20,17:12,T026,reviewer:language,codex,high,high,REWORK,run,,,2026-10-20 17:12 T026 reviewer[language] codex high (priority high) REWORK
+141,2026-10-20,17:15,T024,worker,codex,high,high,,run,,,2026-10-20 17:15 T024 worker codex high (priority high)
+142,2026-10-21,13:51,T027,worker,codex,high,high,,run,,,2026-10-21 13:51 T027 worker codex high (priority high)
+143,2026-10-21,13:53,T024,worker,codex,high,high,,run,,,2026-10-21 13:53 T024 worker codex high (priority high)
+144,2026-10-21,13:59,T027,reviewer:data,claude,opus,high,PASS,run,,,2026-10-21 13:59 T027 reviewer[data] claude opus (priority high) PASS
+145,2026-10-21,14:01,T027,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-21 14:01 T027 reviewer[estimation] claude opus (priority high) PASS
+146,2026-10-21,14:03,T027,reviewer:consistency,claude,opus,high,REWORK,run,,,2026-10-21 14:03 T027 reviewer[consistency] claude opus (priority high) REWORK
+147,2026-10-21,14:14,T027,worker,codex,high,high,,run,,,2026-10-21 14:14 T027 worker codex high (priority high)
+148,2026-10-21,14:16,T027,reviewer:data,claude,opus,high,PASS,run,,,2026-10-21 14:16 T027 reviewer[data] claude opus (priority high) PASS
+149,2026-10-21,14:17,T027,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-21 14:17 T027 reviewer[estimation] claude opus (priority high) PASS
+150,2026-10-21,14:20,T027,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-21 14:20 T027 reviewer[consistency] claude opus (priority high) PASS
+151,2026-10-21,14:36,T024,worker,codex,high,high,,run,,,2026-10-21 14:36 T024 worker codex high (priority high)
+152,2026-10-21,14:39,T024,reviewer:data,claude,opus,high,PASS,run,,,2026-10-21 14:39 T024 reviewer[data] claude opus (priority high) PASS
+153,2026-10-21,14:41,T024,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-21 14:41 T024 reviewer[estimation] claude opus (priority high) REWORK
+154,2026-10-21,14:43,T024,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-21 14:43 T024 reviewer[consistency] claude opus (priority high) PASS
+155,2026-10-21,14:56,T024,worker,codex,high,high,,run,,,2026-10-21 14:56 T024 worker codex high (priority high)
+156,2026-10-21,14:57,T024,reviewer:data,claude,opus,high,PASS,run,,,2026-10-21 14:57 T024 reviewer[data] claude opus (priority high) PASS
+157,2026-10-21,14:59,T024,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-21 14:59 T024 reviewer[estimation] claude opus (priority high) PASS
+158,2026-10-21,15:00,T024,reviewer:consistency,claude,opus,high,REWORK,run,,,2026-10-21 15:00 T024 reviewer[consistency] claude opus (priority high) REWORK
+159,2026-10-21,15:14,T024,worker,codex,high,high,,run,,,2026-10-21 15:14 T024 worker codex high (priority high)
+160,2026-10-21,15:16,T024,reviewer:data,claude,opus,high,REWORK,run,,,2026-10-21 15:16 T024 reviewer[data] claude opus (priority high) REWORK
+161,2026-10-21,15:17,T024,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-21 15:17 T024 reviewer[estimation] claude opus (priority high) PASS
+162,2026-10-21,15:18,T024,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-21 15:18 T024 reviewer[consistency] claude opus (priority high) PASS
+163,2026-10-21,15:27,T024,worker,codex,high,high,,run,,,2026-10-21 15:27 T024 worker codex high (priority high)
+164,2026-10-21,15:29,T024,reviewer:data,claude,opus,high,PASS,run,,,2026-10-21 15:29 T024 reviewer[data] claude opus (priority high) PASS
+165,2026-10-21,15:30,T024,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-21 15:30 T024 reviewer[estimation] claude opus (priority high) PASS
+166,2026-10-21,15:31,T024,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-21 15:31 T024 reviewer[consistency] claude opus (priority high) PASS
+167,2026-10-21,15:46,T025,worker,codex,high,high,,run,,,2026-10-21 15:46 T025 worker codex high (priority high)
+168,2026-10-21,15:47,T025,reviewer:data,claude,opus,high,ESCALATE,run,,,2026-10-21 15:47 T025 reviewer[data] claude opus (priority high) ESCALATE
+169,2026-10-21,15:48,T025,reviewer:estimation,claude,opus,high,ESCALATE,run,,,2026-10-21 15:48 T025 reviewer[estimation] claude opus (priority high) ESCALATE
+170,2026-10-21,15:49,T025,reviewer:consistency,claude,opus,high,ESCALATE,run,,,2026-10-21 15:49 T025 reviewer[consistency] claude opus (priority high) ESCALATE
+171,2026-10-21,19:11,T025,worker,codex,high,high,,run,,,2026-10-21 19:11 T025 worker codex high (priority high)
+172,2026-10-21,19:14,T025,reviewer:data,claude,opus,high,ESCALATE,run,,,2026-10-21 19:14 T025 reviewer[data] claude opus (priority high) ESCALATE
+173,2026-10-21,19:15,T025,reviewer:estimation,claude,opus,high,ESCALATE,run,,,2026-10-21 19:15 T025 reviewer[estimation] claude opus (priority high) ESCALATE
+174,2026-10-21,19:16,T025,reviewer:consistency,claude,opus,high,ESCALATE,run,,,2026-10-21 19:16 T025 reviewer[consistency] claude opus (priority high) ESCALATE
+175,2026-10-21,19:47,T025,worker,codex,high,high,,run,,,2026-10-21 19:47 T025 worker codex high (priority high)
+176,2026-10-21,19:49,T025,reviewer:data,claude,opus,high,ESCALATE,run,,,2026-10-21 19:49 T025 reviewer[data] claude opus (priority high) ESCALATE
+177,2026-10-21,19:51,T025,reviewer:estimation,claude,opus,high,ESCALATE,run,,,2026-10-21 19:51 T025 reviewer[estimation] claude opus (priority high) ESCALATE
+178,2026-10-21,19:52,T025,reviewer:consistency,claude,opus,high,ESCALATE,run,,,2026-10-21 19:52 T025 reviewer[consistency] claude opus (priority high) ESCALATE
+179,2026-10-21,21:17,T025,worker,codex,high,high,,run,,,2026-10-21 21:17 T025 worker codex high (priority high)
+180,2026-10-21,21:20,T025,reviewer:data,claude,opus,high,PASS,run,,,2026-10-21 21:20 T025 reviewer[data] claude opus (priority high) PASS
+181,2026-10-21,21:22,T025,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-21 21:22 T025 reviewer[estimation] claude opus (priority high) PASS
+182,2026-10-21,21:23,T025,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-21 21:23 T025 reviewer[consistency] claude opus (priority high) PASS
+183,2026-10-23,15:37,T028,worker,codex,high,high,,run,,,2026-10-23 15:37 T028 worker codex high (priority high)
+184,2026-10-23,15:40,T028,reviewer:data,claude,opus,high,REWORK,run,,,2026-10-23 15:40 T028 reviewer[data] claude opus (priority high) REWORK
+185,2026-10-23,15:43,T028,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-23 15:43 T028 reviewer[estimation] claude opus (priority high) PASS
+186,2026-10-23,15:45,T028,reviewer:consistency,claude,opus,high,REWORK,run,,,2026-10-23 15:45 T028 reviewer[consistency] claude opus (priority high) REWORK
+187,2026-10-23,15:55,T028,worker,codex,high,high,,run,,,2026-10-23 15:55 T028 worker codex high (priority high)
+188,2026-10-23,16:01,T028,reviewer:data,claude,opus,high,PASS,run,,,2026-10-23 16:01 T028 reviewer[data] claude opus (priority high) PASS
+189,2026-10-23,16:03,T028,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-23 16:03 T028 reviewer[estimation] claude opus (priority high) PASS
+190,2026-10-23,16:06,T028,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-23 16:06 T028 reviewer[consistency] claude opus (priority high) PASS
+191,2026-10-23,16:59,T030,worker,codex,high,high,,run,,,2026-10-23 16:59 T030 worker codex high (priority high)
+192,2026-10-23,17:02,T030,reviewer:data,claude,opus,high,PASS,run,,,2026-10-23 17:02 T030 reviewer[data] claude opus (priority high) PASS
+193,2026-10-23,17:03,T030,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-23 17:03 T030 reviewer[estimation] claude opus (priority high) PASS
+194,2026-10-23,17:04,T030,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-23 17:04 T030 reviewer[consistency] claude opus (priority high) PASS
+195,2026-10-23,17:18,T029,worker,codex,high,high,,run,,,2026-10-23 17:18 T029 worker codex high (priority high)
+196,2026-10-23,17:21,T029,reviewer:data,claude,opus,high,REWORK,run,,,2026-10-23 17:21 T029 reviewer[data] claude opus (priority high) REWORK
+197,2026-10-23,17:24,T029,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-23 17:24 T029 reviewer[estimation] claude opus (priority high) REWORK
+198,2026-10-23,17:36,T032,worker,codex,high,high,,run,,,2026-10-23 17:36 T032 worker codex high (priority high)
+199,2026-10-25,13:15,T029,reviewer:data,claude,opus,high,REWORK,run,,,2026-10-25 13:15 T029 reviewer[data] claude opus (priority high) REWORK
+200,2026-10-25,13:15,T029,reviewer:data,claude,opus,high,PASS,run,,,2026-10-25 13:15 T029 reviewer[data] claude opus (priority high) PASS
+201,2026-10-25,13:17,T029,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-25 13:17 T029 reviewer[estimation] claude opus (priority high) REWORK
+202,2026-10-25,13:17,T029,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-25 13:17 T029 reviewer[estimation] claude opus (priority high) REWORK
+203,2026-10-25,13:20,T029,reviewer:consistency,claude,opus,high,PASS,run,,,2026-10-25 13:20 T029 reviewer[consistency] claude opus (priority high) PASS
+204,2026-10-25,13:24,T032,reviewer:data,claude,opus,high,PASS,run,,,2026-10-25 13:24 T032 reviewer[data] claude opus (priority high) PASS
+205,2026-10-25,13:30,T029,worker,codex,high,high,,run,,,2026-10-25 13:30 T029 worker codex high (priority high)
+206,2026-10-26,13:20,T029,reviewer:data,codex,high,high,PASS,run,,,2026-10-26 13:20 T029 reviewer[data] codex high (priority high) PASS
+207,2026-10-26,13:21,T032,reviewer:data,codex,high,high,ESCALATE,run,,,2026-10-26 13:21 T032 reviewer[data] codex high (priority high) ESCALATE
+208,2026-10-26,13:22,T029,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-26 13:22 T029 reviewer[estimation] claude opus (priority high) PASS
+209,2026-10-26,13:22,T032,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-26 13:22 T032 reviewer[consistency] codex high (priority high) REWORK
+210,2026-10-26,13:26,T029,reviewer:consistency,codex,high,high,PASS,run,,,2026-10-26 13:26 T029 reviewer[consistency] codex high (priority high) PASS
+211,2026-10-26,13:37,T032,worker,codex,high,high,,run,,,2026-10-26 13:37 T032 worker codex high (priority high)
+212,2026-10-26,13:37,T032,reviewer:data,codex,high,high,ESCALATE,run,,,2026-10-26 13:37 T032 reviewer[data] codex high (priority high) ESCALATE
+213,2026-10-26,13:41,T032,reviewer:consistency,codex,high,high,PASS,run,,,2026-10-26 13:41 T032 reviewer[consistency] codex high (priority high) PASS
+214,2026-10-26,13:44,T031,worker,codex,high,high,,run,,,2026-10-26 13:44 T031 worker codex high (priority high)
+215,2026-10-26,13:47,T031,reviewer:data,codex,high,high,ESCALATE,run,,,2026-10-26 13:47 T031 reviewer[data] codex high (priority high) ESCALATE
+216,2026-10-26,13:50,T031,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-26 13:50 T031 reviewer[estimation] claude opus (priority high) PASS
+217,2026-10-26,13:53,T031,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-26 13:53 T031 reviewer[consistency] codex high (priority high) REWORK
+218,2026-10-26,14:02,T034,worker,claude,,,,start_note,paired,220,"2026-10-26 14:02 T034 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+219,2026-10-26,14:02,T036,worker,claude,,,,start_note,paired,221,"2026-10-26 14:02 T036 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+220,2026-10-26,14:10,T034,worker,claude,opus,high,,run,,,2026-10-26 14:10 T034 worker claude opus (priority high)
+221,2026-10-26,14:10,T036,worker,claude,opus,high,,run,,,2026-10-26 14:10 T036 worker claude opus (priority high)
+222,2026-10-26,14:13,T034,reviewer:estimation,codex,high,high,ESCALATE,run,,,2026-10-26 14:13 T034 reviewer[estimation] codex high (priority high) ESCALATE
+223,2026-10-26,14:17,T034,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-26 14:17 T034 reviewer[consistency] codex high (priority high) REWORK
+224,2026-10-26,14:20,T034,reviewer:language,codex,high,high,REWORK,run,,,2026-10-26 14:20 T034 reviewer[language] codex high (priority high) REWORK
+225,2026-10-26,14:32,T036,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-26 14:32 T036 reviewer[consistency] codex high (priority high) REWORK
+226,2026-10-26,14:34,T036,reviewer:language,codex,high,high,REWORK,run,,,2026-10-26 14:34 T036 reviewer[language] codex high (priority high) REWORK
+227,2026-10-26,14:35,T034,worker,claude,,,,start_note,paired,228,"2026-10-26 14:35 T034 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+228,2026-10-26,14:37,T034,worker,claude,opus,high,,run,,,2026-10-26 14:37 T034 worker claude opus (priority high)
+229,2026-10-26,14:39,T034,reviewer:estimation,codex,high,high,PASS,run,,,2026-10-26 14:39 T034 reviewer[estimation] codex high (priority high) PASS
+230,2026-10-26,14:42,T034,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-26 14:42 T034 reviewer[consistency] codex high (priority high) REWORK
+231,2026-10-26,14:44,T034,reviewer:language,codex,high,high,PASS,run,,,2026-10-26 14:44 T034 reviewer[language] codex high (priority high) PASS
+232,2026-10-26,14:45,T035,worker,claude,,,,start_note,paired,233,"2026-10-26 14:45 T035 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+233,2026-10-26,15:29,T035,worker,claude,opus,high,,run,,,2026-10-26 15:29 T035 worker claude opus (priority high)
+234,2026-10-26,15:35,T035,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-10-26 15:35 T035 reviewer[consistency] codex high (priority high) ESCALATE
+235,2026-10-26,15:52,T033,worker,codex,medium,normal,,run,,,2026-10-26 15:52 T033 worker codex medium (priority normal)
+236,2026-10-26,15:55,T033,reviewer:data,codex,medium,normal,REWORK,run,,,2026-10-26 15:55 T033 reviewer[data] codex medium (priority normal) REWORK
+237,2026-10-26,19:19,T033,reviewer:data,codex,medium,normal,REWORK,run,,,2026-10-26 19:19 T033 reviewer[data] codex medium (priority normal) REWORK
+238,2026-10-26,19:21,T033,reviewer:consistency,codex,medium,normal,PASS,run,,,2026-10-26 19:21 T033 reviewer[consistency] codex medium (priority normal) PASS
+239,2026-10-26,19:22,T035,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-10-26 19:22 T035 reviewer[consistency] codex high (priority high) ESCALATE
+240,2026-10-26,19:26,T035,reviewer:language,codex,high,high,REWORK,run,,,2026-10-26 19:26 T035 reviewer[language] codex high (priority high) REWORK
+241,2026-10-26,20:01,T037,worker,claude,,,,start_note,paired,242,"2026-10-26 20:01 T037 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+242,2026-10-26,20:06,T037,worker,claude,opus,high,,run,,,2026-10-26 20:06 T037 worker claude opus (priority high)
+243,2026-10-26,20:09,T037,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-26 20:09 T037 reviewer[consistency] codex high (priority high) REWORK
+244,2026-10-26,20:11,T037,reviewer:language,codex,high,high,REWORK,run,,,2026-10-26 20:11 T037 reviewer[language] codex high (priority high) REWORK
+245,2026-10-26,20:14,T038,worker,claude,,,,start_note,paired,248,"2026-10-26 20:14 T038 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+246,2026-10-26,20:16,T033,worker,codex,medium,normal,,run,,,2026-10-26 20:16 T033 worker codex medium (priority normal)
+247,2026-10-26,20:20,T033,reviewer:data,codex,medium,normal,REWORK,run,,,2026-10-26 20:20 T033 reviewer[data] codex medium (priority normal) REWORK
+248,2026-10-26,20:20,T038,worker,claude,sonnet,normal,,run,,,2026-10-26 20:20 T038 worker claude sonnet (priority normal)
+249,2026-10-26,20:23,T033,reviewer:consistency,codex,medium,normal,PASS,run,,,2026-10-26 20:23 T033 reviewer[consistency] codex medium (priority normal) PASS
+250,2026-10-26,20:27,T038,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-26 20:27 T038 reviewer[consistency] codex medium (priority normal) REWORK
+251,2026-10-26,20:30,T038,reviewer:language,codex,medium,normal,REWORK,run,,,2026-10-26 20:30 T038 reviewer[language] codex medium (priority normal) REWORK
+252,2026-10-26,20:50,T038,worker,claude,,,,start_note,paired,253,"2026-10-26 20:50 T038 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+253,2026-10-26,20:51,T038,worker,claude,sonnet,normal,,run,,,2026-10-26 20:51 T038 worker claude sonnet (priority normal)
+254,2026-10-26,20:55,T038,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-26 20:55 T038 reviewer[consistency] codex medium (priority normal) REWORK
+255,2026-10-26,20:58,T038,reviewer:language,codex,medium,normal,REWORK,run,,,2026-10-26 20:58 T038 reviewer[language] codex medium (priority normal) REWORK
+256,2026-10-27,12:51,T039,worker,claude,,,,start_note,paired,257,"2026-10-27 12:51 T039 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+257,2026-10-27,12:54,T039,worker,claude,sonnet,normal,,run,,,2026-10-27 12:54 T039 worker claude sonnet (priority normal)
+258,2026-10-27,12:57,T039,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-27 12:57 T039 reviewer[consistency] codex medium (priority normal) REWORK
+259,2026-10-27,12:58,T039,reviewer:language,codex,medium,normal,REWORK,run,,,2026-10-27 12:58 T039 reviewer[language] codex medium (priority normal) REWORK
+260,2026-10-27,13:08,T041,worker,codex,medium,normal,,run,,,2026-10-27 13:08 T041 worker codex medium (priority normal)
+261,2026-10-27,13:10,T041,reviewer:data,codex,medium,normal,ESCALATE,run,,,2026-10-27 13:10 T041 reviewer[data] codex medium (priority normal) ESCALATE
+262,2026-10-27,13:13,T041,reviewer:estimation,claude,sonnet,normal,PASS,run,,,2026-10-27 13:13 T041 reviewer[estimation] claude sonnet (priority normal) PASS
+263,2026-10-27,13:21,T041,reviewer:consistency,codex,medium,normal,ESCALATE,run,,,2026-10-27 13:21 T041 reviewer[consistency] codex medium (priority normal) ESCALATE
+264,2026-10-27,14:41,T040,worker,codex,medium,normal,,run,,,2026-10-27 14:41 T040 worker codex medium (priority normal)
+265,2026-10-27,15:00,T040,reviewer:data,codex,medium,normal,REWORK,run,,,2026-10-27 15:00 T040 reviewer[data] codex medium (priority normal) REWORK
+266,2026-10-27,15:02,T040,reviewer:estimation,claude,sonnet,normal,PASS,run,,,2026-10-27 15:02 T040 reviewer[estimation] claude sonnet (priority normal) PASS
+267,2026-10-27,15:04,T040,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-27 15:04 T040 reviewer[consistency] codex medium (priority normal) REWORK
+268,2026-10-27,15:12,T040,worker,codex,medium,normal,,run,,,2026-10-27 15:12 T040 worker codex medium (priority normal)
+269,2026-10-27,15:16,T040,reviewer:data,codex,medium,normal,REWORK,run,,,2026-10-27 15:16 T040 reviewer[data] codex medium (priority normal) REWORK
+270,2026-10-27,15:17,T040,reviewer:data,codex,medium,normal,PASS,run,,,2026-10-27 15:17 T040 reviewer[data] codex medium (priority normal) PASS
+271,2026-10-27,15:18,T040,reviewer:estimation,claude,sonnet,normal,PASS,run,,,2026-10-27 15:18 T040 reviewer[estimation] claude sonnet (priority normal) PASS
+272,2026-10-27,15:18,T040,reviewer:estimation,claude,sonnet,normal,PASS,run,,,2026-10-27 15:18 T040 reviewer[estimation] claude sonnet (priority normal) PASS
+273,2026-10-27,15:19,T040,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-27 15:19 T040 reviewer[consistency] codex medium (priority normal) REWORK
+274,2026-10-27,15:20,T040,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-27 15:20 T040 reviewer[consistency] codex medium (priority normal) REWORK
+275,2026-10-27,15:22,T042,worker,codex,medium,normal,,run,,,2026-10-27 15:22 T042 worker codex medium (priority normal)
+276,2026-10-27,16:51,T039,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-27 16:51 T039 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+277,2026-10-28,13:13,T039,worker,claude,,,,start_note,paired,281,"2026-10-28 13:13 T039 worker claude Rechte: acceptEdits (Edit/Write im Projekt, Schreibbereich prüft review), Read/Glob/Grep, kein Bash"
+278,2026-10-28,13:14,T042,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-10-28 13:14 T042 reviewer[consistency] codex medium (priority normal) REWORK
+279,2026-10-28,13:15,T042,reviewer:language,codex,medium,normal,REWORK,run,,,2026-10-28 13:15 T042 reviewer[language] codex medium (priority normal) REWORK
+280,2026-10-28,13:23,T042,worker,codex,medium,normal,,run,,,2026-10-28 13:23 T042 worker codex medium (priority normal)
+281,2026-10-28,13:25,T039,worker,claude,opus,high,,run,,,2026-10-28 13:25 T039 worker claude opus (priority high)
+282,2026-10-28,13:36,T042,reviewer:consistency,codex,medium,normal,PASS,run,,,2026-10-28 13:36 T042 reviewer[consistency] codex medium (priority normal) PASS
+283,2026-10-28,13:37,T042,reviewer:language,codex,medium,normal,REWORK,run,,,2026-10-28 13:37 T042 reviewer[language] codex medium (priority normal) REWORK
+284,2026-10-28,13:41,T039,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-28 13:41 T039 reviewer[consistency] codex high (priority high) REWORK
+285,2026-10-28,13:45,T039,reviewer:language,codex,high,high,REWORK,run,,,2026-10-28 13:45 T039 reviewer[language] codex high (priority high) REWORK
+286,2026-10-28,14:12,T039,worker,codex,high,high,,run,,,2026-10-28 14:12 T039 worker codex high (priority high)
+287,2026-10-28,14:22,T039,reviewer:consistency,codex,high,high,PASS,run,,,2026-10-28 14:22 T039 reviewer[consistency] codex high (priority high) PASS
+288,2026-10-28,14:25,T039,reviewer:language,codex,high,high,REWORK,run,,,2026-10-28 14:25 T039 reviewer[language] codex high (priority high) REWORK
+289,2026-10-28,15:23,T044,worker,codex,high,high,,run,,,2026-10-28 15:23 T044 worker codex high (priority high)
+290,2026-10-28,15:47,T043,worker,codex,high,high,,run,,,2026-10-28 15:47 T043 worker codex high (priority high)
+291,2026-10-28,15:50,T044,worker,codex,high,high,,run,,,2026-10-28 15:50 T044 worker codex high (priority high)
+292,2026-10-28,16:02,T043,reviewer:data,codex,high,high,REWORK,run,,,2026-10-28 16:02 T043 reviewer[data] codex high (priority high) REWORK
+293,2026-10-28,16:05,T043,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-28 16:05 T043 reviewer[estimation] claude opus (priority high) REWORK
+294,2026-10-28,16:09,T043,reviewer:consistency,codex,high,high,PASS,run,,,2026-10-28 16:09 T043 reviewer[consistency] codex high (priority high) PASS
+295,2026-10-28,16:16,T044,reviewer:data,codex,high,high,ESCALATE,run,,,2026-10-28 16:16 T044 reviewer[data] codex high (priority high) ESCALATE
+296,2026-10-28,16:18,T044,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-28 16:18 T044 reviewer[estimation] claude opus (priority high) REWORK
+297,2026-10-28,16:19,T043,worker,codex,high,high,,run,,,2026-10-28 16:19 T043 worker codex high (priority high)
+298,2026-10-28,16:24,T044,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-10-28 16:24 T044 reviewer[consistency] codex high (priority high) ESCALATE
+299,2026-10-28,16:25,T043,reviewer:data,codex,high,high,PASS,run,,,2026-10-28 16:25 T043 reviewer[data] codex high (priority high) PASS
+300,2026-10-28,16:27,T043,reviewer:estimation,claude,opus,high,ESCALATE,run,,,2026-10-28 16:27 T043 reviewer[estimation] claude opus (priority high) ESCALATE
+301,2026-10-28,16:35,T043,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-28 16:35 T043 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+302,2026-10-28,16:35,T044,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-28 16:35 T044 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+303,2026-10-28,21:00,T043,worker,claude,,,,start_note,paired,306,"2026-10-28 21:00 T043 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+304,2026-10-28,21:00,T044,worker,claude,,,,start_note,paired,305,"2026-10-28 21:00 T044 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+305,2026-10-28,21:04,T044,worker,claude,opus,high,,run,,,2026-10-28 21:04 T044 worker claude opus (priority high)
+306,2026-10-28,21:06,T043,worker,claude,opus,high,,run,,,2026-10-28 21:06 T043 worker claude opus (priority high)
+307,2026-10-28,21:09,T044,reviewer:data,claude,sonnet,high,REWORK,run,,,2026-10-28 21:09 T044 reviewer[data] claude sonnet (priority high) REWORK
+308,2026-10-28,21:11,T044,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-28 21:11 T044 reviewer[estimation] codex high (priority high) REWORK
+309,2026-10-28,21:12,T043,worker,claude,,,,start_note,paired,312,"2026-10-28 21:12 T043 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+310,2026-10-28,21:12,T044,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-28 21:12 T044 reviewer[consistency] claude sonnet (priority high) REWORK
+311,2026-10-28,21:14,T044,worker,claude,,,,start_note,paired,313,"2026-10-28 21:14 T044 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+312,2026-10-28,21:20,T043,worker,claude,opus,high,,run,,,2026-10-28 21:20 T043 worker claude opus (priority high)
+313,2026-10-28,21:23,T044,worker,claude,opus,high,,run,,,2026-10-28 21:23 T044 worker claude opus (priority high)
+314,2026-10-28,21:24,T044,reviewer:data,claude,sonnet,high,REWORK,run,,,2026-10-28 21:24 T044 reviewer[data] claude sonnet (priority high) REWORK
+315,2026-10-28,21:28,T043,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-28 21:28 T043 reviewer[data] claude sonnet (priority high) PASS
+316,2026-10-28,21:28,T044,reviewer:estimation,codex,high,high,PASS,run,,,2026-10-28 21:28 T044 reviewer[estimation] codex high (priority high) PASS
+317,2026-10-28,21:31,T044,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-28 21:31 T044 reviewer[consistency] claude sonnet (priority high) PASS
+318,2026-10-28,21:33,T043,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-28 21:33 T043 reviewer[estimation] codex high (priority high) REWORK
+319,2026-10-28,21:34,T043,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-28 21:34 T043 reviewer[consistency] claude sonnet (priority high) REWORK
+320,2026-10-28,21:35,T044,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-28 21:35 T044 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+321,2026-10-28,21:36,T043,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-28 21:36 T043 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+322,2026-10-29,14:05,T043,worker,claude,,,,start_note,paired,324,"2026-10-29 14:05 T043 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+323,2026-10-29,14:05,T044,worker,claude,,,,start_note,paired,326,"2026-10-29 14:05 T044 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+324,2026-10-29,14:08,T043,worker,claude,opus,high,,run,,,2026-10-29 14:08 T043 worker claude opus (priority high)
+325,2026-10-29,14:09,T043,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-29 14:09 T043 reviewer[data] claude sonnet (priority high) PASS
+326,2026-10-29,14:12,T044,worker,claude,opus,high,,run,,,2026-10-29 14:12 T044 worker claude opus (priority high)
+327,2026-10-29,14:13,T043,reviewer:estimation,codex,high,high,PASS,run,,,2026-10-29 14:13 T043 reviewer[estimation] codex high (priority high) PASS
+328,2026-10-29,14:13,T044,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-29 14:13 T044 reviewer[data] claude sonnet (priority high) PASS
+329,2026-10-29,14:14,T043,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-29 14:14 T043 reviewer[consistency] claude sonnet (priority high) PASS
+330,2026-10-29,14:17,T044,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-29 14:17 T044 reviewer[estimation] codex high (priority high) REWORK
+331,2026-10-29,14:18,T044,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-29 14:18 T044 reviewer[consistency] claude sonnet (priority high) REWORK
+332,2026-10-29,14:42,T044,worker,claude,,,,start_note,paired,334,"2026-10-29 14:42 T044 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+333,2026-10-29,14:42,T046,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-29 14:42 T046 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+334,2026-10-29,14:46,T044,worker,claude,opus,high,,run,,,2026-10-29 14:46 T044 worker claude opus (priority high)
+335,2026-10-29,14:48,T044,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-29 14:48 T044 reviewer[data] claude sonnet (priority high) PASS
+336,2026-10-29,14:49,T044,reviewer:estimation,codex,high,high,REWORK,run,,,2026-10-29 14:49 T044 reviewer[estimation] codex high (priority high) REWORK
+337,2026-10-29,14:50,T044,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-29 14:50 T044 reviewer[consistency] claude sonnet (priority high) REWORK
+338,2026-10-29,14:51,T047,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-29 14:51 T047 worker claude Rechte: Edit/Write replication/ und proposal/, Bash nur Rscript/python3/latexmk/lesende Prüfwerkzeuge"
+339,2026-10-29,23:01,T047,worker,codex,high,high,,run,,,2026-10-29 23:01 T047 worker codex high (priority high)
+340,2026-10-29,23:02,T047,reviewer:data,claude,sonnet,high,ESCALATE,run,,,2026-10-29 23:02 T047 reviewer[data] claude sonnet (priority high) ESCALATE
+341,2026-10-29,23:03,T047,reviewer:estimation,claude,opus,high,ESCALATE,run,,,2026-10-29 23:03 T047 reviewer[estimation] claude opus (priority high) ESCALATE
+342,2026-10-29,23:03,T047,reviewer:consistency,claude,sonnet,high,ESCALATE,run,,,2026-10-29 23:03 T047 reviewer[consistency] claude sonnet (priority high) ESCALATE
+343,2026-10-29,23:23,T046,worker,codex,high,high,,run,,,2026-10-29 23:23 T046 worker codex high (priority high)
+344,2026-10-29,23:25,T046,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-29 23:25 T046 reviewer[data] claude sonnet (priority high) PASS
+345,2026-10-29,23:27,T046,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-29 23:27 T046 reviewer[estimation] claude opus (priority high) PASS
+346,2026-10-29,23:28,T046,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-29 23:28 T046 reviewer[consistency] claude sonnet (priority high) PASS
+347,2026-10-30,00:07,T047,worker,codex,high,high,,run,,,2026-10-30 00:07 T047 worker codex high (priority high)
+348,2026-10-30,00:10,T047,reviewer:data,claude,sonnet,high,REWORK,run,,,2026-10-30 00:10 T047 reviewer[data] claude sonnet (priority high) REWORK
+349,2026-10-30,00:14,T047,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-30 00:14 T047 reviewer[estimation] claude opus (priority high) PASS
+350,2026-10-30,00:17,T047,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 00:17 T047 reviewer[consistency] claude sonnet (priority high) REWORK
+351,2026-10-30,00:39,T047,worker,codex,high,high,,run,,,2026-10-30 00:39 T047 worker codex high (priority high)
+352,2026-10-30,00:41,T047,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-30 00:41 T047 reviewer[data] claude sonnet (priority high) PASS
+353,2026-10-30,00:43,T047,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-30 00:43 T047 reviewer[estimation] claude opus (priority high) PASS
+354,2026-10-30,00:44,T047,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-30 00:44 T047 reviewer[consistency] claude sonnet (priority high) PASS
+355,2026-10-30,01:43,T045,worker,codex,high,high,,run,,,2026-10-30 01:43 T045 worker codex high (priority high)
+356,2026-10-30,01:46,T045,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 01:46 T045 reviewer[consistency] claude sonnet (priority high) REWORK
+357,2026-10-30,01:48,T045,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 01:48 T045 reviewer[language] claude sonnet (priority high) REWORK
+358,2026-10-30,10:15,T045,worker,codex,high,high,,run,,,2026-10-30 10:15 T045 worker codex high (priority high)
+359,2026-10-30,10:19,T045,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 10:19 T045 reviewer[consistency] claude sonnet (priority high) REWORK
+360,2026-10-30,10:21,T045,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 10:21 T045 reviewer[language] claude sonnet (priority high) REWORK
+361,2026-10-30,10:48,T045,worker,codex,high,high,,run,,,2026-10-30 10:48 T045 worker codex high (priority high)
+362,2026-10-30,10:50,T045,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 10:50 T045 reviewer[consistency] claude sonnet (priority high) REWORK
+363,2026-10-30,10:52,T045,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 10:52 T045 reviewer[language] claude sonnet (priority high) REWORK
+364,2026-10-30,11:28,T045,worker,codex,high,high,,run,,,2026-10-30 11:28 T045 worker codex high (priority high)
+365,2026-10-30,11:33,T045,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 11:33 T045 reviewer[consistency] claude sonnet (priority high) REWORK
+366,2026-10-30,11:35,T045,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 11:35 T045 reviewer[language] claude sonnet (priority high) REWORK
+367,2026-10-30,11:40,T045,worker,codex,high,high,,run,,,2026-10-30 11:40 T045 worker codex high (priority high)
+368,2026-10-30,11:43,T045,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-30 11:43 T045 reviewer[consistency] claude sonnet (priority high) PASS
+369,2026-10-30,11:45,T045,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 11:45 T045 reviewer[language] claude sonnet (priority high) REWORK
+370,2026-10-30,11:51,T048,worker,codex,medium,normal,,run,,,2026-10-30 11:51 T048 worker codex medium (priority normal)
+371,2026-10-30,11:52,T048,reviewer:consistency,claude,sonnet,normal,ESCALATE,run,,,2026-10-30 11:52 T048 reviewer[consistency] claude sonnet (priority normal) ESCALATE
+372,2026-10-30,11:52,T048,reviewer:language,claude,sonnet,normal,REWORK,run,,,2026-10-30 11:52 T048 reviewer[language] claude sonnet (priority normal) REWORK
+373,2026-10-30,13:16,T048,worker,codex,medium,normal,,run,,,2026-10-30 13:16 T048 worker codex medium (priority normal)
+374,2026-10-30,13:17,T048,reviewer:consistency,claude,sonnet,normal,REWORK,run,,,2026-10-30 13:17 T048 reviewer[consistency] claude sonnet (priority normal) REWORK
+375,2026-10-30,13:18,T048,reviewer:language,claude,sonnet,normal,REWORK,run,,,2026-10-30 13:18 T048 reviewer[language] claude sonnet (priority normal) REWORK
+376,2026-10-30,13:28,T048,worker,codex,medium,normal,,run,,,2026-10-30 13:28 T048 worker codex medium (priority normal)
+377,2026-10-30,13:30,T048,reviewer:consistency,claude,sonnet,normal,PASS,run,,,2026-10-30 13:30 T048 reviewer[consistency] claude sonnet (priority normal) PASS
+378,2026-10-30,13:30,T048,reviewer:language,claude,sonnet,normal,REWORK,run,,,2026-10-30 13:30 T048 reviewer[language] claude sonnet (priority normal) REWORK
+379,2026-10-30,13:40,T049,worker,codex,high,high,,run,,,2026-10-30 13:40 T049 worker codex high (priority high)
+380,2026-10-30,13:41,T049,reviewer:consistency,claude,sonnet,high,ESCALATE,run,,,2026-10-30 13:41 T049 reviewer[consistency] claude sonnet (priority high) ESCALATE
+381,2026-10-30,13:41,T049,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 13:41 T049 reviewer[language] claude sonnet (priority high) REWORK
+382,2026-10-30,13:57,T049,worker,codex,high,high,,run,,,2026-10-30 13:57 T049 worker codex high (priority high)
+383,2026-10-30,13:59,T049,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 13:59 T049 reviewer[consistency] claude sonnet (priority high) REWORK
+384,2026-10-30,13:59,T049,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 13:59 T049 reviewer[language] claude sonnet (priority high) REWORK
+385,2026-10-30,14:11,T050,worker,codex,high,high,,run,,,2026-10-30 14:11 T050 worker codex high (priority high)
+386,2026-10-30,14:13,T050,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-30 14:13 T050 reviewer[consistency] claude sonnet (priority high) REWORK
+387,2026-10-30,14:14,T050,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 14:14 T050 reviewer[language] claude sonnet (priority high) REWORK
+388,2026-10-30,14:47,T051,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-30 14:47 T051 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+389,2026-10-30,14:50,T051,worker,claude,,,,start_note,paired,390,"2026-10-30 14:50 T051 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+390,2026-10-30,15:06,T051,worker,claude,opus,high,,run,,,2026-10-30 15:06 T051 worker claude opus (priority high)
+391,2026-10-30,15:15,T051,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-30 15:15 T051 reviewer[consistency] codex high (priority high) REWORK
+392,2026-10-30,15:15,T051,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 15:15 T051 reviewer[language] claude sonnet (priority high) REWORK
+393,2026-10-30,15:19,T051,worker,claude,,,,start_note,paired,394,"2026-10-30 15:19 T051 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+394,2026-10-30,15:27,T051,worker,claude,opus,high,,run,,,2026-10-30 15:27 T051 worker claude opus (priority high)
+395,2026-10-30,15:31,T051,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-30 15:31 T051 reviewer[consistency] codex high (priority high) REWORK
+396,2026-10-30,15:32,T051,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 15:32 T051 reviewer[language] claude sonnet (priority high) REWORK
+397,2026-10-30,15:39,T052,worker,claude,,,,start_note,paired,398,"2026-10-30 15:39 T052 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+398,2026-10-30,15:41,T052,worker,claude,sonnet,normal,,run,,,2026-10-30 15:41 T052 worker claude sonnet (priority normal)
+399,2026-10-30,15:44,T052,reviewer:consistency,codex,medium,normal,PASS,run,,,2026-10-30 15:44 T052 reviewer[consistency] codex medium (priority normal) PASS
+400,2026-10-30,15:44,T052,reviewer:language,claude,sonnet,normal,REWORK,run,,,2026-10-30 15:44 T052 reviewer[language] claude sonnet (priority normal) REWORK
+401,2026-10-30,15:50,T053,worker,claude,,,,start_note,paired,402,"2026-10-30 15:50 T053 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+402,2026-10-30,15:54,T053,worker,claude,opus,high,,run,,,2026-10-30 15:54 T053 worker claude opus (priority high)
+403,2026-10-30,15:57,T053,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-10-30 15:57 T053 reviewer[consistency] codex high (priority high) ESCALATE
+404,2026-10-30,15:58,T053,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 15:58 T053 reviewer[language] claude sonnet (priority high) REWORK
+405,2026-10-30,16:03,T054,worker,claude,,,,start_note,paired,406,"2026-10-30 16:03 T054 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+406,2026-10-30,16:11,T054,worker,claude,opus,high,,run,,,2026-10-30 16:11 T054 worker claude opus (priority high)
+407,2026-10-30,16:13,T054,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-30 16:13 T054 reviewer[consistency] codex high (priority high) REWORK
+408,2026-10-30,16:14,T054,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 16:14 T054 reviewer[language] claude sonnet (priority high) REWORK
+409,2026-10-30,16:36,T055,worker,codex,high,high,,run,,,2026-10-30 16:36 T055 worker codex high (priority high)
+410,2026-10-30,16:37,T055,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-30 16:37 T055 reviewer[data] claude sonnet (priority high) PASS
+411,2026-10-30,21:43,T055,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-30 21:43 T055 reviewer[data] claude sonnet (priority high) PASS
+412,2026-10-30,21:45,T055,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-30 21:45 T055 reviewer[estimation] claude opus (priority high) PASS
+413,2026-10-30,21:45,T055,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-30 21:45 T055 reviewer[consistency] claude sonnet (priority high) PASS
+414,2026-10-30,21:47,T056,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-30 21:47 T056 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+415,2026-10-30,22:00,T056,worker,claude,,,,start_note,paired,416,"2026-10-30 22:00 T056 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+416,2026-10-30,22:11,T056,worker,claude,opus,high,,run,,,2026-10-30 22:11 T056 worker claude opus (priority high)
+417,2026-10-30,22:16,T056,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-10-30 22:16 T056 reviewer[consistency] codex high (priority high) ESCALATE
+418,2026-10-30,22:17,T056,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 22:17 T056 reviewer[language] claude sonnet (priority high) REWORK
+419,2026-10-30,22:40,T057,worker,claude,,,,start_note,paired,420,"2026-10-30 22:40 T057 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+420,2026-10-30,22:40,T057,worker,claude,opus,high,,run,,,2026-10-30 22:40 T057 worker claude opus (priority high)
+421,2026-10-30,22:44,T057,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-30 22:44 T057 reviewer[consistency] codex high (priority high) REWORK
+422,2026-10-30,22:45,T057,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-30 22:45 T057 reviewer[language] claude sonnet (priority high) REWORK
+423,2026-10-30,22:45,T057,worker,claude,,,,start_note,"started, no completion entry",,"2026-10-30 22:45 T057 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+424,2026-10-30,22:51,T058,worker,codex,high,high,,run,,,2026-10-30 22:51 T058 worker codex high (priority high)
+425,2026-10-31,13:31,T057,worker,claude,,,,start_note,paired,432,"2026-10-31 13:31 T057 worker claude Rechte: Edit/Write proposal/, Read/Glob/Grep, Bash nur latexmk/pdffonts/pdftotext/detex/wc/ls"
+426,2026-10-31,13:33,T058,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-31 13:33 T058 reviewer[data] claude sonnet (priority high) PASS
+427,2026-10-31,13:36,T058,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-10-31 13:36 T058 reviewer[estimation] claude opus (priority high) REWORK
+428,2026-10-31,13:38,T058,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-31 13:38 T058 reviewer[consistency] claude sonnet (priority high) PASS
+429,2026-10-31,13:49,T058,worker,codex,high,high,,run,,,2026-10-31 13:49 T058 worker codex high (priority high)
+430,2026-10-31,13:50,T058,reviewer:data,claude,sonnet,high,PASS,run,,,2026-10-31 13:50 T058 reviewer[data] claude sonnet (priority high) PASS
+431,2026-10-31,13:52,T058,reviewer:estimation,claude,opus,high,PASS,run,,,2026-10-31 13:52 T058 reviewer[estimation] claude opus (priority high) PASS
+432,2026-10-31,13:53,T057,worker,claude,opus,high,,run,,,2026-10-31 13:53 T057 worker claude opus (priority high)
+433,2026-10-31,13:53,T058,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-10-31 13:53 T058 reviewer[consistency] claude sonnet (priority high) PASS
+434,2026-10-31,14:00,T057,reviewer:consistency,codex,high,high,REWORK,run,,,2026-10-31 14:00 T057 reviewer[consistency] codex high (priority high) REWORK
+435,2026-10-31,14:02,T057,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-31 14:02 T057 reviewer[language] claude sonnet (priority high) REWORK
+436,2026-10-31,14:15,T059,worker,codex,high,high,,run,,,2026-10-31 14:15 T059 worker codex high (priority high)
+437,2026-10-31,14:17,T059,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-10-31 14:17 T059 reviewer[consistency] claude sonnet (priority high) REWORK
+438,2026-10-31,14:18,T059,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-10-31 14:18 T059 reviewer[language] claude sonnet (priority high) REWORK
+439,2026-10-31,14:19,T060,worker,codex,medium,normal,,run,,,2026-10-31 14:19 T060 worker codex medium (priority normal)
+440,2026-10-31,14:20,T060,reviewer:data,claude,sonnet,normal,PASS,run,,,2026-10-31 14:20 T060 reviewer[data] claude sonnet (priority normal) PASS
+441,2026-11-01,14:05,T061,worker,codex,high,high,,run,,,2026-11-01 14:05 T061 worker codex high (priority high)
+442,2026-11-01,14:07,T061,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-01 14:07 T061 reviewer[data] claude sonnet (priority high) PASS
+443,2026-11-01,14:08,T061,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-11-01 14:08 T061 reviewer[estimation] claude opus (priority high) REWORK
+444,2026-11-01,14:09,T061,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-01 14:09 T061 reviewer[consistency] claude sonnet (priority high) PASS
+445,2026-11-01,14:22,T061,worker,codex,high,high,,run,,,2026-11-01 14:22 T061 worker codex high (priority high)
+446,2026-11-01,14:23,T061,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-01 14:23 T061 reviewer[data] claude sonnet (priority high) PASS
+447,2026-11-01,14:24,T061,reviewer:estimation,claude,opus,high,PASS,run,,,2026-11-01 14:24 T061 reviewer[estimation] claude opus (priority high) PASS
+448,2026-11-01,14:24,T061,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-01 14:24 T061 reviewer[consistency] claude sonnet (priority high) PASS
+449,2026-11-01,14:38,T062,worker,codex,high,high,,run,,,2026-11-01 14:38 T062 worker codex high (priority high)
+450,2026-11-01,14:39,T062,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-01 14:39 T062 reviewer[consistency] claude sonnet (priority high) PASS
+451,2026-11-01,14:40,T062,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-11-01 14:40 T062 reviewer[language] claude sonnet (priority high) REWORK
+452,2026-11-01,15:15,T063,worker,codex,high,high,,run,,,2026-11-01 15:15 T063 worker codex high (priority high)
+453,2026-11-01,15:16,T063,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-01 15:16 T063 reviewer[data] claude sonnet (priority high) PASS
+454,2026-11-01,15:19,T063,reviewer:estimation,claude,opus,high,PASS,run,,,2026-11-01 15:19 T063 reviewer[estimation] claude opus (priority high) PASS
+455,2026-11-01,15:20,T063,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-01 15:20 T063 reviewer[consistency] claude sonnet (priority high) REWORK
+456,2026-11-02,15:35,T064,worker,codex,high,high,,run,,,2026-11-02 15:35 T064 worker codex high (priority high)
+457,2026-11-02,15:38,T064,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-02 15:38 T064 reviewer[consistency] claude sonnet (priority high) REWORK
+458,2026-11-02,15:39,T064,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-11-02 15:39 T064 reviewer[language] claude sonnet (priority high) REWORK
+459,2026-11-02,15:55,T067,worker,codex,high,high,,run,,,2026-11-02 15:55 T067 worker codex high (priority high)
+460,2026-11-02,15:56,T067,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-02 15:56 T067 reviewer[consistency] claude sonnet (priority high) REWORK
+461,2026-11-02,15:57,T067,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-11-02 15:57 T067 reviewer[language] claude sonnet (priority high) REWORK
+462,2026-11-02,16:23,T066,worker,codex,high,high,,run,,,2026-11-02 16:23 T066 worker codex high (priority high)
+463,2026-11-02,16:25,T066,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-02 16:25 T066 reviewer[data] claude sonnet (priority high) PASS
+464,2026-11-02,16:28,T066,reviewer:estimation,claude,opus,high,ESCALATE,run,,,2026-11-02 16:28 T066 reviewer[estimation] claude opus (priority high) ESCALATE
+465,2026-11-02,16:29,T066,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-02 16:29 T066 reviewer[consistency] claude sonnet (priority high) REWORK
+466,2026-11-02,17:14,T066,worker,codex,high,high,,run,,,2026-11-02 17:14 T066 worker codex high (priority high)
+467,2026-11-02,17:16,T066,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-02 17:16 T066 reviewer[data] claude sonnet (priority high) PASS
+468,2026-11-02,17:19,T070,worker,codex,medium,normal,,run,,,2026-11-02 17:19 T070 worker codex medium (priority normal)
+469,2026-11-02,18:51,T070,reviewer:consistency,claude,sonnet,normal,REWORK,run,,,2026-11-02 18:51 T070 reviewer[consistency] claude sonnet (priority normal) REWORK
+470,2026-11-02,18:52,T066,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-02 18:52 T066 reviewer[data] claude sonnet (priority high) PASS
+471,2026-11-02,18:55,T066,reviewer:estimation,claude,opus,high,REWORK,run,,,2026-11-02 18:55 T066 reviewer[estimation] claude opus (priority high) REWORK
+472,2026-11-02,18:56,T066,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-02 18:56 T066 reviewer[consistency] claude sonnet (priority high) PASS
+473,2026-11-09,13:10,T071,worker,codex,medium,normal,,run,,,2026-11-09 13:10 T071 worker codex medium (priority normal)
+474,2026-11-09,13:11,T066,worker,codex,high,high,,run,,,2026-11-09 13:11 T066 worker codex high (priority high)
+475,2026-11-09,13:12,T071,reviewer:consistency,claude,sonnet,normal,PASS,run,,,2026-11-09 13:12 T071 reviewer[consistency] claude sonnet (priority normal) PASS
+476,2026-11-09,13:12,T066,reviewer:estimation,claude,opus,high,PASS,run,,,2026-11-09 13:12 T066 reviewer[estimation] claude opus (priority high) PASS
+477,2026-11-09,13:32,T069,worker,codex,high,high,,run,,,2026-11-09 13:32 T069 worker codex high (priority high)
+478,2026-11-09,13:34,T069,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-09 13:34 T069 reviewer[consistency] claude sonnet (priority high) REWORK
+479,2026-11-09,13:35,T069,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-11-09 13:35 T069 reviewer[language] claude sonnet (priority high) REWORK
+480,2026-11-09,14:12,T072,worker,codex,high,high,,run,,,2026-11-09 14:12 T072 worker codex high (priority high)
+481,2026-11-09,14:12,T072,reviewer:consistency,claude,sonnet,high,ESCALATE,run,,,2026-11-09 14:12 T072 reviewer[consistency] claude sonnet (priority high) ESCALATE
+482,2026-11-12,12:53,T072,worker,codex,high,high,,run,,,2026-11-12 12:53 T072 worker codex high (priority high)
+483,2026-11-12,13:00,T072,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-12 13:00 T072 reviewer[consistency] claude sonnet (priority high) REWORK
+484,2026-11-12,13:06,T072,worker,codex,high,high,,run,,,2026-11-12 13:06 T072 worker codex high (priority high)
+485,2026-11-12,13:07,T072,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-12 13:07 T072 reviewer[consistency] claude sonnet (priority high) PASS
+486,2026-11-12,13:15,T073,worker,codex,medium,normal,,run,,,2026-11-12 13:15 T073 worker codex medium (priority normal)
+487,2026-11-12,13:16,T073,reviewer:data,claude,sonnet,normal,ESCALATE,run,,,2026-11-12 13:16 T073 reviewer[data] claude sonnet (priority normal) ESCALATE
+488,2026-11-12,13:37,T073,worker,codex,medium,normal,,run,,,2026-11-12 13:37 T073 worker codex medium (priority normal)
+489,2026-11-12,13:38,T073,reviewer:data,claude,sonnet,normal,REWORK,run,,,2026-11-12 13:38 T073 reviewer[data] claude sonnet (priority normal) REWORK
+490,2026-11-12,14:19,T073,worker,codex,medium,normal,,run,,,2026-11-12 14:19 T073 worker codex medium (priority normal)
+491,2026-11-12,14:20,T073,reviewer:data,claude,sonnet,normal,PASS,run,,,2026-11-12 14:20 T073 reviewer[data] claude sonnet (priority normal) PASS
+492,2026-11-12,15:24,T068,worker,codex,high,high,,run,,,2026-11-12 15:24 T068 worker codex high (priority high)
+493,2026-11-12,15:25,T068,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-12 15:25 T068 reviewer[consistency] claude sonnet (priority high) PASS
+494,2026-11-12,15:31,T068,worker,codex,high,high,,run,,,2026-11-12 15:31 T068 worker codex high (priority high)
+495,2026-11-12,15:32,T068,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-12 15:32 T068 reviewer[consistency] claude sonnet (priority high) PASS
+496,2026-11-12,15:32,T068,reviewer:language,claude,sonnet,high,REWORK,run,,,2026-11-12 15:32 T068 reviewer[language] claude sonnet (priority high) REWORK
+497,2026-11-12,16:26,T074,worker,codex,high,high,,run,,,2026-11-12 16:26 T074 worker codex high (priority high)
+498,2026-11-12,16:27,T074,reviewer:data,claude,sonnet,high,REWORK,run,,,2026-11-12 16:27 T074 reviewer[data] claude sonnet (priority high) REWORK
+499,2026-11-13,11:11,T076,worker,codex,high,high,,run,,,2026-11-13 11:11 T076 worker codex high (priority high)
+500,2026-11-13,11:12,T076,reviewer:data,claude,sonnet,high,REWORK,run,,,2026-11-13 11:12 T076 reviewer[data] claude sonnet (priority high) REWORK
+501,2026-11-13,11:15,T076,reviewer:estimation,claude,opus,high,PASS,run,,,2026-11-13 11:15 T076 reviewer[estimation] claude opus (priority high) PASS
+502,2026-11-13,11:16,T076,reviewer:consistency,claude,sonnet,high,REWORK,run,,,2026-11-13 11:16 T076 reviewer[consistency] claude sonnet (priority high) REWORK
+503,2026-11-13,11:29,T076,worker,codex,high,high,,run,,,2026-11-13 11:29 T076 worker codex high (priority high)
+504,2026-11-13,11:30,T076,reviewer:data,claude,sonnet,high,PASS,run,,,2026-11-13 11:30 T076 reviewer[data] claude sonnet (priority high) PASS
+505,2026-11-13,11:31,T076,reviewer:estimation,claude,opus,high,PASS,run,,,2026-11-13 11:31 T076 reviewer[estimation] claude opus (priority high) PASS
+506,2026-11-13,11:32,T076,reviewer:consistency,claude,sonnet,high,PASS,run,,,2026-11-13 11:32 T076 reviewer[consistency] claude sonnet (priority high) PASS
+507,2026-11-13,19:15,T077,worker,codex,high,high,,run,,,2026-11-13 19:15 T077 worker codex high (priority high)
+508,2026-11-13,19:27,T077,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-13 19:27 T077 reviewer[data] codex high (priority high) ESCALATE
+509,2026-11-13,19:30,T077,reviewer:estimation,claude,high,high,REWORK,run,,,2026-11-13 19:30 T077 reviewer[estimation] claude high (priority high) REWORK
+510,2026-11-13,19:35,T077,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-13 19:35 T077 reviewer[consistency] codex high (priority high) ESCALATE
+511,2026-11-13,20:00,T077,worker,codex,high,high,,run,,,2026-11-13 20:00 T077 worker codex high (priority high)
+512,2026-11-14,14:00,T077,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-14 14:00 T077 reviewer[data] codex high (priority high) ESCALATE
+513,2026-11-14,14:11,T077,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-14 14:11 T077 reviewer[data] codex high (priority high) ESCALATE
+514,2026-11-14,14:23,T077,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-14 14:23 T077 reviewer[data] codex high (priority high) ESCALATE
+515,2026-11-14,14:25,T077,reviewer:estimation,claude,high,high,PASS,run,,,2026-11-14 14:25 T077 reviewer[estimation] claude high (priority high) PASS
+516,2026-11-14,14:29,T077,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-14 14:29 T077 reviewer[consistency] codex high (priority high) ESCALATE
+517,2026-11-14,15:38,T082,worker,codex,high,high,,run,,,2026-11-14 15:38 T082 worker codex high (priority high)
+518,2026-11-14,15:58,T082,worker,codex,high,high,,run,,,2026-11-14 15:58 T082 worker codex high (priority high)
+519,2026-11-14,16:28,T082,worker,codex,high,high,,run,,,2026-11-14 16:28 T082 worker codex high (priority high)
+520,2026-11-14,19:36,T082,worker,codex,high,high,,run,,,2026-11-14 19:36 T082 worker codex high (priority high)
+521,2026-11-14,19:47,T082,worker,codex,high,high,,run,,,2026-11-14 19:47 T082 worker codex high (priority high)
+522,2026-11-14,19:58,T082,reviewer:data,codex,high,high,REWORK,run,,,2026-11-14 19:58 T082 reviewer[data] codex high (priority high) REWORK
+523,2026-11-14,20:04,T082,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-14 20:04 T082 reviewer[consistency] codex high (priority high) REWORK
+524,2026-11-15,15:32,T088,worker,codex,high,high,,run,,,2026-11-15 15:32 T088 worker codex high (priority high)
+525,2026-11-15,17:40,T088,worker,codex,high,high,,run,,,2026-11-15 17:40 T088 worker codex high (priority high)
+526,2026-11-15,17:58,T088,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-15 17:58 T088 reviewer[data] codex high (priority high) ESCALATE
+527,2026-11-15,19:24,T088,worker,codex,high,high,,run,,,2026-11-15 19:24 T088 worker codex high (priority high)
+528,2026-11-15,19:43,T088,worker,codex,high,high,,run,,,2026-11-15 19:43 T088 worker codex high (priority high)
+529,2026-11-15,19:54,T088,reviewer:data,codex,high,high,PASS,run,,,2026-11-15 19:54 T088 reviewer[data] codex high (priority high) PASS
+530,2026-11-15,20:11,T088,reviewer:data,codex,high,high,PASS,run,,,2026-11-15 20:11 T088 reviewer[data] codex high (priority high) PASS
+531,2026-11-15,20:14,T088,reviewer:estimation,claude,high,high,PASS,run,,,2026-11-15 20:14 T088 reviewer[estimation] claude high (priority high) PASS
+532,2026-11-15,20:17,T088,reviewer:consistency,codex,high,high,PASS,run,,,2026-11-15 20:17 T088 reviewer[consistency] codex high (priority high) PASS
+533,2026-11-15,20:22,T090,worker,codex,medium,normal,,run,,,2026-11-15 20:22 T090 worker codex medium (priority normal)
+534,2026-11-15,20:35,T090,worker,codex,medium,normal,,run,,,2026-11-15 20:35 T090 worker codex medium (priority normal)
+535,2026-11-15,20:45,T090,reviewer:data,codex,medium,normal,ESCALATE,run,,,2026-11-15 20:45 T090 reviewer[data] codex medium (priority normal) ESCALATE
+536,2026-11-15,20:48,T090,reviewer:estimation,claude,medium,normal,PASS,run,,,2026-11-15 20:48 T090 reviewer[estimation] claude medium (priority normal) PASS
+537,2026-11-15,20:51,T090,reviewer:consistency,codex,medium,normal,PASS,run,,,2026-11-15 20:51 T090 reviewer[consistency] codex medium (priority normal) PASS
+538,2026-11-15,21:09,T079,worker,codex,high,high,,run,,,2026-11-15 21:09 T079 worker codex high (priority high)
+539,2026-11-16,14:20,T079,reviewer:data,codex,high,high,REWORK,run,,,2026-11-16 14:20 T079 reviewer[data] codex high (priority high) REWORK
+540,2026-11-16,14:24,T079,reviewer:consistency,codex,high,high,PASS,run,,,2026-11-16 14:24 T079 reviewer[consistency] codex high (priority high) PASS
+541,2026-11-16,15:09,T082,worker,codex,high,high,,run,,,2026-11-16 15:09 T082 worker codex high (priority high)
+542,2026-11-16,15:17,T082,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-16 15:17 T082 reviewer[data] codex high (priority high) ESCALATE
+543,2026-11-16,15:48,T082,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-16 15:48 T082 reviewer[data] codex high (priority high) ESCALATE
+544,2026-11-16,15:52,T082,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-16 15:52 T082 reviewer[consistency] codex high (priority high) ESCALATE
+545,2026-11-16,19:01,T084,worker,codex,high,high,,run,,,2026-11-16 19:01 T084 worker codex high (priority high)
+546,2026-11-16,19:10,T084,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-16 19:10 T084 reviewer[data] codex high (priority high) ESCALATE
+547,2026-11-16,19:13,T084,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-16 19:13 T084 reviewer[consistency] codex high (priority high) ESCALATE
+548,2026-11-16,19:26,T084,worker,codex,high,high,,run,,,2026-11-16 19:26 T084 worker codex high (priority high)
+549,2026-11-16,19:42,T084,worker,codex,high,high,,run,,,2026-11-16 19:42 T084 worker codex high (priority high)
+550,2026-11-16,19:52,T084,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-16 19:52 T084 reviewer[data] codex high (priority high) ESCALATE
+551,2026-11-16,19:56,T084,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-16 19:56 T084 reviewer[consistency] codex high (priority high) ESCALATE
+552,2026-11-16,20:04,T091,worker,codex,high,high,,run,,,2026-11-16 20:04 T091 worker codex high (priority high)
+553,2026-11-16,20:42,T091,worker,codex,high,high,,run,,,2026-11-16 20:42 T091 worker codex high (priority high)
+554,2026-11-16,20:48,T091,reviewer:data,codex,high,high,PASS,run,,,2026-11-16 20:48 T091 reviewer[data] codex high (priority high) PASS
+555,2026-11-16,20:55,T091,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-16 20:55 T091 reviewer[consistency] codex high (priority high) REWORK
+556,2026-11-16,20:57,T091,reviewer:language,claude,high,high,REWORK,run,,,2026-11-16 20:57 T091 reviewer[language] claude high (priority high) REWORK
+557,2026-11-16,21:13,T091,worker,codex,high,high,,run,,,2026-11-16 21:13 T091 worker codex high (priority high)
+558,2026-11-16,21:20,T091,reviewer:data,codex,high,high,PASS,run,,,2026-11-16 21:20 T091 reviewer[data] codex high (priority high) PASS
+559,2026-11-16,22:16,T091,reviewer:data,codex,high,high,PASS,run,,,2026-11-16 22:16 T091 reviewer[data] codex high (priority high) PASS
+560,2026-11-16,22:23,T091,reviewer:consistency,codex,high,high,PASS,run,,,2026-11-16 22:23 T091 reviewer[consistency] codex high (priority high) PASS
+561,2026-11-16,22:24,T091,reviewer:language,claude,high,high,REWORK,run,,,2026-11-16 22:24 T091 reviewer[language] claude high (priority high) REWORK
+562,2026-11-17,11:31,T091,worker,codex,high,high,,run,,,2026-11-17 11:31 T091 worker codex high (priority high)
+563,2026-11-17,12:04,T091,reviewer:data,codex,high,high,PASS,run,,,2026-11-17 12:04 T091 reviewer[data] codex high (priority high) PASS
+564,2026-11-17,12:08,T091,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-17 12:08 T091 reviewer[consistency] codex high (priority high) REWORK
+565,2026-11-17,12:47,T091,worker,codex,high,high,,run,,,2026-11-17 12:47 T091 worker codex high (priority high)
+566,2026-11-17,13:00,T091,reviewer:data,codex,high,high,PASS,run,,,2026-11-17 13:00 T091 reviewer[data] codex high (priority high) PASS
+567,2026-11-17,13:05,T091,reviewer:consistency,codex,high,high,PASS,run,,,2026-11-17 13:05 T091 reviewer[consistency] codex high (priority high) PASS
+568,2026-11-17,13:07,T091,reviewer:language,claude,high,high,REWORK,run,,,2026-11-17 13:07 T091 reviewer[language] claude high (priority high) REWORK
+569,2026-11-17,13:56,T093,worker,codex,high,high,,run,,,2026-11-17 13:56 T093 worker codex high (priority high)
+570,2026-11-17,14:19,T093,worker,codex,high,high,,run,,,2026-11-17 14:19 T093 worker codex high (priority high)
+571,2026-11-17,14:26,T093,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-17 14:26 T093 reviewer[data] codex high (priority high) ESCALATE
+572,2026-11-17,14:30,T093,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-17 14:30 T093 reviewer[consistency] codex high (priority high) ESCALATE
+573,2026-11-17,14:32,T093,reviewer:language,claude,high,high,REWORK,run,,,2026-11-17 14:32 T093 reviewer[language] claude high (priority high) REWORK
+574,2026-11-17,14:53,T093,worker,codex,high,high,,run,,,2026-11-17 14:53 T093 worker codex high (priority high)
+575,2026-11-17,14:57,T093,worker,codex,high,high,,run,,,2026-11-17 14:57 T093 worker codex high (priority high)
+576,2026-11-17,15:11,T093,worker,codex,high,high,,run,,,2026-11-17 15:11 T093 worker codex high (priority high)
+577,2026-11-17,15:16,T093,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-17 15:16 T093 reviewer[data] codex high (priority high) ESCALATE
+578,2026-11-17,15:27,T093,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-17 15:27 T093 reviewer[consistency] codex high (priority high) ESCALATE
+579,2026-11-17,15:28,T093,reviewer:language,claude,high,high,REWORK,run,,,2026-11-17 15:28 T093 reviewer[language] claude high (priority high) REWORK
+580,2026-11-17,15:36,T093,worker,codex,high,high,,run,,,2026-11-17 15:36 T093 worker codex high (priority high)
+581,2026-11-17,15:41,T093,reviewer:data,codex,high,high,ESCALATE,run,,,2026-11-17 15:41 T093 reviewer[data] codex high (priority high) ESCALATE
+582,2026-11-17,15:46,T093,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-17 15:46 T093 reviewer[consistency] codex high (priority high) ESCALATE
+583,2026-11-17,15:47,T093,reviewer:language,claude,high,high,REWORK,run,,,2026-11-17 15:47 T093 reviewer[language] claude high (priority high) REWORK
+584,2026-11-17,16:15,T094,worker,codex,medium,normal,,run,,,2026-11-17 16:15 T094 worker codex medium (priority normal)
+585,2026-11-17,16:18,T094,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-11-17 16:18 T094 reviewer[consistency] codex medium (priority normal) REWORK
+586,2026-11-17,16:19,T094,reviewer:language,claude,medium,normal,REWORK,run,,,2026-11-17 16:19 T094 reviewer[language] claude medium (priority normal) REWORK
+587,2026-11-17,18:08,T094,worker,codex,medium,normal,,run,,,2026-11-17 18:08 T094 worker codex medium (priority normal)
+588,2026-11-17,18:10,T094,reviewer:consistency,codex,medium,normal,ESCALATE,run,,,2026-11-17 18:10 T094 reviewer[consistency] codex medium (priority normal) ESCALATE
+589,2026-11-17,19:29,T094,reviewer:consistency,codex,medium,normal,ESCALATE,run,,,2026-11-17 19:29 T094 reviewer[consistency] codex medium (priority normal) ESCALATE
+590,2026-11-17,19:30,T094,reviewer:language,claude,medium,normal,PASS,run,,,2026-11-17 19:30 T094 reviewer[language] claude medium (priority normal) PASS
+591,2026-11-17,21:52,T083,worker,codex,high,high,,run,,,2026-11-17 21:52 T083 worker codex high (priority high)
+592,2026-11-17,22:04,T083,worker,codex,high,high,,run,,,2026-11-17 22:04 T083 worker codex high (priority high)
+593,2026-11-17,22:18,T083,reviewer:data,codex,high,high,PASS,run,,,2026-11-17 22:18 T083 reviewer[data] codex high (priority high) PASS
+594,2026-11-18,11:19,T083,reviewer:data,codex,high,high,PASS,run,,,2026-11-18 11:19 T083 reviewer[data] codex high (priority high) PASS
+595,2026-11-18,11:30,T083,reviewer:data,codex,high,high,PASS,run,,,2026-11-18 11:30 T083 reviewer[data] codex high (priority high) PASS
+596,2026-11-18,11:36,T083,reviewer:estimation,claude,high,high,REWORK,run,,,2026-11-18 11:36 T083 reviewer[estimation] claude high (priority high) REWORK
+597,2026-11-18,11:42,T083,reviewer:consistency,codex,high,high,PASS,run,,,2026-11-18 11:42 T083 reviewer[consistency] codex high (priority high) PASS
+598,2026-11-18,11:49,T083,worker,codex,high,high,,run,,,2026-11-18 11:49 T083 worker codex high (priority high)
+599,2026-11-18,12:13,T083,reviewer:data,codex,high,high,REWORK,run,,,2026-11-18 12:13 T083 reviewer[data] codex high (priority high) REWORK
+600,2026-11-18,12:15,T083,reviewer:estimation,claude,high,high,PASS,run,,,2026-11-18 12:15 T083 reviewer[estimation] claude high (priority high) PASS
+601,2026-11-18,12:16,T083,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-18 12:16 T083 reviewer[consistency] codex high (priority high) REWORK
+602,2026-11-18,12:24,T083,worker,codex,high,high,,run,,,2026-11-18 12:24 T083 worker codex high (priority high)
+603,2026-11-18,12:26,T083,reviewer:data,codex,high,high,PASS,run,,,2026-11-18 12:26 T083 reviewer[data] codex high (priority high) PASS
+604,2026-11-18,12:27,T083,reviewer:estimation,claude,high,high,PASS,run,,,2026-11-18 12:27 T083 reviewer[estimation] claude high (priority high) PASS
+605,2026-11-18,12:28,T083,reviewer:consistency,codex,high,high,PASS,run,,,2026-11-18 12:28 T083 reviewer[consistency] codex high (priority high) PASS
+606,2026-11-18,12:32,T081,worker,codex,high,high,,run,,,2026-11-18 12:32 T081 worker codex high (priority high)
+607,2026-11-18,12:33,T081,reviewer:consistency,codex,high,high,ESCALATE,run,,,2026-11-18 12:33 T081 reviewer[consistency] codex high (priority high) ESCALATE
+608,2026-11-18,12:34,T081,reviewer:language,claude,high,high,ESCALATE,run,,,2026-11-18 12:34 T081 reviewer[language] claude high (priority high) ESCALATE
+609,2026-11-18,12:45,T081,worker,codex,high,high,,run,,,2026-11-18 12:45 T081 worker codex high (priority high)
+610,2026-11-18,12:49,T081,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-18 12:49 T081 reviewer[consistency] codex high (priority high) REWORK
+611,2026-11-18,12:51,T081,reviewer:language,claude,high,high,REWORK,run,,,2026-11-18 12:51 T081 reviewer[language] claude high (priority high) REWORK
+612,2026-11-18,12:53,T081,reviewer:estimation,claude,high,high,REWORK,run,,,2026-11-18 12:53 T081 reviewer[estimation] claude high (priority high) REWORK
+613,2026-11-18,13:12,T081,worker,codex,high,high,,run,,,2026-11-18 13:12 T081 worker codex high (priority high)
+614,2026-11-18,13:13,T081,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-18 13:13 T081 reviewer[consistency] codex high (priority high) REWORK
+615,2026-11-18,13:15,T081,reviewer:language,claude,high,high,REWORK,run,,,2026-11-18 13:15 T081 reviewer[language] claude high (priority high) REWORK
+616,2026-11-18,13:17,T081,reviewer:estimation,claude,high,high,PASS,run,,,2026-11-18 13:17 T081 reviewer[estimation] claude high (priority high) PASS
+617,2026-11-18,13:43,T081,worker,codex,high,high,,run,,,2026-11-18 13:43 T081 worker codex high (priority high)
+618,2026-11-18,13:44,T081,reviewer:consistency,codex,high,high,REWORK,run,,,2026-11-18 13:44 T081 reviewer[consistency] codex high (priority high) REWORK
+619,2026-11-18,13:46,T081,reviewer:language,claude,high,high,REWORK,run,,,2026-11-18 13:46 T081 reviewer[language] claude high (priority high) REWORK
+620,2026-11-18,13:48,T081,reviewer:estimation,claude,high,high,PASS,run,,,2026-11-18 13:48 T081 reviewer[estimation] claude high (priority high) PASS
+621,2026-11-18,19:35,T095,worker,codex,medium,normal,,run,,,2026-11-18 19:35 T095 worker codex medium (priority normal)
+622,2026-11-18,20:03,T095,worker,codex,medium,normal,,run,,,2026-11-18 20:03 T095 worker codex medium (priority normal)
+623,2026-11-18,20:28,T095,worker,codex,medium,normal,,run,,,2026-11-18 20:28 T095 worker codex medium (priority normal)
+624,2026-11-18,20:35,T095,reviewer:data,codex,medium,normal,PASS,run,,,2026-11-18 20:35 T095 reviewer[data] codex medium (priority normal) PASS
+625,2026-11-18,20:47,T095,reviewer:data,codex,medium,normal,REWORK,run,,,2026-11-18 20:47 T095 reviewer[data] codex medium (priority normal) REWORK
+626,2026-11-18,20:49,T095,reviewer:estimation,claude,medium,normal,REWORK,run,,,2026-11-18 20:49 T095 reviewer[estimation] claude medium (priority normal) REWORK
+627,2026-11-18,20:51,T095,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-11-18 20:51 T095 reviewer[consistency] codex medium (priority normal) REWORK
+628,2026-11-18,20:56,T095,worker,codex,medium,normal,,run,,,2026-11-18 20:56 T095 worker codex medium (priority normal)
+629,2026-11-18,21:03,T095,reviewer:data,codex,medium,normal,REWORK,run,,,2026-11-18 21:03 T095 reviewer[data] codex medium (priority normal) REWORK
+630,2026-11-18,21:06,T095,reviewer:estimation,claude,medium,normal,PASS,run,,,2026-11-18 21:06 T095 reviewer[estimation] claude medium (priority normal) PASS
+631,2026-11-18,21:09,T095,reviewer:consistency,codex,medium,normal,REWORK,run,,,2026-11-18 21:09 T095 reviewer[consistency] codex medium (priority normal) REWORK
+632,2026-11-18,21:14,T096,worker,codex,medium,normal,,run,,,2026-11-18 21:14 T096 worker codex medium (priority normal)
+633,2026-11-18,21:16,T096,worker,codex,medium,normal,,run,,,2026-11-18 21:16 T096 worker codex medium (priority normal)
+634,2026-11-18,21:22,T096,worker,codex,medium,normal,,run,,,2026-11-18 21:22 T096 worker codex medium (priority normal)
+635,2026-11-18,21:26,T096,worker,codex,medium,normal,,run,,,2026-11-18 21:26 T096 worker codex medium (priority normal)
+636,2026-11-18,21:29,T096,worker,codex,high,high,,run,,,2026-11-18 21:29 T096 worker codex high (priority high)
+637,2026-11-18,21:32,T096,worker,codex,high,high,,run,,,2026-11-18 21:32 T096 worker codex high (priority high)
+638,2026-11-18,21:35,T096,worker,codex,high,high,,run,,,2026-11-18 21:35 T096 worker codex high (priority high)
+639,2026-11-18,21:39,T096,worker,codex,high,high,,run,,,2026-11-18 21:39 T096 worker codex high (priority high)
+640,2026-11-18,21:51,T096,worker,codex,high,high,,run,,,2026-11-18 21:51 T096 worker codex high (priority high)
+641,2026-11-18,21:58,T096,worker,codex,high,high,,run,,,2026-11-18 21:58 T096 worker codex high (priority high)

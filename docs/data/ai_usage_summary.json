@@ -1,0 +1,169 @@
+{
+  "cutoff": "2026-11-18T22:13:28+08:00",
+  "runs_total": 586,
+  "runs_with_tokens": 134,
+  "tokens_known": 15607992,
+  "by_role": {
+    "reviewer": {
+      "runs_total": 29,
+      "runs_with_tokens": 7,
+      "tokens_known": 554814
+    },
+    "reviewer:consistency": {
+      "runs_total": 130,
+      "runs_with_tokens": 33,
+      "tokens_known": 3928251
+    },
+    "reviewer:data": {
+      "runs_total": 91,
+      "runs_with_tokens": 16,
+      "tokens_known": 1995695
+    },
+    "reviewer:estimation": {
+      "runs_total": 70,
+      "runs_with_tokens": 4,
+      "tokens_known": 450263
+    },
+    "reviewer:language": {
+      "runs_total": 57,
+      "runs_with_tokens": 9,
+      "tokens_known": 1010617
+    },
+    "worker": {
+      "runs_total": 209,
+      "runs_with_tokens": 65,
+      "tokens_known": 7668352
+    }
+  },
+  "by_provider": {
+    "agy": {
+      "runs_total": 8,
+      "runs_with_tokens": 0,
+      "tokens_known": 0
+    },
+    "claude": {
+      "runs_total": 258,
+      "runs_with_tokens": 0,
+      "tokens_known": 0
+    },
+    "codex": {
+      "runs_total": 320,
+      "runs_with_tokens": 134,
+      "tokens_known": 15607992
+    }
+  },
+  "claude_models": {
+    "haiku": 1,
+    "model not logged": 24,
+    "opus": 117,
+    "sonnet": 116
+  },
+  "cards_total": 95,
+  "cards_by_status": {
+    "DELIVERED": 82,
+    "?": 3,
+    "APPROVED": 4,
+    "PLAN": 6
+  },
+  "review_verdicts": {
+    "PASS": 35,
+    "REWORK": 92,
+    "ESCALATE": 36
+  },
+  "pi_decisions": {
+    "approve": 154,
+    "accept": 33,
+    "override": 52,
+    "return": 65
+  },
+  "run_lines": 641,
+  "start_notes": 55,
+  "paired_notes": 45,
+  "unpaired_notes": [
+    {
+      "line_number": 276,
+      "date": "2026-10-27",
+      "time": "16:51",
+      "task": "T039",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 301,
+      "date": "2026-10-28",
+      "time": "16:35",
+      "task": "T043",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 302,
+      "date": "2026-10-28",
+      "time": "16:35",
+      "task": "T044",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 320,
+      "date": "2026-10-28",
+      "time": "21:35",
+      "task": "T044",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 321,
+      "date": "2026-10-28",
+      "time": "21:36",
+      "task": "T043",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 333,
+      "date": "2026-10-29",
+      "time": "14:42",
+      "task": "T046",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 338,
+      "date": "2026-10-29",
+      "time": "14:51",
+      "task": "T047",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 388,
+      "date": "2026-10-30",
+      "time": "14:47",
+      "task": "T051",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 414,
+      "date": "2026-10-30",
+      "time": "21:47",
+      "task": "T056",
+      "role": "worker",
+      "provider": "claude"
+    },
+    {
+      "line_number": 423,
+      "date": "2026-10-30",
+      "time": "22:45",
+      "task": "T057",
+      "role": "worker",
+      "provider": "claude"
+    }
+  ],
+  "unreadable_status_cards": [
+    "T068",
+    "T074",
+    "T076"
+  ]
+}
