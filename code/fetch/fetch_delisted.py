@@ -1,15 +1,15 @@
 """
-Lädt Bilanz-/GuV-Daten der DELISTETEN Immobilienentwickler über AKShare
-(Liste: delistete_immobilienfirmen.csv, gefiltert aus den Wind-Exporten).
-Codes mit "!" (Code wurde nach Delisting neu vergeben) werden übersprungen -> Wind.
+Downloads balance-sheet and income-statement data for DELISTED developers via AKShare
+(list: delistete_immobilienfirmen.csv, filtered from Wind exports).
+Codes marked "!" (reassigned after delisting) are skipped; use Wind.
 
-Ausführen im Ordner Daten (venv aktiv):
+Run in the Daten directory with the virtual environment active:
     source .venv/bin/activate
     python fetch_delisted.py
 """
 import os
 import pandas as pd
-import akshare_coverage_test as t   # nutzt dieselben Funktionen (Timeout, nur 13 Stichtage)
+import akshare_coverage_test as t   # uses the same functions (timeout, only 13 reporting dates)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "akshare_output")

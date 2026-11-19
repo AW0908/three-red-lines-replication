@@ -1,3 +1,4 @@
+[English guide and task-card index](README_EN.md)
 # Research-process record
 
 This is a sanitized historical record, not a new approval or an executable project checkout. The original workflow is PLAN → explicit principal investigator (PI) approval → worker → Co-PI check → SHA-256 freeze → separate read-only role reviews → PASS / REWORK / ESCALATE → PI acceptance. Only the PI runs `pi.sh`, accepts research or publishes the archive. Worker reports do not establish acceptance; consult cards together with `state/approvals.log`. Review is a phase.

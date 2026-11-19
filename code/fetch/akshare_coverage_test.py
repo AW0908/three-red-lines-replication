@@ -1,20 +1,19 @@
 """
-MTPA – Three Red Lines: Coverage-Test der kostenlosen Datenquelle AKShare
+MTPA – Three Red Lines: coverage test of the free AKShare data source
 -------------------------------------------------------------------------
-Prüft, welche Bilanz-/GuV-Felder für chinesische Immobilienentwickler
-(A-Shares + HK-gelistet) über AKShare (EastMoney) verfügbar sind,
-Halbjahre 2016H2–2022H2.
+Checks which balance-sheet and income-statement fields for Chinese developers
+(A-shares and Hong Kong listings) are available via AKShare (EastMoney),
+for half-years 2016H2–2022H2.
 
-Ausführen im normalen Mac-Terminal (nicht in einer Sandbox), im Ordner
-dieser Datei:
+Run in a regular Mac terminal (not in a sandbox), in this file’s directory:
     pip install --upgrade akshare pandas openpyxl
     python3 akshare_coverage_test.py
 
-Output (im Unterordner ./akshare_output):
+Output (in the ./akshare_output subdirectory):
     raw_a_balance.csv, raw_a_income.csv, raw_hk_balance.csv, raw_hk_income.csv
-    coverage_report.xlsx   -> Abdeckung je Feld (Anteil Firmen-Halbjahre mit Wert)
-    firm_list.csv          -> Firmenliste mit Codes
-Laufzeit: ca. 10–20 Minuten (Pausen gegen Rate-Limits).
+    coverage_report.xlsx   -> coverage per field (share of firm-half-years with a value)
+    firm_list.csv          -> firm list with codes
+Runtime: approximately 10–20 minutes (pauses for rate limits).
 """
 
 import os
@@ -26,7 +25,7 @@ import pandas as pd
 
 import requests
 
-# Globales Timeout für alle HTTP-Requests (AKShare setzt keins -> Hänger)
+# Global timeout for HTTP requests (AKShare does not set one, risking hangs)
 _orig_request = requests.sessions.Session.request
 
 
@@ -52,12 +51,12 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "akshare_output")
 os.makedirs(OUT, exist_ok=True)
 
 PERIODS = [f"{y}-{md}" for y in range(2016, 2023) for md in ("06-30", "12-31")]
-PERIODS = [p for p in PERIODS if p >= "2016-12-31"]  # 2016H2 .. 2022H2 (13 Stichtage)
+PERIODS = [p for p in PERIODS if p >= "2016-12-31"]  # 2016H2 .. 2022H2 (13 reporting dates)
 SLEEP = 0.8
 
 # ---------------------------------------------------------------------------
-# Vorläufige Liste HK-gelisteter Festlands-Entwickler (Codes ohne Gewähr –
-# Fehlschläge werden im Report ausgewiesen und dann korrigiert)
+# Preliminary list of mainland developers listed in Hong Kong (codes not guaranteed;
+# failures are reported and then corrected)
 # ---------------------------------------------------------------------------
 HK_FIRMS = {
     "03333": "China Evergrande", "02007": "Country Garden", "01918": "Sunac",
@@ -72,12 +71,12 @@ HK_FIRMS = {
     "01622": "Redco", "01966": "China SCE", "03990": "Midea Real Estate",
     "01030": "Seazen Group", "03883": "China Aoyuan", "02019": "Dexin China",
     "01862": "Jingrui", "09993": "Radiance",
-    # 02768 Jiayuan: delistet, Code bei EastMoney neu vergeben -> über Wind holen
+    # 02768 Jiayuan: delisted, code reassigned by EastMoney; obtain through Wind
 }
 
 # ---------------------------------------------------------------------------
-# Gesuchte Felder: Name -> Regex auf Spaltennamen (A-Share, EastMoney-Codes)
-# bzw. auf STD_ITEM_NAME (HK, chinesische Bezeichnungen)
+# Fields sought: name -> regex on column names (A-share, EastMoney codes)
+# or on STD_ITEM_NAME (Hong Kong, Chinese labels)
 # ---------------------------------------------------------------------------
 A_BAL_FIELDS = {
     "total_assets":        r"^TOTAL_ASSETS$",
@@ -133,7 +132,7 @@ def norm_date(s):
 
 
 def a_share_list():
-    """A-Share Immobilienentwickler über EastMoney-Branchenboard."""
+    """A-share developers via the EastMoney industry board."""
     for board in ("房地产开发", "房地产"):
         try:
             df = ak.stock_board_industry_cons_em(symbol=board)
@@ -151,7 +150,7 @@ def em_symbol(code):
 
 
 def em_get(endpoint, params, tries=3):
-    """EastMoney-Request mit Timeout + Retries."""
+    """EastMoney request with timeout and retries."""
     for t in range(tries):
         try:
             r = requests.get(EM_BASE + endpoint, params=params, headers=HEADERS, timeout=20)
@@ -163,7 +162,7 @@ def em_get(endpoint, params, tries=3):
 
 
 def em_sheet(sym, ctype, endpoint):
-    """Nur die 13 benötigten Halbjahres-Stichtage (3 Requests statt ~23)."""
+    """Only the 13 required half-year reporting dates (3 requests instead of about 23)."""
     frames = []
     for i in range(0, len(PERIODS), 5):
         params = {"companyType": ctype, "reportDateType": "0", "reportType": "1",
@@ -216,7 +215,7 @@ def fetch_hk(codes):
 
 
 def coverage_wide(df, fields, n_firms, label):
-    """A-Share: breite Tabelle, eine Spalte je Posten."""
+    """A-share: wide table, one column per item."""
     rows = []
     if df.empty:
         return pd.DataFrame([{"market": label, "field": f, "matched_column": None,
@@ -238,7 +237,7 @@ def coverage_wide(df, fields, n_firms, label):
 
 
 def coverage_long(df, fields, n_firms, label):
-    """HK: lange Tabelle (STD_ITEM_NAME, AMOUNT)."""
+    """Hong Kong: long table (STD_ITEM_NAME, AMOUNT)."""
     rows = []
     if df.empty:
         return pd.DataFrame([{"market": label, "field": f, "matched_column": None,
