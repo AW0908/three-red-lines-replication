@@ -80,7 +80,17 @@ for row, run in zip(run_rows, state['runs']):
     run['tokens'] = value
     digest = hashlib.sha256(path.read_bytes()).hexdigest() if value is not None and path.exists() else ''
     source_rows.append(dict(line_number=row['line_number'], task=row['task'], role=role, timestamp=row['date']+' '+row['time'], token_value=value, source_log=path.relative_to(ROOT).as_posix() if value is not None else '', source_sha256=digest))
-card_snapshot = [{'task': t['id'], 'status': t['status']} for t in state['tasks']]
+# Preserve exact front matter locally; it is independently parsed by the checker.
+card_snapshot = []
+for t in state['tasks']:
+    raw = (ROOT/'tasks'/ (t['id']+'.md')).read_bytes()
+    m = re.match(br'^---\r?\n.*?\r?\n---', raw, re.S)
+    front = m.group(0) if m else b''
+    card_snapshot.append({'task':t['id'], 'status':t['status'], 'front_sha256':hashlib.sha256(front).hexdigest()})
+    evidence_path = ROOT/'tasks/T096_validation/card_front_matter'/ (t['id']+'.txt')
+    evidence_path.parent.mkdir(parents=True,exist_ok=True)
+    evidence_path.write_bytes(front)
+
 
 def group(field):
     out = defaultdict(lambda: {'runs_total':0,'runs_with_tokens':0,'tokens_known':0})

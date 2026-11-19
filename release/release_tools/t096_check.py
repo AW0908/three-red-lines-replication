@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Independent T096 recount: read exported events and token lines, not dashboard.py."""
-import csv, json, re
+import csv, json, re, hashlib
 from collections import Counter, defaultdict
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
@@ -8,6 +8,30 @@ OUT = ROOT/'tasks/T096_validation'
 
 def readcsv(p):
     with p.open(encoding='utf-8',newline='') as f: return list(csv.DictReader(f))
+
+def last_token(text):
+    lines=re.findall(r'^tokens used\n([\d,.  ]+)$',text,re.M)
+    return int(re.sub(r'\D','',lines[-1])) if lines else None
+
+def pair_note(events,i):
+    note=events[i]; key=tuple(note[k] for k in ('date','task','role','provider'))
+    for later in events[i+1:]:
+        if tuple(later[k] for k in ('date','task','role','provider')) != key: continue
+        if later['note_type']=='start_note': break
+        return later['line_number']
+    return ''
+
+def latest_run(runs,run):
+    return not any(int(x['line_number'])>int(run['line_number']) and (x['task'],x['role'],x['provider'])==(run['task'],run['role'],run['provider']) for x in runs)
+
+def synthetic_tests():
+    key=dict(date='2026-01-01',task='T001',role='worker',provider='codex')
+    events=[dict(key,line_number='1',note_type='start_note'),dict(key,line_number='2',note_type='start_note'),dict(key,line_number='3',note_type='run'),dict(key,line_number='4',note_type='run')]
+    tests=[('missing token line',last_token('model: test\n'),None),('zero token value',last_token('tokens used\n0\n'),0),('last of multiple token lines',last_token('tokens used\n12\ntokens used\n34\n'),34),('unpaired start before next note',pair_note(events,0),''),('paired start note',pair_note(events,1),'3'),('earlier repeated run excluded',latest_run(events[2:],events[2]),False),('latest repeated run included',latest_run(events[2:],events[3]),True)]
+    with (OUT/'synthetic_tests.csv').open('w',newline='') as f:
+        w=csv.writer(f);w.writerow(['case','observed','expected','result']);w.writerows((name,repr(got),repr(want),'PASS' if got==want else 'FAIL') for name,got,want in tests)
+    assert all(got==want for _,got,want in tests)
+    print('Synthetic tests passed:',len(tests))
 
 def recount():
     events = readcsv(ROOT/'public_release/process/state/runs_current.csv')
@@ -17,20 +41,33 @@ def recount():
     notes = [r for r in events if r['note_type']=='start_note']
     for i, note in enumerate(events):
         if note['note_type'] != 'start_note': continue
-        key = tuple(note[k] for k in ('date','task','role','provider'))
-        paired = ''
-        for later in events[i+1:]:
-            if tuple(later[k] for k in ('date','task','role','provider')) != key: continue
-            if later['note_type']=='start_note': break
-            paired = later['line_number']; break
+        paired = pair_note(events,i)
         assert note['paired_line']==paired
         assert note['pairing']==('paired' if paired else 'started, no completion entry')
     cards=summary['card_status_snapshot']
     assert len({c['task'] for c in cards})==len(cards)
+    status_evidence=[]
+    for c in cards:
+        raw=(OUT/'card_front_matter'/ (c['task']+'.txt')).read_bytes()
+        assert hashlib.sha256(raw).hexdigest()==c['front_sha256']
+        front=raw.decode('utf-8')
+        parsed={}
+        if front:
+            for line in front.splitlines()[1:-1]:
+                if ':' in line:
+                    k,v=line.split(':',1); parsed[k.strip()]=v.strip()
+        assert parsed.get('status','?')==c['status'], c['task']
+        current=(ROOT/'tasks'/ (c['task']+'.md')).read_bytes()
+        m=re.match(br'^---\r?\n.*?\r?\n---',current,re.S)
+        same=hashlib.sha256(m.group(0) if m else b'').hexdigest()==c['front_sha256']
+        status_evidence.append((c['task'],c['status'],c['front_sha256'],'matches current front matter' if same else 'front matter changed after cut-off; snapshot retained'))
+    OUT.mkdir(parents=True,exist_ok=True)
+    with (OUT/'card_source_checks.csv').open('w',newline='') as f:
+        w=csv.writer(f);w.writerow(['task','status','front_sha256','result']);w.writerows(status_evidence)
     statuses=Counter(c['status'] for c in cards)
     unreadable=sorted(c['task'] for c in cards if c['status']=='?')
     by_line={int(r['line_number']):r for r in runs}
-    seen=set()
+    seen=set(); source_checks=[]
     for evidence in summary['token_sources']:
         n=evidence['line_number']; assert n not in seen; seen.add(n)
         r=by_line[n]
@@ -39,9 +76,18 @@ def recount():
         if value is not None:
             assert isinstance(value,int) and value>=0 and re.fullmatch(r'[0-9a-f]{64}', evidence['source_sha256'])
             assert re.fullmatch(r'(tasks|review)/T[0-9]{3}_[a-z]+\.log',evidence['source_log'])
-            assert not any(int(x['line_number'])>n and (x['task'],x['role'],x['provider'])==(r['task'],r['role'],'codex') for x in runs)
+            assert latest_run(runs,r)
+            path=ROOT/evidence['source_log']
+            if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest()!=evidence['source_sha256']:
+                result='source log overwritten after cut-off; snapshot value retained'
+            else:
+                assert last_token(path.read_text(encoding='utf-8',errors='replace'))==value, evidence['source_log']
+                result='hash and token line match'
+            source_checks.append((n,evidence['source_log'],value,evidence['source_sha256'],result))
             r['tokens']=value
         else: assert not evidence['source_log'] and not evidence['source_sha256']
+    with (OUT/'token_source_checks.csv').open('w',newline='') as f:
+        w=csv.writer(f);w.writerow(['line_number','source_log','snapshot_tokens','snapshot_sha256','result']);w.writerows(source_checks)
     assert seen=={int(r['line_number']) for r in runs if r['provider']=='codex'}
     def groups(field):
         groups=defaultdict(lambda:{'runs_total':0,'runs_with_tokens':0,'tokens_known':0})
@@ -92,7 +138,9 @@ def recount():
         w=csv.writer(f); w.writerow(['measure','independent_recount','summary','result']); w.writerows(flat)
     print('Recount matched:',len(flat),'measures;',len(runs),'runs;',len(notes),'start notes')
 
-if __name__=='__main__': recount()
+if __name__=='__main__':
+    synthetic_tests()
+    recount()
 
 # Release checks operate only on T096 ledgers, never on historical validation files.
 def release_checks():

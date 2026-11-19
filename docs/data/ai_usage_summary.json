@@ -1,8 +1,8 @@
 {
-  "cutoff": "2026-11-19T12:11:39+08:00",
-  "runs_total": 594,
+  "cutoff": "2026-11-19T12:35:54+08:00",
+  "runs_total": 600,
   "runs_with_tokens": 136,
-  "tokens_known": 15754734,
+  "tokens_known": 15681600,
   "by_role": {
     "reviewer": {
       "runs_total": 29,
@@ -10,14 +10,14 @@
       "tokens_known": 554814
     },
     "reviewer:consistency": {
-      "runs_total": 131,
+      "runs_total": 133,
       "runs_with_tokens": 34,
-      "tokens_known": 3968604
+      "tokens_known": 3970879
     },
     "reviewer:data": {
-      "runs_total": 92,
+      "runs_total": 94,
       "runs_with_tokens": 17,
-      "tokens_known": 2102084
+      "tokens_known": 2026675
     },
     "reviewer:estimation": {
       "runs_total": 70,
@@ -25,12 +25,12 @@
       "tokens_known": 450263
     },
     "reviewer:language": {
-      "runs_total": 58,
+      "runs_total": 59,
       "runs_with_tokens": 9,
       "tokens_known": 1010617
     },
     "worker": {
-      "runs_total": 214,
+      "runs_total": 215,
       "runs_with_tokens": 65,
       "tokens_known": 7668352
     }
@@ -42,19 +42,19 @@
       "tokens_known": 0
     },
     "claude": {
-      "runs_total": 259,
+      "runs_total": 260,
       "runs_with_tokens": 0,
       "tokens_known": 0
     },
     "codex": {
-      "runs_total": 327,
+      "runs_total": 332,
       "runs_with_tokens": 136,
-      "tokens_known": 15754734
+      "tokens_known": 15681600
     }
   },
   "claude_models": {
     "haiku": 1,
-    "model not logged": 25,
+    "model not logged": 26,
     "opus": 117,
     "sonnet": 116
   },
@@ -62,12 +62,13 @@
   "cards_by_status": {
     "DELIVERED": 82,
     "?": 3,
-    "APPROVED": 4,
-    "PLAN": 6
+    "APPROVED": 3,
+    "PLAN": 6,
+    "REWORK": 1
   },
   "review_verdicts": {
     "PASS": 35,
-    "REWORK": 92,
+    "REWORK": 93,
     "ESCALATE": 37
   },
   "pi_decisions": {
@@ -76,7 +77,7 @@
     "override": 52,
     "return": 71
   },
-  "run_lines": 649,
+  "run_lines": 655,
   "start_notes": 55,
   "paired_notes": 45,
   "unpaired_notes": [
@@ -3065,18 +3066,18 @@
       "task": "T096",
       "role": "reviewer:data",
       "timestamp": "2026-11-18 22:28",
-      "token_value": 106389,
-      "source_log": "review/T096_data.log",
-      "source_sha256": "48d18a047f9e5ab66b423486b19c7ec0794160058aee7e8b5a0e5a0fbf9af165"
+      "token_value": null,
+      "source_log": "",
+      "source_sha256": ""
     },
     {
       "line_number": 645,
       "task": "T096",
       "role": "reviewer:consistency",
       "timestamp": "2026-11-18 22:29",
-      "token_value": 40353,
-      "source_log": "review/T096_consistency.log",
-      "source_sha256": "77678b6cd65ee420a44c5a59712dd45d38225e1148abb04ae3af6e38949cbf99"
+      "token_value": null,
+      "source_log": "",
+      "source_sha256": ""
     },
     {
       "line_number": 647,
@@ -3104,388 +3105,528 @@
       "token_value": null,
       "source_log": "",
       "source_sha256": ""
+    },
+    {
+      "line_number": 650,
+      "task": "T096",
+      "role": "worker",
+      "timestamp": "2026-11-19 12:12",
+      "token_value": null,
+      "source_log": "",
+      "source_sha256": ""
+    },
+    {
+      "line_number": 651,
+      "task": "T096",
+      "role": "reviewer:data",
+      "timestamp": "2026-11-19 12:18",
+      "token_value": null,
+      "source_log": "",
+      "source_sha256": ""
+    },
+    {
+      "line_number": 652,
+      "task": "T096",
+      "role": "reviewer:consistency",
+      "timestamp": "2026-11-19 12:19",
+      "token_value": null,
+      "source_log": "",
+      "source_sha256": ""
+    },
+    {
+      "line_number": 653,
+      "task": "T096",
+      "role": "reviewer:data",
+      "timestamp": "2026-11-19 12:28",
+      "token_value": 30980,
+      "source_log": "review/T096_data.log",
+      "source_sha256": "437501f83ff6875b2a15a4e6a172d91b8222e860f65a31209ac2bb8b8dd3a23f"
+    },
+    {
+      "line_number": 654,
+      "task": "T096",
+      "role": "reviewer:consistency",
+      "timestamp": "2026-11-19 12:29",
+      "token_value": 42628,
+      "source_log": "review/T096_consistency.log",
+      "source_sha256": "5b1761bbbd9ad891eb03ece2bb81c71074e4f6d55303944de7282fa2545c7d01"
     }
   ],
   "card_status_snapshot": [
     {
       "task": "T001",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "9c372b00cdb9c6c27b5ec58c1d082c0e72da07935fec65ad47a8dab07a2400d1"
     },
     {
       "task": "T002",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "87eeac2b796f6e1d5df0654c02833387764874a073bd01e81f2f82bb01c5cf68"
     },
     {
       "task": "T003",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "3252fb9d5e1a44f8dbc2b2564b150a58210d5453b5800ba307d671d43a7d8eb7"
     },
     {
       "task": "T004",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "e1fee249e546bc77794f12230cb85f9209048855665accb4710ddb1866e0683e"
     },
     {
       "task": "T005",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "7ccf5b7f32aa670ac054f52501fe3413db6c06f1420fee96ca91ac79eb6181f4"
     },
     {
       "task": "T006",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b9c5204fd1afbd0b7fbb37e23242dea32e067798bb731e526df8854dd57967e3"
     },
     {
       "task": "T007",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b1b7d01b47bebf38d2e757bed331d7fd0bcfcd99e10e5ea884706f839fe15a4f"
     },
     {
       "task": "T008",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "f29dac2df79f2539209377c7581c7417a16123ceaa243ca945d878ad8c768049"
     },
     {
       "task": "T009",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b644074fd81ead5d6d5b4a4ada27a35c2e847b6809fa6e2f2171955274ea1ac3"
     },
     {
       "task": "T010",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "7a60a8091c85039884484d31d0753fbee411ef334a24c8c82d24be110a3ab8f3"
     },
     {
       "task": "T011",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "da5582ec450a235b3e150a91fde48cb08a0fbd7c0a08066ae6d2d670f987389c"
     },
     {
       "task": "T012",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "2285937f1ba2f3b385a1208f05da9e7140e2aff2de24c981b84ca20d75795a9d"
     },
     {
       "task": "T013",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "4e10f38e3aa0df37b815fcf8e501f1564f0c709652f01a2d70c091d56f203199"
     },
     {
       "task": "T014",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "a135c4ce952f64636cb5b108ad36a331d387b99fa3ea8b83ebc213c3c6e210b9"
     },
     {
       "task": "T015",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "f674212cc8df18f18165e4ea36c402a0b978fae87e9568fbfd835464966cdff3"
     },
     {
       "task": "T016",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "6f12124a1a1b8e969d4e87cf040d093b4b2aca913c1f3af3cc7faa5440e088fb"
     },
     {
       "task": "T017",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "9a3af768d1d1610a87c1f0dc5e2a4b2a0212f3c228ff8b51b8fd4bc75979f183"
     },
     {
       "task": "T018",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "2d609e385a680ad00f9e47d52cf5f13860606e153f5e68a68454d6bfb0e4e81e"
     },
     {
       "task": "T019",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "cf7293a57924cab9be32727a37675bff8d2b255c3065043446f96f3bbc89e0b1"
     },
     {
       "task": "T020",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b522265429e238edc0e80e82d24338fc3506c99e7a428a1091ea6e1a0b928663"
     },
     {
       "task": "T021",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "7adf4c5868aae9e41c8893324de1bb4569b75bb6a759e73ee40ad7c5c1890bea"
     },
     {
       "task": "T022",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "935f0d1d0442ae9232d9e60cba0a72b499097bd57a52937ef20182de21664ed1"
     },
     {
       "task": "T023",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "42545748f33d518bfb7b67d6fc410f84bfd1730af25cbb9ff51116ed389d94d4"
     },
     {
       "task": "T024",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "2f319c9e3eb00c104055a24dc137667318fc22b39d6b34db3be6b82151f169be"
     },
     {
       "task": "T025",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "1db0b3607a7b223df5f4a1d2b1b288d02fd8fbea162d9f15cbae3145f75efc38"
     },
     {
       "task": "T026",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "da408e22ef609961397bed970696c87c4e06544c16fd3896482bdeec5ba2ad87"
     },
     {
       "task": "T027",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "ad26614dc0ad58a6641308316cdce52a60bca5bdec5e0e590f1bcc8a210966a5"
     },
     {
       "task": "T028",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "22f465e06947d3cecd6b30be04e8fec2d544ba1fe9420de38d527fde930dd716"
     },
     {
       "task": "T029",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "8e26efb88121bf182d7c63761eaf96cd72df05c683790c7f0deb726e3e40b06e"
     },
     {
       "task": "T030",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "a9e96c70b6c5e8cc312d93080664fbdf4a9e26ee02dec715a6ea5930d98a5ecb"
     },
     {
       "task": "T031",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "efec3fcf5d5741743d3a9e19b292bc67fa3873dbe1051a84f2436e08bcacd5ac"
     },
     {
       "task": "T032",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "75676b106b8e82c133cdb089356cdc7f63210ef5aa3d17c0b45f176fd33c6532"
     },
     {
       "task": "T033",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "5a69f9bdcac00d79f2ddca1eb1e62ebc00ccc050e1bb565766a0403c5e834f30"
     },
     {
       "task": "T034",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "480ce2f349a27a3cca8090b7d55ac3d58549f22d56ff6055961ef1871eea7798"
     },
     {
       "task": "T035",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "736af16f982c0727e22769e797dee9dc65fef7915283a19b2e81355d130fb16b"
     },
     {
       "task": "T036",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "00a26611b88e3f7b6c0b934db6e2fa489975838b78079121bcdaf8d37371f250"
     },
     {
       "task": "T037",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "97f15ba66d1b54221b6dc58f099e0d6b3a91653a0c5504e772397bb2707dcca0"
     },
     {
       "task": "T038",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "db824cadcd72ca123fb71124df867ce732eab9e3d1c7d36d5020b7882976ce0b"
     },
     {
       "task": "T039",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "90259a0e4ee280ef9f9f9eccd262c75ca17ab46aebc4102412fbb941a1bba95f"
     },
     {
       "task": "T040",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "9a70057c0e24a9130d6474889e127b3cc5306fb758fd5974ff19535698d8af39"
     },
     {
       "task": "T041",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "206af3c01bfb6f45cd28d779a718c7ac7f1c299693bce04569daf5f0934226be"
     },
     {
       "task": "T042",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "337b0272dc6be226317074dab14c83838d2b278037230ab6b449b40207d3240c"
     },
     {
       "task": "T043",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "daf310f2eeb0268c99b33c5f9c055dd4160b6e068a1ba0549e80f33a23fe3c3c"
     },
     {
       "task": "T044",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "f7299f84b4e78b2240cfd85fb7e263e56d04b4b51e755d9ab7597f13ad583f42"
     },
     {
       "task": "T045",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "afb8ccd022e05e6e0ee0aa0384df9e8fd408df9c4e0232032e41da39f4d419fb"
     },
     {
       "task": "T046",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "8850e7c788b5e7674da175e65396d6acfbdac435d5f76b1e4eb49e840d637a9c"
     },
     {
       "task": "T047",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "2e52f034c396daf1941ff8cfebb220103fa63b80bb8cf28a6822175109676b56"
     },
     {
       "task": "T048",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "9894d2f17d3d26a9cb878eea7d0a8903e85a41cce0d40e0b95ea49db444af042"
     },
     {
       "task": "T049",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "6fc41478b41a4f662e1c2b22d57db94a236e6c00f46054e2302b2465ff6817bc"
     },
     {
       "task": "T050",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "1c678af59f5e57b3fcb973f4f0abf617cb3f8c0288d257e2d42690dbb64161aa"
     },
     {
       "task": "T051",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "935e2f2093b1a63f95fabbaeda86e503f4998cebcd5ccc83f5f25d4ed420df4f"
     },
     {
       "task": "T052",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "aca287a57ee55077402cde6bd5d19e7fff208f13c2025309b6b46e3736e7a167"
     },
     {
       "task": "T053",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "16a72658333b9f867d4f30f6e09a5cb3dd15cd1c18bd8232a50c6ed7f3cead4c"
     },
     {
       "task": "T054",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "2258ad3ec688a68976978a76dc5ddb78c67aeeed307716fcffb1112b214930c4"
     },
     {
       "task": "T055",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "79558be1d35302181ec681a1427a0df065a30c6483491594f9a8f20ac7e34771"
     },
     {
       "task": "T056",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "53e59c700cf640b9b519c72b3689241a3abcac74e9ba61f3e8a644769a993c28"
     },
     {
       "task": "T057",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "d59e892bcd1f74a1ab2663e07fa350d2cdb40e818901bacb56399d8c749fcb1a"
     },
     {
       "task": "T058",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "6680782498e56458341f0191551accaca5c4cabbeca29fb2eabba44d2bba9e29"
     },
     {
       "task": "T059",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "f17b001838e403d0b9b9ff767e84e0d79df26bf917380e143a210d23fd2b7a3b"
     },
     {
       "task": "T060",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "53bbd7ca66ffa93007e4b59762394a23bb1249d0185d10ed99add4edaa499a19"
     },
     {
       "task": "T061",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b3a97aebd40ce80ad6726b229f3d3580782080198529db6c19e07125f6df6026"
     },
     {
       "task": "T062",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "556e5eb1b62a215db633d93eb28417cce59217ab4fc5d0627e8dee481429bc85"
     },
     {
       "task": "T063",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b75370db91db2637e30745ce1d0acf331b64f3add5df0ca787581232d2d12bec"
     },
     {
       "task": "T064",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "6a9e6756ef77cc3c72ae43c60eaa3d79086562dc17bd74e61ca98e2926443fbd"
     },
     {
       "task": "T066",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "37adc741734cca0d1ef148d0585ec1c6d6ff0b69a81b43716c0fba33442d541c"
     },
     {
       "task": "T067",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "7f8798806b29db8a4b2d6886b3c8f314c287b3fdda472425f290426b460cadae"
     },
     {
       "task": "T068",
-      "status": "?"
+      "status": "?",
+      "front_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "task": "T069",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "6de6251fe5f7732d6de951de79a7fd08dd8d76b7f848e321fce2e9c6cb74fcc4"
     },
     {
       "task": "T070",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "c99904e02aa43c0d3ba644e4aeae7b993829cda988d7a5bb63ef2245d6cddafc"
     },
     {
       "task": "T071",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "71210432aaf59651b9d475e575869fd124a97ad2cf8315bec8ed5403da214d02"
     },
     {
       "task": "T072",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "d446128549eac09d71e159d617030436523fb9652931040644bd536a1dd5605c"
     },
     {
       "task": "T073",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "17a975865a439a40eca427d4db010798f8814b6b9d0c38f3e3ac38b047320a00"
     },
     {
       "task": "T074",
-      "status": "?"
+      "status": "?",
+      "front_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "task": "T076",
-      "status": "?"
+      "status": "?",
+      "front_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "task": "T077",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "e16b4eb294edbec4f5f25543dff6a6bd42b06a399081c1375033d47987d35919"
     },
     {
       "task": "T078",
-      "status": "APPROVED"
+      "status": "APPROVED",
+      "front_sha256": "c398e60263b5f225304f0293abf03ad125d828ce7b53be391c8840b7d256b92c"
     },
     {
       "task": "T079",
-      "status": "APPROVED"
+      "status": "APPROVED",
+      "front_sha256": "baa0a1b71b52f82d4a066ceb61a3fae5ab9af0f5de4defbaa84dc51c1ae81acd"
     },
     {
       "task": "T080",
-      "status": "APPROVED"
+      "status": "APPROVED",
+      "front_sha256": "047135e575652ed2812adeb68344bc0f1e60a2763f94c4b61c945b82c98b2112"
     },
     {
       "task": "T081",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "96915a94a3e527887f7a52949231567329eecdc380868353fb9f00989648281e"
     },
     {
       "task": "T082",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "3a734049b188bcc2c87049dba62238902bd85fc93046e44ad21185e9f55e8cfc"
     },
     {
       "task": "T083",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "7a6c6104e056f4e7d8fbe9224b498e7d0577c4bcdc885cfad9c2aecc9277147b"
     },
     {
       "task": "T084",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "46c749bfc74899d3a60531823d4d5ee432a5d0606054e2bc65db16bc282db007"
     },
     {
       "task": "T085",
-      "status": "PLAN"
+      "status": "PLAN",
+      "front_sha256": "60cd36920b696e49c587d26adfea9e528354a35fc5d507cfdf82fb541371f957"
     },
     {
       "task": "T086",
-      "status": "PLAN"
+      "status": "PLAN",
+      "front_sha256": "14fcaf7b7fdbed619df184e80fea98d61aaf3aa7c153fe917832fb5566c3b0a1"
     },
     {
       "task": "T087",
-      "status": "PLAN"
+      "status": "PLAN",
+      "front_sha256": "cee20dbeadbd05d9dc5b1099f4c17ba157d9c9e993cf74e9e1e80fb8b0f573f5"
     },
     {
       "task": "T088",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "f797a65ab5179ffe82032e2d772ba795dac333b84662f6c8995310915215bd99"
     },
     {
       "task": "T089",
-      "status": "PLAN"
+      "status": "PLAN",
+      "front_sha256": "506cccb21e28b3e7d0a3532ad44e623401f57093b7bb2cbe82811e85a7ff9c0e"
     },
     {
       "task": "T090",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "e6f82e5a3c545069549eace5507a8d9181fa924141eb701cfa50b13674d50613"
     },
     {
       "task": "T091",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "55f387d9543dfa52dcb35fedeefbf8cfb150f01142a999a93582882c68f24e48"
     },
     {
       "task": "T092",
-      "status": "PLAN"
+      "status": "PLAN",
+      "front_sha256": "2669046418339d8bc2257b5e00fec312fbf3917cef878a30614041d34cad2c89"
     },
     {
       "task": "T093",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "b1e41b9f57d22040ec3382811f1905696daa9f2201648a9afe89f7541a34ed5f"
     },
     {
       "task": "T094",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "e32a7416eea56af5b7f337c4f0cf0021b09f7fb5c30048d89ead12ff0c56435a"
     },
     {
       "task": "T095",
-      "status": "DELIVERED"
+      "status": "DELIVERED",
+      "front_sha256": "0db6ef1205d951d13003771f4b74404b277cceb706482bd1e942cce284152be6"
     },
     {
       "task": "T096",
-      "status": "APPROVED"
+      "status": "REWORK",
+      "front_sha256": "8a6b399a6481bf4d90f4a98c76c4a37b3508827e2eb03943f9546de7b498932b"
     },
     {
       "task": "T097",
-      "status": "PLAN"
+      "status": "PLAN",
+      "front_sha256": "6e7f3b3b529dd30237f21fda32dcef6a6513852de8d48b71c358e3f8c41a037e"
     }
   ],
   "unreadable_status_cards": [
