@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Create the T096 aggregate from local workflow records, without starting a server."""
-import csv, importlib.util, json, re, sys
+import csv, importlib.util, json, re, sys, hashlib
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -68,6 +68,20 @@ if len(run_rows) != len(state['runs']): raise ValueError('dashboard and completi
 for row, run in zip(run_rows, state['runs']):
     if (row['date']+' '+row['time'],row['task'],row['role'],row['provider'],row['tier_model']) != (run['ts'],run['task'],run['role'],run['tool'],run['tier']): raise ValueError('dashboard event mismatch')
 
+# Freeze evidence at the cutoff; an in-progress T096 worker log is not a completion.
+source_rows = []
+for row, run in zip(run_rows, state['runs']):
+    if row['provider'] != 'codex': continue
+    role = row['role']
+    suffix = 'worker' if role == 'worker' else 'reviewer' if role == 'reviewer' else role.split(':', 1)[1]
+    path = ROOT / ('tasks' if role == 'worker' else 'review') / (row['task'] + '_' + suffix + '.log')
+    last = not any(x['task']==row['task'] and x['role']==role and x['provider']=='codex' for x in run_rows[run_rows.index(row)+1:])
+    value = run['tokens'] if last and not (row['task']=='T096' and role=='worker') else None
+    run['tokens'] = value
+    digest = hashlib.sha256(path.read_bytes()).hexdigest() if value is not None and path.exists() else ''
+    source_rows.append(dict(line_number=row['line_number'], task=row['task'], role=role, timestamp=row['date']+' '+row['time'], token_value=value, source_log=path.relative_to(ROOT).as_posix() if value is not None else '', source_sha256=digest))
+card_snapshot = [{'task': t['id'], 'status': t['status']} for t in state['tasks']]
+
 def group(field):
     out = defaultdict(lambda: {'runs_total':0,'runs_with_tokens':0,'tokens_known':0})
     for r in state['runs']:
@@ -89,6 +103,8 @@ decisions = Counter('override' if r['override']=='yes' else decision_names.get(r
 known = [r['tokens'] for r in state['runs'] if r['tokens'] is not None]
 notes = [r for r in rows if r['note_type']=='start_note']
 summary = dict(cutoff=cutoff, runs_total=len(run_rows), runs_with_tokens=len(known), tokens_known=sum(known), by_role=group('role'), by_provider=group('tool'), claude_models=dict(sorted(models.items())), cards_total=len(state['tasks']), cards_by_status=state['status_counts'], review_verdicts=dict(verdicts), pi_decisions=dict(decisions), run_lines=len(rows), start_notes=len(notes), paired_notes=sum(r['pairing']=='paired' for r in notes), unpaired_notes=[{k:r[k] for k in ('line_number','date','time','task','role','provider')} for r in notes if r['pairing']!='paired'])
+summary['token_sources'] = source_rows
+summary['card_status_snapshot'] = card_snapshot
 summary['unreadable_status_cards'] = sorted(t['id'] for t in state['tasks'] if t['status']=='?')
 summary_path.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('T096 summary:',len(run_rows),'runs,',len(rows),'lines,',len(notes),'start notes;',len(known),'runs with known tokens')
@@ -99,8 +115,7 @@ if page.exists():
     serialized = json.dumps(summary, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     source = re.sub(r'const DATA = (?:__SUMMARY__|\{[^\n]*\});', lambda _: 'const DATA = '+serialized+';', source, count=1)
     page.write_text(source, encoding='utf-8')
-links = ('      <a class="btn" data-t096="link" href="architecture.html">How the agents work</a>\n'
-         '      <a class="btn" data-t096="link" href="ai-usage.html">AI runs and tokens</a>\n')
+links = '      <a class="btn" data-t096="link" href="ai-usage.html">AI runs and tokens</a>\n'
 headline = ('    <div data-t096="headlines" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:24px;font-family:var(--ui)">\n'
     f'      <div class="card" style="padding:16px"><strong style="display:block;font-size:1.6rem">{summary["runs_total"]}</strong><span class="small">Recorded runs</span></div>\n'
     f'      <div class="card" style="padding:16px"><strong style="display:block;font-size:1.6rem">{summary["cards_total"]}</strong><span class="small">Task cards</span></div>\n'
@@ -112,6 +127,7 @@ for p in (ROOT/'public_release/docs/index.html', ROOT/'public_release/release/re
     if not match: raise ValueError('process section missing')
     baseline = ROOT/'tasks/T096_validation'/('index_before.html' if p.name=='index.html' else 'template_before.html')
     section = re.search(r'<section id="process">.*?</section>',baseline.read_text(encoding='utf-8'),re.S)[0]
+    section = section.replace('AI reviewers, working in fresh sessions and partly from a different model family, checked data, estimation, consistency and language.', 'AI reviewers checked data, estimation, consistency and language. Reviews are process-independent: each role starts a fresh read-only session. They are not model-independent: some reviewers use the same model family as the worker.')
     anchor = '    </div></div></div>'
     if section.count(anchor)!=1: raise ValueError('Ambiguous process link row')
     section = section.replace(anchor, links+'    </div>\n'+headline+'    </div></div>')

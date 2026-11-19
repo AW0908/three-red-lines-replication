@@ -25,25 +25,24 @@ def recount():
             paired = later['line_number']; break
         assert note['paired_line']==paired
         assert note['pairing']==('paired' if paired else 'started, no completion entry')
-    cards = sorted((ROOT/'tasks').glob('T[0-9][0-9][0-9].md'))
-    statuses=Counter(); unreadable=[]
-    for card in cards:
-        text=card.read_text(encoding='utf-8')
-        fm=re.match(r'^---\n(.*?)\n---',text,re.S)
-        m=re.search(r'^status:\s*(.*)$',fm[1],re.M) if fm else None
-        statuses[m[1].strip() if m else '?']+=1
-        tid=card.stem
-        if not m: unreadable.append(tid)
-        candidates=[('worker',ROOT/'tasks'/f'{tid}_worker.log'),('reviewer',ROOT/'review'/f'{tid}_reviewer.log')]
-        candidates += [('reviewer:'+role,ROOT/'review'/f'{tid}_{role}.log') for role in ('data','estimation','consistency','language','general')]
-        for role,path in candidates:
-            if not path.is_file(): continue
-            # Extract token lines only; no other log content is exported.
-            text=path.read_text(encoding='utf-8',errors='replace')
-            hits=re.findall(r'^tokens used\n([\d,.\u202f ]+)$',text,re.M)
-            if not hits: continue
-            matching=[r for r in runs if r['task']==tid and r['role']==role and r['provider']=='codex']
-            if matching: matching[-1]['tokens']=int(re.sub(r'\D','',hits[-1]))
+    cards=summary['card_status_snapshot']
+    assert len({c['task'] for c in cards})==len(cards)
+    statuses=Counter(c['status'] for c in cards)
+    unreadable=sorted(c['task'] for c in cards if c['status']=='?')
+    by_line={int(r['line_number']):r for r in runs}
+    seen=set()
+    for evidence in summary['token_sources']:
+        n=evidence['line_number']; assert n not in seen; seen.add(n)
+        r=by_line[n]
+        assert r['provider']=='codex' and (r['task'],r['role'],r['date']+' '+r['time'])==(evidence['task'],evidence['role'],evidence['timestamp'])
+        value=evidence['token_value']
+        if value is not None:
+            assert isinstance(value,int) and value>=0 and re.fullmatch(r'[0-9a-f]{64}', evidence['source_sha256'])
+            assert re.fullmatch(r'(tasks|review)/T[0-9]{3}_[a-z]+\.log',evidence['source_log'])
+            assert not any(int(x['line_number'])>n and (x['task'],x['role'],x['provider'])==(r['task'],r['role'],'codex') for x in runs)
+            r['tokens']=value
+        else: assert not evidence['source_log'] and not evidence['source_sha256']
+    assert seen=={int(r['line_number']) for r in runs if r['provider']=='codex'}
     def groups(field):
         groups=defaultdict(lambda:{'runs_total':0,'runs_with_tokens':0,'tokens_known':0})
         for r in runs:
@@ -112,16 +111,24 @@ def release_checks():
     diffs=[]
     for relative,baseline in [('docs/index.html','index_before.html'),('release/release_tools/site_template.html','template_before.html')]:
         old=(OUT/baseline).read_text(); new=(release/relative).read_text(); a=process(old); b=process(new)
-        assert old[:a.start()]==new[:b.start()] and old[a.end():]==new[b.end():], relative+' changed outside process'
+        after=re.sub(r'\s*<section id="agents">.*?</section>','',new[b.end():],count=1,flags=re.S)
+        assert old[:a.start()]==new[:b.start()] and old[a.end():].lstrip()==after.lstrip(), relative+' changed outside process and agents'
         oldbytes=(OUT/baseline).read_bytes(); newbytes=(release/relative).read_bytes()
         ba=re.search(br'<section id="process">.*?</section>',oldbytes,re.S)
         bb=re.search(br'<section id="process">.*?</section>',newbytes,re.S)
-        assert oldbytes[:ba.start()]==newbytes[:bb.start()] and oldbytes[ba.end():]==newbytes[bb.end():], relative+' byte change outside process'
+        afterbytes=re.sub(br'\s*<section id="agents">.*?</section>',b'',newbytes[bb.end():],count=1,flags=re.S)
+        assert oldbytes[:ba.start()]==newbytes[:bb.start()] and oldbytes[ba.end():].lstrip()==afterbytes.lstrip(), relative+' byte change outside process and agents'
         diffs.extend(difflib.unified_diff(a[0].splitlines(True),b[0].splitlines(True),fromfile=baseline,tofile=relative))
     current=process((release/'docs/index.html').read_text())[0]
     template=process((release/'release/release_tools/site_template.html').read_text())[0]
     assert current==template, 'Process sections differ'
-    assert current.count('class="links"')==1 and current.count('data-t096="link"')==2, 'New links must share the existing button row'
+    assert current.count('class="links"')==1 and current.count('data-t096="link"')==1, 'New links must share the existing button row'
+    agents=re.search(r'<section id="agents">.*?</section>',(release/'docs/index.html').read_text(),re.S)
+    template_agents=re.search(r'<section id="agents">.*?</section>',(release/'release/release_tools/site_template.html').read_text(),re.S)
+    assert agents and template_agents and agents[0]==template_agents[0]
+    assert 'IntersectionObserver' in agents[0] and 'prefers-reduced-motion:reduce' in agents[0]
+    assert not re.search(r'Anton|Wilhelmi|AW0908',agents[0],re.I)
+    diffs.extend(difflib.unified_diff([],agents[0].splitlines(True),fromfile='no agents section',tofile='agents section'))
     (OUT/'index_diff.txt').write_text(''.join(diffs))
     class Links(HTMLParser):
         def __init__(self): super().__init__(); self.links=[]
@@ -144,9 +151,37 @@ def release_checks():
     assert '<svg' in architecture and '<marker' in architecture and 'feGaussianBlur' in architecture
     assert "edge('rework'," in architecture and "edge('escalate'," in architecture
     assert 'getPointAtLength' in architecture and 'stroke-dashoffset' in architecture
-    assert 'id="pause"' in architecture and 'prefers-reduced-motion:reduce' in architecture
-    assert 'Role assignment as of 13 November 2026' in architecture
+    assert 'id="pause"' not in architecture and 'Pause animation' not in architecture
+    assert 'prefers-reduced-motion:reduce' in architecture and '.t096-pulse,.t096-card{display:none!important}' in architecture
+    assert 'Roles as of 13 November 2026' in architecture
     assert "innerWidth<700" in architecture
+    for phrase in ('PI','Co-PI · Claude Opus','Worker · Codex','Reviewers','R / replication','Proposal & Overleaf','Public archive','Data basis','1 Goal','2 Task card','3 Approve','4 Implement','5 Check & freeze','6 Reviews','7 Accept','8 Publish','Overleaf','overleaf.sh push','Rscript','outputs','Daten/','GitHub Pages'):
+        assert phrase in architecture, phrase
+    assert not re.search(r'Gemini|never the worker|Anton|Wilhelmi|AW0908',architecture,re.I)
+    assert 'class="wrap"' in agents[0]
+    # Validate literal desktop paths as orthogonal, rather than merely checking labels.
+    desktop = architecture.split('if(!mobile){\nedge(', 1)[1].split('\n}else{for(let i=0;', 1)[0]
+    desktop = "edge(" + desktop
+    segments = re.findall(r"edge\('[a-z-]+','([^']+)'", desktop)
+    assert len(segments) >= 19, 'Desktop paths missing'
+    for path in segments:
+        tokens = re.findall(r'[A-Za-z]|-?\d+(?:\.\d+)?', path)
+        assert ''.join(tokens) == re.sub(r'[\s,]+', '', path), path
+        x = y = None; i = 0
+        while i < len(tokens):
+            cmd = tokens[i]; i += 1
+            assert cmd in ('M', 'H', 'V', 'L'), (path, cmd)
+            if cmd in ('M', 'L'):
+                nx, ny = float(tokens[i]), float(tokens[i+1]); i += 2
+                if cmd == 'L': assert x == nx or y == ny, path
+                x, y = nx, ny
+            elif cmd == 'H': x = float(tokens[i]); i += 1
+            else: y = float(tokens[i]); i += 1
+    for node in ("['rdata'", "['rest'", "['rcons'", "['rlang'"):
+        assert node in architecture, node
+    assert '0 0 1430 830' in architecture
+    assert "edge('publish-archive','M1370 88 V100 H1415 V660 H1395'" in architecture
+    assert "edge('east-data','M230 788 V805 H650 V788'" in architecture
     for name in ('ai-usage.html','architecture.html'):
         source=(release/'docs'/name).read_text()
         parser=Links(); parser.feed(source)
